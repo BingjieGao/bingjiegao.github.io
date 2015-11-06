@@ -33,7 +33,7 @@ layout: default
         <li class="each-post-list">
             {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
             {% capture pyear %}{{post.previous.date | date: "%Y"}}{% endcapture %}
-            {% if tyear != nyear %}
+            {% if tyear != pyear %}
             
             <div class="each-post">
                 <h3>

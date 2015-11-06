@@ -32,6 +32,7 @@ layout: default
     {% for post in site.posts  %}
         <li class="each-post-list">
             {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
+            {% capture nyear %}{{post.next.date | date: "%Y"}}{% endcapture %}
             {% capture pyear %}{{post.previous.date | date: "%Y"}}{% endcapture %}
             {% if tyear != pyear %}
             
@@ -41,9 +42,11 @@ layout: default
                 </h3>
             </div>
             {% else %}
+            {% if tyear == nyear %}
             <div class="each-post">
                 <h3>&nbsp</h3>
             </div>
+            {% endif %}
             {% endif %}
 
         </li>

@@ -7,7 +7,7 @@ layout: default
     <ul class="list-posts">
         {% for post in site.posts  %}
         {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
-        <li class="each-post-list" year="{{tyear}}">
+        <li class="each-post-list" year="{{ tyear }}">
 
 
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -28,15 +28,16 @@ layout: default
 
 
 <div class="side-bar">
-    {% assign static-year = 0 %}
+    
     {% for post in site.posts  %}
         <li class="each-post-list">
-            {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-            {% if static-year != year %}
-            {% capture static-year %}{{year}}{% endcapture %}
+            {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
+            {% capture pyear %}{{post.previous.date | date: "%Y"}}{% endcapture %}
+            {% if tyear != nyear %}
+            
             <div class="each-post">
                 <h3>
-                    <a href=javascript:; class="archive-year" year="{{static-year}}">{{ static-year }}</a>
+                    <a href=javascript:; class="archive-year" year="{{static-year}}">{{ tyear }}</a>
                 </h3>
             </div>
             {% else %}

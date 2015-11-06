@@ -22,7 +22,7 @@ layout: default
         {% if post.url %}
         <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a href="{{ post.url }}" class="post-list-item">
+        <a href="{{ post.url | prepend: site.baseurl}}" class="post-list-item">
             <h3>
                 {{ post.title }}
             </h3>

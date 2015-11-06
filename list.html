@@ -37,7 +37,7 @@ layout: default
             
             <div class="each-post">
                 <h3>
-                    <a href=javascript:; class="archive-year" year="{{ tyear }}">{{ tyear }}</a>
+                    <a href=javascript:; class="archive-year" value="{{ tyear }}">{{ tyear }}</a>
                 </h3>
             </div>
             {% else %}
@@ -54,7 +54,7 @@ layout: default
 <script>
 
     $('.archive-year').click(function(){
-        var year = $(this).attr('year');
+        var year = $(this).attr('value');
         console.log(year);
 
         $('.list-posts>li[year!='+year+']').css('visibility','hidden');

@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "变成你现在看到的样子~jekyll"
+date:   2015-11-05 15:44:18 +0000
+categories: 学习
+---
+添加paginate 一定要加上 gems: [jekyll-paginate]
+

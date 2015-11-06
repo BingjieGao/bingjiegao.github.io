@@ -1,0 +1,89 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <ul class="list-posts">
+        {% for post in site.posts  %}
+        {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
+        <li class="each-post-list" year="{{tyear}}">
+
+
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <div class="each-post">
+                <h3>
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+
+                </h3>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+
+
+
+
+
+<div class="side-bar">
+    {% assign static-year = 0 %}
+    {% for post in site.posts  %}
+        <li class="each-post-list">
+            {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+            {% if static-year != year %}
+            {% capture static-year %}{{year}}{% endcapture %}
+            <div class="each-post">
+                <h3>
+                    <a href=javascript:; class="archive-year" value="{{static-year}}">{{ static-year }}</a>
+                </h3>
+            </div>
+            {% else %}
+            <div class="each-post">
+                <h3>&nbsp</h3>
+            </div>
+            {% endif %}
+
+        </li>
+    {% endfor %}
+</div>
+</div>
+
+<script>
+
+    $('.archive-year').click(function(){
+        var year = $(this).attr('value');
+        console.log(year);
+
+        $('.list-posts>li[year!='+year+']').css('visibility','hidden');
+        $('.list-posts>li[year='+year+']').css('visibility','visible');
+        $('.archive-year').css('color','#afafaf');
+        $(this).css('color','#77BA9B');
+    });
+
+
+
+
+    //    /*show category when click categories list*/
+//    $('.categories-list-item').click(function () {
+//        var cate = $(this).attr('cate'); //get category's name
+//
+//        $('.toggle-post-list').css('display','inline-block');
+//        $('.post-list-body>ul[post-cate!=' + cate + ']').hide();
+//        $('.post-list-body>ul[post-cate=' + cate + ']').show();
+//        $('.categories-list-item').css('color','#afafaf');
+//        $(this).css('color','#77BA9B');
+//
+//
+//    });
+
+
+</script>
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-    color: $text-color;
+    color: #6c6c6c;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -91,16 +91,16 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $brand-color;
+    color: $grey-color-light;
     text-decoration: none;
 
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    //&:visited {
+    //    color: darken($grey-color, 15%);
+    //}
 
     &:hover {
-        color: $text-color;
-        text-decoration: underline;
+        color:#77BA9B;
+        //text-decoration: underline;
     }
 }
 
@@ -110,7 +110,7 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: #4AC090;
+    color: #77BA9B;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
     font-size: 18px;
@@ -155,6 +155,12 @@ pre {
 /**
  * Wrapper
  */
+//#mainpage{
+//    border-left: 5px solid #4AC090;
+//}
+
+
+
 .wrapper {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
     max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -203,4 +209,17 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+//next/previous pages
+.left-arrow{
+    display: inline-block;
+    float:left;
+    margin-left: 40px;
+}
+.right-arrow{
+    display: inline-block;
+    float:right;
+    margin-right:40px;
+
 }

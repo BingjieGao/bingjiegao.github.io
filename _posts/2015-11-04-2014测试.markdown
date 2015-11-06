@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "2014年测试"
+date:   2014-11-05 15:44:18 +0000
+categories: 学习
+---
+添加paginate 一定要加上 gems: [jekyll-paginate]
+

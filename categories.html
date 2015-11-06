@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <!--<h1 class="page-heading">所有文章</h1>-->
+    {% for category in site.categories %}
+    <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+        {{ category | first }}
+
+        <span class="my-badge">{{ category | last | size }}</span>
+    </a>
+    {% endfor %}
+
+
+    <div class="post-list-body">
+    {% for category in site.categories %}
+    <ul class="toggle-post-list" post-cate="{{category | first}}">
+        {% for posts in category  %}
+        {% for post in posts %}
+        {% if post.url %}
+        <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a href="{{ post.url }}" class="post-list-item">
+            <h3>
+                {{ post.title }}
+            </h3>
+        </a>
+            </li>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </ul>
+    {% endfor %}
+    </div>
+</div>
+
+<script>
+
+
+
+        /*show category when click categories list*/
+        $('.categories-list-item').click(function () {
+            var cate = $(this).attr('cate'); //get category's name
+
+            $('.toggle-post-list').css('display','inline-block');
+            $('.post-list-body>ul[post-cate!=' + cate + ']').hide();
+            $('.post-list-body>ul[post-cate=' + cate + ']').show();
+            $('.categories-list-item').css('color','#afafaf');
+            $(this).css('color','#77BA9B');
+
+
+        });
+
+
+</script>

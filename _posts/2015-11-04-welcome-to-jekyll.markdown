@@ -1,25 +1,9 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2015-11-04 10:44:18 +0000
-categories: jekyll update
+title:  "讲个最近的故事"
+date:   2015-11-04 15:21:18 +0000
+categories: 生活笔记
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+我开始想了想其实这并不算一个很最近的故事
+有一天 我遇见了一个诉衷肠的孩子 哭哭啼啼 我们一起在路边坐下 就是那种背后能感到杂草丛生扎在背上的马路墩上 那时候是春天 太阳已经晒得我睁不开眼睛 我背上的汗正如他眼里的泪一样 大滴大滴流下来 “我不喜欢这样一个人的生活”他说 我想孩子是想家了 “她为什么就不在”他说 哦 孩子是谈恋爱了 我站起身拍拍灰 准备走 “我就想有个家，可以不用再空荡荡的发呆”他继续说 我停下了

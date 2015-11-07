@@ -19,5 +19,6 @@ gems: [jekyll-paginate]
 paginate: 3
 paginate_path: "blog/page:num"
 # Build settings
-markdown: kramdown: 
+markdown: kramdown 
+kramdown: 
 input: GFM

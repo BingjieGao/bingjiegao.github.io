@@ -36,7 +36,7 @@ layout: default
             {% capture static-year %}{{year}}{% endcapture %}
             <div class="each-post">
                 <h3>
-                    <a href=javascript:; class="archive-year" value="{{static-year}}">{{ static-year }}</a>
+                    <a href=javascript:; class="archive-year" year="{{static-year}}" style="nactive">{{ static-year }}</a>
                 </h3>
             </div>
             {% else %}
@@ -53,13 +53,13 @@ layout: default
 <script>
 
     $('.archive-year').click(function(){
-        var year = $(this).attr('value');
+        var year = $(this).attr('year');
         console.log(year);
 
         $('.list-posts>li[year!='+year+']').css('visibility','hidden');
         $('.list-posts>li[year='+year+']').css('visibility','visible');
-        $('.archive-year').css('color','#afafaf');
-        $(this).css('color','#77BA9B');
+        $('.archive-year').attr('style','nactive');
+        $(this).attr('style','active');
     });
 
 

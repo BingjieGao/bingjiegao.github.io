@@ -5,9 +5,75 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 06 Nov 2015 16:02:15 +0000</pubDate>
-    <lastBuildDate>Fri, 06 Nov 2015 16:02:15 +0000</lastBuildDate>
+    <pubDate>Sat, 07 Nov 2015 11:44:11 +0000</pubDate>
+    <lastBuildDate>Sat, 07 Nov 2015 11:44:11 +0000</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
+    
+      <item>
+        <title>怎样很麻烦的做一个、个人博客</title>
+        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然…不想做的更不来浪费时间 我只是单纯的想…以后的我不要忘了这个漫长的流程&lt;/p&gt;
+
+&lt;p&gt;首先 你要有一个充足的时间 比如…一个空闲的下午茶时间
+其次 你需要有一个Github账号或者、你有一个已购买的注册域名 一个主机服务器等等…&lt;/p&gt;
+
+&lt;p&gt;你应该是不会有那些的&lt;/p&gt;
+
+&lt;p&gt;这篇文章很有限的介绍怎样基于Mac环境下在Github上部署一个免费的jeklly博客 
+Jekyll是什么我也不知道 具体请去&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;官网&lt;/a&gt;详查&lt;/p&gt;
+
+&lt;p&gt;按照官网的安装教程 你可以将jekyll先下载到本地
+你需要打开一个黑色背景的小窗口 它叫‘Terminal’ 也许在你的电脑上它已经改名叫‘iTerm’了&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+第一步 安装jekyll&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ gem install jekyll
+&lt;/code&gt;
+必要时候请 ‘sudo’&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+ sudo gem install jekyll
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;第二步 新建一个jekyll博客&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+jekyll new my-new-blog
+&lt;/code&gt;
+第三步…&lt;/p&gt;
+
+&lt;p&gt;请到你的新建博客下&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+cd ~/PATH/my-new-blog/
+&lt;/code&gt;
+第四步 开启jekyll server&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+jekyll server --watch
+&lt;/code&gt;
+不要打小鼓默默碎碎念为什么要加watch 我也不知道…&lt;/p&gt;
+
+&lt;p&gt;不加watch在编辑中会有莫名的假bug让你误以为自己总是写错 其实可能只是你需要重新 ‘ctrl+c’ 再 ‘jekyll server’重新开启一下&lt;/p&gt;
+
+&lt;p&gt;接着你就能在浏览器中的’localhost:4000’看到你的页面了 应该跟下面一样&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后嘛&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 06 Nov 2015 18:52:00 +0000</pubDate>
+        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/06/2012%E6%B5%8B%E8%AF%95.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/06/2012%E6%B5%8B%E8%AF%95.html</guid>
+        
+        
+        <category>学习</category>
+        
+      </item>
     
       <item>
         <title>爱情的方式</title>
@@ -113,20 +179,6 @@
         
         
         <category>生活笔记</category>
-        
-      </item>
-    
-      <item>
-        <title>2012测试</title>
-        <description>&lt;p&gt;等会来添加内容…&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 04 Nov 2012 15:22:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2012/11/04/2012%E6%B5%8B%E8%AF%95.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2012/11/04/2012%E6%B5%8B%E8%AF%95.html</guid>
-        
-        
-        <category>学习</category>
         
       </item>
     

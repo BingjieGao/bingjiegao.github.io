@@ -114,7 +114,21 @@
     color: #77BA9B;
     border-left-color: transparent;
 }
-
+.archive-year:hover{
+    color: #77BA9B;
+}
+.archive-year:active{
+    color: #77BA9B;
+}
+.archive-year[style="nactive"]{
+    color:$grey-color-light;
+}
+.archive-year[style="nactive"]:hover{
+    color: #77BA9B;
+}
+.archive-year[style="active"]{
+    color:#77BA9B;
+}
 /**
  * Site footer
  */
@@ -310,6 +324,17 @@ a.categories-list-item{
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+}
+
+.categories-list-item[style="nactive"]{
+    color: $grey-color-light;
+}
+.categories-list-item[style="nactive"]:hover{
+    color: #77BA9B;
+}
+
+.categories-list-item[style="active"]{
+    color: #77BA9B;
 }
 
 .post-list-body{

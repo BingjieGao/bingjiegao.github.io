@@ -6,7 +6,7 @@ layout: default
 
     <!--<h1 class="page-heading">所有文章</h1>-->
     {% for category in site.categories %}
-    <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+    <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}" style="nactive">
         {{ category | first }}
 
         <span class="my-badge">{{ category | last | size }}</span>
@@ -47,8 +47,8 @@ layout: default
             $('.toggle-post-list').css('display','inline-block');
             $('.post-list-body>ul[post-cate!=' + cate + ']').hide();
             $('.post-list-body>ul[post-cate=' + cate + ']').show();
-            $('.categories-list-item').css('color','#afafaf');
-            $(this).css('color','#77BA9B');
+            $('.categories-list-item').attr('style','nactive');
+            $(this).attr('style','active');
 
 
         });

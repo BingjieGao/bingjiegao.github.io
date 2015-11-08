@@ -1,8 +1,0 @@
----
-layout: post
-title:  "怎样让写博客变得麻烦一些-Jekyll"
-date:   2015-11-04 15:22:18 +0000
-categories: 学习
----
-等会来添加内容...
-

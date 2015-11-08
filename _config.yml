@@ -22,7 +22,8 @@ paginate_path: "blog/page:num"
 # markdown: kramdown 
 # kramdown: 
 # input: GFM
-markdown: redcarpet2
+markdown: redcarpet
+encoding: UTF-8
 redcarpet: 
     extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
 highlighter: pygments

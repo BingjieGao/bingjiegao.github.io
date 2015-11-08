@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Nov 2015 20:07:04 +0000</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 20:07:04 +0000</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 20:10:10 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 20:10:10 +0000</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -244,7 +244,7 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
 The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
 The basic design in draft is presented below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/SummerBlogs/imgScreen Shot 2015-07-23 at 15.17.31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.17.31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.&lt;/p&gt;
 
@@ -255,7 +255,7 @@ The design thinking of this modular sensor node had been changed a lot in terms 
 &lt;h2 id=&quot;software-side&quot;&gt;Software Side&lt;/h2&gt;
 &lt;p&gt;The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/SummerBlogs/img/Screen Shot 2015-07-23 at 15.32.57.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.32.57.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The things are to be working on following weeks:&lt;/p&gt;
 
@@ -283,7 +283,7 @@ Because of waiting the manufacture delivering the PCB, there is no design actual
 The software side didn’t go well because of not succeeding on streaming the data like a “server awareness” system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
 The difficulty was mainly the data model, the design is basically as shown below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/SummerBlogs/img/Screen Shot 2015-07-23 at 16.29.16.png//&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 16.29.16.png//&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users’ authetication information would be added on top of this.&lt;/p&gt;
 
@@ -395,11 +395,11 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
 &lt;h3 id=&quot;what-have-been-done-on-pcb-initial-design&quot;&gt;What have been done on PCB initial design:&lt;/h3&gt;
 &lt;p&gt;##### The schematic circuit&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/SummerBlogs/img/Screen Shot 2015-06-18 at 23.28.09.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-06-18 at 23.28.09.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;the-board&quot;&gt;The board:&lt;/h5&gt;
 
-&lt;p&gt;&lt;img src=&quot;/SummerBlogs/pictures/Screen Shot 2015-06-21 at 12.13.59.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/pictures/Screen Shot 2015-06-21 at 12.13.59.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In the next two weeks, the following things are to be done hopefully:&lt;/p&gt;
 

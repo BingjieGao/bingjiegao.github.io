@@ -7,7 +7,7 @@ layout: default
     <ul class="list-posts">
         {% for post in site.posts  %}
         {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
-        {% capture tmonth %}{{post.date | date: "%-d"}}{% endcapture %}
+        {% capture tmonth %}{{post.date | date: "%b"}}{% endcapture %}
         <li class="each-post-list" year="{{ tyear }}">
 
 

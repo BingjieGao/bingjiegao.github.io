@@ -4,6 +4,11 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
+exclude: [Src, Lib, Visual Studio Integration]
+
+markdown: redcarpet
+encoding: UTF-8
+highlighter: pygments
 
 # Site settings
 title: CatAmo凉生
@@ -22,6 +27,4 @@ paginate_path: "blog/page:num"
 # markdown: kramdown 
 # kramdown: 
 # input: GFM
-markdown: redcarpet
-encoding: UTF-8
-highlighter: pygments
+

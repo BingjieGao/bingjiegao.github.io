@@ -19,10 +19,10 @@ gems: [jekyll-paginate]
 paginate: 3
 paginate_path: "blog/page:num"
 # Build settings
-markdown: kramdown 
-kramdown: 
-input: GFM
-# markdown: redcarpet
-# redcarpet: 
-#     extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
-# highlighter: pygments
+# markdown: kramdown 
+# kramdown: 
+# input: GFM
+markdown: redcarpet
+redcarpet: 
+    extensions: ["fenced_code_blocks", "tables", "highlight", "with_toc_data", "strikethrough", "underline"]
+highlighter: pygments

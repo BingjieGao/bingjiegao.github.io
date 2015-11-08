@@ -5,8 +5,8 @@
     <description></description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Nov 2015 19:30:54 +0000</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 19:30:54 +0000</lastBuildDate>
+    <pubDate>Sun, 08 Nov 2015 20:04:08 +0000</pubDate>
+    <lastBuildDate>Sun, 08 Nov 2015 20:04:08 +0000</lastBuildDate>
     <generator>Jekyll v3.0.0</generator>
     
       <item>
@@ -52,6 +52,25 @@
         
         
         <category>生活笔记</category>
+        
+      </item>
+    
+      <item>
+        <title>若是我送你走、会怎样</title>
+        <description>
+&lt;p&gt;或许这是一种想念式的道歉：这辈子不会有人叫我”媳妇”了&lt;/p&gt;
+
+&lt;p&gt;如果等到送你走的那天 我希望给你写这么一句话&lt;/p&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般&lt;/h4&gt;
+&lt;p&gt;####最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般&lt;/p&gt;
+
+&lt;p&gt;明信片我还留着 你没能去的地方 我想有时间替你去看看&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Nov 2015 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/2015/11/07/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/2015/11/07/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</guid>
+        
         
       </item>
     
@@ -219,66 +238,6 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
       </item>
     
       <item>
-        <title>爱情的方式</title>
-        <description>&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般&lt;/p&gt;
-
-&lt;p&gt;爱的最怀念的方式 无非是将现在的她宠得一如当初的你爱我一般&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Nov 2015 16:59:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/05/test3.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/05/test3.html</guid>
-        
-        
-        <category>生活笔记</category>
-        
-      </item>
-    
-      <item>
-        <title>变成你现在看到的样子~jekyll</title>
-        <description>&lt;p&gt;添加paginate 一定要加上 gems: [jekyll-paginate]&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 05 Nov 2015 15:44:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/05/test2.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/05/test2.html</guid>
-        
-        
-        <category>学习</category>
-        
-      </item>
-    
-      <item>
-        <title>怎样让写博客变得麻烦一些-Jekyll</title>
-        <description>&lt;p&gt;等会来添加内容…&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 04 Nov 2015 15:22:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/04/test4.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/04/test4.html</guid>
-        
-        
-        <category>学习</category>
-        
-      </item>
-    
-      <item>
-        <title>转述一个故事...</title>
-        <description>
-</description>
-        <pubDate>Wed, 04 Nov 2015 15:21:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/04/test5.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/04/test5.html</guid>
-        
-        
-        <category>生活笔记</category>
-        
-      </item>
-    
-      <item>
         <title>Summary on WEEK8</title>
         <description>&lt;h1 id=&quot;summary-for-week8&quot;&gt;Summary for WEEK8&lt;/h1&gt;
 &lt;p&gt;##Hardware Side
@@ -366,13 +325,11 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 03 Jul 2015 12:52:34 +0100</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2015/07/03/week5.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2015/07/03/week5.html</guid>
+        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/03/week5.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/03/week5.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>毕设Archive</category>
         
       </item>
     
@@ -425,6 +382,548 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
         
         
         <category>毕设Archive</category>
+        
+      </item>
+    
+      <item>
+        <title>Summary on WEEK3</title>
+        <description>&lt;h1 id=&quot;week-3&quot;&gt;Week 3&lt;/h1&gt;
+&lt;p&gt;After researching on the MCU and the HOPErf modules, the initial PCB was produced in 4 days. The MCU selected was the ATmel 328P which is the most popular one on diffrerent Arduino alternative boards. The schematic circuit was pretty much the same as Moteino has, the only difference so far is the RF module which in my design the rfm69hw was basically used while in moteino the rf module was deployed from rf12b.&lt;/p&gt;
+
+&lt;p&gt;It has been a long time being familair with the software Eagle which is to be used for following PCB design as well. The next step would be adding the secure device ATmel produced called ATSHA204A that can be compatible with ATmel mega 328P using now. The original PCB design still need a lot of improvements in order to be price and size optimized for building the sensor nodes. The bootloader for the ATmel mega 328P MCU should also be researched and re-implemented for intergated with intialization of ATSHA204A module.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-have-been-done-on-pcb-initial-design&quot;&gt;What have been done on PCB initial design:&lt;/h3&gt;
+&lt;p&gt;##### The schematic circuit&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/SummerBlogs/img/Screen Shot 2015-06-18 at 23.28.09.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;the-board&quot;&gt;The board:&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/SummerBlogs/pictures/Screen Shot 2015-06-21 at 12.13.59.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In the next two weeks, the following things are to be done hopefully:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Continue working on the “perfect” PCB design in order to fit the flexibility as well as relative price optimization purpose&lt;/li&gt;
+  &lt;li&gt;Research on the secure chip may be used on the PCB ATSHA204A module&lt;/li&gt;
+  &lt;li&gt;Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module&lt;/li&gt;
+  &lt;li&gt;Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
+*&lt;/li&gt;
+  &lt;li&gt;Continue working on some nodejs development, transfer the simple blog building to a simple CMS&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 19 Jun 2015 23:52:48 +0100</pubDate>
+        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</guid>
+        
+        
+        <category>毕设Archive</category>
+        
+      </item>
+    
+      <item>
+        <title>Initial Research on MCUs</title>
+        <description>&lt;h1 id=&quot;day1-2&quot;&gt;Day1-2&lt;/h1&gt;
+&lt;p&gt;###Initial Research on MCUs&lt;/p&gt;
+
+&lt;p&gt;During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called “busy bee” by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Digi-Key Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Quantity Available&lt;/th&gt;
+      &lt;th&gt;Factory Stock&lt;/th&gt;
+      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
+      &lt;th&gt;@ qty&lt;/th&gt;
+      &lt;th&gt;Minimum Quantity&lt;/th&gt;
+      &lt;th&gt;Series&lt;/th&gt;
+      &lt;th&gt;Core Processor&lt;/th&gt;
+      &lt;th&gt;Core Size&lt;/th&gt;
+      &lt;th&gt;Speed&lt;/th&gt;
+      &lt;th&gt;Connectivity&lt;/th&gt;
+      &lt;th&gt;Peripherals&lt;/th&gt;
+      &lt;th&gt;Number of I/O&lt;/th&gt;
+      &lt;th&gt;Program Memory Size&lt;/th&gt;
+      &lt;th&gt;Program Memory Type&lt;/th&gt;
+      &lt;th&gt;EEPROM Size&lt;/th&gt;
+      &lt;th&gt;RAM Size&lt;/th&gt;
+      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
+      &lt;th&gt;Data Converters&lt;/th&gt;
+      &lt;th&gt;Oscillator Type&lt;/th&gt;
+      &lt;th&gt;Operating Temperature&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EFM8BB10F2G-A-QFN20R-ND&lt;/td&gt;
+      &lt;td&gt;EFM8BB10F2G-A-QFN20R&lt;/td&gt;
+      &lt;td&gt;Silicon Labs&lt;/td&gt;
+      &lt;td&gt;IC MCU 2KB 20QFN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.31361&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1500&lt;/td&gt;
+      &lt;td&gt;Busy Bee&lt;/td&gt;
+      &lt;td&gt;CIP-51 8051&lt;/td&gt;
+      &lt;td&gt;8-Bit&lt;/td&gt;
+      &lt;td&gt;25MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SMBus, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;2KB (2K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;256 x 8&lt;/td&gt;
+      &lt;td&gt;2.2 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;A/D 15x12b&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EFM8SB10F2G-A-QFN20R-ND&lt;/td&gt;
+      &lt;td&gt;EFM8SB10F2G-A-QFN20R&lt;/td&gt;
+      &lt;td&gt;Silicon Labs&lt;/td&gt;
+      &lt;td&gt;IC MCU 2KB 20QFN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.47723&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1500&lt;/td&gt;
+      &lt;td&gt;Sleepy Bee&lt;/td&gt;
+      &lt;td&gt;CIP-51 8051&lt;/td&gt;
+      &lt;td&gt;8-Bit&lt;/td&gt;
+      &lt;td&gt;25MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SMBus, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;2KB (2K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;256 x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;A/D 9x12b&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For MPS4302X based MCUs are normally consume less power as Texas Instrument claims:
+* Active Mode: 220µA at 1MHz, 2.2V
+* Standby Mode: 0.5µA
+* Off Mode: 0.1µA&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Quantity Available&lt;/th&gt;
+      &lt;th&gt;Factory Stock&lt;/th&gt;
+      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
+      &lt;th&gt;@ qty&lt;/th&gt;
+      &lt;th&gt;Minimum Quantity&lt;/th&gt;
+      &lt;th&gt;Packaging&lt;/th&gt;
+      &lt;th&gt;Series&lt;/th&gt;
+      &lt;th&gt;Core Processor&lt;/th&gt;
+      &lt;th&gt;Core Size&lt;/th&gt;
+      &lt;th&gt;Speed&lt;/th&gt;
+      &lt;th&gt;Connectivity&lt;/th&gt;
+      &lt;th&gt;Peripherals&lt;/th&gt;
+      &lt;th&gt;Number of I/O&lt;/th&gt;
+      &lt;th&gt;Program Memory Size&lt;/th&gt;
+      &lt;th&gt;Program Memory Type&lt;/th&gt;
+      &lt;th&gt;EEPROM Size&lt;/th&gt;
+      &lt;th&gt;RAM Size&lt;/th&gt;
+      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
+      &lt;th&gt;Data Converters&lt;/th&gt;
+      &lt;th&gt;Oscillator Type&lt;/th&gt;
+      &lt;th&gt;Operating Temperature&lt;/th&gt;
+      &lt;th&gt;Package / Case&lt;/th&gt;
+      &lt;th&gt;Supplier Device Package&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MSP430G2001IPW14R&lt;/td&gt;
+      &lt;td&gt;Texas Instruments&lt;/td&gt;
+      &lt;td&gt;IC MCU 16BIT 512B FLASH 14TSSOP&lt;/td&gt;
+      &lt;td&gt;2000&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.385&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2000&lt;/td&gt;
+      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
+      &lt;td&gt;MSP430G2xx&lt;/td&gt;
+      &lt;td&gt;MSP430&lt;/td&gt;
+      &lt;td&gt;16-Bit&lt;/td&gt;
+      &lt;td&gt;16MHz&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;512B (512 x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;128 x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40째C ~ 85째C&lt;/td&gt;
+      &lt;td&gt;14-TSSOP (0.173”, 4.40mm Width)&lt;/td&gt;
+      &lt;td&gt;14-TSSOP&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;For general AVR based MCUs, there are three main series manufactured by ATmel, ATtiny, Atmega and XMEGA which corresponding to different purposes. According to the official site, the series ATtiny is mostly designed for building solutions or applications commercially with smaller size and lower power consumption that the supply voltage is only 0.7 Volts. With the promise from Atmel that this tiny size of AVR based MCU has the same performance as those larger ones, this could be a great choice regarding a solution with limitations on scale. It is also mentioned that for this tinyAVR there is no need for external in-circuit which saves more time for a commercial solution to get on sell to market. The cheapest one MCU cost around USD 0.378 in ATtiny4 family (ATTINY4-TSHR).
+The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Active Mode: 200µA at 1MHz and 1.8V&lt;/li&gt;
+  &lt;li&gt;Idle Mode: 25µA at 1MHz and 1.8V&lt;/li&gt;
+  &lt;li&gt;Power-down Mode:  &amp;lt; 0.1µA at 1.8V&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ATmega is the series that offers more memories, Pin I/Os and etc. With the featured characteristic on building IOT solutions, the mega version of AVR is typically designed for medical or health systems. This series of AVR based MCUs cost around USD 0.83 for the cheapest ones which have 4KB flash memory. The power consumption is listed below (ATmega48PB/88PB/168PB):
+* Active Mode: 0.35 mA
+* Power down Mode: 0.4µA
+* Power-Save Mode: 0.1µA&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Digi-Key Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+      &lt;th&gt;Quantity Available&lt;/th&gt;
+      &lt;th&gt;Factory Stock&lt;/th&gt;
+      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
+      &lt;th&gt;@ qty&lt;/th&gt;
+      &lt;th&gt;Minimum Quantity&lt;/th&gt;
+      &lt;th&gt;Packaging&lt;/th&gt;
+      &lt;th&gt;Series&lt;/th&gt;
+      &lt;th&gt;Core Processor&lt;/th&gt;
+      &lt;th&gt;Core Size&lt;/th&gt;
+      &lt;th&gt;Speed&lt;/th&gt;
+      &lt;th&gt;Connectivity&lt;/th&gt;
+      &lt;th&gt;Peripherals&lt;/th&gt;
+      &lt;th&gt;Number of I/O&lt;/th&gt;
+      &lt;th&gt;Program Memory Size&lt;/th&gt;
+      &lt;th&gt;Program Memory Type&lt;/th&gt;
+      &lt;th&gt;EEPROM Size&lt;/th&gt;
+      &lt;th&gt;RAM Size&lt;/th&gt;
+      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
+      &lt;th&gt;Data Converters&lt;/th&gt;
+      &lt;th&gt;Oscillator Type&lt;/th&gt;
+      &lt;th&gt;Operating Temperature&lt;/th&gt;
+      &lt;th&gt;Package / Case&lt;/th&gt;
+      &lt;th&gt;Supplier Device Package&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ATTINY4-TSHRTR-ND&lt;/td&gt;
+      &lt;td&gt;ATTINY4-TSHR&lt;/td&gt;
+      &lt;td&gt;Atmel&lt;/td&gt;
+      &lt;td&gt;IC MCU 8BIT 512B FLASH SOT23-6&lt;/td&gt;
+      &lt;td&gt;4500&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.378&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;4500&lt;/td&gt;
+      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
+      &lt;td&gt;AVR® ATtiny&lt;/td&gt;
+      &lt;td&gt;AVR&lt;/td&gt;
+      &lt;td&gt;8-Bit&lt;/td&gt;
+      &lt;td&gt;12MHz&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;512B (256 x 16)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;32 x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+      &lt;td&gt;SOT-23-6&lt;/td&gt;
+      &lt;td&gt;SOT-23&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ATMEGA48PB-AURTR-ND&lt;/td&gt;
+      &lt;td&gt;ATMEGA48PB-AUR&lt;/td&gt;
+      &lt;td&gt;Atmel&lt;/td&gt;
+      &lt;td&gt;IC MCU 8BIT 4KB FLASH 32TQFP&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.82884&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;2000&lt;/td&gt;
+      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
+      &lt;td&gt;AVR® ATmega&lt;/td&gt;
+      &lt;td&gt;AVR&lt;/td&gt;
+      &lt;td&gt;8-Bit&lt;/td&gt;
+      &lt;td&gt;20MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;4KB (2K x 16)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;256 x 8&lt;/td&gt;
+      &lt;td&gt;512 x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
+      &lt;td&gt;A/D 8x10b&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+      &lt;td&gt;32-TQFP&lt;/td&gt;
+      &lt;td&gt;32-TQFP (7x7)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ATMEGA48PB-MURTR-ND&lt;/td&gt;
+      &lt;td&gt;ATMEGA48PB-MUR&lt;/td&gt;
+      &lt;td&gt;Atmel&lt;/td&gt;
+      &lt;td&gt;IC MCU 8BIT 4KB FLASH 32QFN&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.82884&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;6000&lt;/td&gt;
+      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
+      &lt;td&gt;AVR® ATmega&lt;/td&gt;
+      &lt;td&gt;AVR&lt;/td&gt;
+      &lt;td&gt;8-Bit&lt;/td&gt;
+      &lt;td&gt;20MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;27&lt;/td&gt;
+      &lt;td&gt;4KB (2K x 16)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;256 x 8&lt;/td&gt;
+      &lt;td&gt;512 x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
+      &lt;td&gt;A/D 8x10b&lt;/td&gt;
+      &lt;td&gt;Internal&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+      &lt;td&gt;32-VFQFN Exposed Pad&lt;/td&gt;
+      &lt;td&gt;32-VFQFN (5x5)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There are various of ARM cortex-M core types that the cheapest one costs around USD 0.364 which is based on the  core processor cortex-M0 and manufactured by the company called Cypress Semiconductor Corp. Other companies like STMicroelectronics, NXP Semiconductors and Infineon Technologies as well as ATmel also produce MCUs based on Cortex-M0. The detailed table regarding ARM cortex-M0 based MCUs with the cheapest price are listed below:
+Core processor: Cortex-M0/Cortex-M0+
+Internal oscillator&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
+      &lt;th&gt;Manufacturer&lt;/th&gt;
+      &lt;th&gt;Power Consumption&lt;/th&gt;
+      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
+      &lt;th&gt;Minimum Quantity&lt;/th&gt;
+      &lt;th&gt;Core Processor&lt;/th&gt;
+      &lt;th&gt;Core Size&lt;/th&gt;
+      &lt;th&gt;Speed&lt;/th&gt;
+      &lt;th&gt;Connectivity&lt;/th&gt;
+      &lt;th&gt;Peripherals&lt;/th&gt;
+      &lt;th&gt;Number of I/O&lt;/th&gt;
+      &lt;th&gt;Program Memory Size&lt;/th&gt;
+      &lt;th&gt;Program Memory Type&lt;/th&gt;
+      &lt;th&gt;EEPROM Size&lt;/th&gt;
+      &lt;th&gt;RAM Size&lt;/th&gt;
+      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
+      &lt;th&gt;Data Converters&lt;/th&gt;
+      &lt;th&gt;Operating Temperature&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CY8C4013SXI-400T&lt;/td&gt;
+      &lt;td&gt;Cypress Semiconductor Corp&lt;/td&gt;
+      &lt;td&gt;Lower Power 1.71V to 5.5V operation&lt;/td&gt;
+      &lt;td&gt;0.364&lt;/td&gt;
+      &lt;td&gt;2500&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;16MHz&lt;/td&gt;
+      &lt;td&gt;I²C&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;2K x 8&lt;/td&gt;
+      &lt;td&gt;1.71 V ~ 5.5 V&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;STM32F030F4P6TR&lt;/td&gt;
+      &lt;td&gt;STMicroelectronics&lt;/td&gt;
+      &lt;td&gt;External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V&lt;/td&gt;
+      &lt;td&gt;0.5796&lt;/td&gt;
+      &lt;td&gt;2500&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;48MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;DMA, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;16KB (16K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;4K x 8&lt;/td&gt;
+      &lt;td&gt;2.4 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;A/D 11x12b&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LPC811M001JDH16J&lt;/td&gt;
+      &lt;td&gt;NXP Semiconductors&lt;/td&gt;
+      &lt;td&gt;Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current)&lt;/td&gt;
+      &lt;td&gt;0.644&lt;/td&gt;
+      &lt;td&gt;2500&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;30MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;2K x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;XMC1301T016X0016AAXUMA1&lt;/td&gt;
+      &lt;td&gt;Infineon Technologies&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;0.71172&lt;/td&gt;
+      &lt;td&gt;3000&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;32MHz&lt;/td&gt;
+      &lt;td&gt;I²C, LIN, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, I²S, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;16KB (16K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;16K x 8&lt;/td&gt;
+      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
+      &lt;td&gt;A/D 11x12b&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;MKL02Z8VFG4R&lt;/td&gt;
+      &lt;td&gt;Freescale Semiconductor&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;0.741&lt;/td&gt;
+      &lt;td&gt;2500&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;48MHz&lt;/td&gt;
+      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, LVD, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;1K x 8&lt;/td&gt;
+      &lt;td&gt;1.71 V ~ 3.6 V&lt;/td&gt;
+      &lt;td&gt;A/D 6x12b&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;EFM32ZG108F4-QFN24&lt;/td&gt;
+      &lt;td&gt;Silicon Labs&lt;/td&gt;
+      &lt;td&gt;20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode&lt;/td&gt;
+      &lt;td&gt;0.7772&lt;/td&gt;
+      &lt;td&gt;1000&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;24MHz&lt;/td&gt;
+      &lt;td&gt;EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT&lt;/td&gt;
+      &lt;td&gt;17&lt;/td&gt;
+      &lt;td&gt;4KB (4K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;2K x 8&lt;/td&gt;
+      &lt;td&gt;1.85 V ~ 3.8 V&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ATSAMD10C13A-SSUT&lt;/td&gt;
+      &lt;td&gt;Atmel&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;0.83375&lt;/td&gt;
+      &lt;td&gt;3000&lt;/td&gt;
+      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
+      &lt;td&gt;32-Bit&lt;/td&gt;
+      &lt;td&gt;48MHz&lt;/td&gt;
+      &lt;td&gt;I²C, LIN, SPI, UART/USART&lt;/td&gt;
+      &lt;td&gt;Brown-out Detect/Reset, DMA, POR, WDT&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
+      &lt;td&gt;FLASH&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;4K x 8&lt;/td&gt;
+      &lt;td&gt;1.62 V ~ 3.63 V&lt;/td&gt;
+      &lt;td&gt;A/D 5x12b, D/A 1x10b&lt;/td&gt;
+      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There is an additional one that looked up for which is the Quark X-1000 produced by Intel. This is the SoC chip that is claimed to be the ideal component for Internet Of Things. Here re the features of Quark-X1000.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Frequency:400MHz&lt;/li&gt;
+  &lt;li&gt;Flash: SPI, 2GB&lt;/li&gt;
+  &lt;li&gt;Cache: 16KB&lt;/li&gt;
+  &lt;li&gt;Memory Types: DDR3&lt;/li&gt;
+  &lt;li&gt;Working Temperature: -40°C~85°C&lt;/li&gt;
+  &lt;li&gt;UART: 2&lt;/li&gt;
+  &lt;li&gt;MAX TDP: 2.2W&lt;/li&gt;
+  &lt;li&gt;Customer price: $9.62&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 05 Jun 2015 23:52:48 +0100</pubDate>
+        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</guid>
+        
+        
+        <category>毕设Archive</category>
+        
+      </item>
+    
+      <item>
+        <title>2014年测试</title>
+        <description>&lt;p&gt;添加paginate 一定要加上 gems: [jekyll-paginate]&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 05 Nov 2014 15:44:18 +0000</pubDate>
+        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2014/11/05/2014%E6%B5%8B%E8%AF%95.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2014/11/05/2014%E6%B5%8B%E8%AF%95.html</guid>
+        
+        
+        <category>学习</category>
         
       </item>
     

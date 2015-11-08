@@ -227,21 +227,3 @@ pre {
 
 
 
-/* ----------- iPhone 6 ----------- */
-
-/* Portrait and Landscape */
-@media screen
-and (max-width: 700px)
- {
-    .categories-list-item{
-        width: 100%;
-        display: block;
-    }
-    .toggle-post-list{
-        width: 100%;
-    }
-    .archive-year{
-        display:none;
-    }
-
-}

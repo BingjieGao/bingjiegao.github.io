@@ -3,23 +3,339 @@
   <channel>
     <title>CatAmo凉生</title>
     <description></description>
-    <link>http://yourdomain.com/</link>
-    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 08 Nov 2015 20:10:10 +0000</pubDate>
-    <lastBuildDate>Sun, 08 Nov 2015 20:10:10 +0000</lastBuildDate>
-    <generator>Jekyll v3.0.0</generator>
+    <link>http://yourdomain.com/TempBlogs//</link>
+    <atom:link href="http://yourdomain.com/TempBlogs//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 23 Jan 2016 14:08:34 +0000</pubDate>
+    <lastBuildDate>Sat, 23 Jan 2016 14:08:34 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.2</generator>
+    
+      <item>
+        <title>程序员面试金典 chapter1 arrays and strings</title>
+        <description>&lt;h5&gt;第一题  翻转字符串&lt;/h5&gt;
+
+&lt;p&gt;把一个给定的字符串反转
+笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n-1-i]个元素对调，下面为代码示例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Reverse {
+public:
+    string reverseString(string iniString) {
+        // write code here
+        char c;
+        int len = iniString.length();
+        for(int i=0; i &amp;lt; len / 2; i ++)
+        {
+         c = iniString[i];
+            iniString[i] = iniString[len - i - 1];
+            iniString[len - i - 1] = c;
+        }
+        return iniString;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;第二题  判定字符串中字符是否相同或不同&lt;/h5&gt;
+
+&lt;p&gt;...
+不细说、代码示例在下面：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
+class Different {
+public:
+    bool checkDifferent(string iniString) {
+        // write code here
+        for(int i=0;iniString[i]!=&#39;\0&#39;;i++)
+            {
+            for(int j=i+1;iniString[j]!=&#39;\0&#39;;j++){
+                if(iniString[i] == iniString[j])
+                    return 0;
+            }
+        }
+            return 1;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;第三题  确定两串乱序同构&lt;/h5&gt;
+
+&lt;p&gt;(我觉得和第八题是一样的，这里是第八题的描述：
+请将这个算法编写成一个函数，给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成。唯一不一样的地方可能就是第八题要求用并且只用一次issubstring这个函数吧。这里省略第八题。
+)&lt;/p&gt;
+
+&lt;p&gt;给出的代码结构为:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Same {
+public:
+    bool checkSam(string stringA, string stringB) {
+        // write code here
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我的第一个想法很简单，遍历整个stringA和stringB，当在B中能找到该元素就在B数组中删除这个元素，直到最后判断B是否为空。但是....总之我这么想着写有误，会漏判应该返回 &amp;quot;false&amp;quot;的情况，下面为错误的代码示例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Same {
+public:
+    bool checkSam(string stringA, string stringB) {
+        // write code here
+        if(stringA.length()!=stringB.length())
+            return false;
+       for(int i=0;stringA[i]!=&#39;\0&#39;;i++){
+           for (int j=0;stringB[j]!=&#39;\0&#39;;j++){
+               if(stringA[i] == stringB[j]){
+                   stringB.erase(j,1);
+               }
+           }
+       }
+        stringB.erase(&#39;\0&#39;);  //delete the last element in the string
+        if(stringB.empty())
+            return true;
+        return false;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;既然漏判了一个原本应该为&amp;quot;false&amp;quot;的情况那么我就加判一个，同样遍历A，当不能在B中找到A的该元素时我就立即返回&amp;quot;false&amp;quot;.一下为通过的代码示例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Same {
+public:
+    bool checkSam(string stringA, string stringB) {
+        // write code here
+        if(stringA.length()!=stringB.length())
+            return false;
+       for(int i=0;stringA[i]!=&#39;\0&#39;;i++){
+           for (int j=0;stringB[j]!=&#39;\0&#39;;j++){
+               if(stringA[i] == stringB[j]){
+                   stringB.erase(j,1);
+                   break;
+               }
+               else if((stringA[i] != stringB[j]) &amp;amp;&amp;amp; (j == stringB.length()-1))
+                   return false;
+           }
+       }
+        stringB.erase(&#39;\0&#39;);
+        if(stringB.empty())
+            return true;
+        return false;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;在看别人的讨论中看到大神们是这么想的，还是一样先从最简单的长度开始比较，然后定义一个存放了256个&amp;quot;0&amp;quot;的新数组，当在遍历的时候将A中的元素和B中的元素逐一进行记录，遇到A中的第n个元素该新定义的的数组的第[A[n]]个&amp;quot;0&amp;quot;自增1，而同样，遇到B的元素时自减1.也就是说若A和B是完全相同的组合数组那么意味着这个新定义的数组始终应该保持“0”的平衡。下面是该方法的代码示例：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
+class Same {
+public:
+    bool checkSam(string stringA, string stringB) {
+        // write code here
+        char count[256]={0};
+        if(stringA.size()!=stringB.size()) return false;
+
+        for(int i=0;i&amp;lt;stringA.size();i++)
+        {
+            count[stringA[i]]++;
+                count[stringB[i]]--;
+        }
+        for(int i=0;i&amp;lt;256;i++)
+            if(count[i]!=0)
+                return false;
+        return true;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我自己的本方法虽然最后运行结果正确但是运行时间相当长，我的正确代码运行时间为70ms而大神的代码只需要1ms。&lt;/p&gt;
+
+&lt;h5&gt;第四题 将字符串中的空格全部替换为&amp;quot;%20&amp;quot;&lt;/h5&gt;
+
+&lt;p&gt;给出的代码格式为:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Replacement {
+public:
+    string replaceSpace(string iniString, int length) {
+        // write code here
+
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;简单的想，首要任务应该就是找找这个字符串里面哪里有空格,哪里有空格就在哪里添加那个&amp;quot;%20&amp;quot;呗。简单的代码示例为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
+class Replacement {
+public:
+    string replaceSpace(string iniString, int length) {
+        // write code here
+        string str;
+        for(int i=0;i&amp;lt;length;i++)
+        {
+            if(iniString[i]==&#39; &#39;)
+            {
+                str+=&quot;%20&quot;;
+            }else
+            {
+                str+=iniString[i];
+            }
+        }
+        return str;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;第五题 压缩字符串&lt;/h5&gt;
+
+&lt;p&gt;利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。&lt;/p&gt;
+
+&lt;p&gt;好吧，一开始没怎么明白看了好几遍输出才知道卧槽根本不存在压缩后面不带数字的情况啊。。。。思路很简单总之就是j的循环在i里面，期间犯了个很大错误导致最后一个元素会打印不出来，原因在于内循环的j也设了不能到字符串最后的条件，来看一下这个判断：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;for(int i=0;i&amp;lt;iniString.length();){
+            for(j=i;j&amp;lt;iniString.length();){
+                if(iniString[i] == iniString[j]){
+                    count++;
+                    j++;
+                }
+                else{
+                       str+=iniString[i];
+                       str+=to_string(count);
+                    count=0;
+                    break;
+                }
+            }
+            i=j;
+        }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我估计之所以不能get到最后的元素可能是因为这样写的后果。。。j到不了字符串最后的&amp;#39;\0&amp;#39;，以至于最后比较的时候没办法&amp;quot;j++&amp;quot;。所以最终通过代码为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Zipper {
+public:
+    string zipString(string iniString) {
+        // write code here
+        string str;
+        int j=0;
+        int count=0;
+        for(int i=0;i&amp;lt;iniString.length();){
+            for(j=i;;){
+                if(iniString[i] == iniString[j]){
+                    count++;
+                    j++;
+                }
+                else{
+                       str+=iniString[i];
+                       str+=to_string(count);
+                    count=0;
+                    break;
+                }
+            }
+            i=j;
+        }
+
+        if(str.length() &amp;gt;= iniString.length())
+            return iniString;
+        return str;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;第六题 像素翻转&lt;/h5&gt;
+
+&lt;p&gt;需要返回一个旋转后的NxN矩阵
+函数样例给出如下：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Transform {
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; transformImage(vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; mat, int n) {
+        // write code here
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;既然不能定义一个新的temp数组可能从替换的角度来思考这个问题更简便一些，首先从矩阵最外围的一圈来看：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;for(int i=0;i&amp;lt;n/2;i++){
+ //... ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;假如说该原始矩阵有单数层那么理应只需要进行(n-1)/2次分层就可以了，比如三层，去掉最外围就只剩下中间的一个元素，应该不动。若是偶数层正好除尽，进行n/2次的处理。那么对于每一层来说有四条边，就在每一层中间做需要做四次的操作：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;for(int i=0;i&amp;lt;n/2;i++){
+    for(int j=i;j&amp;lt;n-1-i;j++){
+        mat[i][j]=mat[n-j-1][i];
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第一次处理第一行的元素，变换后的矩阵第一行由第一列来取代，将内循环的j看作是列的话，那么挨个的元素替换就相当于是将该列最后一个元素[n-0-1][0]替换到了[0][0]的位置，而后以此类推。
+第二次处理应该处理刚刚替换的位置的元素也就是第一列的元素，第一列的元素是被最后一行的元素锁替代，那么代码示例为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;mat[n-j-1][i]=mat[n-i-1][n-j-1];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;也就是说第一列最后一个元素[n-0-1][0]被替换成了[n-0-1][n-0-1]也就是最后一行的最后一个元素了，以此类推。
+继续第三次是把刚刚替换了第一列的元素，也就是原矩阵最后一行的元素进行处理，换成原矩阵的最后一列元素。最后将原矩阵第一行的元素放入原矩阵最后一列的元素，第一层就替换完毕了。
+最后完整代码示例为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Transform {
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; transformImage(vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; mat, int n) {
+    // write code here
+    int temp;
+    for(int i=0;i&amp;lt;n/2;i++){
+      for(int j=i;j&amp;lt;n-1-i;j++){
+          temp = mat[i][j];
+          mat[i][j]=mat[n-j-1][i];
+          mat[n-j-1][i]=mat[n-i-1][n-j-1];
+          mat[n-i-1][n-j-1]=mat[j][n-i-1];
+          mat[j][n-i-1]=temp;
+      }
+  }
+    return mat;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h5&gt;第七题  清除矩阵中整行整列&lt;/h5&gt;
+
+&lt;p&gt;还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;class Clearer {
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; clearZero(vector&amp;lt;vector&amp;lt;int&amp;gt; &amp;gt; mat, int n) {
+        // write code here
+        //vector&amp;lt;int&amp;gt; row(n,1),column(n,1);
+        int row[n],column[n];
+        for(int i=0;i&amp;lt;n;i++){
+            row[i]=0;
+            column[i]=0;
+        }
+        for(int i=0;i&amp;lt;n;i++){
+            for(int j=0;j&amp;lt;n;j++){
+                if(mat[i][j] == 0){
+                    row[i]=1;
+                    column[j]=1;
+                }
+            }
+        }
+        for(int i=0;i&amp;lt;n;i++){
+            for(int j=0;j&amp;lt;n;j++){
+                if(row[i]==1 || column[j]==1){
+                    mat[i][j]=0;
+                }
+            }
+        }
+        return mat;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Sat, 23 Jan 2016 00:00:00 +0000</pubDate>
+        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</guid>
+        
+        
+        <category>学习</category>
+        
+      </item>
+    
+      <item>
+        <title>若是我送你走、会怎样</title>
+        <description>&lt;p&gt;或许这是一种想念式的道歉：这辈子不会有人叫我&amp;quot;媳妇&amp;quot;了&lt;/p&gt;
+
+&lt;p&gt;如果等到送你走的那天 我希望给你写这么一句话 &lt;/p&gt;
+
+&lt;h4&gt;&amp;quot;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般 、&lt;/h4&gt;
+
+&lt;h4&gt;最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般&amp;quot;&lt;/h4&gt;
+
+&lt;p&gt;明信片我还留着 你没能去的地方 我想有时间替你去看看&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Nov 2015 22:10:18 +0000</pubDate>
+        <link>http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</guid>
+        
+        
+        <category>生活笔记</category>
+        
+      </item>
     
       <item>
         <title>我跟生活失了次恋</title>
-        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;&lt;br   /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;section&quot;&gt;“希望困得时候 有 大段的时间可以睡觉		寂寞的时候 知道你在爱我”&lt;/h3&gt;
+&lt;h3&gt;“希望困得时候 有 大段的时间可以睡觉       寂寞的时候 知道你在爱我”&lt;/h3&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br   /&gt;&lt;/p&gt;
 
-&lt;p&gt;我开始想了想其实这并不算一个很最近的发生的事情 有一天 我遇见了一个诉衷肠的孩子 哭哭啼啼 我们一起在路边坐下 就是那种背后能感到杂草丛生扎在背上的马路墩上 那时候是春天 太阳已经晒得我睁不开眼睛 我背上的汗正如他眼里的泪一样 大滴大滴流下来 “一个人太孤零零的了”他说 太软弱了 我起身拍拍灰 一点也不想掺和儿女情长 这不是高冷的我应该干的事情&lt;/p&gt;
+&lt;p&gt;我开始想了想其实这并不算一个很最近的发生的事情 有一天 我遇见了一个诉衷肠的孩子 哭哭啼啼 我们一起在路边坐下 就是那种背后能感到杂草丛生扎在背上的马路墩上 那时候是春天 太阳已经晒得我睁不开眼睛 我背上的汗正如他眼里的泪一样 大滴大滴流下来 “一个人太孤零零的了”他说 太软弱了 我起身拍拍灰 一点也不想掺和儿女情长 这不是高冷的我应该干的事情 &lt;/p&gt;
 
-&lt;p&gt;他执着的跟着我 汗淋湿我的衬衫 湿哒哒的粘在身上 他也是 伴随着一刻不停的念念叨叨 竟然有一刻我突然喜欢上了这种纯粹而又真实的表达方式 比平时打电话听微信的语音都来得更加带劲&lt;/p&gt;
+&lt;p&gt;他执着的跟着我 汗淋湿我的衬衫 湿哒哒的粘在身上 他也是 伴随着一刻不停的念念叨叨 竟然有一刻我突然喜欢上了这种纯粹而又真实的表达方式 比平时打电话听微信的语音都来得更加带劲 &lt;/p&gt;
 
 &lt;p&gt;“我好想回到最开始”哭泣停滞 
 一下子很烦躁 听惯了别人嘴里的你还年轻 其实 早已到了有过去的年纪&lt;/p&gt;
@@ -43,12 +359,11 @@
 
 &lt;p&gt;没有什么最开始可以让我们回去 过去打下的是烙印 现在的脚步永远追随着将来的希望和美好&lt;/p&gt;
 
-&lt;h3 id=&quot;a-chance-of-sunshine--&quot;&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/h3&gt;
-
+&lt;h3&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/h3&gt;
 </description>
         <pubDate>Sun, 08 Nov 2015 19:18:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</guid>
         
         
         <category>生活笔记</category>
@@ -56,30 +371,11 @@
       </item>
     
       <item>
-        <title>若是我送你走、会怎样</title>
-        <description>
-&lt;p&gt;或许这是一种想念式的道歉：这辈子不会有人叫我”媳妇”了&lt;/p&gt;
-
-&lt;p&gt;如果等到送你走的那天 我希望给你写这么一句话&lt;/p&gt;
-
-&lt;h4 id=&quot;section&quot;&gt;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般&lt;/h4&gt;
-&lt;p&gt;####最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般&lt;/p&gt;
-
-&lt;p&gt;明信片我还留着 你没能去的地方 我想有时间替你去看看&lt;/p&gt;
-</description>
-        <pubDate>Sat, 07 Nov 2015 00:00:00 +0000</pubDate>
-        <link>http://yourdomain.com/2015/11/07/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/2015/11/07/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</guid>
-        
-        
-      </item>
-    
-      <item>
         <title>怎样很麻烦的开始做一个个人博客~jekyll</title>
-        <description>&lt;p&gt;有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然…不想做的更不来浪费时间 我只是单纯的想…以后的我不要忘了这个漫长的流程&lt;/p&gt;
+        <description>&lt;p&gt;有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然...不想做的更不来浪费时间 我只是单纯的想...以后的我不要忘了这个漫长的流程&lt;/p&gt;
 
-&lt;p&gt;首先 你要有一个充足的时间 比如…一个空闲的下午茶时间
-其次 你需要有一个Github账号或者、你有一个已购买的注册域名 一个主机服务器等等…&lt;/p&gt;
+&lt;p&gt;首先 你要有一个充足的时间 比如...一个空闲的下午茶时间
+其次 你需要有一个Github账号或者、你有一个已购买的注册域名 一个主机服务器等等...&lt;/p&gt;
 
 &lt;p&gt;你应该是不会有那些的&lt;/p&gt;
 
@@ -90,48 +386,34 @@ Jekyll是什么我也不知道 具体请去&lt;a href=&quot;https://jekyllrb.com
 你需要打开一个黑色背景的小窗口 它叫‘Terminal’ 也许在你的电脑上它已经改名叫‘iTerm’了&lt;/p&gt;
 
 &lt;p&gt;第一步 安装jekyll&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt; gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;必要时候请 ‘sudo’&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
- sudo gem install jekyll
-&lt;/code&gt;&lt;/p&gt;
-
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt; sudo gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;第二步 新建一个jekyll博客&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-jekyll new my-new-blog
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;第三步…&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;jekyll new my-new-blog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第三步...&lt;/p&gt;
 
 &lt;p&gt;请到你的新建博客下&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-cd ~/PATH/my-new-blog/
-&lt;/code&gt;
-第四步 开启jekyll server&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-jekyll server --watch
-&lt;/code&gt;
-不要打小鼓默默碎碎念为什么要加watch 我也不知道…&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;cd ~/PATH/my-new-blog/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;第四步 开启jekyll server&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;jekyll server --watch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;不要打小鼓默默碎碎念为什么要加watch 我也不知道...&lt;/p&gt;
 
 &lt;p&gt;不加watch在编辑中会有莫名的假bug让你误以为自己总是写错 其实可能只是你需要重新 ‘ctrl+c’ 再 ‘jekyll server’重新开启一下&lt;/p&gt;
 
-&lt;p&gt;接着你就能在浏览器中的’localhost:4000’看到你的页面了 应该跟下面一样&lt;/p&gt;
+&lt;p&gt;接着你就能在浏览器中的&amp;#39;localhost:4000&amp;#39;看到你的页面了 应该跟下面一样&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/1.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;然后嘛…我们要来先看一下刚刚我们 ‘new’ 的这个jeyll文件夹里面有什么 
+&lt;p&gt;然后嘛...我们要来先看一下刚刚我们 ‘new’ 的这个jeyll文件夹里面有什么 
 下面这个就是你的文件夹&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;├── _config.yml
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;
+├── _config.yml
 ├── _includes
 |   ├── footer.html
 |   └── header.html
@@ -152,85 +434,77 @@ jekyll server --watch
 |   ├── main.scss
 ├── _site
 ├── feed.xml
-└── index.html&lt;/p&gt;
+└── index.html
 
-&lt;p&gt;```
-好，我们先来看一下最基本的‘.yml’配置文件 在这个configuration文件中包含了网页的基本信息 诸如你的网页名称之类的 其中 ‘baseurl’这一项需要特别注意 最后我们上传到Github page上面需要特别注意这一项的设置 在本地时我们不要做修改 将 ‘baseurl’这一项保持&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;好，我们先来看一下最基本的‘.yml’配置文件 在这个configuration文件中包含了网页的基本信息 诸如你的网页名称之类的 其中 ‘baseurl’这一项需要特别注意 最后我们上传到Github page上面需要特别注意这一项的设置 在本地时我们不要做修改 将 ‘baseurl’这一项保持&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;baseurl=&quot;&quot;
 
-&lt;p&gt;```
-baseurl=””&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;jekyll默认的用liquid template来定义网页界面
-我们来看第二和第三个子文件夹  ‘ _includes’ 和 ’ _layout‘ 在’_includes‘中的三个’html‘文件被分别引用安排在页面的不同位置 ‘_layout’中的’html’文件就是用来定义这些界面安排的&lt;/p&gt;
+我们来看第二和第三个子文件夹  ‘ &lt;em&gt;includes’ 和 ’ _layout‘ 在’&lt;/em&gt;includes‘中的三个’html‘文件被分别引用安排在页面的不同位置 &amp;#39;_layout&amp;#39;中的&amp;#39;html&amp;#39;文件就是用来定义这些界面安排的&lt;/p&gt;
 
-&lt;p&gt;接下来你所看到的这个文件夹’ _posts’就是存放所有博客的地方 jekyll用markdown文件来让你专注于写作这件事情 所有在’ _posts’文件夹中的文件都以markdown文件形式存在 而对于你来说 写博客只需要将文字简单的输入完成思想到文字形式的转换就可以了 推荐一个Mac上我比较常用的markdown文本编辑器 &lt;a href=&quot;http://25.io/mou/&quot;&gt;‘Mou’&lt;/a&gt; 当然markdown编辑器还有很多 或许你平时已经习惯于用文本编辑器来写代码 sublime vim也可以作为写博客的好手 只要你去认真搜索一下相关的插件&lt;/p&gt;
+&lt;p&gt;接下来你所看到的这个文件夹&amp;#39; _posts&amp;#39;就是存放所有博客的地方 jekyll用markdown文件来让你专注于写作这件事情 所有在&amp;#39; _posts&amp;#39;文件夹中的文件都以markdown文件形式存在 而对于你来说 写博客只需要将文字简单的输入完成思想到文字形式的转换就可以了 推荐一个Mac上我比较常用的markdown文本编辑器 &lt;a href=&quot;http://25.io/mou/&quot;&gt;&amp;#39;Mou&amp;#39;&lt;/a&gt; 当然markdown编辑器还有很多 或许你平时已经习惯于用文本编辑器来写代码 sublime vim也可以作为写博客的好手 只要你去认真搜索一下相关的插件 &lt;/p&gt;
 
-&lt;p&gt;最后对于这个本地正常运行的静态文件博客 你需要做的也就是添添补补把显示页面变成你喜欢的样子 这些你将以修改’ _sass‘和 ‘_includes’文件夹中的文件来完成 如果你暂时还没有什么做网页的经验那么CSS也就无关紧要了 五搜索一下你想要的页面Template吧 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;这里&lt;/a&gt;有很多别人做好的主题可供下载直接使用&lt;/p&gt;
+&lt;p&gt;最后对于这个本地正常运行的静态文件博客 你需要做的也就是添添补补把显示页面变成你喜欢的样子 这些你将以修改’ &lt;em&gt;sass‘和 &amp;#39;&lt;/em&gt;includes&amp;#39;文件夹中的文件来完成 如果你暂时还没有什么做网页的经验那么CSS也就无关紧要了 五搜索一下你想要的页面Template吧 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;这里&lt;/a&gt;有很多别人做好的主题可供下载直接使用&lt;/p&gt;
 
 &lt;p&gt;当然 除了很多ruby的插件可以让你的博客完成更多的事情以外 原生的jekyll也提供了一些基本的功能 诸如页面分页pagetination&lt;/p&gt;
 
 &lt;p&gt;pagetination的具体官方文档可以在&lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot;&gt;这里&lt;/a&gt;
-用法相当简单 这是一个可以让你的’index‘主页分页显示你的博客 这时我们需要打开configuration文件也就是开头所讲的 ‘ _config.yml’文件 在该文件后面加上：&lt;/p&gt;
-
-&lt;p&gt;```
-gems: [jekyll-paginate]
+用法相当简单 这是一个可以让你的’index‘主页分页显示你的博客 这时我们需要打开configuration文件也就是开头所讲的 &amp;#39; _config.yml&amp;#39;文件 在该文件后面加上：&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-&quot; data-lang=&quot;&quot;&gt;gems: [jekyll-paginate]
 paginate: 5
-paginate_path: “/blog/page:num/”&lt;/p&gt;
+paginate_path: &quot;/blog/page:num/&quot;
 
-&lt;p&gt;```&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里面 &amp;#39;paginate: 5&amp;#39;代表了每页显示5个博客 接下来paginate会自行generate出第二页第三页...直到你&amp;#39; &lt;em&gt;posts &amp;#39; 文件中的最后一个博客 而所设定的路径也就是 &amp;#39; paginate&lt;/em&gt;path &amp;#39;就是生成的第二页第三页的URL地址&lt;/p&gt;
 
-&lt;p&gt;这里面 ‘paginate: 5’代表了每页显示5个博客 接下来paginate会自行generate出第二页第三页…直到你’ _posts ‘ 文件中的最后一个博客 而所设定的路径也就是 ‘ paginate_path ‘就是生成的第二页第三页的URL地址&lt;/p&gt;
+&lt;p&gt;接下来你会需要这些代码放在你的&amp;#39;index.html&amp;#39;文件中以便看到paginate的效果&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;
 
-&lt;p&gt;接下来你会需要这些代码放在你的’index.html’文件中以便看到paginate的效果&lt;/p&gt;
-
-&lt;p&gt;```html&lt;/p&gt;
-
-&lt;p&gt;{% if paginator.total_pages &amp;gt; 1 %}&lt;/p&gt;
-&lt;div class=&quot;pagination&quot;&gt;
+{% if paginator.total_pages &amp;gt; 1 %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
   {% if paginator.previous_page %}
-    &lt;a href=&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;&amp;laquo; Prev&lt;/a&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;ni&quot;&gt;&amp;amp;laquo;&lt;/span&gt; Prev&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
   {% else %}
-    &lt;span&gt;&amp;laquo; Prev&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;&lt;span class=&quot;ni&quot;&gt;&amp;amp;laquo;&lt;/span&gt; Prev&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
     {% if page == paginator.page %}
-      &lt;em&gt;{{ page }}&lt;/em&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;em&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/em&amp;gt;&lt;/span&gt;
     {% elsif page == 1 %}
-      &lt;a href=&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;{{ page }}&lt;/a&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
     {% else %}
-      &lt;a href=&quot;{{ site.paginate_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; | replace: &#39;:num&#39;, page }}&quot;&gt;{{ page }}&lt;/a&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.paginate_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; | replace: &#39;:num&#39;, page }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;{{ page }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
     {% endif %}
   {% endfor %}
 
   {% if paginator.next_page %}
-    &lt;a href=&quot;{{ paginator.next_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;Next &amp;raquo;&lt;/a&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ paginator.next_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next &lt;span class=&quot;ni&quot;&gt;&amp;amp;raquo;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
   {% else %}
-    &lt;span&gt;Next &amp;raquo;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&amp;gt;&lt;/span&gt;Next &lt;span class=&quot;ni&quot;&gt;&amp;amp;raquo;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
   {% endif %}
-&lt;/div&gt;
-&lt;p&gt;{% endif %}&lt;/p&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+{% endif %}
 
-&lt;p&gt;```&lt;/p&gt;
 
-&lt;p&gt;以上这些都能在上面的官方文档链接中找到 虽然默认的可能不符合你的审美 但是基本实现了翻页的功能&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以上这些都能在上面的官方文档链接中找到 虽然默认的可能不符合你的审美 但是基本实现了翻页的功能 &lt;/p&gt;
 
-&lt;p&gt;接下来就可以开始上传到你的Github page上 当然你确实需要一个Github账号 新建一个repository 创建一个新的Github page&lt;/p&gt;
+&lt;p&gt;接下来就可以开始上传到你的Github page上 当然你确实需要一个Github账号 新建一个repository 创建一个新的Github page &lt;/p&gt;
 
-&lt;p&gt;重新打开你的’ _config.yml’ 文件将原来空的baseurl换成 ‘ /新建的Github repository地址名字/ ‘ 比如你的Github page的URL为 ‘YOUR_NAMW.github.io/PAGE_NAME/’ 那么你的baseurl在这里就应该是 ’ /PAGE_NAME/‘&lt;/p&gt;
+&lt;p&gt;重新打开你的&amp;#39; &lt;em&gt;config.yml&amp;#39; 文件将原来空的baseurl换成 &amp;#39; /新建的Github repository地址名字/ &amp;#39; 比如你的Github page的URL为 ‘YOUR&lt;/em&gt;NAMW.github.io/PAGE&lt;em&gt;NAME/’ 那么你的baseurl在这里就应该是 ’ /PAGE&lt;/em&gt;NAME/‘&lt;/p&gt;
 
 &lt;p&gt;将本地的文件上传到你的Github上之后 一切似乎就差不多准备就绪了&lt;/p&gt;
 
-&lt;p&gt;最后你就可以开始专注于你的博客了….&lt;/p&gt;
+&lt;p&gt;最后你就可以开始专注于你的博客了....&lt;/p&gt;
 
-&lt;p&gt;好吧、我承认这样实在是太麻烦了 但是…万一你也很感兴趣想做一个可以去看一下 反正也花不了太长的时间&lt;/p&gt;
-
+&lt;p&gt;好吧、我承认这样实在是太麻烦了 但是...万一你也很感兴趣想做一个可以去看一下 反正也花不了太长的时间&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Nov 2015 20:39:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</guid>
         
         
         <category>学习</category>
@@ -239,36 +513,40 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
     
       <item>
         <title>Summary on WEEK8</title>
-        <description>&lt;h1 id=&quot;summary-for-week8&quot;&gt;Summary for WEEK8&lt;/h1&gt;
-&lt;p&gt;##Hardware Side
-The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
+        <description>&lt;h1&gt;Summary for WEEK8&lt;/h1&gt;
+
+&lt;h2&gt;Hardware Side&lt;/h2&gt;
+
+&lt;p&gt;The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
 The basic design in draft is presented below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.17.31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.17.31.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.&lt;/p&gt;
 
-&lt;h5 id=&quot;the-printing-3d-box&quot;&gt;The printing 3D box&lt;/h5&gt;
+&lt;h5&gt;The printing 3D box&lt;/h5&gt;
+
 &lt;p&gt;There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
 The design thinking of this modular sensor node had been changed a lot in terms of the usability and different senarios. The image below shows the brief magenetic connection between each identical sensor boxes which could stack together.&lt;/p&gt;
 
-&lt;h2 id=&quot;software-side&quot;&gt;Software Side&lt;/h2&gt;
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
 &lt;p&gt;The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.32.57.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.32.57.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The things are to be working on following weeks:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The dissertation writting&lt;/li&gt;
-  &lt;li&gt;The further development of software side for the HTTP RESTful server&lt;/li&gt;
-  &lt;li&gt;The hardware design is finished for complating the MSc project&lt;/li&gt;
-  &lt;li&gt;For the company, the hardware design needs to be continued with more researches on voltage regulators and finish the PCB routing.&lt;/li&gt;
+&lt;li&gt;The dissertation writting&lt;/li&gt;
+&lt;li&gt;The further development of software side for the HTTP RESTful server&lt;/li&gt;
+&lt;li&gt;The hardware design is finished for complating the MSc project&lt;/li&gt;
+&lt;li&gt;For the company, the hardware design needs to be continued with more researches on voltage regulators and finish the PCB routing.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 11:07:34 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/13/week8.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/13/week8.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</guid>
         
         
         <category>毕设Archive</category>
@@ -277,20 +555,21 @@ The design thinking of this modular sensor node had been changed a lot in terms 
     
       <item>
         <title>Summary on WEEK6</title>
-        <description>&lt;h1 id=&quot;summary-for-week6&quot;&gt;Summary for WEEK6&lt;/h1&gt;
-&lt;p&gt;##Software Side
-Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The “LEGO” design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
-The software side didn’t go well because of not succeeding on streaming the data like a “server awareness” system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
+        <description>&lt;h1&gt;Summary for WEEK6&lt;/h1&gt;
+
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
+&lt;p&gt;Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The &amp;quot;LEGO&amp;quot; design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
+The software side didn&amp;#39;t go well because of not succeeding on streaming the data like a &amp;quot;server awareness&amp;quot; system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
 The difficulty was mainly the data model, the design is basically as shown below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 16.29.16.png//&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2016.29.16.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users’ authetication information would be added on top of this.&lt;/p&gt;
-
+&lt;p&gt;Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users&amp;#39; authetication information would be added on top of this.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 11:07:34 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/13/week6.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/13/week6.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</guid>
         
         
         <category>毕设Archive</category>
@@ -299,34 +578,37 @@ The difficulty was mainly the data model, the design is basically as shown below
     
       <item>
         <title>Summary on WEEK5</title>
-        <description>&lt;h1 id=&quot;summary-for-week5&quot;&gt;Summary for WEEK5&lt;/h1&gt;
-&lt;p&gt;##Hardware Side
-Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.&lt;/p&gt;
+        <description>&lt;h1&gt;Summary for WEEK5&lt;/h1&gt;
 
-&lt;h2 id=&quot;software-side&quot;&gt;Software Side&lt;/h2&gt;
-&lt;p&gt;For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the “smart city” under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.&lt;/p&gt;
+&lt;h2&gt;Hardware Side&lt;/h2&gt;
+
+&lt;p&gt;Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.&lt;/p&gt;
+
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
+&lt;p&gt;For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &amp;quot;smart city&amp;quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.&lt;/p&gt;
 
 &lt;p&gt;Thus, the important bits are to be done next weeks are:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Hardware side:
-    &lt;ul&gt;
-      &lt;li&gt;Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)&lt;/li&gt;
-      &lt;li&gt;Soldering the PCb if arrived&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Software Side:
-    &lt;ul&gt;
-      &lt;li&gt;More research on how normally the data is sent to the server more&lt;/li&gt;
-      &lt;li&gt;Understanding the make the comparisons between different framework regarding restful (Express, restify)&lt;/li&gt;
-      &lt;li&gt;Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
+&lt;li&gt;Hardware side:
+
+&lt;ul&gt;
+&lt;li&gt;Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)&lt;/li&gt;
+&lt;li&gt;Soldering the PCb if arrived&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Software Side:
+
+&lt;ul&gt;
+&lt;li&gt;More research on how normally the data is sent to the server more&lt;/li&gt;
+&lt;li&gt;Understanding the make the comparisons between different framework regarding restful (Express, restify)&lt;/li&gt;
+&lt;li&gt;Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 03 Jul 2015 12:52:34 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/03/week5.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/07/03/week5.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</guid>
         
         
         <category>毕设Archive</category>
@@ -335,50 +617,50 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
     
       <item>
         <title>Summary on WEEK4</title>
-        <description>&lt;h1 id=&quot;summary-for-week-4&quot;&gt;Summary For WEEK 4&lt;/h1&gt;
+        <description>&lt;h1&gt;Summary For WEEK 4&lt;/h1&gt;
 
 &lt;p&gt;This week, the Moteino experiment was succeed transferring data through rfm69 offered by HOPERF within a small range, and data could be uploaded to web server provided by Nquiringminds with the driver developed for each different sensor. Followingly, the main tasks are experimenting the PCB previously designed on the breadboard and print the PCB for further testing. The MCU and RF module are to be changed through more research regarding different application solutions. It is believed the design of PCB should be fairly quick after the basic PCB design is succeed.&lt;/p&gt;
 
 &lt;p&gt;The report is to be started with background and literature review, here are something occured that could be involved in the report.&lt;/p&gt;
 
-&lt;h5 id=&quot;what-could-possibly-go-in-background&quot;&gt;What could possibly go in Background&lt;/h5&gt;
+&lt;h5&gt;What could possibly go in Background&lt;/h5&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;General IOT background for generic purpose&lt;/li&gt;
-  &lt;li&gt;mode detailed proposals for IOT nodes in terms of the hardware issues&lt;/li&gt;
-  &lt;li&gt;In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized&lt;/li&gt;
+&lt;li&gt;General IOT background for generic purpose&lt;/li&gt;
+&lt;li&gt;mode detailed proposals for IOT nodes in terms of the hardware issues&lt;/li&gt;
+&lt;li&gt;In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;what-could-be-in-literature-review&quot;&gt;what could be in literature review&lt;/h5&gt;
+&lt;h5&gt;what could be in literature review&lt;/h5&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The exising solutions like Arduino, Moteino&lt;/li&gt;
-  &lt;li&gt;the comparisons between each MCUs solutions&lt;/li&gt;
-  &lt;li&gt;the comparisons between each RF modules solutions&lt;/li&gt;
-  &lt;li&gt;what problem solved
-    &lt;ul&gt;
-      &lt;li&gt;modularization&lt;/li&gt;
-      &lt;li&gt;price/size optimizaton&lt;/li&gt;
-      &lt;li&gt;secure authentication&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;the comparisons between different connection: SPI, I2C, UART&lt;/li&gt;
-  &lt;li&gt;the comparisons between each different solution of secure the MCU node&lt;/li&gt;
-  &lt;li&gt;any modulazed solutions like little bits but not price optimized&lt;/li&gt;
+&lt;li&gt;The exising solutions like Arduino, Moteino&lt;/li&gt;
+&lt;li&gt;the comparisons between each MCUs solutions&lt;/li&gt;
+&lt;li&gt;the comparisons between each RF modules solutions &lt;/li&gt;
+&lt;li&gt;&lt;p&gt;what problem solved&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;modularization&lt;/li&gt;
+&lt;li&gt;price/size optimizaton&lt;/li&gt;
+&lt;li&gt;secure authentication&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the comparisons between different connection: SPI, I2C, UART&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the comparisons between each different solution of secure the MCU node&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;any modulazed solutions like little bits but not price optimized&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;thus-the-certain-things-are-to-be-done-in-the-following-week&quot;&gt;Thus, the certain things are to be done in the following week:&lt;/h4&gt;
+&lt;h4&gt;Thus, the certain things are to be done in the following week:&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;continue on designing the PCB in order to finish the project&lt;/li&gt;
-  &lt;li&gt;Testing the design see if it could be successful&lt;/li&gt;
-  &lt;li&gt;try to build the simple data upload server based on previous CMS system which was developed from the basic blog system&lt;/li&gt;
-  &lt;li&gt;The literature review and background should be drafted before Wednesday in terms of the report&lt;/li&gt;
+&lt;li&gt;continue on designing the PCB in order to finish the project&lt;/li&gt;
+&lt;li&gt;Testing the design see if it could be successful&lt;/li&gt;
+&lt;li&gt;try to build the simple data upload server based on previous CMS system which was developed from the basic blog system&lt;/li&gt;
+&lt;li&gt;The literature review and background should be drafted before Wednesday in terms of the report&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 26 Jun 2015 16:52:48 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</guid>
         
         
         <category>毕设Archive</category>
@@ -387,35 +669,36 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
     
       <item>
         <title>Summary on WEEK3</title>
-        <description>&lt;h1 id=&quot;week-3&quot;&gt;Week 3&lt;/h1&gt;
+        <description>&lt;h1&gt;Week 3&lt;/h1&gt;
+
 &lt;p&gt;After researching on the MCU and the HOPErf modules, the initial PCB was produced in 4 days. The MCU selected was the ATmel 328P which is the most popular one on diffrerent Arduino alternative boards. The schematic circuit was pretty much the same as Moteino has, the only difference so far is the RF module which in my design the rfm69hw was basically used while in moteino the rf module was deployed from rf12b.&lt;/p&gt;
 
 &lt;p&gt;It has been a long time being familair with the software Eagle which is to be used for following PCB design as well. The next step would be adding the secure device ATmel produced called ATSHA204A that can be compatible with ATmel mega 328P using now. The original PCB design still need a lot of improvements in order to be price and size optimized for building the sensor nodes. The bootloader for the ATmel mega 328P MCU should also be researched and re-implemented for intergated with intialization of ATSHA204A module.&lt;/p&gt;
 
-&lt;h3 id=&quot;what-have-been-done-on-pcb-initial-design&quot;&gt;What have been done on PCB initial design:&lt;/h3&gt;
-&lt;p&gt;##### The schematic circuit&lt;/p&gt;
+&lt;h3&gt;What have been done on PCB initial design:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-06-18 at 23.28.09.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;h5&gt;The schematic circuit&lt;/h5&gt;
 
-&lt;h5 id=&quot;the-board&quot;&gt;The board:&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-06-18%20at%2023.28.09.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/pictures/Screen Shot 2015-06-21 at 12.13.59.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+&lt;h5&gt;The board:&lt;/h5&gt;
+
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-06-21%20at%2012.13.59.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;In the next two weeks, the following things are to be done hopefully:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Continue working on the “perfect” PCB design in order to fit the flexibility as well as relative price optimization purpose&lt;/li&gt;
-  &lt;li&gt;Research on the secure chip may be used on the PCB ATSHA204A module&lt;/li&gt;
-  &lt;li&gt;Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module&lt;/li&gt;
-  &lt;li&gt;Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
+&lt;li&gt;Continue working on the &amp;quot;perfect&amp;quot; PCB design in order to fit the flexibility as well as relative price optimization purpose&lt;/li&gt;
+&lt;li&gt;Research on the secure chip may be used on the PCB ATSHA204A module&lt;/li&gt;
+&lt;li&gt;Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module&lt;/li&gt;
+&lt;li&gt;Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
 *&lt;/li&gt;
-  &lt;li&gt;Continue working on some nodejs development, transfer the simple blog building to a simple CMS&lt;/li&gt;
+&lt;li&gt;Continue working on some nodejs development, transfer the simple blog building to a simple CMS&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Fri, 19 Jun 2015 23:52:48 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html</guid>
         
         
         <category>毕设Archive</category>
@@ -424,171 +707,33 @@ Finalize the design of sensor node PCB on the basis of saving power and price op
     
       <item>
         <title>Initial Research on MCUs</title>
-        <description>&lt;h1 id=&quot;day1-2&quot;&gt;Day1-2&lt;/h1&gt;
-&lt;p&gt;###Initial Research on MCUs&lt;/p&gt;
+        <description>&lt;h1&gt;Day1-2&lt;/h1&gt;
 
-&lt;p&gt;During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called “busy bee” by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.&lt;/p&gt;
+&lt;h3&gt;Initial Research on MCUs&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Digi-Key Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-      &lt;th&gt;Quantity Available&lt;/th&gt;
-      &lt;th&gt;Factory Stock&lt;/th&gt;
-      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
-      &lt;th&gt;@ qty&lt;/th&gt;
-      &lt;th&gt;Minimum Quantity&lt;/th&gt;
-      &lt;th&gt;Series&lt;/th&gt;
-      &lt;th&gt;Core Processor&lt;/th&gt;
-      &lt;th&gt;Core Size&lt;/th&gt;
-      &lt;th&gt;Speed&lt;/th&gt;
-      &lt;th&gt;Connectivity&lt;/th&gt;
-      &lt;th&gt;Peripherals&lt;/th&gt;
-      &lt;th&gt;Number of I/O&lt;/th&gt;
-      &lt;th&gt;Program Memory Size&lt;/th&gt;
-      &lt;th&gt;Program Memory Type&lt;/th&gt;
-      &lt;th&gt;EEPROM Size&lt;/th&gt;
-      &lt;th&gt;RAM Size&lt;/th&gt;
-      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
-      &lt;th&gt;Data Converters&lt;/th&gt;
-      &lt;th&gt;Oscillator Type&lt;/th&gt;
-      &lt;th&gt;Operating Temperature&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;EFM8BB10F2G-A-QFN20R-ND&lt;/td&gt;
-      &lt;td&gt;EFM8BB10F2G-A-QFN20R&lt;/td&gt;
-      &lt;td&gt;Silicon Labs&lt;/td&gt;
-      &lt;td&gt;IC MCU 2KB 20QFN&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.31361&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;1500&lt;/td&gt;
-      &lt;td&gt;Busy Bee&lt;/td&gt;
-      &lt;td&gt;CIP-51 8051&lt;/td&gt;
-      &lt;td&gt;8-Bit&lt;/td&gt;
-      &lt;td&gt;25MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SMBus, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;16&lt;/td&gt;
-      &lt;td&gt;2KB (2K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;256 x 8&lt;/td&gt;
-      &lt;td&gt;2.2 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;A/D 15x12b&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;EFM8SB10F2G-A-QFN20R-ND&lt;/td&gt;
-      &lt;td&gt;EFM8SB10F2G-A-QFN20R&lt;/td&gt;
-      &lt;td&gt;Silicon Labs&lt;/td&gt;
-      &lt;td&gt;IC MCU 2KB 20QFN&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.47723&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;1500&lt;/td&gt;
-      &lt;td&gt;Sleepy Bee&lt;/td&gt;
-      &lt;td&gt;CIP-51 8051&lt;/td&gt;
-      &lt;td&gt;8-Bit&lt;/td&gt;
-      &lt;td&gt;25MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SMBus, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;16&lt;/td&gt;
-      &lt;td&gt;2KB (2K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;256 x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;A/D 9x12b&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called &amp;quot;busy bee&amp;quot; by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.&lt;/p&gt;
+
+&lt;p&gt;| Digi-Key Part Number    | Manufacturer Part Number | Manufacturer | Description      | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Series     | Core Processor | Core Size | Speed | Connectivity                | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature |
+|-------------------------|--------------------------|--------------|------------------|--------------------|---------------|------------------|-------|------------------|------------|----------------|-----------|-------|-----------------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|
+| EFM8BB10F2G-A-QFN20R-ND | EFM8BB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.31361          | 0     | 1500             | Busy Bee   | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 2.2 V ~ 3.6 V              | A/D 15x12b      | Internal        | -40°C ~ 85°C          |
+| EFM8SB10F2G-A-QFN20R-ND | EFM8SB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.47723          | 0     | 1500             | Sleepy Bee | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 1.8 V ~ 3.6 V              | A/D 9x12b       | Internal        | -40°C ~ 85°C          |&lt;/p&gt;
 
 &lt;p&gt;For MPS4302X based MCUs are normally consume less power as Texas Instrument claims:
 * Active Mode: 220µA at 1MHz, 2.2V
 * Standby Mode: 0.5µA
 * Off Mode: 0.1µA&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-      &lt;th&gt;Quantity Available&lt;/th&gt;
-      &lt;th&gt;Factory Stock&lt;/th&gt;
-      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
-      &lt;th&gt;@ qty&lt;/th&gt;
-      &lt;th&gt;Minimum Quantity&lt;/th&gt;
-      &lt;th&gt;Packaging&lt;/th&gt;
-      &lt;th&gt;Series&lt;/th&gt;
-      &lt;th&gt;Core Processor&lt;/th&gt;
-      &lt;th&gt;Core Size&lt;/th&gt;
-      &lt;th&gt;Speed&lt;/th&gt;
-      &lt;th&gt;Connectivity&lt;/th&gt;
-      &lt;th&gt;Peripherals&lt;/th&gt;
-      &lt;th&gt;Number of I/O&lt;/th&gt;
-      &lt;th&gt;Program Memory Size&lt;/th&gt;
-      &lt;th&gt;Program Memory Type&lt;/th&gt;
-      &lt;th&gt;EEPROM Size&lt;/th&gt;
-      &lt;th&gt;RAM Size&lt;/th&gt;
-      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
-      &lt;th&gt;Data Converters&lt;/th&gt;
-      &lt;th&gt;Oscillator Type&lt;/th&gt;
-      &lt;th&gt;Operating Temperature&lt;/th&gt;
-      &lt;th&gt;Package / Case&lt;/th&gt;
-      &lt;th&gt;Supplier Device Package&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;MSP430G2001IPW14R&lt;/td&gt;
-      &lt;td&gt;Texas Instruments&lt;/td&gt;
-      &lt;td&gt;IC MCU 16BIT 512B FLASH 14TSSOP&lt;/td&gt;
-      &lt;td&gt;2000&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.385&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;2000&lt;/td&gt;
-      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
-      &lt;td&gt;MSP430G2xx&lt;/td&gt;
-      &lt;td&gt;MSP430&lt;/td&gt;
-      &lt;td&gt;16-Bit&lt;/td&gt;
-      &lt;td&gt;16MHz&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;512B (512 x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;128 x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40째C ~ 85째C&lt;/td&gt;
-      &lt;td&gt;14-TSSOP (0.173”, 4.40mm Width)&lt;/td&gt;
-      &lt;td&gt;14-TSSOP&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;| Manufacturer Part Number | Manufacturer      | Description                     | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series     | Core Processor | Core Size | Speed | Connectivity | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case                  | Supplier Device Package |
+|--------------------------|-------------------|---------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|------------|----------------|-----------|-------|--------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|---------------------------------|-------------------------|
+| MSP430G2001IPW14R        | Texas Instruments | IC MCU 16BIT 512B FLASH 14TSSOP | 2000               | 0             | 0.385            | 0     | 2000             | Tape &amp;amp; Reel (TR) | MSP430G2xx | MSP430         | 16-Bit    | 16MHz | -            | Brown-out Detect/Reset, POR, PWM, WDT | 10            | 512B (512 x 8)      | FLASH               | -           | 128 x 8  | 1.8 V ~ 3.6 V              | -               | Internal        | -40째C ~ 85째C        | 14-TSSOP (0.173&amp;quot;, 4.40mm Width) | 14-TSSOP                |&lt;/p&gt;
 
 &lt;p&gt;For general AVR based MCUs, there are three main series manufactured by ATmel, ATtiny, Atmega and XMEGA which corresponding to different purposes. According to the official site, the series ATtiny is mostly designed for building solutions or applications commercially with smaller size and lower power consumption that the supply voltage is only 0.7 Volts. With the promise from Atmel that this tiny size of AVR based MCU has the same performance as those larger ones, this could be a great choice regarding a solution with limitations on scale. It is also mentioned that for this tinyAVR there is no need for external in-circuit which saves more time for a commercial solution to get on sell to market. The cheapest one MCU cost around USD 0.378 in ATtiny4 family (ATTINY4-TSHR).
 The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Active Mode: 200µA at 1MHz and 1.8V&lt;/li&gt;
-  &lt;li&gt;Idle Mode: 25µA at 1MHz and 1.8V&lt;/li&gt;
-  &lt;li&gt;Power-down Mode:  &amp;lt; 0.1µA at 1.8V&lt;/li&gt;
+&lt;li&gt; Active Mode: 200µA at 1MHz and 1.8V &lt;/li&gt;
+&lt;li&gt; Idle Mode: 25µA at 1MHz and 1.8V &lt;/li&gt;
+&lt;li&gt;Power-down Mode:  &amp;lt; 0.1µA at 1.8V&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;ATmega is the series that offers more memories, Pin I/Os and etc. With the featured characteristic on building IOT solutions, the mega version of AVR is typically designed for medical or health systems. This series of AVR based MCUs cost around USD 0.83 for the cheapest ones which have 4KB flash memory. The power consumption is listed below (ATmega48PB/88PB/168PB):
@@ -596,334 +741,45 @@ The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):&lt;/p&gt;
 * Power down Mode: 0.4µA
 * Power-Save Mode: 0.1µA&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Digi-Key Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer&lt;/th&gt;
-      &lt;th&gt;Description&lt;/th&gt;
-      &lt;th&gt;Quantity Available&lt;/th&gt;
-      &lt;th&gt;Factory Stock&lt;/th&gt;
-      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
-      &lt;th&gt;@ qty&lt;/th&gt;
-      &lt;th&gt;Minimum Quantity&lt;/th&gt;
-      &lt;th&gt;Packaging&lt;/th&gt;
-      &lt;th&gt;Series&lt;/th&gt;
-      &lt;th&gt;Core Processor&lt;/th&gt;
-      &lt;th&gt;Core Size&lt;/th&gt;
-      &lt;th&gt;Speed&lt;/th&gt;
-      &lt;th&gt;Connectivity&lt;/th&gt;
-      &lt;th&gt;Peripherals&lt;/th&gt;
-      &lt;th&gt;Number of I/O&lt;/th&gt;
-      &lt;th&gt;Program Memory Size&lt;/th&gt;
-      &lt;th&gt;Program Memory Type&lt;/th&gt;
-      &lt;th&gt;EEPROM Size&lt;/th&gt;
-      &lt;th&gt;RAM Size&lt;/th&gt;
-      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
-      &lt;th&gt;Data Converters&lt;/th&gt;
-      &lt;th&gt;Oscillator Type&lt;/th&gt;
-      &lt;th&gt;Operating Temperature&lt;/th&gt;
-      &lt;th&gt;Package / Case&lt;/th&gt;
-      &lt;th&gt;Supplier Device Package&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ATTINY4-TSHRTR-ND&lt;/td&gt;
-      &lt;td&gt;ATTINY4-TSHR&lt;/td&gt;
-      &lt;td&gt;Atmel&lt;/td&gt;
-      &lt;td&gt;IC MCU 8BIT 512B FLASH SOT23-6&lt;/td&gt;
-      &lt;td&gt;4500&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.378&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;4500&lt;/td&gt;
-      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
-      &lt;td&gt;AVR® ATtiny&lt;/td&gt;
-      &lt;td&gt;AVR&lt;/td&gt;
-      &lt;td&gt;8-Bit&lt;/td&gt;
-      &lt;td&gt;12MHz&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;512B (256 x 16)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;32 x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-      &lt;td&gt;SOT-23-6&lt;/td&gt;
-      &lt;td&gt;SOT-23&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ATMEGA48PB-AURTR-ND&lt;/td&gt;
-      &lt;td&gt;ATMEGA48PB-AUR&lt;/td&gt;
-      &lt;td&gt;Atmel&lt;/td&gt;
-      &lt;td&gt;IC MCU 8BIT 4KB FLASH 32TQFP&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.82884&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;2000&lt;/td&gt;
-      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
-      &lt;td&gt;AVR® ATmega&lt;/td&gt;
-      &lt;td&gt;AVR&lt;/td&gt;
-      &lt;td&gt;8-Bit&lt;/td&gt;
-      &lt;td&gt;20MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;4KB (2K x 16)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;256 x 8&lt;/td&gt;
-      &lt;td&gt;512 x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
-      &lt;td&gt;A/D 8x10b&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-      &lt;td&gt;32-TQFP&lt;/td&gt;
-      &lt;td&gt;32-TQFP (7x7)&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ATMEGA48PB-MURTR-ND&lt;/td&gt;
-      &lt;td&gt;ATMEGA48PB-MUR&lt;/td&gt;
-      &lt;td&gt;Atmel&lt;/td&gt;
-      &lt;td&gt;IC MCU 8BIT 4KB FLASH 32QFN&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.82884&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;6000&lt;/td&gt;
-      &lt;td&gt;Tape &amp;amp; Reel (TR)&lt;/td&gt;
-      &lt;td&gt;AVR® ATmega&lt;/td&gt;
-      &lt;td&gt;AVR&lt;/td&gt;
-      &lt;td&gt;8-Bit&lt;/td&gt;
-      &lt;td&gt;20MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;27&lt;/td&gt;
-      &lt;td&gt;4KB (2K x 16)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;256 x 8&lt;/td&gt;
-      &lt;td&gt;512 x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
-      &lt;td&gt;A/D 8x10b&lt;/td&gt;
-      &lt;td&gt;Internal&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-      &lt;td&gt;32-VFQFN Exposed Pad&lt;/td&gt;
-      &lt;td&gt;32-VFQFN (5x5)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;| Digi-Key Part Number | Manufacturer Part Number | Manufacturer | Description                    | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series      | Core Processor | Core Size | Speed | Connectivity         | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case       | Supplier Device Package |
+|----------------------|--------------------------|--------------|--------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|-------------|----------------|-----------|-------|----------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|----------------------|-------------------------|
+| ATTINY4-TSHRTR-ND    | ATTINY4-TSHR             | Atmel        | IC MCU 8BIT 512B FLASH SOT23-6 | 4500               | 0             | 0.378            | 0     | 4500             | Tape &amp;amp; Reel (TR) | AVR® ATtiny | AVR            | 8-Bit     | 12MHz | -                    | POR, PWM, WDT                         | 4             | 512B (256 x 16)     | FLASH               | -           | 32 x 8   | 1.8 V ~ 5.5 V              | -               | Internal        | -40°C ~ 85°C          | SOT-23-6             | SOT-23                  |
+| ATMEGA48PB-AURTR-ND  | ATMEGA48PB-AUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32TQFP   | 0                  | 0             | 0.82884          | 0     | 2000             | Tape &amp;amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-TQFP              | 32-TQFP (7x7)           |
+| ATMEGA48PB-MURTR-ND  | ATMEGA48PB-MUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32QFN    | 0                  | 0             | 0.82884          | 0     | 6000             | Tape &amp;amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-VFQFN Exposed Pad | 32-VFQFN (5x5)          |&lt;/p&gt;
 
 &lt;p&gt;There are various of ARM cortex-M core types that the cheapest one costs around USD 0.364 which is based on the  core processor cortex-M0 and manufactured by the company called Cypress Semiconductor Corp. Other companies like STMicroelectronics, NXP Semiconductors and Infineon Technologies as well as ATmel also produce MCUs based on Cortex-M0. The detailed table regarding ARM cortex-M0 based MCUs with the cheapest price are listed below:
 Core processor: Cortex-M0/Cortex-M0+
 Internal oscillator&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Manufacturer Part Number&lt;/th&gt;
-      &lt;th&gt;Manufacturer&lt;/th&gt;
-      &lt;th&gt;Power Consumption&lt;/th&gt;
-      &lt;th&gt;Unit Price (USD)&lt;/th&gt;
-      &lt;th&gt;Minimum Quantity&lt;/th&gt;
-      &lt;th&gt;Core Processor&lt;/th&gt;
-      &lt;th&gt;Core Size&lt;/th&gt;
-      &lt;th&gt;Speed&lt;/th&gt;
-      &lt;th&gt;Connectivity&lt;/th&gt;
-      &lt;th&gt;Peripherals&lt;/th&gt;
-      &lt;th&gt;Number of I/O&lt;/th&gt;
-      &lt;th&gt;Program Memory Size&lt;/th&gt;
-      &lt;th&gt;Program Memory Type&lt;/th&gt;
-      &lt;th&gt;EEPROM Size&lt;/th&gt;
-      &lt;th&gt;RAM Size&lt;/th&gt;
-      &lt;th&gt;Voltage - Supply (Vcc/Vdd)&lt;/th&gt;
-      &lt;th&gt;Data Converters&lt;/th&gt;
-      &lt;th&gt;Operating Temperature&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;CY8C4013SXI-400T&lt;/td&gt;
-      &lt;td&gt;Cypress Semiconductor Corp&lt;/td&gt;
-      &lt;td&gt;Lower Power 1.71V to 5.5V operation&lt;/td&gt;
-      &lt;td&gt;0.364&lt;/td&gt;
-      &lt;td&gt;2500&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;16MHz&lt;/td&gt;
-      &lt;td&gt;I²C&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;2K x 8&lt;/td&gt;
-      &lt;td&gt;1.71 V ~ 5.5 V&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;STM32F030F4P6TR&lt;/td&gt;
-      &lt;td&gt;STMicroelectronics&lt;/td&gt;
-      &lt;td&gt;External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V&lt;/td&gt;
-      &lt;td&gt;0.5796&lt;/td&gt;
-      &lt;td&gt;2500&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;48MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;DMA, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;15&lt;/td&gt;
-      &lt;td&gt;16KB (16K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;4K x 8&lt;/td&gt;
-      &lt;td&gt;2.4 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;A/D 11x12b&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;LPC811M001JDH16J&lt;/td&gt;
-      &lt;td&gt;NXP Semiconductors&lt;/td&gt;
-      &lt;td&gt;Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current)&lt;/td&gt;
-      &lt;td&gt;0.644&lt;/td&gt;
-      &lt;td&gt;2500&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;30MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;2K x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;XMC1301T016X0016AAXUMA1&lt;/td&gt;
-      &lt;td&gt;Infineon Technologies&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;0.71172&lt;/td&gt;
-      &lt;td&gt;3000&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;32MHz&lt;/td&gt;
-      &lt;td&gt;I²C, LIN, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, I²S, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;16KB (16K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;16K x 8&lt;/td&gt;
-      &lt;td&gt;1.8 V ~ 5.5 V&lt;/td&gt;
-      &lt;td&gt;A/D 11x12b&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;MKL02Z8VFG4R&lt;/td&gt;
-      &lt;td&gt;Freescale Semiconductor&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;0.741&lt;/td&gt;
-      &lt;td&gt;2500&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;48MHz&lt;/td&gt;
-      &lt;td&gt;I²C, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, LVD, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;14&lt;/td&gt;
-      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;1K x 8&lt;/td&gt;
-      &lt;td&gt;1.71 V ~ 3.6 V&lt;/td&gt;
-      &lt;td&gt;A/D 6x12b&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 105°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;EFM32ZG108F4-QFN24&lt;/td&gt;
-      &lt;td&gt;Silicon Labs&lt;/td&gt;
-      &lt;td&gt;20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode&lt;/td&gt;
-      &lt;td&gt;0.7772&lt;/td&gt;
-      &lt;td&gt;1000&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;24MHz&lt;/td&gt;
-      &lt;td&gt;EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT&lt;/td&gt;
-      &lt;td&gt;17&lt;/td&gt;
-      &lt;td&gt;4KB (4K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;2K x 8&lt;/td&gt;
-      &lt;td&gt;1.85 V ~ 3.8 V&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ATSAMD10C13A-SSUT&lt;/td&gt;
-      &lt;td&gt;Atmel&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
-      &lt;td&gt;0.83375&lt;/td&gt;
-      &lt;td&gt;3000&lt;/td&gt;
-      &lt;td&gt;ARM® Cortex®-M0+&lt;/td&gt;
-      &lt;td&gt;32-Bit&lt;/td&gt;
-      &lt;td&gt;48MHz&lt;/td&gt;
-      &lt;td&gt;I²C, LIN, SPI, UART/USART&lt;/td&gt;
-      &lt;td&gt;Brown-out Detect/Reset, DMA, POR, WDT&lt;/td&gt;
-      &lt;td&gt;12&lt;/td&gt;
-      &lt;td&gt;8KB (8K x 8)&lt;/td&gt;
-      &lt;td&gt;FLASH&lt;/td&gt;
-      &lt;td&gt;-&lt;/td&gt;
-      &lt;td&gt;4K x 8&lt;/td&gt;
-      &lt;td&gt;1.62 V ~ 3.63 V&lt;/td&gt;
-      &lt;td&gt;A/D 5x12b, D/A 1x10b&lt;/td&gt;
-      &lt;td&gt;-40°C ~ 85°C&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;| Manufacturer Part Number | Manufacturer               | Power Consumption                                                                                                                                                                                           | Unit Price (USD) | Minimum Quantity | Core Processor   | Core Size | Speed | Connectivity                                  | Peripherals                                     | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters      | Operating Temperature |
+|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------|------------------|-----------|-------|-----------------------------------------------|-------------------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|----------------------|-----------------------|
+| CY8C4013SXI-400T         | Cypress Semiconductor Corp | Lower Power 1.71V to 5.5V operation                                                                                                                                                                         | 0.364            | 2500             | ARM® Cortex®-M0  | 32-Bit    | 16MHz | I²C                                           | Brown-out Detect/Reset, POR, PWM, WDT           | 5             | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.71 V ~ 5.5 V             | -                    | -40°C ~ 85°C          |
+| STM32F030F4P6TR          | STMicroelectronics         | External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V                                                                                                                                         | 0.5796           | 2500             | ARM® Cortex®-M0  | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | DMA, POR, PWM, WDT                              | 15            | 16KB (16K x 8)      | FLASH               | -           | 4K x 8   | 2.4 V ~ 3.6 V              | A/D 11x12b           | -40°C ~ 85°C          |
+| LPC811M001JDH16J         | NXP Semiconductors         | Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current) | 0.644            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 30MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, POR, PWM, WDT           | 14            | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.8 V ~ 3.6 V              | -                    | -40°C ~ 105°C         |
+| XMC1301T016X0016AAXUMA1  | Infineon Technologies      | -                                                                                                                                                                                                           | 0.71172          | 3000             | ARM® Cortex®-M0  | 32-Bit    | 32MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, I²S, POR, PWM, WDT      | 14            | 16KB (16K x 8)      | FLASH               | -           | 16K x 8  | 1.8 V ~ 5.5 V              | A/D 11x12b           | -40°C ~ 105°C         |
+| MKL02Z8VFG4R             | Freescale Semiconductor    | -                                                                                                                                                                                                           | 0.741            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, LVD, POR, PWM, WDT      | 14            | 8KB (8K x 8)        | FLASH               | -           | 1K x 8   | 1.71 V ~ 3.6 V             | A/D 6x12b            | -40°C ~ 105°C         |
+| EFM32ZG108F4-QFN24       | Silicon Labs               | 20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode                                                                                             | 0.7772           | 1000             | ARM® Cortex®-M0+ | 32-Bit    | 24MHz | EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART | Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT | 17            | 4KB (4K x 8)        | FLASH               | -           | 2K x 8   | 1.85 V ~ 3.8 V             | -                    | -40°C ~ 85°C          |
+| ATSAMD10C13A-SSUT        | Atmel                      |                                                                                                                                                                                                             | 0.83375          | 3000             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, DMA, POR, WDT           | 12            | 8KB (8K x 8)        | FLASH               | -           | 4K x 8   | 1.62 V ~ 3.63 V            | A/D 5x12b, D/A 1x10b | -40°C ~ 85°C          |&lt;/p&gt;
 
 &lt;p&gt;There is an additional one that looked up for which is the Quark X-1000 produced by Intel. This is the SoC chip that is claimed to be the ideal component for Internet Of Things. Here re the features of Quark-X1000.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Frequency:400MHz&lt;/li&gt;
-  &lt;li&gt;Flash: SPI, 2GB&lt;/li&gt;
-  &lt;li&gt;Cache: 16KB&lt;/li&gt;
-  &lt;li&gt;Memory Types: DDR3&lt;/li&gt;
-  &lt;li&gt;Working Temperature: -40°C~85°C&lt;/li&gt;
-  &lt;li&gt;UART: 2&lt;/li&gt;
-  &lt;li&gt;MAX TDP: 2.2W&lt;/li&gt;
-  &lt;li&gt;Customer price: $9.62&lt;/li&gt;
+&lt;li&gt;Frequency:400MHz &lt;/li&gt;
+&lt;li&gt;Flash: SPI, 2GB&lt;/li&gt;
+&lt;li&gt;Cache: 16KB&lt;/li&gt;
+&lt;li&gt;Memory Types: DDR3&lt;/li&gt;
+&lt;li&gt;Working Temperature: -40°C~85°C&lt;/li&gt;
+&lt;li&gt;UART: 2&lt;/li&gt;
+&lt;li&gt;MAX TDP: 2.2W&lt;/li&gt;
+&lt;li&gt;Customer price: $9.62&lt;/li&gt;
 &lt;/ul&gt;
-
 </description>
         <pubDate>Fri, 05 Jun 2015 23:52:48 +0100</pubDate>
-        <link>http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</guid>
+        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html</guid>
         
         
         <category>毕设Archive</category>
-        
-      </item>
-    
-      <item>
-        <title>2014年测试</title>
-        <description>&lt;p&gt;添加paginate 一定要加上 gems: [jekyll-paginate]&lt;/p&gt;
-
-</description>
-        <pubDate>Wed, 05 Nov 2014 15:44:18 +0000</pubDate>
-        <link>http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2014/11/05/2014%E6%B5%8B%E8%AF%95.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/%E5%AD%A6%E4%B9%A0/2014/11/05/2014%E6%B5%8B%E8%AF%95.html</guid>
-        
-        
-        <category>学习</category>
         
       </item>
     

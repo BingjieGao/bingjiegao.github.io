@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CatAmo凉生</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/TempBlogs//css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/TempBlogs//blog/page4/">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://yourdomain.com/TempBlogs//feed.xml">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        <a class="page-link" id="categories" href="/TempBlogs//categories.html">Cate文件夹</a>
+        <a class="page-link" id="list" href="/TempBlogs//list.html">列表</a>
+        
+          
+          <a class="page-link" href="/TempBlogs//about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper" id="mainpage">
+        <div class="home">
+
+  <ul class="post-list" post-cate="All">
+    
+      <li>
+        <span class="post-meta">Jun 5, 2015</span>
+        <div class="post-link">
+        <h1>
+          <a href="/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/05/day-1-2.html">Initial Research on MCUs</a>
+        </h1>
+          <h1>Day1-2</h1>
+
+<h3>Initial Research on MCUs</h3>
+
+<p>During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called &quot;busy bee&quot; by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.</p>
+
+<p>| Digi-Key Part Number    | Manufacturer Part Number | Manufacturer | Description      | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Series     | Core Processor | Core Size | Speed | Connectivity                | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature |
+|-------------------------|--------------------------|--------------|------------------|--------------------|---------------|------------------|-------|------------------|------------|----------------|-----------|-------|-----------------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|
+| EFM8BB10F2G-A-QFN20R-ND | EFM8BB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.31361          | 0     | 1500             | Busy Bee   | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 2.2 V ~ 3.6 V              | A/D 15x12b      | Internal        | -40°C ~ 85°C          |
+| EFM8SB10F2G-A-QFN20R-ND | EFM8SB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.47723          | 0     | 1500             | Sleepy Bee | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 1.8 V ~ 3.6 V              | A/D 9x12b       | Internal        | -40°C ~ 85°C          |</p>
+
+<p>For MPS4302X based MCUs are normally consume less power as Texas Instrument claims:
+* Active Mode: 220µA at 1MHz, 2.2V
+* Standby Mode: 0.5µA
+* Off Mode: 0.1µA</p>
+
+<p>| Manufacturer Part Number | Manufacturer      | Description                     | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series     | Core Processor | Core Size | Speed | Connectivity | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case                  | Supplier Device Package |
+|--------------------------|-------------------|---------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|------------|----------------|-----------|-------|--------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|---------------------------------|-------------------------|
+| MSP430G2001IPW14R        | Texas Instruments | IC MCU 16BIT 512B FLASH 14TSSOP | 2000               | 0             | 0.385            | 0     | 2000             | Tape &amp; Reel (TR) | MSP430G2xx | MSP430         | 16-Bit    | 16MHz | -            | Brown-out Detect/Reset, POR, PWM, WDT | 10            | 512B (512 x 8)      | FLASH               | -           | 128 x 8  | 1.8 V ~ 3.6 V              | -               | Internal        | -40째C ~ 85째C        | 14-TSSOP (0.173&quot;, 4.40mm Width) | 14-TSSOP                |</p>
+
+<p>For general AVR based MCUs, there are three main series manufactured by ATmel, ATtiny, Atmega and XMEGA which corresponding to different purposes. According to the official site, the series ATtiny is mostly designed for building solutions or applications commercially with smaller size and lower power consumption that the supply voltage is only 0.7 Volts. With the promise from Atmel that this tiny size of AVR based MCU has the same performance as those larger ones, this could be a great choice regarding a solution with limitations on scale. It is also mentioned that for this tinyAVR there is no need for external in-circuit which saves more time for a commercial solution to get on sell to market. The cheapest one MCU cost around USD 0.378 in ATtiny4 family (ATTINY4-TSHR).
+The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):</p>
+
+<ul>
+<li> Active Mode: 200µA at 1MHz and 1.8V </li>
+<li> Idle Mode: 25µA at 1MHz and 1.8V </li>
+<li>Power-down Mode:  &lt; 0.1µA at 1.8V</li>
+</ul>
+
+<p>ATmega is the series that offers more memories, Pin I/Os and etc. With the featured characteristic on building IOT solutions, the mega version of AVR is typically designed for medical or health systems. This series of AVR based MCUs cost around USD 0.83 for the cheapest ones which have 4KB flash memory. The power consumption is listed below (ATmega48PB/88PB/168PB):
+* Active Mode: 0.35 mA
+* Power down Mode: 0.4µA
+* Power-Save Mode: 0.1µA</p>
+
+<p>| Digi-Key Part Number | Manufacturer Part Number | Manufacturer | Description                    | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series      | Core Processor | Core Size | Speed | Connectivity         | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case       | Supplier Device Package |
+|----------------------|--------------------------|--------------|--------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|-------------|----------------|-----------|-------|----------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|----------------------|-------------------------|
+| ATTINY4-TSHRTR-ND    | ATTINY4-TSHR             | Atmel        | IC MCU 8BIT 512B FLASH SOT23-6 | 4500               | 0             | 0.378            | 0     | 4500             | Tape &amp; Reel (TR) | AVR® ATtiny | AVR            | 8-Bit     | 12MHz | -                    | POR, PWM, WDT                         | 4             | 512B (256 x 16)     | FLASH               | -           | 32 x 8   | 1.8 V ~ 5.5 V              | -               | Internal        | -40°C ~ 85°C          | SOT-23-6             | SOT-23                  |
+| ATMEGA48PB-AURTR-ND  | ATMEGA48PB-AUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32TQFP   | 0                  | 0             | 0.82884          | 0     | 2000             | Tape &amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-TQFP              | 32-TQFP (7x7)           |
+| ATMEGA48PB-MURTR-ND  | ATMEGA48PB-MUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32QFN    | 0                  | 0             | 0.82884          | 0     | 6000             | Tape &amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-VFQFN Exposed Pad | 32-VFQFN (5x5)          |</p>
+
+<p>There are various of ARM cortex-M core types that the cheapest one costs around USD 0.364 which is based on the  core processor cortex-M0 and manufactured by the company called Cypress Semiconductor Corp. Other companies like STMicroelectronics, NXP Semiconductors and Infineon Technologies as well as ATmel also produce MCUs based on Cortex-M0. The detailed table regarding ARM cortex-M0 based MCUs with the cheapest price are listed below:
+Core processor: Cortex-M0/Cortex-M0+
+Internal oscillator</p>
+
+<p>| Manufacturer Part Number | Manufacturer               | Power Consumption                                                                                                                                                                                           | Unit Price (USD) | Minimum Quantity | Core Processor   | Core Size | Speed | Connectivity                                  | Peripherals                                     | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters      | Operating Temperature |
+|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------|------------------|-----------|-------|-----------------------------------------------|-------------------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|----------------------|-----------------------|
+| CY8C4013SXI-400T         | Cypress Semiconductor Corp | Lower Power 1.71V to 5.5V operation                                                                                                                                                                         | 0.364            | 2500             | ARM® Cortex®-M0  | 32-Bit    | 16MHz | I²C                                           | Brown-out Detect/Reset, POR, PWM, WDT           | 5             | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.71 V ~ 5.5 V             | -                    | -40°C ~ 85°C          |
+| STM32F030F4P6TR          | STMicroelectronics         | External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V                                                                                                                                         | 0.5796           | 2500             | ARM® Cortex®-M0  | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | DMA, POR, PWM, WDT                              | 15            | 16KB (16K x 8)      | FLASH               | -           | 4K x 8   | 2.4 V ~ 3.6 V              | A/D 11x12b           | -40°C ~ 85°C          |
+| LPC811M001JDH16J         | NXP Semiconductors         | Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current) | 0.644            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 30MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, POR, PWM, WDT           | 14            | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.8 V ~ 3.6 V              | -                    | -40°C ~ 105°C         |
+| XMC1301T016X0016AAXUMA1  | Infineon Technologies      | -                                                                                                                                                                                                           | 0.71172          | 3000             | ARM® Cortex®-M0  | 32-Bit    | 32MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, I²S, POR, PWM, WDT      | 14            | 16KB (16K x 8)      | FLASH               | -           | 16K x 8  | 1.8 V ~ 5.5 V              | A/D 11x12b           | -40°C ~ 105°C         |
+| MKL02Z8VFG4R             | Freescale Semiconductor    | -                                                                                                                                                                                                           | 0.741            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, LVD, POR, PWM, WDT      | 14            | 8KB (8K x 8)        | FLASH               | -           | 1K x 8   | 1.71 V ~ 3.6 V             | A/D 6x12b            | -40°C ~ 105°C         |
+| EFM32ZG108F4-QFN24       | Silicon Labs               | 20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode                                                                                             | 0.7772           | 1000             | ARM® Cortex®-M0+ | 32-Bit    | 24MHz | EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART | Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT | 17            | 4KB (4K x 8)        | FLASH               | -           | 2K x 8   | 1.85 V ~ 3.8 V             | -                    | -40°C ~ 85°C          |
+| ATSAMD10C13A-SSUT        | Atmel                      |                                                                                                                                                                                                             | 0.83375          | 3000             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, DMA, POR, WDT           | 12            | 8KB (8K x 8)        | FLASH               | -           | 4K x 8   | 1.62 V ~ 3.63 V            | A/D 5x12b, D/A 1x10b | -40°C ~ 85°C          |</p>
+
+<p>There is an additional one that looked up for which is the Quark X-1000 produced by Intel. This is the SoC chip that is claimed to be the ideal component for Internet Of Things. Here re the features of Quark-X1000.</p>
+
+<ul>
+<li>Frequency:400MHz </li>
+<li>Flash: SPI, 2GB</li>
+<li>Cache: 16KB</li>
+<li>Memory Types: DDR3</li>
+<li>Working Temperature: -40°C~85°C</li>
+<li>UART: 2</li>
+<li>MAX TDP: 2.2W</li>
+<li>Customer price: $9.62</li>
+</ul>
+
+        </div>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 5, 2014</span>
+        <div class="post-link">
+        <h1>
+          <a href="/TempBlogs//%E5%AD%A6%E4%B9%A0/2014/11/05/2014%E6%B5%8B%E8%AF%95.html">2014年测试</a>
+        </h1>
+          <p>我只是单纯的想测试一下</p>
+
+        </div>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 5, 2013</span>
+        <div class="post-link">
+        <h1>
+          <a href="/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2013/11/05/2013%E6%B5%8B%E8%AF%95.html">2013年测试</a>
+        </h1>
+          <p><br />
+<br /><br /><br /><br /><br /></p>
+
+<p>别看了、这只是个测试</p>
+
+        </div>
+      </li>
+    
+
+  </ul>
+
+  
+  <div class="pagination">
+    
+    <div class="left-arrow">
+    <a href="/TempBlogs//blog/page3">
+      <i class="fa fa-chevron-left fa-3x"></i> Previous</a>
+    
+    </div>
+
+
+    
+    <!--<span>Next &raquo;</span>-->
+    
+      </div>
+  </div>
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CatAmo凉生</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/jekyll"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">jekyll</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/jekyllrb"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">jekyllrb</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+    <p class="rss-subscribe">subscribe <a href="/TempBlogs//feed.xml">via RSS</a></p>
+
+  </div>
+
+
+
+
+</footer>
+
+
+
+  </body>
+
+</html>

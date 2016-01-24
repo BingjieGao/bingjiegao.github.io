@@ -78,9 +78,10 @@ blockquote {
   color: #77BA9B;
   border-left: 4px solid #afafaf;
   padding-left: 15px;
-  font-size: 18px;
-  letter-spacing: -1px;
-  font-style: italic; }
+  font-family: monospace;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  background-color: whitesmoke; }
   blockquote > :last-child {
     margin-bottom: 0; }
 

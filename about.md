@@ -8,6 +8,6 @@ permalink: /about/
 
 ####职位：Internet developer& Hardware Engineering Designer
 
-####CatAmo Temporary Blog: This is a temporary Blog for CatAmo with jekyll
+####公司: Nquiringminds Ltd. Southampton, UK
 
 

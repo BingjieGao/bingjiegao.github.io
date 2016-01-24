@@ -3,15 +3,15 @@
   <channel>
     <title>CatAmo凉生</title>
     <description></description>
-    <link>http://yourdomain.com/TempBlogs//</link>
-    <atom:link href="http://yourdomain.com/TempBlogs//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jan 2016 22:12:23 +0000</pubDate>
-    <lastBuildDate>Sun, 24 Jan 2016 22:12:23 +0000</lastBuildDate>
+    <link>http://catamo10.github.io/TempBlogs//TempBlogs//</link>
+    <atom:link href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 24 Jan 2016 23:00:42 +0000</pubDate>
+    <lastBuildDate>Sun, 24 Jan 2016 23:00:42 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
         <title>程序员面试金典Chapter2</title>
-        <description>&lt;p&gt;###第一题 输出链表中的倒数第n个结点&lt;/p&gt;
+        <description>&lt;h3&gt;第一题 输出链表中的倒数第n个结点&lt;/h3&gt;
 
 &lt;p&gt;给出的结构体为：&lt;/p&gt;
 
@@ -51,8 +51,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第二题  删除单向链表中的一个节点
-我觉得删除节点分两步，一个是删除单向链表中上一个只想该节点的链接和该节点指向下一个节点的链接，而变成第n-1个节点-&amp;gt;next指向原先的n+1个节点。第二步就是当删除了链接并不代表当前删除的节点不占用内存空间，所以就要free这个空间。下面是通过的代码示例：&lt;/p&gt;
+&lt;h3&gt;第二题  删除单向链表中的一个节点&lt;/h3&gt;
+
+&lt;p&gt;我觉得删除节点分两步，一个是删除单向链表中上一个只想该节点的链接和该节点指向下一个节点的链接，而变成第n-1个节点-&amp;gt;next指向原先的n+1个节点。第二步就是当删除了链接并不代表当前删除的节点不占用内存空间，所以就要free这个空间。下面是通过的代码示例：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Remove&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -67,8 +68,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第三题  分割链表
-题目描述的是要将小于给定x值的节点与大于x值的节点分割成两部分，而本身链表的顺序不能够改变。最后需要返回小于x值的链表+大于x值的链表的头节点。
+&lt;h3&gt;第三题  分割链表&lt;/h3&gt;
+
+&lt;p&gt;题目描述的是要将小于给定x值的节点与大于x值的节点分割成两部分，而本身链表的顺序不能够改变。最后需要返回小于x值的链表+大于x值的链表的头节点。
 想法很单纯，既然要分割链表就自然需要定义两个新的链表，第一步遍历整个给定的链表将每个节点的值与给定的x值作对比，当小于x的时候就把新定义的p1链表的下一个节点指向此时的temp节点，而当大于x值得时候自然就将此时的temp节点赋给p2的下一个节点。
 在过程中需要保存两个新定义链表的表头，也就是要判断一下p1和p2的头结点以便最后返回头节点。下面为最终的代码示例：&lt;/p&gt;
 
@@ -123,8 +125,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第四题  链表A+B
-题目描述为相加两个给出的链表A与B，比如说：{1,2,3} + {3,2,1}需要返回一个结果链表为{4,4,4}。
+&lt;h3&gt;第四题  链表A+B&lt;/h3&gt;
+
+&lt;p&gt;题目描述为相加两个给出的链表A与B，比如说：{1,2,3} + {3,2,1}需要返回一个结果链表为{4,4,4}。
 在中间的加法运算中主要分为两步，第一步计算每每两个数字相加的结果，第二部提取出相应结果的进位和需要保留的个位数结果。下面为这一部分实现的代码示例：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -173,8 +176,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第五题 回文链表
-题目描述是这样的，需要判断一个给定的链表是否为回文链表，若给定链表如{1,2,3,2,1}则返回true，反之返回false。想法应该说并不难，但是我在链表的地址和赋值之间来回徘徊了很久才大概明白代码测试一直不能通过是因为什么，下面先来看这个代码&lt;/p&gt;
+&lt;h3&gt;第五题 回文链表&lt;/h3&gt;
+
+&lt;p&gt;题目描述是这样的，需要判断一个给定的链表是否为回文链表，若给定链表如{1,2,3,2,1}则返回true，反之返回false。想法应该说并不难，但是我在链表的地址和赋值之间来回徘徊了很久才大概明白代码测试一直不能通过是因为什么，下面先来看这个代码&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Palindrome&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -237,7 +241,7 @@
 &lt;p&gt;同样将这段代码整齐的贴进这道题再去遍历做比较，依然会不能通过测试，始终返回true，以我的专业出身和智商还没有真正深究出原因，不过我猜想是因为永远指向同一个地址那么比较的时候肯定会不如人意，当在反转时有必要将反转之后的链表reverse和在遍历当前给定链表的时候new一个新的ListNode而不是在同一条地址链上进行多次的重复操作以至于最后比对的original链表丢失。这也是为什么当只是单纯做反转链表的时候遍历第一步就要保存好当前节点next指向的地址。
 所以重新定义并new一个链表reverse为NULL，然后遍历整个给定的链表，将当前节点值给该次循环中的reverse节点，将该被改动的reverse节点的next指向上一循环中的reverse节点，以此类推，直到把NULL推到最后一个位置。这个方法我很熟悉，跟做硬件编译时传输10101010....类的数据相差不大，都是按照一定的顺序你推我我推你到穷尽。&lt;/p&gt;
 
-&lt;p&gt;####这里很想插一句&lt;/p&gt;
+&lt;h4&gt;这里很想插一句&lt;/h4&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;一直以来人们给所谓程序员配的图满是10101010.....，看黑客帝国就知道了，我想说没错，计算机是接受二进制，可是在我自学Nodejs开发和这些满满的上层软件面向对象碰到过10101010现象的机会远远不如我作为公司的一名新晋嵌入式开发来的平常。&lt;/p&gt;
@@ -289,8 +293,8 @@
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
         <pubDate>Sun, 24 Jan 2016 00:00:00 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2.html</guid>
         
         
         <category>学习</category>
@@ -299,8 +303,9 @@
     
       <item>
         <title>程序员面试金典 chapter1 arrays and strings</title>
-        <description>&lt;p&gt;###第一题  翻转字符串
-把一个给定的字符串反转
+        <description>&lt;h3&gt;第一题  翻转字符串&lt;/h3&gt;
+
+&lt;p&gt;把一个给定的字符串反转
 笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n-1-i]个元素对调，下面为代码示例：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Reverse&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -319,8 +324,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第二题  判定字符串中字符是否相同或不同
-...
+&lt;h3&gt;第二题  判定字符串中字符是否相同或不同&lt;/h3&gt;
+
+&lt;p&gt;...
 不细说、代码示例在下面：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Different&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -338,7 +344,7 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第三题  确定两串乱序同构&lt;/p&gt;
+&lt;h3&gt;第三题  确定两串乱序同构&lt;/h3&gt;
 
 &lt;p&gt;(我觉得和第八题是一样的，这里是第八题的描述：
 请将这个算法编写成一个函数，给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成。唯一不一样的地方可能就是第八题要求用并且只用一次issubstring这个函数吧。这里省略第八题。
@@ -422,8 +428,9 @@
 
 &lt;p&gt;我自己的本方法虽然最后运行结果正确但是运行时间相当长，我的正确代码运行时间为70ms而大神的代码只需要1ms。&lt;/p&gt;
 
-&lt;p&gt;###第四题 将字符串中的空格全部替换为&amp;quot;%20&amp;quot;
-给出的代码格式为:&lt;/p&gt;
+&lt;h3&gt;第四题 将字符串中的空格全部替换为&amp;quot;%20&amp;quot;&lt;/h3&gt;
+
+&lt;p&gt;给出的代码格式为:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Replacement&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -454,8 +461,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第五题 压缩字符串
-利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。&lt;/p&gt;
+&lt;h3&gt;第五题 压缩字符串&lt;/h3&gt;
+
+&lt;p&gt;利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。&lt;/p&gt;
 
 &lt;p&gt;好吧，一开始没怎么明白看了好几遍输出才知道卧槽根本不存在压缩后面不带数字的情况啊。。。。思路很简单总之就是j的循环在i里面，期间犯了个很大错误导致最后一个元素会打印不出来，原因在于内循环的j也设了不能到字符串最后的条件，来看一下这个判断：&lt;/p&gt;
 
@@ -506,8 +514,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第六题 像素翻转
-需要返回一个旋转后的NxN矩阵
+&lt;h3&gt;第六题 像素翻转&lt;/h3&gt;
+
+&lt;p&gt;需要返回一个旋转后的NxN矩阵
 函数样例给出如下：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Transform&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -558,8 +567,9 @@
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;###第七题  清除矩阵中整行整列
-还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：&lt;/p&gt;
+&lt;h3&gt;第七题  清除矩阵中整行整列&lt;/h3&gt;
+
+&lt;p&gt;还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Clearer&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 &lt;span class=&quot;nl&quot;&gt;public&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -591,8 +601,8 @@
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 </description>
         <pubDate>Sat, 23 Jan 2016 00:00:00 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings.html</guid>
         
         
         <category>学习</category>
@@ -645,8 +655,8 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
         <pubDate>Wed, 11 Nov 2015 16:14:18 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91.html</guid>
         
         
         <category>学习</category>
@@ -659,14 +669,15 @@
 
 &lt;p&gt;如果等到送你走的那天 我希望给你写这么一句话 &lt;/p&gt;
 
-&lt;p&gt;####&amp;quot;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般 、
-####最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般&amp;quot;&lt;/p&gt;
+&lt;h4&gt;&amp;quot;最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般 、&lt;/h4&gt;
+
+&lt;h4&gt;最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般&amp;quot;&lt;/h4&gt;
 
 &lt;p&gt;明信片我还留着 你没能去的地方 我想有时间替你去看看&lt;/p&gt;
 </description>
         <pubDate>Sun, 08 Nov 2015 22:10:18 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7.html</guid>
         
         
         <category>生活笔记</category>
@@ -710,8 +721,8 @@
 &lt;h3&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/h3&gt;
 </description>
         <pubDate>Sun, 08 Nov 2015 19:18:18 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B.html</guid>
         
         
         <category>生活笔记</category>
@@ -843,8 +854,8 @@ paginate_path: &amp;quot;/blog/page:num/&amp;quot;
 &lt;p&gt;好吧、我承认这样实在是太麻烦了 但是...万一你也很感兴趣想做一个可以去看一下 反正也花不了太长的时间&lt;/p&gt;
 </description>
         <pubDate>Fri, 06 Nov 2015 20:39:18 +0000</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html</guid>
         
         
         <category>学习</category>
@@ -853,21 +864,25 @@ paginate_path: &amp;quot;/blog/page:num/&amp;quot;
     
       <item>
         <title>Summary on WEEK8</title>
-        <description>&lt;p&gt;#Summary for WEEK8
-##Hardware Side
-The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
+        <description>&lt;h1&gt;Summary for WEEK8&lt;/h1&gt;
+
+&lt;h2&gt;Hardware Side&lt;/h2&gt;
+
+&lt;p&gt;The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
 The basic design in draft is presented below:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.17.31.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.&lt;/p&gt;
 
-&lt;p&gt;#####The printing 3D box
-There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
+&lt;h5&gt;The printing 3D box&lt;/h5&gt;
+
+&lt;p&gt;There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
 The design thinking of this modular sensor node had been changed a lot in terms of the usability and different senarios. The image below shows the brief magenetic connection between each identical sensor boxes which could stack together.&lt;/p&gt;
 
-&lt;p&gt;##Software Side
-The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:&lt;/p&gt;
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
+&lt;p&gt;The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.32.57.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
 
@@ -881,8 +896,8 @@ The simple HTTP RESTful server is about to be finished but a lot more are to be 
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 11:07:34 +0100</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html</guid>
         
         
         <category>毕设Archive</category>
@@ -891,9 +906,11 @@ The simple HTTP RESTful server is about to be finished but a lot more are to be 
     
       <item>
         <title>Summary on WEEK6</title>
-        <description>&lt;p&gt;#Summary for WEEK6
-##Software Side
-Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The &amp;quot;LEGO&amp;quot; design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
+        <description>&lt;h1&gt;Summary for WEEK6&lt;/h1&gt;
+
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
+&lt;p&gt;Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The &amp;quot;LEGO&amp;quot; design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
 The software side didn&amp;#39;t go well because of not succeeding on streaming the data like a &amp;quot;server awareness&amp;quot; system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
 The difficulty was mainly the data model, the design is basically as shown below:&lt;/p&gt;
 
@@ -902,8 +919,8 @@ The difficulty was mainly the data model, the design is basically as shown below
 &lt;p&gt;Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users&amp;#39; authetication information would be added on top of this.&lt;/p&gt;
 </description>
         <pubDate>Mon, 13 Jul 2015 11:07:34 +0100</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html</guid>
         
         
         <category>毕设Archive</category>
@@ -912,12 +929,15 @@ The difficulty was mainly the data model, the design is basically as shown below
     
       <item>
         <title>Summary on WEEK5</title>
-        <description>&lt;p&gt;#Summary for WEEK5
-##Hardware Side
-Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.&lt;/p&gt;
+        <description>&lt;h1&gt;Summary for WEEK5&lt;/h1&gt;
 
-&lt;p&gt;##Software Side
-For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &amp;quot;smart city&amp;quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.&lt;/p&gt;
+&lt;h2&gt;Hardware Side&lt;/h2&gt;
+
+&lt;p&gt;Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.&lt;/p&gt;
+
+&lt;h2&gt;Software Side&lt;/h2&gt;
+
+&lt;p&gt;For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &amp;quot;smart city&amp;quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.&lt;/p&gt;
 
 &lt;p&gt;Thus, the important bits are to be done next weeks are:&lt;/p&gt;
 
@@ -938,8 +958,8 @@ For the software side, the simple server was researched with serveral existing I
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 03 Jul 2015 12:52:34 +0100</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</guid>
         
         
         <category>毕设Archive</category>
@@ -948,7 +968,7 @@ For the software side, the simple server was researched with serveral existing I
     
       <item>
         <title>Summary on WEEK4</title>
-        <description>&lt;p&gt;#Summary For WEEK 4&lt;/p&gt;
+        <description>&lt;h1&gt;Summary For WEEK 4&lt;/h1&gt;
 
 &lt;p&gt;This week, the Moteino experiment was succeed transferring data through rfm69 offered by HOPERF within a small range, and data could be uploaded to web server provided by Nquiringminds with the driver developed for each different sensor. Followingly, the main tasks are experimenting the PCB previously designed on the breadboard and print the PCB for further testing. The MCU and RF module are to be changed through more research regarding different application solutions. It is believed the design of PCB should be fairly quick after the basic PCB design is succeed.&lt;/p&gt;
 
@@ -962,7 +982,7 @@ For the software side, the simple server was researched with serveral existing I
 &lt;li&gt;In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;#####what could be in literature review &lt;/p&gt;
+&lt;h5&gt;what could be in literature review&lt;/h5&gt;
 
 &lt;ul&gt;
 &lt;li&gt;The exising solutions like Arduino, Moteino&lt;/li&gt;
@@ -980,7 +1000,7 @@ For the software side, the simple server was researched with serveral existing I
 &lt;li&gt;&lt;p&gt;any modulazed solutions like little bits but not price optimized&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;####Thus, the certain things are to be done in the following week:&lt;/p&gt;
+&lt;h4&gt;Thus, the certain things are to be done in the following week:&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;continue on designing the PCB in order to finish the project&lt;/li&gt;
@@ -990,8 +1010,8 @@ For the software side, the simple server was researched with serveral existing I
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 26 Jun 2015 16:52:48 +0100</pubDate>
-        <link>http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</guid>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</guid>
         
         
         <category>毕设Archive</category>

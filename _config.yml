@@ -16,9 +16,11 @@ email: bingjie.gao10@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 baseurl: /TempBlogs/ # the subpath of your site, e.g. /blog
 # baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://catamo10.github.io/TempBlogs/" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+jianshu_username: CatAmo凉生_简书
+github_username:  CatAmo10
+jianshu_png: /TempBlogs/_includes/skeleton.png
 
 gems: [jekyll-paginate]
 paginate: 3

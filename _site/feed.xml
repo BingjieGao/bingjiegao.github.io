@@ -5,8 +5,8 @@
     <description></description>
     <link>http://catamo10.github.io/TempBlogs//TempBlogs//</link>
     <atom:link href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jan 2016 23:00:42 +0000</pubDate>
-    <lastBuildDate>Sun, 24 Jan 2016 23:00:42 +0000</lastBuildDate>
+    <pubDate>Tue, 26 Jan 2016 23:08:11 +0000</pubDate>
+    <lastBuildDate>Tue, 26 Jan 2016 23:08:11 +0000</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -610,6 +610,35 @@
       </item>
     
       <item>
+        <title>深夜惊醒程序员</title>
+        <description>&lt;p&gt;多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。&lt;/p&gt;
+
+&lt;p&gt;再说这位朋友 985工程下的名校自动化专业在读生，说着我都心里犯尴尬的专业 如今这个社会也可以越来越不关心所谓 专科出身 这样的帽子了。且说所谓计算机专业，那些成为网民手下的码农、程序员的人 相当一部分出自自动化 通信 电子 机械，甚至数学 物理这些兄弟姐妹类似的旁系。这些统称为工科的专业大都殊途同归变成了不同的码农 操纵着不同的编程语言、这是我上大学的时候一位出身通信的学长告诉我的 现在看来的确是不可争的事实。彼时我还在读 余果的 全栈工程师自我修养，想来现在的社会分工于二、三十年前相比精致许多，所谓软件工程师 嵌入式工程师 web工程师 硬件工程师 前端工程师 后端工程师，呵、当然还有全栈工程师。看看那一个个的头衔 哪一个不是人们嘴里、文字里的码农，眼里穿着冲锋衣牛仔裤的程序员。同样是理论物理出身的我的父亲，在三十年前大学毕业的时候手里只有一本翻译的FORTRAN教材，三十年后的今天，几乎你想学的语言，你想学习的方向，都只需要简单的通过键盘敲在搜索框里，丰富的资源都在回车之后一览无遗。我想所谓码农的分工之细正好对上了开头我的一时语塞，现在说想学编程，不能不说这是一个极其复杂而艰难的问题，我根本无从说起。作为一个半路出家了一年的应届毕业生来说，我接触的编码实在少之又少，每天醒来都觉得世界又变了，有太多新的语言，新的框架和许许多多我叫不上来的技术正在世界每个角落萌发生长。往往清晨起床，在V2EX上浪一浪，就满眼飘着的都是诸如Vue.js，ES6，PHP7这些跟我的生活无关却又息息相关的技术名词，坐在高脚凳上，两腿就开始发虚了，一声长叹，这个世界啊，这个社会啊，我是否会在一波又一波的浪潮中死无葬身之地。在这个无论是工资还是智商都追不上的社会里如何避免食不果腹、衣冠不整、开始成为每天头顶着的无形压力，谁说不恐惧呢，我打包票，城市里，那些夜晚亮着灯的办公室中，每个所谓的程序员或多或少都有这样的技术栈恐惧感。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;所谓30的程序员、一语成谶。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我们这些初入社会的捣乱分子，还能年轻多久，还能趁着这股激情疯狂多久。在那些程序员的世界里，有一个长着章鱼脚的猫看管的圣地，时不时那里的风景会带来些许兴奋，些许失落，兴奋是别人的院子永远绿满格，而失落则是不管发了几回毒誓，自己的院子还是空空荡荡，甚至当开始寻摸下一份工作的时候都怕拿不出像样的项目。其实从哪里开始的都不重要，长久的坚持才能时不时的消除那份莫名的恐慌吧。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;在这个不大不小的尴尬年龄，从前过往，不知曾经爱过的人如今在哪里，愿在漫长的未来里，除了爱情，彼时，我们还能拥有此时的激情。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/20160102.jpeg&quot; alt=&quot;这些都是你给我的爱&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;我不想成为一名人们说的程序员、工程师，在我慢慢走近编程的这条路上，有过太多的的骄傲自满也有过数不清的煎熬和自卑。对于朋友，我只想说，找一个感兴趣的方向不难，甚至在未来的几年里成为一个性感又受众的所谓大数据工程师也并不难，我给不了太多的建议，那么、说说你编程想做什么吧&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
+        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98.html</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98.html</guid>
+        
+        
+        <category>生活笔记</category>
+        
+      </item>
+    
+      <item>
         <title>Express开发陷入异步圈和回调坑</title>
         <description>&lt;p&gt;接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose CRUD之外 为了完成基本功能的express也写过了 想要真正的静下心来看Doc反而越看越慌 今天一天就深深的陷入了回调函数的坑里&lt;/p&gt;
 
@@ -960,58 +989,6 @@ The difficulty was mainly the data model, the design is basically as shown below
         <pubDate>Fri, 03 Jul 2015 12:52:34 +0100</pubDate>
         <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</link>
         <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html</guid>
-        
-        
-        <category>毕设Archive</category>
-        
-      </item>
-    
-      <item>
-        <title>Summary on WEEK4</title>
-        <description>&lt;h1&gt;Summary For WEEK 4&lt;/h1&gt;
-
-&lt;p&gt;This week, the Moteino experiment was succeed transferring data through rfm69 offered by HOPERF within a small range, and data could be uploaded to web server provided by Nquiringminds with the driver developed for each different sensor. Followingly, the main tasks are experimenting the PCB previously designed on the breadboard and print the PCB for further testing. The MCU and RF module are to be changed through more research regarding different application solutions. It is believed the design of PCB should be fairly quick after the basic PCB design is succeed.&lt;/p&gt;
-
-&lt;p&gt;The report is to be started with background and literature review, here are something occured that could be involved in the report.&lt;/p&gt;
-
-&lt;h5&gt;What could possibly go in Background&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;General IOT background for generic purpose&lt;/li&gt;
-&lt;li&gt;mode detailed proposals for IOT nodes in terms of the hardware issues&lt;/li&gt;
-&lt;li&gt;In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h5&gt;what could be in literature review&lt;/h5&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The exising solutions like Arduino, Moteino&lt;/li&gt;
-&lt;li&gt;the comparisons between each MCUs solutions&lt;/li&gt;
-&lt;li&gt;the comparisons between each RF modules solutions &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;what problem solved&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;modularization&lt;/li&gt;
-&lt;li&gt;price/size optimizaton&lt;/li&gt;
-&lt;li&gt;secure authentication&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;the comparisons between different connection: SPI, I2C, UART&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;the comparisons between each different solution of secure the MCU node&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;any modulazed solutions like little bits but not price optimized&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4&gt;Thus, the certain things are to be done in the following week:&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;continue on designing the PCB in order to finish the project&lt;/li&gt;
-&lt;li&gt;Testing the design see if it could be successful&lt;/li&gt;
-&lt;li&gt;try to build the simple data upload server based on previous CMS system which was developed from the basic blog system&lt;/li&gt;
-&lt;li&gt;The literature review and background should be drafted before Wednesday in terms of the report&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 26 Jun 2015 16:52:48 +0100</pubDate>
-        <link>http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</link>
-        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/26/week4.html</guid>
         
         
         <category>毕设Archive</category>

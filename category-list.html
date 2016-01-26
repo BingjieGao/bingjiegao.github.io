@@ -1,15 +1,21 @@
 ---
-layout: default
+layout: otherpages
 ---
 
 <div class="home">
 
     <h1 class="page-heading">所有文章</h1>
+    <div class="list-title">
         {% for category in site.categories %}
+        
         <a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
             {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
         </a>
+        </div>
         {% endfor %}
+
+
+        
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

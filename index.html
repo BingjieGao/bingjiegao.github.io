@@ -20,28 +20,19 @@ layout: default
   </ul>
 
   {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-    <div class="left-arrow">
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
-      <i class="fa fa-chevron-left fa-3x"></i> Previous</a>
-    {% else %}
-    <!--<i class="fa fa-chevron-left fa-5x"></i>-->
-    {% endif %}
+    <div class="pagination">
+        {% if paginator.previous_page %}
+          <div class="left-arrow">
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
+        
     </div>
-
-
+        {% endif %}
     {% if paginator.next_page %}
     <div class="right-arrow">
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-
-      <i class="fa fa-chevron-right fa-3x"></i>NEXT
-    </a>
-    {% else %}
-    <!--<span>Next &raquo;</span>-->
-    {% endif %}
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">NEXT
+      </a>
       </div>
+      {% endif %}
   </div>
   {% endif %}
-
-</div>
+  </div>

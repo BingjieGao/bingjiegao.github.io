@@ -9,12 +9,15 @@
   <title>怎样很麻烦的开始做一个个人博客~jekyll</title>
   <meta name="description" content="有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然...不想做的更不来浪费时间 我只是单纯的想...以后的我不要忘了这个漫长的流程">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <link rel="stylesheet" href="/TempBlogs//css/main.css">
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/06/jekyll-1.html">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 
@@ -23,7 +26,7 @@
 
     <header class="site-header">
 
-  <div class="wrapper">
+  <div class="header-main">
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -69,13 +72,18 @@
     </nav>
 
   </div>
-
+  
+  
 </header>
 
 
     <div class="page-content">
-      <div class="wrapper" id="mainpage">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container-fluid">
+                    <div class="row">
+                      <div class="inner" id="main-content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">怎样很麻烦的开始做一个个人博客~jekyll</h1>
@@ -209,7 +217,21 @@ paginate_path: &quot;/blog/page:num/&quot;
 
 </article>
 
-      </div>
+                      </div>
+
+                      <div class="toggle-span">
+                          <i class="fa fa-hand-o-left fa-2x"></i>
+                      </div>
+
+                      <div class="col-md-4" id="side-page">
+                          <div class="side-content">
+                            About Me
+                          </div>
+                      </div>
+                    </div>
+                    
+              </div>
+            </div>
     </div>
 
     <footer class="site-footer">
@@ -254,10 +276,26 @@ paginate_path: &quot;/blog/page:num/&quot;
 
   </div>
 
-
-
-
 </footer>
+<script>
+      var scroll = $('.toggle-span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main-content');
+      var side = $('.col-md-4');
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        side.css('display','block');
+      })
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+
+
+
+</script>
 
 
 

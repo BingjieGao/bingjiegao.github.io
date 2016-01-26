@@ -9,12 +9,15 @@
   <title>CatAmo凉生</title>
   <meta name="description" content="">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <link rel="stylesheet" href="/TempBlogs//css/main.css">
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 
@@ -23,7 +26,7 @@
 
     <header class="site-header">
 
-  <div class="wrapper">
+  <div class="header-main">
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -69,13 +72,18 @@
     </nav>
 
   </div>
-
+  
+  
 </header>
 
 
     <div class="page-content">
-      <div class="wrapper" id="mainpage">
-        <div class="home">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container-fluid">
+                    <div class="row">
+                      <div class="inner" id="main-content">
+                            <div class="home">
 
   <ul class="post-list" post-cate="All">
     
@@ -676,54 +684,29 @@
       </li>
     
       <li>
-        <span class="post-meta">Nov 11, 2015</span>
+        <span class="post-meta">Jan 2, 2016</span>
         <div class="post-link">
         <h1>
-          <a href="/TempBlogs//%E5%AD%A6%E4%B9%A0/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91.html">Express开发陷入异步圈和回调坑</a>
+          <a href="/TempBlogs//%E7%94%9F%E6%B4%BB%E7%AC%94%E8%AE%B0/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98.html">深夜惊醒程序员</a>
         </h1>
-          <p>接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose CRUD之外 为了完成基本功能的express也写过了 想要真正的静下心来看Doc反而越看越慌 今天一天就深深的陷入了回调函数的坑里</p>
+          <p>多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。</p>
 
-<p>不讨论回调和异步、同步的关系和不同了 请自行google ... ... 因为我也没整明白 简单讲一下我试了一天对这几个的理解</p>
+<p>再说这位朋友 985工程下的名校自动化专业在读生，说着我都心里犯尴尬的专业 如今这个社会也可以越来越不关心所谓 专科出身 这样的帽子了。且说所谓计算机专业，那些成为网民手下的码农、程序员的人 相当一部分出自自动化 通信 电子 机械，甚至数学 物理这些兄弟姐妹类似的旁系。这些统称为工科的专业大都殊途同归变成了不同的码农 操纵着不同的编程语言、这是我上大学的时候一位出身通信的学长告诉我的 现在看来的确是不可争的事实。彼时我还在读 余果的 全栈工程师自我修养，想来现在的社会分工于二、三十年前相比精致许多，所谓软件工程师 嵌入式工程师 web工程师 硬件工程师 前端工程师 后端工程师，呵、当然还有全栈工程师。看看那一个个的头衔 哪一个不是人们嘴里、文字里的码农，眼里穿着冲锋衣牛仔裤的程序员。同样是理论物理出身的我的父亲，在三十年前大学毕业的时候手里只有一本翻译的FORTRAN教材，三十年后的今天，几乎你想学的语言，你想学习的方向，都只需要简单的通过键盘敲在搜索框里，丰富的资源都在回车之后一览无遗。我想所谓码农的分工之细正好对上了开头我的一时语塞，现在说想学编程，不能不说这是一个极其复杂而艰难的问题，我根本无从说起。作为一个半路出家了一年的应届毕业生来说，我接触的编码实在少之又少，每天醒来都觉得世界又变了，有太多新的语言，新的框架和许许多多我叫不上来的技术正在世界每个角落萌发生长。往往清晨起床，在V2EX上浪一浪，就满眼飘着的都是诸如Vue.js，ES6，PHP7这些跟我的生活无关却又息息相关的技术名词，坐在高脚凳上，两腿就开始发虚了，一声长叹，这个世界啊，这个社会啊，我是否会在一波又一波的浪潮中死无葬身之地。在这个无论是工资还是智商都追不上的社会里如何避免食不果腹、衣冠不整、开始成为每天头顶着的无形压力，谁说不恐惧呢，我打包票，城市里，那些夜晚亮着灯的办公室中，每个所谓的程序员或多或少都有这样的技术栈恐惧感。</p>
 
-<p>先说同步 我理解的同步就是逻辑自上而下 默默突然回想起做VerilogHDL的时候学过这么两个词blocking和non-blocking 那么这个阻塞和非阻塞又和同步异步有什么关系和区别呢</p>
+<blockquote>
+<p>所谓30的程序员、一语成谶。</p>
+</blockquote>
 
-<p>其实按照理论是没有什么关系的 同步嘛相当于调用者主动 一旦该调用返回了有值了 异步就反一反 相当于被调用者的状态反馈给调用者</p>
+<p>我们这些初入社会的捣乱分子，还能年轻多久，还能趁着这股激情疯狂多久。在那些程序员的世界里，有一个长着章鱼脚的猫看管的圣地，时不时那里的风景会带来些许兴奋，些许失落，兴奋是别人的院子永远绿满格，而失落则是不管发了几回毒誓，自己的院子还是空空荡荡，甚至当开始寻摸下一份工作的时候都怕拿不出像样的项目。其实从哪里开始的都不重要，长久的坚持才能时不时的消除那份莫名的恐慌吧。</p>
 
-<p>这个打个比方 我们国内很多客服态度可能时好时坏 但是这个服务速度是有的 你好比打个电话问问客服我有个什么问题不能解决 这个客服呢就在电话那头给你解决 在问题解决之前或者说在这个事情有结果之前你一直都是在跟客服进行沟通的 </p>
+<blockquote>
+<p>在这个不大不小的尴尬年龄，从前过往，不知曾经爱过的人如今在哪里，愿在漫长的未来里，除了爱情，彼时，我们还能拥有此时的激情。</p>
+</blockquote>
 
-<p>那么英国这里呢 实在等不起 你打个电话 他说&quot;Alright mate, but I can do nothing to help you right now I&#39;ll give you a call back later, OK?&quot; 这就是异步了 他解不解决问题在他 在你等他给你打回来通知结果之前 你是正常过日子的 没有24小时一直在通电话</p>
+<p><img src="/TempBlogs/img/pictures/20160102.jpeg" alt="这些都是你给我的爱"></p>
 
-<p>所以说呢同步还是异步只是说明了消息机制 communication嘛 对伐 而阻塞非阻塞可能就是描述了当在等待的状态 就是说非阻塞是会正常过日子的等结果的 中间呢因为这个英国服务太糟糕了 只能是不是check一下状态如何了 这个阻塞啊就意味着问题太大了 没法正常过日子等着客服解决了 不管什么时候返回结果 这期间都只能“挂起” 就好比只能呆滞的躺在床上等一场我想我要挂了的考试最终成绩一样</p>
+<p>我不想成为一名人们说的程序员、工程师，在我慢慢走近编程的这条路上，有过太多的的骄傲自满也有过数不清的煎熬和自卑。对于朋友，我只想说，找一个感兴趣的方向不难，甚至在未来的几年里成为一个性感又受众的所谓大数据工程师也并不难，我给不了太多的建议，那么、说说你编程想做什么吧</p>
 
-<p>再说这个回调，这个吧我就记住这么两条，一般情况下同步回调 这个回调函数最后执行 如果是异步回调 那人家不一定就最后执行 如果要等该函数执行完以后在执行另一条 那么这个执行语句必须放在回调函数内</p>
-
-<p>想想真的是慌得呀 一本正经好像说的跟真的一样 我就先给自己备忘一下 简单的注册功能 本来想把MVC弄得好看一些 不要把所有函数啊判断啊都放在一起混了 结果就被异步啊回调啊尴尬了</p>
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">IsExisted</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">callback</span><span class="p">){</span>
-  <span class="nx">userdb</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="s1">&#39;useremail&#39;</span><span class="o">:</span><span class="nx">data</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">doc</span><span class="p">){</span>
-
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-
-    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
-      <span class="c1">//console.log(doc);</span>
-      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">){</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;new user&#39;</span><span class="p">);</span>
-        <span class="c1">//console.log(doc);</span>
-        <span class="nx">return_value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
-      <span class="p">}</span>
-      <span class="k">else</span>
-      <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;user existed&#39;</span><span class="p">);</span>
-        <span class="nx">return_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">else</span><span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></div>
         </div>
       </li>
     
@@ -731,27 +714,32 @@
   </ul>
 
   
-  <div class="pagination">
-    
-    <!--<i class="fa fa-chevron-left fa-5x"></i>-->
-    
-    </div>
-
-
+    <div class="pagination">
+        
     
     <div class="right-arrow">
-    <a href="/TempBlogs/blog/page2">
-
-      <i class="fa fa-chevron-right fa-3x"></i>NEXT
-    </a>
-    
+      <a href="/TempBlogs/blog/page2">NEXT
+      </a>
       </div>
+      
   </div>
   
+  </div>
+                      </div>
 
-</div>
+                      <div class="toggle-span">
+                          <i class="fa fa-hand-o-left fa-2x"></i>
+                      </div>
 
-      </div>
+                      <div class="col-md-4" id="side-page">
+                          <div class="side-content">
+                            About Me
+                          </div>
+                      </div>
+                    </div>
+                    
+              </div>
+            </div>
     </div>
 
     <footer class="site-footer">
@@ -796,10 +784,26 @@
 
   </div>
 
-
-
-
 </footer>
+<script>
+      var scroll = $('.toggle-span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main-content');
+      var side = $('.col-md-4');
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        side.css('display','block');
+      })
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+
+
+
+</script>
 
 
 

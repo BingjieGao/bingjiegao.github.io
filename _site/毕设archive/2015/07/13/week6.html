@@ -9,12 +9,15 @@
   <title>Summary on WEEK6</title>
   <meta name="description" content="Summary for WEEK6Software SideBecause of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussio...">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
   <link rel="stylesheet" href="/TempBlogs//css/main.css">
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 
@@ -23,7 +26,7 @@
 
     <header class="site-header">
 
-  <div class="wrapper">
+  <div class="header-main">
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -69,13 +72,18 @@
     </nav>
 
   </div>
-
+  
+  
 </header>
 
 
     <div class="page-content">
-      <div class="wrapper" id="mainpage">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container-fluid">
+                    <div class="row">
+                      <div class="inner" id="main-content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Summary on WEEK6</h1>
@@ -99,7 +107,21 @@ The difficulty was mainly the data model, the design is basically as shown below
 
 </article>
 
-      </div>
+                      </div>
+
+                      <div class="toggle-span">
+                          <i class="fa fa-hand-o-left fa-2x"></i>
+                      </div>
+
+                      <div class="col-md-4" id="side-page">
+                          <div class="side-content">
+                            About Me
+                          </div>
+                      </div>
+                    </div>
+                    
+              </div>
+            </div>
     </div>
 
     <footer class="site-footer">
@@ -144,10 +166,26 @@ The difficulty was mainly the data model, the design is basically as shown below
 
   </div>
 
-
-
-
 </footer>
+<script>
+      var scroll = $('.toggle-span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main-content');
+      var side = $('.col-md-4');
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        side.css('display','block');
+      })
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+
+
+
+</script>
 
 
 

@@ -163,8 +163,25 @@ pre {
 
 
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc((#{$content-width}) * 1.2);
+    max-width:         calc((#{$content-width}) * 1.2);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+    @extend %clearfix;
+
+    @include media-query($on-laptop) {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        padding-right: $spacing-unit / 2;
+        padding-left: $spacing-unit / 2;
+    }
+}
+
+.wrapper2 {
+    max-width: -webkit-calc(#{$content-width} * 1.5);
+    max-width:         calc(#{$content-width} * 1.5);
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -249,7 +266,44 @@ and (max-width: 700px)
     }
 
 }
+.nav-right{
+    display:inline-block;
+    right:0;
+    position:relative;
+    margin:auto;
+    padding:1.5em;
+    position:fixed;
+}
+.nav-right:hover{
+    cursor:pointer;
+}
 
-
+.col-md-8{
+   padding:1em 2em;
+}
+.col-md-4{
+   padding:1em 2em;
+}
+#side-page{
+     padding:1em 2em;
+     display:none;    
+}
+.side-content{
+    padding:10px;
+}
+.pagination{
+    width:100%;
+}
+.list-title{
+    width:100%;
+}
+.toggle-span{
+    position:fixed;
+    right:3em;
+    top:150px;
+}
+.toggle-span:hover{
+    cursor:pointer;
+}
 
 

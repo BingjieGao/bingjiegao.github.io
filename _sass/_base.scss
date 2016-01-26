@@ -15,7 +15,11 @@ dl, dd, ol, ul, figure {
  */
 body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+<<<<<<< HEAD
     color: #6c6c6c;
+=======
+    color: $text-color;
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -91,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
+<<<<<<< HEAD
     color: $grey-color-light;
     text-decoration: none;
 
@@ -101,6 +106,18 @@ a {
     &:hover {
         color:#77BA9B;
         //text-decoration: underline;
+=======
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a
     }
 }
 
@@ -110,6 +127,7 @@ a {
  * Blockquotes
  */
 blockquote {
+<<<<<<< HEAD
     color: #77BA9B;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
@@ -117,6 +135,14 @@ blockquote {
     font-size: 1em;
     letter-spacing: 0.1em;
     background-color:rgb(245, 245, 245);
+=======
+    color: $grey-color;
+    border-left: 4px solid $grey-color-light;
+    padding-left: $spacing-unit / 2;
+    font-size: 18px;
+    letter-spacing: -1px;
+    font-style: italic;
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a
 
     > :last-child {
         margin-bottom: 0;
@@ -131,9 +157,15 @@ blockquote {
 pre,
 code {
     font-size: 15px;
+<<<<<<< HEAD
     border: 0px solid $grey-color-light;
     border-radius: 3px;
     background-color: #f5f5f5;
+=======
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    background-color: #eef;
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a
 }
 
 code {
@@ -156,6 +188,7 @@ pre {
 /**
  * Wrapper
  */
+<<<<<<< HEAD
 //#mainpage{
 //    border-left: 5px solid #4AC090;
 //}
@@ -182,6 +215,11 @@ pre {
 .wrapper2 {
     max-width: -webkit-calc(#{$content-width} * 1.5);
     max-width:         calc(#{$content-width} * 1.5);
+=======
+.wrapper {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -228,6 +266,7 @@ pre {
         }
     }
 }
+<<<<<<< HEAD
 
 //next/previous pages
 .left-arrow{
@@ -307,3 +346,5 @@ and (max-width: 700px)
 }
 
 
+=======
+>>>>>>> e174843ee7ef8a6b680ae4000604267d35246d6a

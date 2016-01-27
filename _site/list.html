@@ -211,7 +211,7 @@
                     
                     <li class="each-post-list" year="2016">
                         <div class="each-post">
-                                <a href="/TempBlogs//2016/01/02/深夜惊醒程序员.html">深夜惊醒程序员</a>
+                                <a href="/TempBlogs//2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">深夜惊醒程序员</a>
                                 <span class="post-meta">Jan 2, 2016</span>
                         </div>
                     </li>
@@ -406,22 +406,27 @@
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var tag_name = $('.tag-name');
+      var collpas = $('.toggle-span2');
+
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
         maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
+        collpas.css('display','block');
       })
+
+      collpas.click(function(){
+         maincontent.removeClass('col-md-8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
       $(window).scroll(function(){
         scroll.css('top',Math.max(60,150-$(this).scrollTop()));
       })
-      tag_name.click(function(){
-        console.log($(this).text());
-      })
-
-
 
 </script>
 

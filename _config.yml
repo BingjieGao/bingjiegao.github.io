@@ -18,9 +18,10 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: /TempBlogs/ # the subpath of your site, e.g. /blog
 # baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://catamo10.github.io/TempBlogs/" # the base hostname & protocol for your site
-permalink: /:year/:month/:day//:title
+permalink: /:year/:month/:day/:title
 tag_page_layout: tag_page
 tag_page_dir: tag
+tag_permalink_style: pretty
 # twitter_username: jekyllrb
 jianshu_username: CatAmo凉生_简书
 github_username:  CatAmo10

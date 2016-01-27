@@ -331,6 +331,9 @@ pre {
     @media (max-width: 991px){
         display:none;
     }
+    &:hover{
+        cursor:pointer;
+    }
 }
 #side-img>img{
     height:100px;

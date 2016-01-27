@@ -20,14 +20,13 @@ layout: otherpages
         {% for posts in category  %}
         {% for post in posts %}
         {% if post.url %}
-        <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a href="{{ post.url | prepend: site.baseurl}}" class="post-list-item">
-            <h4>
-                {{ post.title }}
-            </h4>
-        </a>
-            </li>
+        <li class="each-post-list">
+            <div class="each-post">
+                <a href="{{ post.url | prepend: site.baseurl}}" class="post-list-item">{{ post.title }}</a>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            </div>
+        
+        </li>
         {% endif %}
         {% endfor %}
         {% endfor %}

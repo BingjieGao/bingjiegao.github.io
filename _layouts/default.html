@@ -33,17 +33,13 @@
                               {% assign tags = site.tags | sort %}
                               {% for tag in tags %}
                               <span class="site-tag">
-                                <a href="/tag/{{ tag | first | slugify }}/"
+                                <a href="{{site.baseurl}}/tags.html"
                                     style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
                                 {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
                                 </a>
                               </span>
                           {% endfor %}
                           </div>
-
-
-
-
                           <div class="toggle-span2">
                             <i class="fa fa-chevron-circle-right fa-2x"></i>
                           </div>

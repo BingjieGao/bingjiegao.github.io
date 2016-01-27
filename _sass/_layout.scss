@@ -55,6 +55,7 @@
     .page-link:hover{
         text-decoration: none;
         border-bottom: 2px solid #77BA9B;
+        color:#77BA9B;
     }
 
     @include media-query($on-palm) {
@@ -376,10 +377,12 @@ and (min-width: 750px) {
 .toggle-post-list{
     display: none;
     list-style: none;
+    margin-bottom:8px;
 }
 .post-list-item{
     display:inline-block;
-    padding-left: 20px;
+    padding:0px;
+    font-size:1.5vw;
 }
 .post-list-item h3{
     margin: 0px;

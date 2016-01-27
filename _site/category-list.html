@@ -32,7 +32,7 @@
     <header class="site-header">
 
 
-  <div class="header-main">
+ 
 
   <div class="wrapper">
 
@@ -83,7 +83,7 @@
 
   </div>
  
-      </div>
+
     </nav>
 
   </div>
@@ -174,7 +174,7 @@
           <li>
             <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
 
-
+            
           
         </ul>
       </div>
@@ -201,6 +201,7 @@
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
         maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
+        $(this).css('display','none');
       })
       $(window).scroll(function(){
         scroll.css('top',Math.max(60,150-$(this).scrollTop()));

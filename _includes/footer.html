@@ -24,7 +24,7 @@
           {% if site.jianshu_username %}
           <li>
             {% include icon-jianshu.html username=site.jianshu_username %}
-{% endif %}
+            {% endif %}
           {% if site.twitter_username %}
           <li>
             {% include icon-twitter.html username=site.twitter_username %}
@@ -56,6 +56,7 @@
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
         maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
+        $(this).css('display','none');
       })
       $(window).scroll(function(){
         scroll.css('top',Math.max(60,150-$(this).scrollTop()));

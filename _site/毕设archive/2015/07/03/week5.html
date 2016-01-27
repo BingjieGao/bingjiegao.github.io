@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/TempBlogs//css/main.css">
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/03/WEEK5.html">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
+
 </head>
 
 
@@ -26,7 +31,11 @@
 
     <header class="site-header">
 
+
   <div class="header-main">
+
+  <div class="wrapper">
+
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -40,6 +49,7 @@
       </a>
 
       <div class="trigger">
+
         <a class="page-link" id="categories" href="/TempBlogs//categories.html">Cate文件夹</a>
         <a class="page-link" id="list" href="/TempBlogs//list.html">列表</a>
         
@@ -72,8 +82,13 @@
     </nav>
 
   </div>
-  
-  
+ 
+      </div>
+    </nav>
+
+  </div>
+
+
 </header>
 
 
@@ -138,6 +153,50 @@
                     
               </div>
             </div>
+
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Summary on WEEK5</h1>
+    <p class="post-meta"><time datetime="2015-07-03T12:52:34+01:00" itemprop="datePublished">Jul 3, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1>Summary for WEEK5</h1>
+
+<h2>Hardware Side</h2>
+
+<p>Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.</p>
+
+<h2>Software Side</h2>
+
+<p>For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &quot;smart city&quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.</p>
+
+<p>Thus, the important bits are to be done next weeks are:</p>
+
+<ul>
+<li>Hardware side:
+
+<ul>
+<li>Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)</li>
+<li>Soldering the PCb if arrived</li>
+</ul></li>
+<li>Software Side:
+
+<ul>
+<li>More research on how normally the data is sent to the server more</li>
+<li>Understanding the make the comparisons between different framework regarding restful (Express, restify)</li>
+<li>Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino</li>
+</ul></li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+
     </div>
 
     <footer class="site-footer">
@@ -164,11 +223,12 @@
           </li>
           
 
+
           
           <li>
             <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
 
-          </li>
+
           
         </ul>
       </div>
@@ -177,6 +237,7 @@
         <p></p>
       </div>
     </div>
+
 
     <p class="rss-subscribe">subscribe <a href="/TempBlogs//feed.xml">via RSS</a></p>
 
@@ -202,6 +263,11 @@
 
 
 </script>
+
+
+  </div>
+
+</footer>
 
 
 

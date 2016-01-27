@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/TempBlogs//css/main.css">
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK8.html">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
+
 </head>
 
 
@@ -26,7 +31,11 @@
 
     <header class="site-header">
 
+
   <div class="header-main">
+
+  <div class="wrapper">
+
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -40,6 +49,7 @@
       </a>
 
       <div class="trigger">
+
         <a class="page-link" id="categories" href="/TempBlogs//categories.html">Cate文件夹</a>
         <a class="page-link" id="list" href="/TempBlogs//list.html">列表</a>
         
@@ -72,8 +82,13 @@
     </nav>
 
   </div>
-  
-  
+ 
+      </div>
+    </nav>
+
+  </div>
+
+
 </header>
 
 
@@ -141,6 +156,53 @@ The design thinking of this modular sensor node had been changed a lot in terms 
                     
               </div>
             </div>
+
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Summary on WEEK8</h1>
+    <p class="post-meta"><time datetime="2015-07-13T11:07:34+01:00" itemprop="datePublished">Jul 13, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1>Summary for WEEK8</h1>
+
+<h2>Hardware Side</h2>
+
+<p>The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
+The basic design in draft is presented below:</p>
+
+<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.17.31.png" alt="image"></p>
+
+<p>The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.</p>
+
+<h5>The printing 3D box</h5>
+
+<p>There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
+The design thinking of this modular sensor node had been changed a lot in terms of the usability and different senarios. The image below shows the brief magenetic connection between each identical sensor boxes which could stack together.</p>
+
+<h2>Software Side</h2>
+
+<p>The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:</p>
+
+<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2015.32.57.png" alt="image"></p>
+
+<p>The things are to be working on following weeks:</p>
+
+<ul>
+<li>The dissertation writting</li>
+<li>The further development of software side for the HTTP RESTful server</li>
+<li>The hardware design is finished for complating the MSc project</li>
+<li>For the company, the hardware design needs to be continued with more researches on voltage regulators and finish the PCB routing.</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+
     </div>
 
     <footer class="site-footer">
@@ -167,11 +229,12 @@ The design thinking of this modular sensor node had been changed a lot in terms 
           </li>
           
 
+
           
           <li>
             <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
 
-          </li>
+
           
         </ul>
       </div>
@@ -180,6 +243,7 @@ The design thinking of this modular sensor node had been changed a lot in terms 
         <p></p>
       </div>
     </div>
+
 
     <p class="rss-subscribe">subscribe <a href="/TempBlogs//feed.xml">via RSS</a></p>
 
@@ -205,6 +269,11 @@ The design thinking of this modular sensor node had been changed a lot in terms 
 
 
 </script>
+
+
+  </div>
+
+</footer>
 
 
 

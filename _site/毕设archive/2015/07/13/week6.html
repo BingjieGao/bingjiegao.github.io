@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/TempBlogs//css/main.css">
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/07/13/WEEK6.html">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
+
 </head>
 
 
@@ -26,7 +31,11 @@
 
     <header class="site-header">
 
+
   <div class="header-main">
+
+  <div class="wrapper">
+
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -40,6 +49,7 @@
       </a>
 
       <div class="trigger">
+
         <a class="page-link" id="categories" href="/TempBlogs//categories.html">Cate文件夹</a>
         <a class="page-link" id="list" href="/TempBlogs//list.html">列表</a>
         
@@ -72,8 +82,13 @@
     </nav>
 
   </div>
-  
-  
+ 
+      </div>
+    </nav>
+
+  </div>
+
+
 </header>
 
 
@@ -122,6 +137,34 @@ The difficulty was mainly the data model, the design is basically as shown below
                     
               </div>
             </div>
+
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Summary on WEEK6</h1>
+    <p class="post-meta"><time datetime="2015-07-13T11:07:34+01:00" itemprop="datePublished">Jul 13, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1>Summary for WEEK6</h1>
+
+<h2>Software Side</h2>
+
+<p>Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The &quot;LEGO&quot; design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
+The software side didn&#39;t go well because of not succeeding on streaming the data like a &quot;server awareness&quot; system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
+The difficulty was mainly the data model, the design is basically as shown below:</p>
+
+<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-07-23%20at%2016.29.16.png" alt="image"></p>
+
+<p>Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users&#39; authetication information would be added on top of this.</p>
+
+  </div>
+
+</article>
+
+      </div>
+
     </div>
 
     <footer class="site-footer">
@@ -148,11 +191,12 @@ The difficulty was mainly the data model, the design is basically as shown below
           </li>
           
 
+
           
           <li>
             <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
 
-          </li>
+
           
         </ul>
       </div>
@@ -161,6 +205,7 @@ The difficulty was mainly the data model, the design is basically as shown below
         <p></p>
       </div>
     </div>
+
 
     <p class="rss-subscribe">subscribe <a href="/TempBlogs//feed.xml">via RSS</a></p>
 
@@ -186,6 +231,11 @@ The difficulty was mainly the data model, the design is basically as shown below
 
 
 </script>
+
+
+  </div>
+
+</footer>
 
 
 

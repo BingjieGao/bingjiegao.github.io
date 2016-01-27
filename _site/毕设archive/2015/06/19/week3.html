@@ -19,6 +19,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="/TempBlogs//css/main.css">
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs//TempBlogs//%E6%AF%95%E8%AE%BEarchive/2015/06/19/week3.html">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs//TempBlogs//feed.xml">
+
 </head>
 
 
@@ -26,7 +31,11 @@
 
     <header class="site-header">
 
+
   <div class="header-main">
+
+  <div class="wrapper">
+
 
     <a class="site-title" href="/TempBlogs//">CatAmo凉生</a>
 
@@ -40,6 +49,7 @@
       </a>
 
       <div class="trigger">
+
         <a class="page-link" id="categories" href="/TempBlogs//categories.html">Cate文件夹</a>
         <a class="page-link" id="list" href="/TempBlogs//list.html">列表</a>
         
@@ -72,8 +82,13 @@
     </nav>
 
   </div>
-  
-  
+ 
+      </div>
+    </nav>
+
+  </div>
+
+
 </header>
 
 
@@ -137,6 +152,49 @@
                     
               </div>
             </div>
+
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Summary on WEEK3</h1>
+    <p class="post-meta"><time datetime="2015-06-19T23:52:48+01:00" itemprop="datePublished">Jun 19, 2015</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1>Week 3</h1>
+
+<p>After researching on the MCU and the HOPErf modules, the initial PCB was produced in 4 days. The MCU selected was the ATmel 328P which is the most popular one on diffrerent Arduino alternative boards. The schematic circuit was pretty much the same as Moteino has, the only difference so far is the RF module which in my design the rfm69hw was basically used while in moteino the rf module was deployed from rf12b.</p>
+
+<p>It has been a long time being familair with the software Eagle which is to be used for following PCB design as well. The next step would be adding the secure device ATmel produced called ATSHA204A that can be compatible with ATmel mega 328P using now. The original PCB design still need a lot of improvements in order to be price and size optimized for building the sensor nodes. The bootloader for the ATmel mega 328P MCU should also be researched and re-implemented for intergated with intialization of ATSHA204A module.</p>
+
+<h3>What have been done on PCB initial design:</h3>
+
+<h5>The schematic circuit</h5>
+
+<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-06-18%20at%2023.28.09.png" alt="image"></p>
+
+<h5>The board:</h5>
+
+<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-06-21%20at%2012.13.59.png" alt="image"></p>
+
+<p>In the next two weeks, the following things are to be done hopefully:</p>
+
+<ul>
+<li>Continue working on the &quot;perfect&quot; PCB design in order to fit the flexibility as well as relative price optimization purpose</li>
+<li>Research on the secure chip may be used on the PCB ATSHA204A module</li>
+<li>Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module</li>
+<li>Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
+*</li>
+<li>Continue working on some nodejs development, transfer the simple blog building to a simple CMS</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+
     </div>
 
     <footer class="site-footer">
@@ -163,11 +221,12 @@
           </li>
           
 
+
           
           <li>
             <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
 
-          </li>
+
           
         </ul>
       </div>
@@ -176,6 +235,7 @@
         <p></p>
       </div>
     </div>
+
 
     <p class="rss-subscribe">subscribe <a href="/TempBlogs//feed.xml">via RSS</a></p>
 
@@ -201,6 +261,11 @@
 
 
 </script>
+
+
+  </div>
+
+</footer>
 
 
 

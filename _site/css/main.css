@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 body {
   font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6c6c6c;
-  background-color: transparent;
+  background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
@@ -44,7 +44,7 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14.8px; }
+  font-size: 14px; }
 
 /**
  * Lists
@@ -76,7 +76,7 @@ a {
  */
 blockquote {
   color: #77BA9B;
-  border-left: 4px solid #afafaf;
+  border-left: 4px solid #a3a3a3;
   padding-left: 15px;
   font-family: monospace;
   font-size: 1em;
@@ -91,7 +91,7 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 0px solid #afafaf;
+  border: 0px solid #a3a3a3;
   border-radius: 3px;
   background-color: #f5f5f5; }
 
@@ -154,7 +154,7 @@ pre {
   height: 16px;
   vertical-align: middle; }
   .icon > svg path {
-    fill: #898989; }
+    fill: #828282; }
 
 .left-arrow {
   display: inline-block;
@@ -243,7 +243,6 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #77BA9B;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -271,7 +270,7 @@ pre {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #494949; }
+            fill: #424242; }
       .site-nav .trigger {
         clear: both;
         display: none; }
@@ -286,8 +285,7 @@ pre {
           margin-right: 5px; } }
 
 .each-post-list {
-  list-style-type: none;
-  display: block; }
+  list-style-type: none; }
 
 @media (max-width: 550px) {
   #archive-year {
@@ -300,7 +298,7 @@ pre {
   color: #77BA9B; }
 
 .archive-year[style="nactive"] {
-  color: #afafaf; }
+  color: #a3a3a3; }
 
 .archive-year[style="nactive"]:hover {
   color: #77BA9B; }
@@ -319,6 +317,7 @@ pre {
   font-size: 1vw;
   font-weight: 500;
   color: #77BA9B;
+  margin: 0 auto;
   min-width: 90px;
   display: block; }
 
@@ -342,8 +341,7 @@ pre {
 .each-post {
   display: inline-block;
   margin-left: 10px;
-  padding-left: 10px;
-  min-height: 28px; }
+  padding-left: 10px; }
   @media (min-width: 991px) {
     .each-post {
       font-size: 1.4vw; } }
@@ -369,7 +367,7 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #afafaf;
+  border-top: 1px solid #a3a3a3;
   padding: 30px 0; }
 
 .footer-heading {
@@ -470,7 +468,7 @@ a.categories-list-item {
     margin: 10px;
     padding: 10px; } }
 .categories-list-item[style="nactive"] {
-  color: #afafaf; }
+  color: #a3a3a3; }
 
 .categories-list-item[style="nactive"]:hover {
   color: #77BA9B; }

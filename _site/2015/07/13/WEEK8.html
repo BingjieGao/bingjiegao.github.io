@@ -77,6 +77,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       </div>
 
     </nav>
@@ -160,35 +170,35 @@ The design thinking of this modular sensor node had been changed a lot in terms 
                               
                               
                               <span class="site-tag">
-                                <a href="/TempBlogs//tags.html"
+                                <a class="tag-name" href="/TempBlogs//tag/-c-c.html/"
                                     style="font-size: 84%">
                                  C/C++ (1)
                                 </a>
                               </span>
                           
                               <span class="site-tag">
-                                <a href="/TempBlogs//tags.html"
+                                <a class="tag-name" href="/TempBlogs//tag/-express.html/"
                                     style="font-size: 84%">
                                  Express (1)
                                 </a>
                               </span>
                           
                               <span class="site-tag">
-                                <a href="/TempBlogs//tags.html"
+                                <a class="tag-name" href="/TempBlogs//tag/-nodejs.html/"
                                     style="font-size: 84%">
                                  Nodejs (1)
                                 </a>
                               </span>
                           
                               <span class="site-tag">
-                                <a href="/TempBlogs//tags.html"
+                                <a class="tag-name" href="/TempBlogs//tag/-学习.html/"
                                     style="font-size: 88%">
                                  学习 (2)
                                 </a>
                               </span>
                           
                               <span class="site-tag">
-                                <a href="/TempBlogs//tags.html"
+                                <a class="tag-name" href="/TempBlogs//tag/-面试.html/"
                                     style="font-size: 84%">
                                  面试 (1)
                                 </a>
@@ -255,6 +265,7 @@ The design thinking of this modular sensor node had been changed a lot in terms 
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
+      var tag_name = $('.tag-name');
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
@@ -264,6 +275,9 @@ The design thinking of this modular sensor node had been changed a lot in terms 
       })
       $(window).scroll(function(){
         scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+      tag_name.click(function(){
+        console.log($(this).text());
       })
 
 

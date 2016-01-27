@@ -77,6 +77,16 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       </div>
 
     </nav>
@@ -196,6 +206,7 @@
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
+      var tag_name = $('.tag-name');
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
@@ -205,6 +216,9 @@
       })
       $(window).scroll(function(){
         scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+      tag_name.click(function(){
+        console.log($(this).text());
       })
 
 

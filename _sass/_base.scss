@@ -246,26 +246,22 @@ pre {
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
-@media screen
-and (max-width: 700px)
- {
-    .categories-list-item{
-        width: 100%;
-        display: block;
-        text-align: center;
-        margin:10px;
-        margin-left: 0px;
-    }
-    .toggle-post-list{
-        width: 100%;
-        padding-left: 0px;
-        margin-left: 0px;
-    }
-    .archive-year{
-        display:none;
-    }
-
-}
+// @media screen
+// and (max-width: 700px)
+//  {
+//     .categories-list-item{
+//         width: 100%;
+//         display: block;
+//         text-align: center;
+//         margin:10px;
+//         margin-left: 0px;
+//     }
+//     .toggle-post-list{
+//         width: 100%;
+//         padding-left: 0px;
+//         margin-left: 0px;
+//     }
+// }
 .nav-right{
     display:inline-block;
     right:0;
@@ -304,6 +300,11 @@ and (max-width: 700px)
 }
 .toggle-span:hover{
     cursor:pointer;
+}
+.list-content{
+    margin:0 auto;
+    padding:0 auto;
+    width:100%;
 }
 
 

@@ -5,7 +5,7 @@ layout: otherpages
 <h2>{{ page.tag | replace:'-', ' '}}</h2>
 <ul>
 {% for post in page.posts %}
-  <li><a href="{{site.baseurl}}/{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }} | Tags: {{ post | tags | replace:'-', ' ' }})</li>
+  <li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }}  {{ post |tags| replace:'-', ' '}})</li>
 {% endfor %}
 </ul>
 

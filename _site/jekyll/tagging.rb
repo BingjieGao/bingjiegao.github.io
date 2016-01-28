@@ -12,8 +12,7 @@ module Jekyll
     # Substitutes any diacritics in _str_ with their ASCII equivalents,
     # whitespaces with dashes and converts _str_ to downcase.
     def jekyll_tagging_slug(str)
-      str.replace_diacritics.downcase.gsub(/\s/, '-')
-      #str.replace_diacritics.downcase.gsub('-','')
+      str.replace_diacritics.downcase.gsub(/\s/, ' ')
     end
 
   end
@@ -131,8 +130,7 @@ module Jekyll
     end
 
     def tag_url(tag, type = :page, site = Tagger.site)
-      tag = tag.gsub('-','')
-      url = File.join('', site.config["baseurl"].to_s, site.config["tag_#{type}_dir"], ERB::Util.u(jekyll_tagging_slug(tag))
+      url = File.join('', site.config["baseurl"].to_s, site.config["tag_#{type}_dir"], ERB::Util.u(tag))
       print tag
       site.permalink_style == :pretty || site.config['tag_permalink_style'] == 'pretty' ? url << '/' : url << '.html'
     end

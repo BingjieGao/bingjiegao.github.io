@@ -1,1 +1,1 @@
-require 'jekyll/tagging'
+require '~/Sites/TempBlog/jekyll/tagging'

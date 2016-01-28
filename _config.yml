@@ -20,8 +20,8 @@ baseurl: /TempBlogs # the subpath of your site, e.g. /blog
 url: "http://catamo10.github.io/TempBlogs" # the base hostname & protocol for your site
 permalink: :year/:month/:day/:title
 tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
+tag_page_dir: /
+# tag_permalink_style: pretty
 gems:
   - jekyll-tagging
 # twitter_username: jekyllrb

@@ -133,7 +133,7 @@ module Jekyll
 
     def tag_url(tag, type = :page, site = Tagger.site)
     	tag = tag.tr('-','')
-      url = File.join('', site.config["baseurl"].to_s, site.config["tag_#{type}_dir"],tag)
+      url = File.join('', site.config["baseurl"].to_s,tag)
       print url
       site.permalink_style == :pretty || site.config['tag_permalink_style'] == 'pretty' ? url << '/' : url << '.html'
     end

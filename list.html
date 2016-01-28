@@ -2,7 +2,7 @@
 layout: otherpages
 ---
 
-<div class="home">
+
     <div class="list-content">
             <div class="col-md-4" id="archive-year">
             <!-- <div class="side-bar"> -->
@@ -26,15 +26,15 @@ layout: otherpages
                     {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
                     <li class="each-post-list" year="{{ tyear }}">
                         <div class="each-post">
-                                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                                 <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                         </div>
                     </li>
                     {% endfor %}
                     </ul>
                 </div>
         </div>
-</div>
+
 
 <script>
 

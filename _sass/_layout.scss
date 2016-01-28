@@ -107,7 +107,11 @@
         }
     }
 }
-
+.inner{
+    width:100%;
+    position:relative;
+    @extend %clearfix;
+}
 
 //list.html
 .each-post-list{
@@ -144,12 +148,18 @@
     }
 }
 .post-meta {
-    font-size: 1vw;
     font-weight: 500;
     color: #77BA9B;
     margin: 0 auto;
     min-width: 90px;
-    display: block;
+    display: inline-block;
+
+    @media (min-width: 991px){
+        font-size:1.2vw;
+    }
+    @media (max-width: 900px){
+        font-size:13px;
+    }
 }
 .span>.post-meta{
     min-width: 90px;
@@ -182,7 +192,7 @@
     // min-height: 28px;
 
     @media (min-width: 991px){
-        font-size:1.4vw;
+        font-size:1.5vw;
     }
     @media (max-width: 900px){
         font-size:15px;

@@ -6,9 +6,6 @@ layout: otherpages
 <ul>
 {% for post in page.posts %}
   <li><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }}  {{ post |tags| replace:'-', ' '}})</li>
- {{post |keywords| replace:'-',''}}
-
-
 {% endfor %}
 </ul>
 

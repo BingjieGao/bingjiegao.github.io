@@ -109,6 +109,7 @@
 }
 .inner{
     width:100%;
+    min-width: 550px;
     position:relative;
     @extend %clearfix;
 }

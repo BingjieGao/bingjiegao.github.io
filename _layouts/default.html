@@ -29,16 +29,14 @@
                           </div>
                               
                           <div class="side-content">    
-                            <h1>Tag Cloud</h1>
-                              {% assign tags = site.tags | sort %}
-                              {% for tag in tags %}
-                              <span class="site-tag">
-                                <a class="tag-name" href="{{site.baseurl}}/tag/{{ tag | first | replace:'-',''|downcase }}/index.html"
-                                    style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
-                                {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
-                                </a>
-                              </span>
-                          {% endfor %}
+                              <div class="side-content-title">Tag Cloud</div>
+                                {% assign tags = site.tags | sort %}
+                                {% for tag in tags %}
+                                <div class="site-tag">
+                                  <a class="tag-name" href="{{site.baseurl}}/tag/{{ tag | first | replace:'-',''|downcase }}/index.html"
+                                      style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">{{ tag[0] | replace:'-', ' ' }}</a>
+                                </div>
+                                {% endfor %}
                           </div>
                           <div class="toggle-span2">
                             <i class="fa fa-chevron-circle-right fa-2x"></i>

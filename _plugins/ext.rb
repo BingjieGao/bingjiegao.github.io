@@ -133,7 +133,10 @@ module Jekyll
 
     def tag_url(tag, type = :page, site = Tagger.site)
     	tag = tag.tr('-','')
+      # tag = tag.downcase
+      print tag
       url = File.join('', site.config["baseurl"].to_s, site.config["tag_#{type}_dir"],tag.downcase)
+      print url
       site.permalink_style == :pretty || site.config['tag_permalink_style'] == 'pretty' ? url << '/' : url << '.html'
     end
 
@@ -141,6 +144,7 @@ module Jekyll
       tags = obj['tags'].dup
       tags.map! { |t| t.first } if tags.first.is_a?(Array)
       tags.map! { |t| tag_link(t, tag_url(t), :rel => 'tag') if t.is_a?(String) }.compact!
+      print tags
       tags.join(', ')
     end
 

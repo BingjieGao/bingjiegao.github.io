@@ -165,8 +165,6 @@ pre {
   float: right;
   margin-right: 40px; }
 
-/* ----------- iPhone 6 ----------- */
-/* Portrait and Landscape */
 .nav-right {
   display: inline-block;
   right: 0;
@@ -286,7 +284,9 @@ pre {
     -moz-transition: all 0.5s ease-out;
     -o-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
-    transition: padding 0.5s ease-out; } }
+    transition: padding 0.5s ease-out;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); } }
 
 @-webkit-keyframes fadeIn {
   0% {

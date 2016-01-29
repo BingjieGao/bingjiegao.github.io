@@ -242,26 +242,6 @@ pre {
 
 }
 
-
-/* ----------- iPhone 6 ----------- */
-
-/* Portrait and Landscape */
-// @media screen
-// and (max-width: 700px)
-//  {
-//     .categories-list-item{
-//         width: 100%;
-//         display: block;
-//         text-align: center;
-//         margin:10px;
-//         margin-left: 0px;
-//     }
-//     .toggle-post-list{
-//         width: 100%;
-//         padding-left: 0px;
-//         margin-left: 0px;
-//     }
-// }
 .nav-right{
     display:inline-block;
     right:0;
@@ -398,6 +378,9 @@ pre {
     -o-transition: all 0.5s ease-out;
     -ms-transition: all 0.5s ease-out;
     transition: padding 0.5s ease-out;
+
+    -webkit-transform: translateZ(0);
+    transform:translateZ(0);
     }
 }
 //animation fadein

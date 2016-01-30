@@ -186,7 +186,7 @@ pre {
 #side-page {
   padding: 1em 2em;
   display: none;
-  -webkit-animation-name: fadeIn;
+  -webkit-animation-name: fadeIn,fadeOut;
   -moz-animation-name: fadeIn;
   -o-animation-name: fadeIn;
   -ms-animation-name: fadeIn;
@@ -236,7 +236,7 @@ pre {
   -o-animation-name: fadeOut;
   -ms-animation-name: fadeOut;
   animation-name: fadeOut;
-  animation-duration: 1s; }
+  animation-duration: 1.5s; }
   @media (max-width: 991px) {
     .toggle-span {
       display: none; } }
@@ -291,12 +291,15 @@ pre {
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
+    display: none;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0); }
   1% {
+    display: block;
     opacity: 0;
     transform: scale(1); }
-  1% {
+  10% {
+    display: block;
     opacity: 0;
     transform: scale(1); }
   100% {
@@ -307,12 +310,15 @@ pre {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    display: none;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0); }
   1% {
+    display: block;
     opacity: 0;
     transform: scale(1); }
-  1% {
+  10% {
+    display: block;
     opacity: 0;
     transform: scale(1); }
   100% {
@@ -346,9 +352,9 @@ pre {
     display: none;
     opacity: 0;
     transform: scale(1); }
-  1% {
+  10% {
     display: none;
-    opacity: 0;
+    opacity: 0.4;
     transform: scale(1); }
   100% {
     opacity: 1;

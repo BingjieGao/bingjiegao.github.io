@@ -26,8 +26,8 @@ layout: otherpages
                     {% capture tyear %}{{post.date | date: "%Y"}}{% endcapture %}
                     <li class="each-post-list" year="{{ tyear }}">
                         <div class="each-post">
-                                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
                                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
                         </div>
                     </li>
                     {% endfor %}

@@ -469,7 +469,7 @@ pre {
   color: #77BA9B;
   margin: 0 auto;
   min-width: 90px;
-  display: inline-block; }
+  display: block; }
   @media (min-width: 991px) {
     .post-meta {
       font-size: 1.2vw; } }
@@ -497,13 +497,14 @@ pre {
 .each-post {
   display: inline-block;
   margin-left: 10px;
-  padding-left: 10px; }
-  @media (min-width: 991px) {
+  padding-left: 10px;
+  font-size: 1.5vw; }
+  @media (min-width: 1200px) {
     .each-post {
-      font-size: 1.5vw; } }
-  @media (max-width: 900px) {
+      font-size: 22px; } }
+  @media (max-width: 991px) {
     .each-post {
-      font-size: 15px; } }
+      font-size: 18px; } }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
     .each-post {
       font-size: 18px; } }
@@ -645,6 +646,12 @@ a.categories-list-item {
   display: inline-block;
   padding: 0px;
   font-size: 1.5vw; }
+  @media (min-width: 1200px) {
+    .post-list-item {
+      font-size: 24px; } }
+  @media (max-width: 991px) {
+    .post-list-item {
+      font-size: 18px; } }
 
 .post-list-item h3 {
   margin: 0px; }

@@ -11,7 +11,7 @@ layout: otherpages
                         {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
                         {% if static-year != year %}
                         {% assign static-year = year %}
-                    <li class="each-post-list">
+                    <li id="year-list" class="each-post-list">
                         <div class="each-post">
                             <a href=javascript:; class="archive-year" year="{{static-year}}" style="nactive">{{ static-year }}</a>
                         </div>

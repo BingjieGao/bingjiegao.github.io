@@ -438,9 +438,12 @@ pre {
 .each-post-list {
   list-style-type: none; }
 
-@media (max-width: 550px) {
-  #archive-year {
-    display: none; } }
+#archive-year {
+  background-color: #f5f5f5;
+  text-align: center; }
+  @media (max-width: 550px) {
+    #archive-year {
+      display: none; } }
 
 .archive-year:hover {
   color: #77BA9B; }
@@ -456,6 +459,12 @@ pre {
 
 .archive-year[style="active"] {
   color: #77BA9B; }
+
+#year-list {
+  border-bottom: 2px dotted #afafaf;
+  padding: 0px; }
+  #year-list:last-child {
+    border-bottom: 0px; }
 
 .post-list {
   margin-left: 0;
@@ -496,8 +505,8 @@ pre {
 
 .each-post {
   display: inline-block;
-  margin-left: 10px;
-  padding-left: 10px;
+  margin: 0 auto;
+  padding: 0px;
   font-size: 1.5vw; }
   @media (min-width: 1200px) {
     .each-post {
@@ -513,7 +522,7 @@ pre {
   margin: 0px; }
 
 .each-post-list {
-  padding: 0 auto;
+  padding-left: 2em;
   margin: 0 auto;
   border-left: 4px solid transparent; }
 

@@ -56,10 +56,11 @@
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/TempBlogs/css/main.css">
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/about/">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -115,11 +113,13 @@
   </header>
 
   <div class="post-content">
-    <h4>姓名：CatAmo</h4>
-
-<h4>职位：Internet developer&amp; Hardware Engineering Designer</h4>
+    <h4>CatAmo (Internet developer&amp; Hardware Engineering Designer)</h4>
 
 <h4>公司: Nquiringminds Ltd. Southampton, UK</h4>
+
+<p>不愿长期滞留之苦，西洋之怪习不可沾染也、技术不比人长，学习之路漫漫</p>
+
+<h5>NOTHING IS SO COMMMON-PLACE AS TO WISH TO BE REMARKABLE</h5>
 
   </div>
 
@@ -234,10 +234,11 @@
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

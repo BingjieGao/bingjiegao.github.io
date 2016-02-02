@@ -19,8 +19,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/TempBlogs/css/main.css">
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -263,10 +261,11 @@
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

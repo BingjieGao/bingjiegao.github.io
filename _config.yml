@@ -9,7 +9,7 @@ exclude: [Src, Lib, Visual Studio Integration]
 
 markdown: redcarpet
 encoding: UTF-8
-highlighter: pygments
+highlighter: rouge
 
 # Site settings
 title: CatAmo凉生
@@ -22,15 +22,15 @@ permalink: :year/:month/:day/:title
 tag_page_layout: tag_page
 tag_page_dir: tag
 tag_permalink_style: pretty
-gems:
-  - jekyll-tagging
+# gems:
+#   - jekyll-tagging
 # twitter_username: jekyllrb
 jianshu_username: CatAmo凉生_简书
 github_username:  CatAmo10
 jianshu_png: /TempBlogs/_includes/skeleton.png
 
 gems: [jekyll-paginate]
-paginate: 3
+paginate: 1
 paginate_path: "blog/page:num"
 # Build settings
 # markdown: kramdown 

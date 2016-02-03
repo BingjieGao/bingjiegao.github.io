@@ -16,9 +16,9 @@
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -53,6 +53,26 @@
         
           
           <a class="page-link" href="/TempBlogs/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -134,7 +154,7 @@
 <p>我觉得首先应该要把整个链表的长度先求出来，然后在不判断不遍历整个链表的情况下只比对数字。下面是示例代码：</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
+<span class="n">public</span><span class="o">:</span>
     <span class="n">ListNode</span><span class="o">*</span> <span class="n">FindKthToTail</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pListHead</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">pListHead</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
@@ -159,10 +179,10 @@
 <p>我觉得删除节点分两步，一个是删除单向链表中上一个只想该节点的链接和该节点指向下一个节点的链接，而变成第n-1个节点-&gt;next指向原先的n+1个节点。第二步就是当删除了链接并不代表当前删除的节点不占用内存空间，所以就要free这个空间。下面是通过的代码示例：</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Remove</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
-    <span class="kt">bool</span> <span class="n">removeNode</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">removeNode</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span><span class="o">=</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
         <span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
@@ -177,17 +197,17 @@
 想法很单纯，既然要分割链表就自然需要定义两个新的链表，第一步遍历整个给定的链表将每个节点的值与给定的x值作对比，当小于x的时候就把新定义的p1链表的下一个节点指向此时的temp节点，而当大于x值得时候自然就将此时的temp节点赋给p2的下一个节点。
 在过程中需要保存两个新定义链表的表头，也就是要判断一下p1和p2的头结点以便最后返回头节点。下面为最终的代码示例：</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*</span>
-<span class="cm">struct ListNode {</span>
-<span class="cm">    int val;</span>
-<span class="cm">    struct ListNode *next;</span>
-<span class="cm">    ListNode(int x) : val(x), next(NULL) {}</span>
-<span class="cm">};*/</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
 <span class="n">class</span> <span class="n">Partition</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
+<span class="n">public</span><span class="o">:</span>
     <span class="n">ListNode</span><span class="o">*</span> <span class="n">partition</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here</span>
-        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p1</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="c1">// write code here
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p1</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">p2</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">p1Head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -233,32 +253,32 @@
 <p>题目描述为相加两个给出的链表A与B，比如说：{1,2,3} + {3,2,1}需要返回一个结果链表为{4,4,4}。
 在中间的加法运算中主要分为两步，第一步计算每每两个数字相加的结果，第二部提取出相应结果的进位和需要保留的个位数结果。下面为这一部分实现的代码示例：</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="nl">val</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
-<span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="nl">val</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
 <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="o">+</span><span class="n">carry</span><span class="p">;</span>
 <span class="n">carry</span> <span class="o">=</span> <span class="n">val</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span></code></pre></figure>
 
 <p>定义两个新的ListNode结构的新链表，一个用来做最后返回的链表头，一个作为链表的存储。因为不知道两个给定的链表长度，所以判断的时候两个链表都判断是否为NULL再进入循环来遍历两个链表。当遍历时判断一下最终返回链表的头节点，下面为完整的代码示例：</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*</span>
-<span class="cm">struct ListNode {</span>
-<span class="cm">    int val;</span>
-<span class="cm">    struct ListNode *next;</span>
-<span class="cm">    ListNode(int x) : val(x), next(NULL) {}</span>
-<span class="cm">};*/</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
 <span class="n">class</span> <span class="n">Plus</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
+<span class="n">public</span><span class="o">:</span>
     <span class="n">ListNode</span><span class="o">*</span> <span class="n">plusAB</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here</span>
-        <span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="c1">// write code here
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
         <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="k">while</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span> <span class="o">||</span> <span class="n">carry</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
             <span class="kt">int</span> <span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">;</span>
-            <span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="nl">val</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
-            <span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="nl">val</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
             <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="o">+</span><span class="n">carry</span><span class="p">;</span>
             <span class="n">carry</span> <span class="o">=</span> <span class="n">val</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
             
@@ -271,8 +291,8 @@
                 <span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
                 <span class="n">pNode</span><span class="o">=</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
             <span class="p">}</span>
-            <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="nl">next</span><span class="p">:</span><span class="nb">NULL</span><span class="p">;</span>
-            <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="nl">next</span><span class="p">:</span><span class="nb">NULL</span><span class="p">;</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">:</span><span class="nb">NULL</span><span class="p">;</span>
+            <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">:</span><span class="nb">NULL</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="n">pNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="k">return</span> <span class="n">pHead</span><span class="p">;</span>
@@ -284,10 +304,10 @@
 <p>题目描述是这样的，需要判断一个给定的链表是否为回文链表，若给定链表如{1,2,3,2,1}则返回true，反之返回false。想法应该说并不难，但是我在链表的地址和赋值之间来回徘徊了很久才大概明白代码测试一直不能通过是因为什么，下面先来看这个代码</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Palindrome</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
-    <span class="kt">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here·</span>
-        <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverseNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here·
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverseNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">originalNode</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -295,10 +315,10 @@
             <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="k">while</span><span class="p">(</span><span class="n">pHead</span><span class="p">){</span>
             <span class="n">next</span> <span class="o">=</span> <span class="n">pHead</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-            <span class="n">temp</span> <span class="o">=</span> <span class="n">reverseNode</span><span class="p">;</span><span class="c1">//temp=current</span>
-            <span class="n">reverseNode</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span><span class="c1">//prev=current</span>
-            <span class="n">reverseNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span><span class="c1">//next=current</span>
-            <span class="n">pHead</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">reverseNode</span><span class="p">;</span><span class="c1">//temp=current
+</span>            <span class="n">reverseNode</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span><span class="c1">//prev=current
+</span>            <span class="n">reverseNode</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span><span class="c1">//next=current
+</span>            <span class="n">pHead</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">while</span><span class="p">(</span><span class="n">originalNode</span> <span class="o">&amp;&amp;</span> <span class="n">reverseNode</span><span class="p">){</span>
             <span class="k">if</span><span class="p">(</span><span class="n">originalNode</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">!=</span> <span class="n">reverseNode</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">){</span>
@@ -315,22 +335,22 @@
 <p>首先定义了两个链表节点分别指向第一个给定节点和NULL，然后遍历给定的链表将链表反转。在遍历的过程中，将reverse这个想象中是反转后的链表先传给一个temp以做保留，将reverse指向遍历当前的节点，而reverse-&gt;next指向先前的地址也就是temp，然而此时我想也就破坏了给定链表指向next的这个节点链接了。
 先贴一个正常反转链表并返回反转之后链表表头的leetcode上通过的代码：</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/**</span>
-<span class="cm"> * Definition for singly-linked list.</span>
-<span class="cm"> * struct ListNode {</span>
-<span class="cm"> *     int val;</span>
-<span class="cm"> *     ListNode *next;</span>
-<span class="cm"> *     ListNode(int x) : val(x), next(NULL) {}</span>
-<span class="cm"> * };</span>
-<span class="cm"> */</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
 <span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
+<span class="n">public</span><span class="o">:</span>
     <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverseList</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span><span class="p">,</span><span class="o">*</span><span class="n">current</span><span class="p">,</span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverse</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">current</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
-        <span class="c1">//prev = NULL;</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">current</span><span class="p">){</span>
+        <span class="c1">//prev = NULL;
+</span>        <span class="k">while</span><span class="p">(</span><span class="n">current</span><span class="p">){</span>
             <span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
             <span class="n">temp</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">;</span>
             <span class="n">reverse</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
@@ -354,29 +374,29 @@
 
 <p>好吧，插了一句嘴，下面来贴上纠结了我一下午的最终通过代码示例：</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*</span>
-<span class="cm">struct ListNode {</span>
-<span class="cm">    int val;</span>
-<span class="cm">    struct ListNode *next;</span>
-<span class="cm">    ListNode(int x) : val(x), next(NULL) {}</span>
-<span class="cm">};*/</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
 <span class="n">class</span> <span class="n">Palindrome</span> <span class="p">{</span>
-<span class="nl">public</span><span class="p">:</span>
-    <span class="kt">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here</span>
-        
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">current</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span>
         <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverse</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
         <span class="k">if</span><span class="p">(</span><span class="n">pHead</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
             <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
         <span class="k">while</span><span class="p">(</span><span class="n">current</span><span class="p">){</span>
-            <span class="c1">//temp = reverse;</span>
-            <span class="c1">//reverse-&gt;next = temp;</span>
-            <span class="c1">//reverse = current-&gt;next;</span>
-            <span class="n">temp</span><span class="o">=</span><span class="n">reverse</span><span class="p">;</span>
-            <span class="n">ListNode</span><span class="o">*</span> <span class="n">nextnode</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//reverse = current-&gt;next;</span>
-            <span class="n">reverse</span> <span class="o">=</span> <span class="n">nextnode</span><span class="p">;</span>
+            <span class="c1">//temp = reverse;
+</span>            <span class="c1">//reverse-&gt;next = temp;
+</span>            <span class="c1">//reverse = current-&gt;next;
+</span>            <span class="n">temp</span><span class="o">=</span><span class="n">reverse</span><span class="p">;</span>
+            <span class="n">ListNode</span><span class="o">*</span> <span class="n">nextnode</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">current</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//reverse = current-&gt;next;
+</span>            <span class="n">reverse</span> <span class="o">=</span> <span class="n">nextnode</span><span class="p">;</span>
             <span class="n">reverse</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
             <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
         <span class="p">}</span>

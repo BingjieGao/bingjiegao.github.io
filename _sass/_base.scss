@@ -373,14 +373,15 @@ pre {
 
 #main-content{
     @media (min-width:991px){
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
+    -webkit-transition: padding 0.5s ease-out;
+    -moz-transition: padding 0.5s ease-out;
+    -o-transition: padding 0.5s ease-out;
+    -ms-transition: padding 0.5s ease-out;
     transition: padding 0.5s ease-out;
 
     -webkit-transform: translateZ(0);
     transform:translateZ(0);
+    transform: translate3d(20px, 20px, 0px)
     }
 }
 //animation fadein

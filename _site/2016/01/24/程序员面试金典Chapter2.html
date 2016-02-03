@@ -114,7 +114,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3>第一题 输出链表中的倒数第n个结点</h3>
+    <h3 id="n">第一题 输出链表中的倒数第n个结点</h3>
 
 <p>给出的结构体为：</p>
 
@@ -154,8 +154,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3>第二题  删除单向链表中的一个节点</h3>
-
+<h3 id="section">第二题  删除单向链表中的一个节点</h3>
 <p>我觉得删除节点分两步，一个是删除单向链表中上一个只想该节点的链接和该节点指向下一个节点的链接，而变成第n-1个节点-&gt;next指向原先的n+1个节点。第二步就是当删除了链接并不代表当前删除的节点不占用内存空间，所以就要free这个空间。下面是通过的代码示例：</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Remove</span> <span class="p">{</span>
@@ -171,8 +170,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3>第三题  分割链表</h3>
-
+<h3 id="section-1">第三题  分割链表</h3>
 <p>题目描述的是要将小于给定x值的节点与大于x值的节点分割成两部分，而本身链表的顺序不能够改变。最后需要返回小于x值的链表+大于x值的链表的头节点。
 想法很单纯，既然要分割链表就自然需要定义两个新的链表，第一步遍历整个给定的链表将每个节点的值与给定的x值作对比，当小于x的时候就把新定义的p1链表的下一个节点指向此时的temp节点，而当大于x值得时候自然就将此时的temp节点赋给p2的下一个节点。
 在过程中需要保存两个新定义链表的表头，也就是要判断一下p1和p2的头结点以便最后返回头节点。下面为最终的代码示例：</p>
@@ -212,8 +210,8 @@ struct ListNode {
                 <span class="p">}</span>
                     
                 <span class="k">else</span><span class="p">{</span>
-                    <span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
-                    <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span> 
+                	<span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                	<span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span> 
                 <span class="p">}</span>   
             <span class="p">}</span>
             <span class="n">pHead</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
@@ -228,8 +226,7 @@ struct ListNode {
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3>第四题  链表A+B</h3>
-
+<h3 id="ab">第四题  链表A+B</h3>
 <p>题目描述为相加两个给出的链表A与B，比如说：{1,2,3} + {3,2,1}需要返回一个结果链表为{4,4,4}。
 在中间的加法运算中主要分为两步，第一步计算每每两个数字相加的结果，第二部提取出相应结果的进位和需要保留的个位数结果。下面为这一部分实现的代码示例：</p>
 
@@ -279,8 +276,7 @@ struct ListNode {
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3>第五题 回文链表</h3>
-
+<h3 id="section-2">第五题 回文链表</h3>
 <p>题目描述是这样的，需要判断一个给定的链表是否为回文链表，若给定链表如{1,2,3,2,1}则返回true，反之返回false。想法应该说并不难，但是我在链表的地址和赋值之间来回徘徊了很久才大概明白代码测试一直不能通过是因为什么，下面先来看这个代码</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Palindrome</span> <span class="p">{</span>
@@ -342,14 +338,16 @@ struct ListNode {
 <span class="p">};</span></code></pre></figure>
 
 <p>同样将这段代码整齐的贴进这道题再去遍历做比较，依然会不能通过测试，始终返回true，以我的专业出身和智商还没有真正深究出原因，不过我猜想是因为永远指向同一个地址那么比较的时候肯定会不如人意，当在反转时有必要将反转之后的链表reverse和在遍历当前给定链表的时候new一个新的ListNode而不是在同一条地址链上进行多次的重复操作以至于最后比对的original链表丢失。这也是为什么当只是单纯做反转链表的时候遍历第一步就要保存好当前节点next指向的地址。
-所以重新定义并new一个链表reverse为NULL，然后遍历整个给定的链表，将当前节点值给该次循环中的reverse节点，将该被改动的reverse节点的next指向上一循环中的reverse节点，以此类推，直到把NULL推到最后一个位置。这个方法我很熟悉，跟做硬件编译时传输10101010....类的数据相差不大，都是按照一定的顺序你推我我推你到穷尽。</p>
+所以重新定义并new一个链表reverse为NULL，然后遍历整个给定的链表，将当前节点值给该次循环中的reverse节点，将该被改动的reverse节点的next指向上一循环中的reverse节点，以此类推，直到把NULL推到最后一个位置。这个方法我很熟悉，跟做硬件编译时传输10101010….类的数据相差不大，都是按照一定的顺序你推我我推你到穷尽。</p>
 
-<h4>这里很想插一句</h4>
+<h4 id="section-3">这里很想插一句</h4>
 
 <blockquote>
-<p>一直以来人们给所谓程序员配的图满是10101010.....，看黑客帝国就知道了，我想说没错，计算机是接受二进制，可是在我自学Nodejs开发和这些满满的上层软件面向对象碰到过10101010现象的机会远远不如我作为公司的一名新晋嵌入式开发来的平常。</p>
+  <p>一直以来人们给所谓程序员配的图满是10101010…..，看黑客帝国就知道了，我想说没错，计算机是接受二进制，可是在我自学Nodejs开发和这些满满的上层软件面向对象碰到过10101010现象的机会远远不如我作为公司的一名新晋嵌入式开发来的平常。</p>
+</blockquote>
 
-<p>程序员分很多种，我希望我哪种都不是，我不是一名程序员或者软件、硬件工程师，我只是一名普通人，懂得少学得慢。</p>
+<blockquote>
+  <p>程序员分很多种，我希望我哪种都不是，我不是一名程序员或者软件、硬件工程师，我只是一名普通人，懂得少学得慢。</p>
 </blockquote>
 
 <p>好吧，插了一句嘴，下面来贴上纠结了我一下午的最终通过代码示例：</p>

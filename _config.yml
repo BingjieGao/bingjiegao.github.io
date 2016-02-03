@@ -7,7 +7,7 @@
 
 exclude: [Src, Lib, Visual Studio Integration]
 
-markdown: redcarpet
+markdown: kramdown
 encoding: UTF-8
 highlighter: rouge
 

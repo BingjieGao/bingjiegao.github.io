@@ -116,33 +116,171 @@
         <h1>
           <a href="/TempBlogs/2015/06/05/day-1-2">Initial Research on MCUs</a>
         </h1>
-          <h1>Day1-2</h1>
+          <h1 id="day1-2">Day1-2</h1>
+<p>###Initial Research on MCUs</p>
 
-<h3>Initial Research on MCUs</h3>
+<p>During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called “busy bee” by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.</p>
 
-<p>During the first day in office, the main instruments provider were researched such as: Texas Instruments, ARM and Atmel, etc. The main MUCs were determined to be further examined today: TMS320 and TMS370, MSP430 series from TI; 8051 based MCUs; AVR based MCUs; ARM Cortex-M based MCUs. In terms of the commercial benefits as well as the lower cost consideration, the unit price and the minimum purchase regulations were studied. Generally, the lowest price lied on the core processor 8051which provided by Silicon Labs and sells about USD 0.31. This cheap chip belongs to the series called &quot;busy bee&quot; by Silicon Labs and normally this EFM8 family cost energy around 150uA/MHz actively, and 50nA when in the sleep mode. Also the wake up time for such EFM8 family MCUs normally less than 2us. The most expensive MCUs among the all researched so far are based on TMS320 manufactured by Texas Instruments that cost around USD 3.26 to buy the cheapest one. Whereas other MCUs based on AVR, ARM Cortex-M0 and MSP4302X are typically sold abound USD 0.38 or 0.42.</p>
-
-<p>| Digi-Key Part Number    | Manufacturer Part Number | Manufacturer | Description      | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Series     | Core Processor | Core Size | Speed | Connectivity                | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature |
-|-------------------------|--------------------------|--------------|------------------|--------------------|---------------|------------------|-------|------------------|------------|----------------|-----------|-------|-----------------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|
-| EFM8BB10F2G-A-QFN20R-ND | EFM8BB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.31361          | 0     | 1500             | Busy Bee   | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 2.2 V ~ 3.6 V              | A/D 15x12b      | Internal        | -40°C ~ 85°C          |
-| EFM8SB10F2G-A-QFN20R-ND | EFM8SB10F2G-A-QFN20R     | Silicon Labs | IC MCU 2KB 20QFN | 0                  | 0             | 0.47723          | 0     | 1500             | Sleepy Bee | CIP-51 8051    | 8-Bit     | 25MHz | I²C, SMBus, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 16            | 2KB (2K x 8)        | FLASH               | -           | 256 x 8  | 1.8 V ~ 3.6 V              | A/D 9x12b       | Internal        | -40°C ~ 85°C          |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Digi-Key Part Number</th>
+      <th>Manufacturer Part Number</th>
+      <th>Manufacturer</th>
+      <th>Description</th>
+      <th>Quantity Available</th>
+      <th>Factory Stock</th>
+      <th>Unit Price (USD)</th>
+      <th>@ qty</th>
+      <th>Minimum Quantity</th>
+      <th>Series</th>
+      <th>Core Processor</th>
+      <th>Core Size</th>
+      <th>Speed</th>
+      <th>Connectivity</th>
+      <th>Peripherals</th>
+      <th>Number of I/O</th>
+      <th>Program Memory Size</th>
+      <th>Program Memory Type</th>
+      <th>EEPROM Size</th>
+      <th>RAM Size</th>
+      <th>Voltage - Supply (Vcc/Vdd)</th>
+      <th>Data Converters</th>
+      <th>Oscillator Type</th>
+      <th>Operating Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>EFM8BB10F2G-A-QFN20R-ND</td>
+      <td>EFM8BB10F2G-A-QFN20R</td>
+      <td>Silicon Labs</td>
+      <td>IC MCU 2KB 20QFN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.31361</td>
+      <td>0</td>
+      <td>1500</td>
+      <td>Busy Bee</td>
+      <td>CIP-51 8051</td>
+      <td>8-Bit</td>
+      <td>25MHz</td>
+      <td>I²C, SMBus, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>16</td>
+      <td>2KB (2K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>256 x 8</td>
+      <td>2.2 V ~ 3.6 V</td>
+      <td>A/D 15x12b</td>
+      <td>Internal</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+    <tr>
+      <td>EFM8SB10F2G-A-QFN20R-ND</td>
+      <td>EFM8SB10F2G-A-QFN20R</td>
+      <td>Silicon Labs</td>
+      <td>IC MCU 2KB 20QFN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.47723</td>
+      <td>0</td>
+      <td>1500</td>
+      <td>Sleepy Bee</td>
+      <td>CIP-51 8051</td>
+      <td>8-Bit</td>
+      <td>25MHz</td>
+      <td>I²C, SMBus, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>16</td>
+      <td>2KB (2K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>256 x 8</td>
+      <td>1.8 V ~ 3.6 V</td>
+      <td>A/D 9x12b</td>
+      <td>Internal</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>For MPS4302X based MCUs are normally consume less power as Texas Instrument claims:
 * Active Mode: 220µA at 1MHz, 2.2V
 * Standby Mode: 0.5µA
 * Off Mode: 0.1µA</p>
 
-<p>| Manufacturer Part Number | Manufacturer      | Description                     | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series     | Core Processor | Core Size | Speed | Connectivity | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case                  | Supplier Device Package |
-|--------------------------|-------------------|---------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|------------|----------------|-----------|-------|--------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|---------------------------------|-------------------------|
-| MSP430G2001IPW14R        | Texas Instruments | IC MCU 16BIT 512B FLASH 14TSSOP | 2000               | 0             | 0.385            | 0     | 2000             | Tape &amp; Reel (TR) | MSP430G2xx | MSP430         | 16-Bit    | 16MHz | -            | Brown-out Detect/Reset, POR, PWM, WDT | 10            | 512B (512 x 8)      | FLASH               | -           | 128 x 8  | 1.8 V ~ 3.6 V              | -               | Internal        | -40째C ~ 85째C        | 14-TSSOP (0.173&quot;, 4.40mm Width) | 14-TSSOP                |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer Part Number</th>
+      <th>Manufacturer</th>
+      <th>Description</th>
+      <th>Quantity Available</th>
+      <th>Factory Stock</th>
+      <th>Unit Price (USD)</th>
+      <th>@ qty</th>
+      <th>Minimum Quantity</th>
+      <th>Packaging</th>
+      <th>Series</th>
+      <th>Core Processor</th>
+      <th>Core Size</th>
+      <th>Speed</th>
+      <th>Connectivity</th>
+      <th>Peripherals</th>
+      <th>Number of I/O</th>
+      <th>Program Memory Size</th>
+      <th>Program Memory Type</th>
+      <th>EEPROM Size</th>
+      <th>RAM Size</th>
+      <th>Voltage - Supply (Vcc/Vdd)</th>
+      <th>Data Converters</th>
+      <th>Oscillator Type</th>
+      <th>Operating Temperature</th>
+      <th>Package / Case</th>
+      <th>Supplier Device Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MSP430G2001IPW14R</td>
+      <td>Texas Instruments</td>
+      <td>IC MCU 16BIT 512B FLASH 14TSSOP</td>
+      <td>2000</td>
+      <td>0</td>
+      <td>0.385</td>
+      <td>0</td>
+      <td>2000</td>
+      <td>Tape &amp; Reel (TR)</td>
+      <td>MSP430G2xx</td>
+      <td>MSP430</td>
+      <td>16-Bit</td>
+      <td>16MHz</td>
+      <td>-</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>10</td>
+      <td>512B (512 x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>128 x 8</td>
+      <td>1.8 V ~ 3.6 V</td>
+      <td>-</td>
+      <td>Internal</td>
+      <td>-40째C ~ 85째C</td>
+      <td>14-TSSOP (0.173”, 4.40mm Width)</td>
+      <td>14-TSSOP</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>For general AVR based MCUs, there are three main series manufactured by ATmel, ATtiny, Atmega and XMEGA which corresponding to different purposes. According to the official site, the series ATtiny is mostly designed for building solutions or applications commercially with smaller size and lower power consumption that the supply voltage is only 0.7 Volts. With the promise from Atmel that this tiny size of AVR based MCU has the same performance as those larger ones, this could be a great choice regarding a solution with limitations on scale. It is also mentioned that for this tinyAVR there is no need for external in-circuit which saves more time for a commercial solution to get on sell to market. The cheapest one MCU cost around USD 0.378 in ATtiny4 family (ATTINY4-TSHR).
 The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):</p>
 
 <ul>
-<li> Active Mode: 200µA at 1MHz and 1.8V </li>
-<li> Idle Mode: 25µA at 1MHz and 1.8V </li>
-<li>Power-down Mode:  &lt; 0.1µA at 1.8V</li>
+  <li>Active Mode: 200µA at 1MHz and 1.8V</li>
+  <li>Idle Mode: 25µA at 1MHz and 1.8V</li>
+  <li>Power-down Mode:  &lt; 0.1µA at 1.8V</li>
 </ul>
 
 <p>ATmega is the series that offers more memories, Pin I/Os and etc. With the featured characteristic on building IOT solutions, the mega version of AVR is typically designed for medical or health systems. This series of AVR based MCUs cost around USD 0.83 for the cheapest ones which have 4KB flash memory. The power consumption is listed below (ATmega48PB/88PB/168PB):
@@ -150,38 +288,313 @@ The power consumption (ATtiny4 / ATtiny5 / ATtiny9 / ATtiny10):</p>
 * Power down Mode: 0.4µA
 * Power-Save Mode: 0.1µA</p>
 
-<p>| Digi-Key Part Number | Manufacturer Part Number | Manufacturer | Description                    | Quantity Available | Factory Stock | Unit Price (USD) | @ qty | Minimum Quantity | Packaging        | Series      | Core Processor | Core Size | Speed | Connectivity         | Peripherals                           | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters | Oscillator Type | Operating Temperature | Package / Case       | Supplier Device Package |
-|----------------------|--------------------------|--------------|--------------------------------|--------------------|---------------|------------------|-------|------------------|------------------|-------------|----------------|-----------|-------|----------------------|---------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|-----------------|-----------------|-----------------------|----------------------|-------------------------|
-| ATTINY4-TSHRTR-ND    | ATTINY4-TSHR             | Atmel        | IC MCU 8BIT 512B FLASH SOT23-6 | 4500               | 0             | 0.378            | 0     | 4500             | Tape &amp; Reel (TR) | AVR® ATtiny | AVR            | 8-Bit     | 12MHz | -                    | POR, PWM, WDT                         | 4             | 512B (256 x 16)     | FLASH               | -           | 32 x 8   | 1.8 V ~ 5.5 V              | -               | Internal        | -40°C ~ 85°C          | SOT-23-6             | SOT-23                  |
-| ATMEGA48PB-AURTR-ND  | ATMEGA48PB-AUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32TQFP   | 0                  | 0             | 0.82884          | 0     | 2000             | Tape &amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-TQFP              | 32-TQFP (7x7)           |
-| ATMEGA48PB-MURTR-ND  | ATMEGA48PB-MUR           | Atmel        | IC MCU 8BIT 4KB FLASH 32QFN    | 0                  | 0             | 0.82884          | 0     | 6000             | Tape &amp; Reel (TR) | AVR® ATmega | AVR            | 8-Bit     | 20MHz | I²C, SPI, UART/USART | Brown-out Detect/Reset, POR, PWM, WDT | 27            | 4KB (2K x 16)       | FLASH               | 256 x 8     | 512 x 8  | 1.8 V ~ 5.5 V              | A/D 8x10b       | Internal        | -40°C ~ 85°C          | 32-VFQFN Exposed Pad | 32-VFQFN (5x5)          |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Digi-Key Part Number</th>
+      <th>Manufacturer Part Number</th>
+      <th>Manufacturer</th>
+      <th>Description</th>
+      <th>Quantity Available</th>
+      <th>Factory Stock</th>
+      <th>Unit Price (USD)</th>
+      <th>@ qty</th>
+      <th>Minimum Quantity</th>
+      <th>Packaging</th>
+      <th>Series</th>
+      <th>Core Processor</th>
+      <th>Core Size</th>
+      <th>Speed</th>
+      <th>Connectivity</th>
+      <th>Peripherals</th>
+      <th>Number of I/O</th>
+      <th>Program Memory Size</th>
+      <th>Program Memory Type</th>
+      <th>EEPROM Size</th>
+      <th>RAM Size</th>
+      <th>Voltage - Supply (Vcc/Vdd)</th>
+      <th>Data Converters</th>
+      <th>Oscillator Type</th>
+      <th>Operating Temperature</th>
+      <th>Package / Case</th>
+      <th>Supplier Device Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ATTINY4-TSHRTR-ND</td>
+      <td>ATTINY4-TSHR</td>
+      <td>Atmel</td>
+      <td>IC MCU 8BIT 512B FLASH SOT23-6</td>
+      <td>4500</td>
+      <td>0</td>
+      <td>0.378</td>
+      <td>0</td>
+      <td>4500</td>
+      <td>Tape &amp; Reel (TR)</td>
+      <td>AVR® ATtiny</td>
+      <td>AVR</td>
+      <td>8-Bit</td>
+      <td>12MHz</td>
+      <td>-</td>
+      <td>POR, PWM, WDT</td>
+      <td>4</td>
+      <td>512B (256 x 16)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>32 x 8</td>
+      <td>1.8 V ~ 5.5 V</td>
+      <td>-</td>
+      <td>Internal</td>
+      <td>-40°C ~ 85°C</td>
+      <td>SOT-23-6</td>
+      <td>SOT-23</td>
+    </tr>
+    <tr>
+      <td>ATMEGA48PB-AURTR-ND</td>
+      <td>ATMEGA48PB-AUR</td>
+      <td>Atmel</td>
+      <td>IC MCU 8BIT 4KB FLASH 32TQFP</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.82884</td>
+      <td>0</td>
+      <td>2000</td>
+      <td>Tape &amp; Reel (TR)</td>
+      <td>AVR® ATmega</td>
+      <td>AVR</td>
+      <td>8-Bit</td>
+      <td>20MHz</td>
+      <td>I²C, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>27</td>
+      <td>4KB (2K x 16)</td>
+      <td>FLASH</td>
+      <td>256 x 8</td>
+      <td>512 x 8</td>
+      <td>1.8 V ~ 5.5 V</td>
+      <td>A/D 8x10b</td>
+      <td>Internal</td>
+      <td>-40°C ~ 85°C</td>
+      <td>32-TQFP</td>
+      <td>32-TQFP (7x7)</td>
+    </tr>
+    <tr>
+      <td>ATMEGA48PB-MURTR-ND</td>
+      <td>ATMEGA48PB-MUR</td>
+      <td>Atmel</td>
+      <td>IC MCU 8BIT 4KB FLASH 32QFN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0.82884</td>
+      <td>0</td>
+      <td>6000</td>
+      <td>Tape &amp; Reel (TR)</td>
+      <td>AVR® ATmega</td>
+      <td>AVR</td>
+      <td>8-Bit</td>
+      <td>20MHz</td>
+      <td>I²C, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>27</td>
+      <td>4KB (2K x 16)</td>
+      <td>FLASH</td>
+      <td>256 x 8</td>
+      <td>512 x 8</td>
+      <td>1.8 V ~ 5.5 V</td>
+      <td>A/D 8x10b</td>
+      <td>Internal</td>
+      <td>-40°C ~ 85°C</td>
+      <td>32-VFQFN Exposed Pad</td>
+      <td>32-VFQFN (5x5)</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>There are various of ARM cortex-M core types that the cheapest one costs around USD 0.364 which is based on the  core processor cortex-M0 and manufactured by the company called Cypress Semiconductor Corp. Other companies like STMicroelectronics, NXP Semiconductors and Infineon Technologies as well as ATmel also produce MCUs based on Cortex-M0. The detailed table regarding ARM cortex-M0 based MCUs with the cheapest price are listed below:
 Core processor: Cortex-M0/Cortex-M0+
 Internal oscillator</p>
 
-<p>| Manufacturer Part Number | Manufacturer               | Power Consumption                                                                                                                                                                                           | Unit Price (USD) | Minimum Quantity | Core Processor   | Core Size | Speed | Connectivity                                  | Peripherals                                     | Number of I/O | Program Memory Size | Program Memory Type | EEPROM Size | RAM Size | Voltage - Supply (Vcc/Vdd) | Data Converters      | Operating Temperature |
-|--------------------------|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|------------------|------------------|-----------|-------|-----------------------------------------------|-------------------------------------------------|---------------|---------------------|---------------------|-------------|----------|----------------------------|----------------------|-----------------------|
-| CY8C4013SXI-400T         | Cypress Semiconductor Corp | Lower Power 1.71V to 5.5V operation                                                                                                                                                                         | 0.364            | 2500             | ARM® Cortex®-M0  | 32-Bit    | 16MHz | I²C                                           | Brown-out Detect/Reset, POR, PWM, WDT           | 5             | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.71 V ~ 5.5 V             | -                    | -40°C ~ 85°C          |
-| STM32F030F4P6TR          | STMicroelectronics         | External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V                                                                                                                                         | 0.5796           | 2500             | ARM® Cortex®-M0  | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | DMA, POR, PWM, WDT                              | 15            | 16KB (16K x 8)      | FLASH               | -           | 4K x 8   | 2.4 V ~ 3.6 V              | A/D 11x12b           | -40°C ~ 85°C          |
-| LPC811M001JDH16J         | NXP Semiconductors         | Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current) | 0.644            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 30MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, POR, PWM, WDT           | 14            | 8KB (8K x 8)        | FLASH               | -           | 2K x 8   | 1.8 V ~ 3.6 V              | -                    | -40°C ~ 105°C         |
-| XMC1301T016X0016AAXUMA1  | Infineon Technologies      | -                                                                                                                                                                                                           | 0.71172          | 3000             | ARM® Cortex®-M0  | 32-Bit    | 32MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, I²S, POR, PWM, WDT      | 14            | 16KB (16K x 8)      | FLASH               | -           | 16K x 8  | 1.8 V ~ 5.5 V              | A/D 11x12b           | -40°C ~ 105°C         |
-| MKL02Z8VFG4R             | Freescale Semiconductor    | -                                                                                                                                                                                                           | 0.741            | 2500             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, SPI, UART/USART                          | Brown-out Detect/Reset, LVD, POR, PWM, WDT      | 14            | 8KB (8K x 8)        | FLASH               | -           | 1K x 8   | 1.71 V ~ 3.6 V             | A/D 6x12b            | -40°C ~ 105°C         |
-| EFM32ZG108F4-QFN24       | Silicon Labs               | 20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode                                                                                             | 0.7772           | 1000             | ARM® Cortex®-M0+ | 32-Bit    | 24MHz | EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART | Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT | 17            | 4KB (4K x 8)        | FLASH               | -           | 2K x 8   | 1.85 V ~ 3.8 V             | -                    | -40°C ~ 85°C          |
-| ATSAMD10C13A-SSUT        | Atmel                      |                                                                                                                                                                                                             | 0.83375          | 3000             | ARM® Cortex®-M0+ | 32-Bit    | 48MHz | I²C, LIN, SPI, UART/USART                     | Brown-out Detect/Reset, DMA, POR, WDT           | 12            | 8KB (8K x 8)        | FLASH               | -           | 4K x 8   | 1.62 V ~ 3.63 V            | A/D 5x12b, D/A 1x10b | -40°C ~ 85°C          |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Manufacturer Part Number</th>
+      <th>Manufacturer</th>
+      <th>Power Consumption</th>
+      <th>Unit Price (USD)</th>
+      <th>Minimum Quantity</th>
+      <th>Core Processor</th>
+      <th>Core Size</th>
+      <th>Speed</th>
+      <th>Connectivity</th>
+      <th>Peripherals</th>
+      <th>Number of I/O</th>
+      <th>Program Memory Size</th>
+      <th>Program Memory Type</th>
+      <th>EEPROM Size</th>
+      <th>RAM Size</th>
+      <th>Voltage - Supply (Vcc/Vdd)</th>
+      <th>Data Converters</th>
+      <th>Operating Temperature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CY8C4013SXI-400T</td>
+      <td>Cypress Semiconductor Corp</td>
+      <td>Lower Power 1.71V to 5.5V operation</td>
+      <td>0.364</td>
+      <td>2500</td>
+      <td>ARM® Cortex®-M0</td>
+      <td>32-Bit</td>
+      <td>16MHz</td>
+      <td>I²C</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>5</td>
+      <td>8KB (8K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>2K x 8</td>
+      <td>1.71 V ~ 5.5 V</td>
+      <td>-</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+    <tr>
+      <td>STM32F030F4P6TR</td>
+      <td>STMicroelectronics</td>
+      <td>External power supply(VDD):2.4-3.6V, External analog power:VDD-3.6V</td>
+      <td>0.5796</td>
+      <td>2500</td>
+      <td>ARM® Cortex®-M0</td>
+      <td>32-Bit</td>
+      <td>48MHz</td>
+      <td>I²C, SPI, UART/USART</td>
+      <td>DMA, POR, PWM, WDT</td>
+      <td>15</td>
+      <td>16KB (16K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>4K x 8</td>
+      <td>2.4 V ~ 3.6 V</td>
+      <td>A/D 11x12b</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+    <tr>
+      <td>LPC811M001JDH16J</td>
+      <td>NXP Semiconductors</td>
+      <td>Active Mode:1.4mA/12MHz, 1.0mA/12MHz(low current)2.2mA/24MHz(low current)3.3mA/12MHz, 3mA/30MHz(low current)Sleep Mode:0.8mA/12MHz,0.7mA/12MHz(low current)1.3mA/24MHz1.8mA/30MHz, 1.7mA/30MHz(low current)</td>
+      <td>0.644</td>
+      <td>2500</td>
+      <td>ARM® Cortex®-M0+</td>
+      <td>32-Bit</td>
+      <td>30MHz</td>
+      <td>I²C, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, POR, PWM, WDT</td>
+      <td>14</td>
+      <td>8KB (8K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>2K x 8</td>
+      <td>1.8 V ~ 3.6 V</td>
+      <td>-</td>
+      <td>-40°C ~ 105°C</td>
+    </tr>
+    <tr>
+      <td>XMC1301T016X0016AAXUMA1</td>
+      <td>Infineon Technologies</td>
+      <td>-</td>
+      <td>0.71172</td>
+      <td>3000</td>
+      <td>ARM® Cortex®-M0</td>
+      <td>32-Bit</td>
+      <td>32MHz</td>
+      <td>I²C, LIN, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, I²S, POR, PWM, WDT</td>
+      <td>14</td>
+      <td>16KB (16K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>16K x 8</td>
+      <td>1.8 V ~ 5.5 V</td>
+      <td>A/D 11x12b</td>
+      <td>-40°C ~ 105°C</td>
+    </tr>
+    <tr>
+      <td>MKL02Z8VFG4R</td>
+      <td>Freescale Semiconductor</td>
+      <td>-</td>
+      <td>0.741</td>
+      <td>2500</td>
+      <td>ARM® Cortex®-M0+</td>
+      <td>32-Bit</td>
+      <td>48MHz</td>
+      <td>I²C, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, LVD, POR, PWM, WDT</td>
+      <td>14</td>
+      <td>8KB (8K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>1K x 8</td>
+      <td>1.71 V ~ 3.6 V</td>
+      <td>A/D 6x12b</td>
+      <td>-40°C ~ 105°C</td>
+    </tr>
+    <tr>
+      <td>EFM32ZG108F4-QFN24</td>
+      <td>Silicon Labs</td>
+      <td>20nA at 3V shutoff Mode0.5uA at 3V stop Mode0.9uA at 3V sleep Mode48uA/MHz at 3V sleep Mode114uA at 3V Run Mode</td>
+      <td>0.7772</td>
+      <td>1000</td>
+      <td>ARM® Cortex®-M0+</td>
+      <td>32-Bit</td>
+      <td>24MHz</td>
+      <td>EBI/EMI, I²C, IrDA, SmartCard, SPI,UART/USART</td>
+      <td>Brown-out Detect/Reset, DMA, I²S, POR, PWM, WDT</td>
+      <td>17</td>
+      <td>4KB (4K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>2K x 8</td>
+      <td>1.85 V ~ 3.8 V</td>
+      <td>-</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+    <tr>
+      <td>ATSAMD10C13A-SSUT</td>
+      <td>Atmel</td>
+      <td> </td>
+      <td>0.83375</td>
+      <td>3000</td>
+      <td>ARM® Cortex®-M0+</td>
+      <td>32-Bit</td>
+      <td>48MHz</td>
+      <td>I²C, LIN, SPI, UART/USART</td>
+      <td>Brown-out Detect/Reset, DMA, POR, WDT</td>
+      <td>12</td>
+      <td>8KB (8K x 8)</td>
+      <td>FLASH</td>
+      <td>-</td>
+      <td>4K x 8</td>
+      <td>1.62 V ~ 3.63 V</td>
+      <td>A/D 5x12b, D/A 1x10b</td>
+      <td>-40°C ~ 85°C</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>There is an additional one that looked up for which is the Quark X-1000 produced by Intel. This is the SoC chip that is claimed to be the ideal component for Internet Of Things. Here re the features of Quark-X1000.</p>
 
 <ul>
-<li>Frequency:400MHz </li>
-<li>Flash: SPI, 2GB</li>
-<li>Cache: 16KB</li>
-<li>Memory Types: DDR3</li>
-<li>Working Temperature: -40°C~85°C</li>
-<li>UART: 2</li>
-<li>MAX TDP: 2.2W</li>
-<li>Customer price: $9.62</li>
+  <li>Frequency:400MHz</li>
+  <li>Flash: SPI, 2GB</li>
+  <li>Cache: 16KB</li>
+  <li>Memory Types: DDR3</li>
+  <li>Working Temperature: -40°C~85°C</li>
+  <li>UART: 2</li>
+  <li>MAX TDP: 2.2W</li>
+  <li>Customer price: $9.62</li>
 </ul>
+
 
         </div>
       </li>
@@ -193,6 +606,7 @@ Internal oscillator</p>
           <a href="/TempBlogs/2014/11/05/2014%E6%B5%8B%E8%AF%95">2014年测试</a>
         </h1>
           <p>我只是单纯的想测试一下</p>
+
 
         </div>
       </li>
@@ -207,6 +621,7 @@ Internal oscillator</p>
 <br /><br /><br /><br /><br /></p>
 
 <p>别看了、这只是个测试</p>
+
 
         </div>
       </li>

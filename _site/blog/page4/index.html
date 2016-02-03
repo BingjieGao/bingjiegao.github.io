@@ -116,32 +116,29 @@
         <h1>
           <a href="/TempBlogs/2015/07/03/WEEK5">Summary on WEEK5</a>
         </h1>
-          <h1>Summary for WEEK5</h1>
+          <h1 id="summary-for-week5">Summary for WEEK5</h1>
+<p>##Hardware Side
+Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.</p>
 
-<h2>Hardware Side</h2>
-
-<p>Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.</p>
-
-<h2>Software Side</h2>
-
-<p>For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &quot;smart city&quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.</p>
+<h2 id="software-side">Software Side</h2>
+<p>For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the “smart city” under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.</p>
 
 <p>Thus, the important bits are to be done next weeks are:</p>
 
 <ul>
-<li>Hardware side:
-
-<ul>
-<li>Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)</li>
-<li>Soldering the PCb if arrived</li>
-</ul></li>
-<li>Software Side:
-
-<ul>
-<li>More research on how normally the data is sent to the server more</li>
-<li>Understanding the make the comparisons between different framework regarding restful (Express, restify)</li>
-<li>Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino</li>
-</ul></li>
+  <li>Hardware side:
+    <ul>
+      <li>Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)</li>
+      <li>Soldering the PCb if arrived</li>
+    </ul>
+  </li>
+  <li>Software Side:
+    <ul>
+      <li>More research on how normally the data is sent to the server more</li>
+      <li>Understanding the make the comparisons between different framework regarding restful (Express, restify)</li>
+      <li>Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino</li>
+    </ul>
+  </li>
 </ul>
 
         </div>
@@ -153,45 +150,45 @@
         <h1>
           <a href="/TempBlogs/2015/06/26/week4">Summary on WEEK4</a>
         </h1>
-          <h1>Summary For WEEK 4</h1>
+          <h1 id="summary-for-week-4">Summary For WEEK 4</h1>
 
 <p>This week, the Moteino experiment was succeed transferring data through rfm69 offered by HOPERF within a small range, and data could be uploaded to web server provided by Nquiringminds with the driver developed for each different sensor. Followingly, the main tasks are experimenting the PCB previously designed on the breadboard and print the PCB for further testing. The MCU and RF module are to be changed through more research regarding different application solutions. It is believed the design of PCB should be fairly quick after the basic PCB design is succeed.</p>
 
 <p>The report is to be started with background and literature review, here are something occured that could be involved in the report.</p>
 
-<h5>What could possibly go in Background</h5>
+<h5 id="what-could-possibly-go-in-background">What could possibly go in Background</h5>
 
 <ul>
-<li>General IOT background for generic purpose</li>
-<li>mode detailed proposals for IOT nodes in terms of the hardware issues</li>
-<li>In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized</li>
+  <li>General IOT background for generic purpose</li>
+  <li>mode detailed proposals for IOT nodes in terms of the hardware issues</li>
+  <li>In terms of the business purpose, the price as well as the scale of each IOT nodes should be optimized</li>
 </ul>
 
-<h5>what could be in literature review</h5>
+<h5 id="what-could-be-in-literature-review">what could be in literature review</h5>
 
 <ul>
-<li>The exising solutions like Arduino, Moteino</li>
-<li>the comparisons between each MCUs solutions</li>
-<li>the comparisons between each RF modules solutions </li>
-<li><p>what problem solved</p>
-
-<ul>
-<li>modularization</li>
-<li>price/size optimizaton</li>
-<li>secure authentication</li>
-</ul></li>
-<li><p>the comparisons between different connection: SPI, I2C, UART</p></li>
-<li><p>the comparisons between each different solution of secure the MCU node</p></li>
-<li><p>any modulazed solutions like little bits but not price optimized</p></li>
+  <li>The exising solutions like Arduino, Moteino</li>
+  <li>the comparisons between each MCUs solutions</li>
+  <li>the comparisons between each RF modules solutions</li>
+  <li>what problem solved
+    <ul>
+      <li>modularization</li>
+      <li>price/size optimizaton</li>
+      <li>secure authentication</li>
+    </ul>
+  </li>
+  <li>the comparisons between different connection: SPI, I2C, UART</li>
+  <li>the comparisons between each different solution of secure the MCU node</li>
+  <li>any modulazed solutions like little bits but not price optimized</li>
 </ul>
 
-<h4>Thus, the certain things are to be done in the following week:</h4>
+<h4 id="thus-the-certain-things-are-to-be-done-in-the-following-week">Thus, the certain things are to be done in the following week:</h4>
 
 <ul>
-<li>continue on designing the PCB in order to finish the project</li>
-<li>Testing the design see if it could be successful</li>
-<li>try to build the simple data upload server based on previous CMS system which was developed from the basic blog system</li>
-<li>The literature review and background should be drafted before Wednesday in terms of the report</li>
+  <li>continue on designing the PCB in order to finish the project</li>
+  <li>Testing the design see if it could be successful</li>
+  <li>try to build the simple data upload server based on previous CMS system which was developed from the basic blog system</li>
+  <li>The literature review and background should be drafted before Wednesday in terms of the report</li>
 </ul>
 
         </div>
@@ -203,32 +200,31 @@
         <h1>
           <a href="/TempBlogs/2015/06/19/week3">Summary on WEEK3</a>
         </h1>
-          <h1>Week 3</h1>
-
+          <h1 id="week-3">Week 3</h1>
 <p>After researching on the MCU and the HOPErf modules, the initial PCB was produced in 4 days. The MCU selected was the ATmel 328P which is the most popular one on diffrerent Arduino alternative boards. The schematic circuit was pretty much the same as Moteino has, the only difference so far is the RF module which in my design the rfm69hw was basically used while in moteino the rf module was deployed from rf12b.</p>
 
 <p>It has been a long time being familair with the software Eagle which is to be used for following PCB design as well. The next step would be adding the secure device ATmel produced called ATSHA204A that can be compatible with ATmel mega 328P using now. The original PCB design still need a lot of improvements in order to be price and size optimized for building the sensor nodes. The bootloader for the ATmel mega 328P MCU should also be researched and re-implemented for intergated with intialization of ATSHA204A module.</p>
 
-<h3>What have been done on PCB initial design:</h3>
+<h3 id="what-have-been-done-on-pcb-initial-design">What have been done on PCB initial design:</h3>
+<p>##### The schematic circuit</p>
 
-<h5>The schematic circuit</h5>
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-06-18 at 23.28.09.png" alt="image" /></p>
 
-<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-06-18%20at%2023.28.09.png" alt="image"></p>
+<h5 id="the-board">The board:</h5>
 
-<h5>The board:</h5>
-
-<p><img src="/TempBlogs/img/pictures/Screen%20Shot%202015-06-21%20at%2012.13.59.png" alt="image"></p>
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-06-21 at 12.13.59.png" alt="image" /></p>
 
 <p>In the next two weeks, the following things are to be done hopefully:</p>
 
 <ul>
-<li>Continue working on the &quot;perfect&quot; PCB design in order to fit the flexibility as well as relative price optimization purpose</li>
-<li>Research on the secure chip may be used on the PCB ATSHA204A module</li>
-<li>Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module</li>
-<li>Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
+  <li>Continue working on the “perfect” PCB design in order to fit the flexibility as well as relative price optimization purpose</li>
+  <li>Research on the secure chip may be used on the PCB ATSHA204A module</li>
+  <li>Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module</li>
+  <li>Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
 *</li>
-<li>Continue working on some nodejs development, transfer the simple blog building to a simple CMS</li>
+  <li>Continue working on some nodejs development, transfer the simple blog building to a simple CMS</li>
 </ul>
+
 
         </div>
       </li>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Summary on WEEK5</title>
-  <meta name="description" content="Summary for WEEK5Hardware SideFinalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to th...">
+  <meta name="description" content="Summary for WEEK5##Hardware SideFinalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to ...">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -114,32 +114,29 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1>Summary for WEEK5</h1>
+    <h1 id="summary-for-week5">Summary for WEEK5</h1>
+<p>##Hardware Side
+Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.</p>
 
-<h2>Hardware Side</h2>
-
-<p>Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.</p>
-
-<h2>Software Side</h2>
-
-<p>For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the &quot;smart city&quot; under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.</p>
+<h2 id="software-side">Software Side</h2>
+<p>For the software side, the simple server was researched with serveral existing IOT hobbist and commercial IOT plarform. Among all the platforms, Thinkspeak and plotly, Xively were deeply researched and compared with the connection solutions. Instead of the direct connectiong with the database and MCU which is the sensor nodes placed among the “smart city” under a WI-FI environment, RF tranceivers are used for communicating with two identical MCU board. The other MCU which is not managing the various of sensors would be connect to a Raspberry PI as a main station which is called a Hub. Normally, the connection is through simple serial port for a easier and faster communication solution. However, there are existing solutions of some RF modules which needs the serial port communication with MCU as well. As a result, SPI and I2C are being considered to becoming the alternative ways of PI talking to MCU.</p>
 
 <p>Thus, the important bits are to be done next weeks are:</p>
 
 <ul>
-<li>Hardware side:
-
-<ul>
-<li>Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)</li>
-<li>Soldering the PCb if arrived</li>
-</ul></li>
-<li>Software Side:
-
-<ul>
-<li>More research on how normally the data is sent to the server more</li>
-<li>Understanding the make the comparisons between different framework regarding restful (Express, restify)</li>
-<li>Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino</li>
-</ul></li>
+  <li>Hardware side:
+    <ul>
+      <li>Research on how to communicate wi the MCU and Raspberry PI without the serial port(including hte software serial)</li>
+      <li>Soldering the PCb if arrived</li>
+    </ul>
+  </li>
+  <li>Software Side:
+    <ul>
+      <li>More research on how normally the data is sent to the server more</li>
+      <li>Understanding the make the comparisons between different framework regarding restful (Express, restify)</li>
+      <li>Try to build the streaming data plot on top of the previous simple server response from Mongodb stores the sensor readings from Arduino/Moteino</li>
+    </ul>
+  </li>
 </ul>
 
   </div>

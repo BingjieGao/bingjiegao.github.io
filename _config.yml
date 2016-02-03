@@ -30,7 +30,7 @@ github_username:  CatAmo10
 jianshu_png: /TempBlogs/_includes/skeleton.png
 
 gems: [jekyll-paginate]
-paginate: 1
+paginate: 3
 paginate_path: "blog/page:num"
 # Build settings
 # markdown: kramdown 

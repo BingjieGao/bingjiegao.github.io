@@ -3,6 +3,10 @@ layout: post
 title:  "程序员面试金典 chapter1 arrays and strings"
 date:   2016-01-23 
 categories: 学习
+tag: 
+    -学习
+    -面试
+    -C语言
 ---
 ###第一题  翻转字符串
 把一个给定的字符串反转

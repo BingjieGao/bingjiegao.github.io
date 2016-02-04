@@ -53,21 +53,15 @@
         <a class="page-link" id="list" href="/TempBlogs/list.html">列表</a>
         
           
+          <a class="page-link" href="/TempBlogs/2016-01-02-%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">关于</a>
+          
+        
+          
+          <a class="page-link" href="/TempBlogs/2016-01-23-%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8%20Chapter1%20Arrays%20and%20Strings">关于</a>
+          
+        
+          
           <a class="page-link" href="/TempBlogs/about/">关于</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
           
         
           
@@ -116,81 +110,6 @@
   <ul class="post-list" post-cate="All">
     
       <li>
-        <span class="post-meta">Nov 11, 2015</span>
-        <div class="post-link">
-        <h1>
-          <a href="/TempBlogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a>
-        </h1>
-          <p>接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose CRUD之外 为了完成基本功能的express也写过了 想要真正的静下心来看Doc反而越看越慌 今天一天就深深的陷入了回调函数的坑里</p>
-
-<p>不讨论回调和异步、同步的关系和不同了 请自行google … … 因为我也没整明白 简单讲一下我试了一天对这几个的理解</p>
-
-<p>先说同步 我理解的同步就是逻辑自上而下 默默突然回想起做VerilogHDL的时候学过这么两个词blocking和non-blocking 那么这个阻塞和非阻塞又和同步异步有什么关系和区别呢</p>
-
-<p>其实按照理论是没有什么关系的 同步嘛相当于调用者主动 一旦该调用返回了有值了 异步就反一反 相当于被调用者的状态反馈给调用者</p>
-
-<p>这个打个比方 我们国内很多客服态度可能时好时坏 但是这个服务速度是有的 你好比打个电话问问客服我有个什么问题不能解决 这个客服呢就在电话那头给你解决 在问题解决之前或者说在这个事情有结果之前你一直都是在跟客服进行沟通的</p>
-
-<p>那么英国这里呢 实在等不起 你打个电话 他说”Alright mate, but I can do nothing to help you right now I’ll give you a call back later, OK?” 这就是异步了 他解不解决问题在他 在你等他给你打回来通知结果之前 你是正常过日子的 没有24小时一直在通电话</p>
-
-<p>所以说呢同步还是异步只是说明了消息机制 communication嘛 对伐 而阻塞非阻塞可能就是描述了当在等待的状态 就是说非阻塞是会正常过日子的等结果的 中间呢因为这个英国服务太糟糕了 只能是不是check一下状态如何了 这个阻塞啊就意味着问题太大了 没法正常过日子等着客服解决了 不管什么时候返回结果 这期间都只能“挂起” 就好比只能呆滞的躺在床上等一场我想我要挂了的考试最终成绩一样</p>
-
-<p>再说这个回调，这个吧我就记住这么两条，一般情况下同步回调 这个回调函数最后执行 如果是异步回调 那人家不一定就最后执行 如果要等该函数执行完以后在执行另一条 那么这个执行语句必须放在回调函数内</p>
-
-<p>想想真的是慌得呀 一本正经好像说的跟真的一样 我就先给自己备忘一下 简单的注册功能 本来想把MVC弄得好看一些 不要把所有函数啊判断啊都放在一起混了 结果就被异步啊回调啊尴尬了</p>
-
-<p>```javascript
-var IsExisted = function(data,callback){
-  userdb.findOne({‘useremail’:data},function(err,doc){</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>console.log(data);
-
-if(!err){
-  //console.log(doc);
-  if(!doc){
-    console.log('new user');
-    //console.log(doc);
-    return_value = 1;
-    callback(return_value);
-  }
-  else
-  {
-    console.log('user existed');
-    return_value = -1;
-    callback(return_value);
-  }
-}
-else{
-  console.log(err);
-}   }); }
-</code></pre>
-</div>
-
-<p>```</p>
-
-
-        </div>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 8, 2015</span>
-        <div class="post-link">
-        <h1>
-          <a href="/TempBlogs/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7">若是我送你走、会怎样</a>
-        </h1>
-          <p>或许这是一种想念式的道歉：这辈子不会有人叫我”媳妇”了</p>
-
-<p>如果等到送你走的那天 我希望给你写这么一句话</p>
-
-<h4 id="section">“最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般 、</h4>
-<p>#### 最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般”</p>
-
-<p>明信片我还留着 你没能去的地方 我想有时间替你去看看</p>
-
-        </div>
-      </li>
-    
-      <li>
         <span class="post-meta">Nov 8, 2015</span>
         <div class="post-link">
         <h1>
@@ -232,6 +151,204 @@ else{
   <p>“A chance of sunshine 这样的注定相遇 的确是美丽的”</p>
 </blockquote>
 
+
+        </div>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 6, 2015</span>
+        <div class="post-link">
+        <h1>
+          <a href="/TempBlogs/2015/11/06/jekyll-1">怎样很麻烦的开始做一个个人博客~jekyll</a>
+        </h1>
+          <p>有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然…不想做的更不来浪费时间 我只是单纯的想…以后的我不要忘了这个漫长的流程</p>
+
+<p>首先 你要有一个充足的时间 比如…一个空闲的下午茶时间
+其次 你需要有一个Github账号或者、你有一个已购买的注册域名 一个主机服务器等等…</p>
+
+<p>你应该是不会有那些的</p>
+
+<p>这篇文章很有限的介绍怎样基于Mac环境下在Github上部署一个免费的jeklly博客 
+Jekyll是什么我也不知道 具体请去<a href="https://jekyllrb.com/">官网</a>详查</p>
+
+<p>按照官网的安装教程 你可以将jekyll先下载到本地
+你需要打开一个黑色背景的小窗口 它叫‘Terminal’ 也许在你的电脑上它已经改名叫‘iTerm’了</p>
+
+<p>第一步 安装jekyll</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> gem install jekyll
+</code></pre>
+</div>
+
+<p>必要时候请 ‘sudo’</p>
+
+<p><code class="highlighter-rouge">
+ sudo gem install jekyll
+</code></p>
+
+<p>第二步 新建一个jekyll博客</p>
+
+<p><code class="highlighter-rouge">
+jekyll new my-new-blog
+</code></p>
+
+<p>第三步…</p>
+
+<p>请到你的新建博客下</p>
+
+<p><code class="highlighter-rouge">
+cd ~/PATH/my-new-blog/
+</code>
+第四步 开启jekyll server</p>
+
+<p><code class="highlighter-rouge">
+jekyll server --watch
+</code>
+不要打小鼓默默碎碎念为什么要加watch 我也不知道…</p>
+
+<p>不加watch在编辑中会有莫名的假bug让你误以为自己总是写错 其实可能只是你需要重新 ‘ctrl+c’ 再 ‘jekyll server’重新开启一下</p>
+
+<p>接着你就能在浏览器中的’localhost:4000’看到你的页面了 应该跟下面一样</p>
+
+<p><img src="/TempBlogs/img/1.png" alt="image" /></p>
+
+<p>然后嘛…我们要来先看一下刚刚我们 ‘new’ 的这个jeyll文件夹里面有什么 
+下面这个就是你的文件夹</p>
+
+<p>```</p>
+
+<p>├── _config.yml
+├── _includes
+|   ├── footer.html
+|   └── header.html
+|   └── head.html
+├── _layouts
+|   ├── default.html
+|   └── post.html
+|   └── page.html
+├── _posts
+|   ├── 20015-10-29-welcome-to-jekyll.markdown
+├── _data
+|   └── members.yml
+├── _sass
+|   ├── base.scss
+|   └── layout.scss
+|   └── syntax-hoghlight.scss
+├── _css
+|   ├── main.scss
+├── _site
+├── feed.xml
+└── index.html</p>
+
+<p>```
+好，我们先来看一下最基本的‘.yml’配置文件 在这个configuration文件中包含了网页的基本信息 诸如你的网页名称之类的 其中 ‘baseurl’这一项需要特别注意 最后我们上传到Github page上面需要特别注意这一项的设置 在本地时我们不要做修改 将 ‘baseurl’这一项保持</p>
+
+<p>```
+baseurl=””</p>
+
+<p>```</p>
+
+<p>jekyll默认的用liquid template来定义网页界面
+我们来看第二和第三个子文件夹  ‘ _includes’ 和 ’ _layout‘ 在’_includes‘中的三个’html‘文件被分别引用安排在页面的不同位置 ‘_layout’中的’html’文件就是用来定义这些界面安排的</p>
+
+<p>接下来你所看到的这个文件夹’ _posts’就是存放所有博客的地方 jekyll用markdown文件来让你专注于写作这件事情 所有在’ _posts’文件夹中的文件都以markdown文件形式存在 而对于你来说 写博客只需要将文字简单的输入完成思想到文字形式的转换就可以了 推荐一个Mac上我比较常用的markdown文本编辑器 <a href="http://25.io/mou/">‘Mou’</a> 当然markdown编辑器还有很多 或许你平时已经习惯于用文本编辑器来写代码 sublime vim也可以作为写博客的好手 只要你去认真搜索一下相关的插件</p>
+
+<p>最后对于这个本地正常运行的静态文件博客 你需要做的也就是添添补补把显示页面变成你喜欢的样子 这些你将以修改’ _sass‘和 ‘_includes’文件夹中的文件来完成 如果你暂时还没有什么做网页的经验那么CSS也就无关紧要了 五搜索一下你想要的页面Template吧 <a href="http://jekyllthemes.org/">这里</a>有很多别人做好的主题可供下载直接使用</p>
+
+<p>当然 除了很多ruby的插件可以让你的博客完成更多的事情以外 原生的jekyll也提供了一些基本的功能 诸如页面分页pagetination</p>
+
+<p>pagetination的具体官方文档可以在<a href="http://jekyllrb.com/docs/pagination/">这里</a>
+用法相当简单 这是一个可以让你的’index‘主页分页显示你的博客 这时我们需要打开configuration文件也就是开头所讲的 ‘ _config.yml’文件 在该文件后面加上：</p>
+
+<p>```
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: “/blog/page:num/”</p>
+
+<p>```</p>
+
+<p>这里面 ‘paginate: 5’代表了每页显示5个博客 接下来paginate会自行generate出第二页第三页…直到你’ _posts ‘ 文件中的最后一个博客 而所设定的路径也就是 ‘ paginate_path ‘就是生成的第二页第三页的URL地址</p>
+
+<p>接下来你会需要这些代码放在你的’index.html’文件中以便看到paginate的效果</p>
+
+<p>```</p>
+
+<p>{% if paginator.total_pages &gt; 1 %}</p>
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+  {% else %}
+    <span>&laquo; Prev</span>
+  {% endif %}
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <em>{{ page }}</em>
+    {% elsif page == 1 %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    {% else %}
+      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+  {% else %}
+    <span>Next &raquo;</span>
+  {% endif %}
+</div>
+<p>{% endif %}</p>
+
+<p>```</p>
+
+<p>以上这些都能在上面的官方文档链接中找到 虽然默认的可能不符合你的审美 但是基本实现了翻页的功能</p>
+
+<p>接下来就可以开始上传到你的Github page上 当然你确实需要一个Github账号 新建一个repository 创建一个新的Github page</p>
+
+<p>重新打开你的’ _config.yml’ 文件将原来空的baseurl换成 ‘ /新建的Github repository地址名字/ ‘ 比如你的Github page的URL为 ‘YOUR_NAMW.github.io/PAGE_NAME/’ 那么你的baseurl在这里就应该是 ’ /PAGE_NAME/‘</p>
+
+<p>将本地的文件上传到你的Github上之后 一切似乎就差不多准备就绪了</p>
+
+<p>最后你就可以开始专注于你的博客了….</p>
+
+<p>好吧、我承认这样实在是太麻烦了 但是…万一你也很感兴趣想做一个可以去看一下 反正也花不了太长的时间</p>
+
+
+        </div>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jul 13, 2015</span>
+        <div class="post-link">
+        <h1>
+          <a href="/TempBlogs/2015/07/13/WEEK8">Summary on WEEK8</a>
+        </h1>
+          <h1 id="summary-for-week8">Summary for WEEK8</h1>
+<p>## Hardware Side
+The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
+The basic design in draft is presented below:</p>
+
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.17.31.png" alt="image" /></p>
+
+<p>The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.</p>
+
+<h5 id="the-printing-3d-box">The printing 3D box</h5>
+<p>There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
+The design thinking of this modular sensor node had been changed a lot in terms of the usability and different senarios. The image below shows the brief magenetic connection between each identical sensor boxes which could stack together.</p>
+
+<h2 id="software-side">Software Side</h2>
+<p>The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:</p>
+
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.32.57.png" alt="image" /></p>
+
+<p>The things are to be working on following weeks:</p>
+
+<ul>
+  <li>The dissertation writting</li>
+  <li>The further development of software side for the HTTP RESTful server</li>
+  <li>The hardware design is finished for complating the MSc project</li>
+  <li>For the company, the hardware design needs to be continued with more researches on voltage regulators and finish the PCB routing.</li>
+</ul>
 
         </div>
       </li>
@@ -296,16 +413,6 @@ else{
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/学习/index.html"
                                       style="font-size: 88%"> 学习</a>
-                                </div>
-                                
-                                <div class="site-tag">
-                                  <a class="tag-name" href="/TempBlogs/tag/学习 面试 c语言/index.html"
-                                      style="font-size: 84%"> 学习  面试  C语言</a>
-                                </div>
-                                
-                                <div class="site-tag">
-                                  <a class="tag-name" href="/TempBlogs/tag/随笔 记事/index.html"
-                                      style="font-size: 84%"> 随笔  记事</a>
                                 </div>
                                 
                                 <div class="site-tag">

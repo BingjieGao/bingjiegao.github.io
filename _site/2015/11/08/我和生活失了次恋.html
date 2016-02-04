@@ -9,7 +9,6 @@
   <title>我跟生活失了次恋</title>
   <meta name="description" content="">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
@@ -19,7 +18,7 @@
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -53,15 +52,25 @@
         <a class="page-link" id="list" href="/TempBlogs/list.html">列表</a>
         
           
-          <a class="page-link" href="/TempBlogs/2016-01-02-%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">关于</a>
-          
-        
-          
-          <a class="page-link" href="/TempBlogs/2016-01-23-%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8%20Chapter1%20Arrays%20and%20Strings">关于</a>
-          
-        
-          
           <a class="page-link" href="/TempBlogs/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -156,7 +165,7 @@
 
                       </div>
 
-                      <div class="toggle-span" id="toggle-span">
+                      <div class="toggle-span">
                           <i class="fa fa-chevron-circle-left fa-2x"></i>
                       </div>
 
@@ -174,7 +183,7 @@
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/c语言/index.html"
-                                      style="font-size: 84%"> C语言</a>
+                                      style="font-size: 92%"> C语言</a>
                                 </div>
                                 
                                 <div class="site-tag">
@@ -189,16 +198,36 @@
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/学习/index.html"
-                                      style="font-size: 88%"> 学习</a>
+                                      style="font-size: 96%"> 学习</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/总结/index.html"
+                                      style="font-size: 92%"> 总结</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/无聊/index.html"
+                                      style="font-size: 88%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/物联网/index.html"
+                                      style="font-size: 92%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/记事/index.html"
+                                      style="font-size: 88%"> 记事</a>
                                 </div>
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/面试/index.html"
-                                      style="font-size: 84%"> 面试</a>
+                                      style="font-size: 92%"> 面试</a>
                                 </div>
                                 
                           </div>
-                          <div class="toggle-span2" id="toggle-span2">
+                          <div class="toggle-span2">
                             <i class="fa fa-chevron-circle-right fa-2x"></i>
                           </div>
                     </div>
@@ -253,20 +282,21 @@
 
 </footer>
 <script>
-      var scroll = $('#toggle-span');
+      var scroll = $('.toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('#toggle-span2');
+      var collpas = $('.toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

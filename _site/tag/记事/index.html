@@ -9,18 +9,17 @@
   <title>CatAmo凉生</title>
   <meta name="description" content="">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
-  <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/tag/%E9%9A%8F%E7%AC%94%E8%AE%B0%E4%BA%8B/">
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/tag/%E8%AE%B0%E4%BA%8B/">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  
-  <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/tag/%E9%9A%8F%E7%AC%94%E8%AE%B0%E4%BA%8B/">
+  <script src="/TempBlogs/js/jquery.js"></script>
+  <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/tag/%E8%AE%B0%E4%BA%8B/">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
 </head>
@@ -90,6 +89,10 @@
         
           
         
+          
+        
+          
+        
       </div>
 
     </nav>
@@ -111,15 +114,17 @@
               <div class="container-fluid">
                     <div class="row">
                       <div class="inner" id="main-content">
-                            <h2>随笔 记事</h2>
+                            <h2>记事</h2>
 <ul>
 
-  <li><a href="/TempBlogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">深夜惊醒程序员</a> (02 Jan 2016  <a href="/TempBlogs/tag/随笔 记事/" rel="tag"> 随笔  记事</a>)</li>
+  <li><a href="/TempBlogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">深夜惊醒程序员</a> (02 Jan 2016  <a href="/TempBlogs/tag/记事/" rel="tag"> 记事</a>, <a href="/TempBlogs/tag/无聊/" rel="tag"> 无聊</a>)</li>
+
+  <li><a href="/TempBlogs/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7">若是我送你走、会怎样</a> (08 Nov 2015  <a href="/TempBlogs/tag/记事/" rel="tag"> 记事</a>, <a href="/TempBlogs/tag/无聊/" rel="tag"> 无聊</a>)</li>
 
 </ul>
 
 <!-- <div id="tag-cloud">
-  <a href="/TempBlogs/tag/c语言/" class="set1">-C语言</a> <a href="/TempBlogs/tag/express/" class="set1">-Express</a> <a href="/TempBlogs/tag/nodejs/" class="set1">-Nodejs</a> <a href="/TempBlogs/tag/学习/" class="set5">-学习</a> <a href="/TempBlogs/tag/学习 面试 c语言/" class="set1">-学习 -面试 -C语言</a> <a href="/TempBlogs/tag/随笔 记事/" class="set1">-随笔 -记事</a> <a href="/TempBlogs/tag/面试/" class="set1">-面试</a>
+  <a href="/TempBlogs/tag/c语言/" class="set4">-C语言</a> <a href="/TempBlogs/tag/express/" class="set1">-Express</a> <a href="/TempBlogs/tag/nodejs/" class="set1">-Nodejs</a> <a href="/TempBlogs/tag/学习/" class="set5">-学习</a> <a href="/TempBlogs/tag/总结/" class="set4">-总结</a> <a href="/TempBlogs/tag/无聊/" class="set2">-无聊</a> <a href="/TempBlogs/tag/物联网/" class="set4">-物联网</a> <a href="/TempBlogs/tag/记事/" class="set2">-记事</a> <a href="/TempBlogs/tag/面试/" class="set4">-面试</a>
 </div> -->
                       </div>
 <!-- 
@@ -184,20 +189,21 @@
 
 </footer>
 <script>
-      var scroll = $('#toggle-span');
+      var scroll = $('.toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('#toggle-span2');
+      var collpas = $('.toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

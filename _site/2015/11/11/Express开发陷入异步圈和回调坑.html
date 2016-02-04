@@ -9,7 +9,6 @@
   <title>Express开发陷入异步圈和回调坑</title>
   <meta name="description" content="接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose C...">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
@@ -19,7 +18,7 @@
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -53,15 +52,25 @@
         <a class="page-link" id="list" href="/TempBlogs/list.html">列表</a>
         
           
-          <a class="page-link" href="/TempBlogs/2016-01-02-%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">关于</a>
-          
-        
-          
-          <a class="page-link" href="/TempBlogs/2016-01-23-%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8%20Chapter1%20Arrays%20and%20Strings">关于</a>
-          
-        
-          
           <a class="page-link" href="/TempBlogs/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -167,7 +176,7 @@ else{
 
                       </div>
 
-                      <div class="toggle-span" id="toggle-span">
+                      <div class="toggle-span">
                           <i class="fa fa-chevron-circle-left fa-2x"></i>
                       </div>
 
@@ -185,7 +194,7 @@ else{
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/c语言/index.html"
-                                      style="font-size: 84%"> C语言</a>
+                                      style="font-size: 92%"> C语言</a>
                                 </div>
                                 
                                 <div class="site-tag">
@@ -200,16 +209,36 @@ else{
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/学习/index.html"
-                                      style="font-size: 88%"> 学习</a>
+                                      style="font-size: 96%"> 学习</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/总结/index.html"
+                                      style="font-size: 92%"> 总结</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/无聊/index.html"
+                                      style="font-size: 88%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/物联网/index.html"
+                                      style="font-size: 92%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/TempBlogs/tag/记事/index.html"
+                                      style="font-size: 88%"> 记事</a>
                                 </div>
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/TempBlogs/tag/面试/index.html"
-                                      style="font-size: 84%"> 面试</a>
+                                      style="font-size: 92%"> 面试</a>
                                 </div>
                                 
                           </div>
-                          <div class="toggle-span2" id="toggle-span2">
+                          <div class="toggle-span2">
                             <i class="fa fa-chevron-circle-right fa-2x"></i>
                           </div>
                     </div>
@@ -264,20 +293,21 @@ else{
 
 </footer>
 <script>
-      var scroll = $('#toggle-span');
+      var scroll = $('.toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('#toggle-span2');
+      var collpas = $('.toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

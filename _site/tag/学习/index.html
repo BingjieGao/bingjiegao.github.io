@@ -16,11 +16,9 @@
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="/TempBlogs/css/main.css">
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/tag/%E5%AD%A6%E4%B9%A0/">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -87,6 +85,14 @@
         
           
         
+          
+        
+          
+        
+          
+        
+          
+        
       </div>
 
     </nav>
@@ -113,12 +119,16 @@
 
   <li><a href="/TempBlogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">程序员面试金典Chapter2</a> (24 Jan 2016  <a href="/TempBlogs/tag/学习/" rel="tag"> 学习</a>, <a href="/TempBlogs/tag/面试/" rel="tag"> 面试</a>, <a href="/TempBlogs/tag/c语言/" rel="tag"> C语言</a>)</li>
 
+  <li><a href="/TempBlogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">程序员面试金典 chapter1 arrays and strings</a> (23 Jan 2016  <a href="/TempBlogs/tag/学习/" rel="tag"> 学习</a>, <a href="/TempBlogs/tag/面试/" rel="tag"> 面试</a>, <a href="/TempBlogs/tag/c语言/" rel="tag"> C语言</a>)</li>
+
   <li><a href="/TempBlogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a> (11 Nov 2015  <a href="/TempBlogs/tag/学习/" rel="tag"> 学习</a>, <a href="/TempBlogs/tag/nodejs/" rel="tag"> Nodejs</a>, <a href="/TempBlogs/tag/express/" rel="tag"> Express</a>)</li>
+
+  <li><a href="/TempBlogs/2013/11/05/2013%E6%B5%8B%E8%AF%95">2013年测试</a> (05 Nov 2013  <a href="/TempBlogs/tag/学习/" rel="tag"> 学习</a>, <a href="/TempBlogs/tag/面试/" rel="tag"> 面试</a>, <a href="/TempBlogs/tag/c语言/" rel="tag"> C语言</a>)</li>
 
 </ul>
 
 <!-- <div id="tag-cloud">
-  <a href="/TempBlogs/tag/c语言/" class="set1">-C语言</a> <a href="/TempBlogs/tag/express/" class="set1">-Express</a> <a href="/TempBlogs/tag/nodejs/" class="set1">-Nodejs</a> <a href="/TempBlogs/tag/学习/" class="set5">-学习</a> <a href="/TempBlogs/tag/面试/" class="set1">-面试</a>
+  <a href="/TempBlogs/tag/c语言/" class="set4">-C语言</a> <a href="/TempBlogs/tag/express/" class="set1">-Express</a> <a href="/TempBlogs/tag/nodejs/" class="set1">-Nodejs</a> <a href="/TempBlogs/tag/学习/" class="set5">-学习</a> <a href="/TempBlogs/tag/总结/" class="set4">-总结</a> <a href="/TempBlogs/tag/无聊/" class="set2">-无聊</a> <a href="/TempBlogs/tag/物联网/" class="set4">-物联网</a> <a href="/TempBlogs/tag/记事/" class="set2">-记事</a> <a href="/TempBlogs/tag/面试/" class="set4">-面试</a>
 </div> -->
                       </div>
 <!-- 
@@ -193,10 +203,11 @@
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
-        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
       })
 
       collpas.click(function(){

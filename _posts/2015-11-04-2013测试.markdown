@@ -3,6 +3,10 @@ layout: post
 title:  "2013年测试"
 date:   2013-11-05 16:59:18 +0000
 categories: 生活笔记
+tags: 
+     -学习
+     -面试
+     -C语言
 ---
 
 <br />

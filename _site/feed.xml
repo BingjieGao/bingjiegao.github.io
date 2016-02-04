@@ -5,8 +5,8 @@
     <description></description>
     <link>http://catamo10.github.io/TempBlogs/TempBlogs/</link>
     <atom:link href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Feb 2016 20:46:03 +0000</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2016 20:46:03 +0000</lastBuildDate>
+    <pubDate>Thu, 04 Feb 2016 21:31:28 +0000</pubDate>
+    <lastBuildDate>Thu, 04 Feb 2016 21:31:28 +0000</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -702,7 +702,7 @@ else{
 &lt;p&gt;如果等到送你走的那天 我希望给你写这么一句话&lt;/p&gt;
 
 &lt;h4 id=&quot;section&quot;&gt;“最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般 、&lt;/h4&gt;
-&lt;p&gt;####最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般”&lt;/p&gt;
+&lt;p&gt;#### 最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般”&lt;/p&gt;
 
 &lt;p&gt;明信片我还留着 你没能去的地方 我想有时间替你去看看&lt;/p&gt;
 </description>
@@ -749,7 +749,9 @@ else{
 
 &lt;p&gt;没有什么最开始可以让我们回去 过去打下的是烙印 现在的脚步永远追随着将来的希望和美好&lt;/p&gt;
 
-&lt;h3 id=&quot;a-chance-of-sunshine--&quot;&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/p&gt;
+&lt;/blockquote&gt;
 
 </description>
         <pubDate>Sun, 08 Nov 2015 19:18:18 +0000</pubDate>
@@ -873,7 +875,7 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
 
 &lt;p&gt;接下来你会需要这些代码放在你的’index.html’文件中以便看到paginate的效果&lt;/p&gt;
 
-&lt;p&gt;```html&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;p&gt;{% if paginator.total_pages &amp;gt; 1 %}&lt;/p&gt;
 &lt;div class=&quot;pagination&quot;&gt;
@@ -928,7 +930,7 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
       <item>
         <title>Summary on WEEK8</title>
         <description>&lt;h1 id=&quot;summary-for-week8&quot;&gt;Summary for WEEK8&lt;/h1&gt;
-&lt;p&gt;##Hardware Side
+&lt;p&gt;## Hardware Side
 The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
 The basic design in draft is presented below:&lt;/p&gt;
 
@@ -966,7 +968,7 @@ The design thinking of this modular sensor node had been changed a lot in terms 
       <item>
         <title>Summary on WEEK6</title>
         <description>&lt;h1 id=&quot;summary-for-week6&quot;&gt;Summary for WEEK6&lt;/h1&gt;
-&lt;p&gt;##Software Side
+&lt;p&gt;## Software Side
 Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The “LEGO” design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
 The software side didn’t go well because of not succeeding on streaming the data like a “server awareness” system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
 The difficulty was mainly the data model, the design is basically as shown below:&lt;/p&gt;
@@ -988,7 +990,7 @@ The difficulty was mainly the data model, the design is basically as shown below
       <item>
         <title>Summary on WEEK5</title>
         <description>&lt;h1 id=&quot;summary-for-week5&quot;&gt;Summary for WEEK5&lt;/h1&gt;
-&lt;p&gt;##Hardware Side
+&lt;p&gt;## Hardware Side
 Finalize the design of sensor node PCB on the basis of saving power and price optimization. The Gerber file has been sent to the manufacturer for printing the PCB on Thursday. The simple flexible power management PCb was also finished designing the schematic as well as the PCB routing. In the next week, there is not much  practice work but wait for the PCB arriving and try to lean Sketchup for building the plastic box contaning the sensor nodes with the 3D printer in the purpose of creating the electronic LEGO IOT node.&lt;/p&gt;
 
 &lt;h2 id=&quot;software-side&quot;&gt;Software Side&lt;/h2&gt;

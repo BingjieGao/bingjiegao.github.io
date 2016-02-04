@@ -227,7 +227,7 @@ paginate_path: “/blog/page:num/”</p>
 
 <p>接下来你会需要这些代码放在你的’index.html’文件中以便看到paginate的效果</p>
 
-<p>```html</p>
+<p>```</p>
 
 <p>{% if paginator.total_pages &gt; 1 %}</p>
 <div class="pagination">
@@ -280,7 +280,7 @@ paginate_path: “/blog/page:num/”</p>
           <a href="/TempBlogs/2015/07/13/WEEK8">Summary on WEEK8</a>
         </h1>
           <h1 id="summary-for-week8">Summary for WEEK8</h1>
-<p>##Hardware Side
+<p>## Hardware Side
 The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
 The basic design in draft is presented below:</p>
 
@@ -316,7 +316,7 @@ The design thinking of this modular sensor node had been changed a lot in terms 
           <a href="/TempBlogs/2015/07/13/WEEK6">Summary on WEEK6</a>
         </h1>
           <h1 id="summary-for-week6">Summary for WEEK6</h1>
-<p>##Software Side
+<p>## Software Side
 Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The “LEGO” design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
 The software side didn’t go well because of not succeeding on streaming the data like a “server awareness” system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
 The difficulty was mainly the data model, the design is basically as shown below:</p>

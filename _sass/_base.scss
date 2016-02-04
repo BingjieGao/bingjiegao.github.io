@@ -379,9 +379,17 @@ pre {
     -ms-transition: padding 0.5s ease-out;
     transition: padding 0.5s ease-out;
 
+    -ms-transform:translateZ(0);
+    -o-transform:translateZ(0);
+    -moz-transform:translateZ(0);
     -webkit-transform: translateZ(0);
     transform:translateZ(0);
-    transform: translate3d(20px, 20px, 0px)
+
+    -ms-transform:translate3d(0px, 0px, 0px);
+    -o-transform:translate3d(0px, 0px, 0px);
+    -moz-transform:translate3d(0px, 0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
     }
 }
 //animation fadein

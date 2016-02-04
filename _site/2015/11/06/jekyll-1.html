@@ -9,6 +9,7 @@
   <title>怎样很麻烦的开始做一个个人博客~jekyll</title>
   <meta name="description" content="有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然…不想做的更不来浪费时间 我只是单纯的想…以后的我不要忘了这个漫长的流程">
 
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
@@ -18,7 +19,7 @@
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
+  
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/2015/11/06/jekyll-1">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -53,6 +54,8 @@
         
           
           <a class="page-link" href="/TempBlogs/about/">关于</a>
+          
+        
           
         
           
@@ -273,7 +276,7 @@ paginate_path: “/blog/page:num/”</p>
 
                       </div>
 
-                      <div class="toggle-span">
+                      <div class="toggle-span" id="toggle-span">
                           <i class="fa fa-chevron-circle-left fa-2x"></i>
                       </div>
 
@@ -315,7 +318,7 @@ paginate_path: “/blog/page:num/”</p>
                                 </div>
                                 
                           </div>
-                          <div class="toggle-span2">
+                          <div class="toggle-span2" id="toggle-span2">
                             <i class="fa fa-chevron-circle-right fa-2x"></i>
                           </div>
                     </div>
@@ -370,21 +373,20 @@ paginate_path: “/blog/page:num/”</p>
 
 </footer>
 <script>
-      var scroll = $('.toggle-span');
+      var scroll = $('#toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('.toggle-span2');
+      var collpas = $('#toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
-        maincontent.removeClass('inner').addClass('col-md-8');
-        
       })
 
       collpas.click(function(){

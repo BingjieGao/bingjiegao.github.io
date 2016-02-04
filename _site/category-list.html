@@ -9,6 +9,7 @@
   <title>CatAmo凉生</title>
   <meta name="description" content="">
 
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
@@ -18,7 +19,7 @@
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
+  
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/category-list">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -85,6 +86,8 @@
         
           
         
+          
+        
       </div>
 
     </nav>
@@ -113,7 +116,7 @@
         
         
         <a href="javascript:;" class="categories-list-item" cate="生活笔记">
-            生活笔记 <span class="my-badge">4</span>
+            生活笔记 <span class="my-badge">7</span>
         </a>
         </div>
         
@@ -199,21 +202,20 @@
 
 </footer>
 <script>
-      var scroll = $('.toggle-span');
+      var scroll = $('#toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('.toggle-span2');
+      var collpas = $('#toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
-        maincontent.removeClass('inner').addClass('col-md-8');
-        
       })
 
       collpas.click(function(){

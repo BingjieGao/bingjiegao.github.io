@@ -46,21 +46,20 @@
 
 </footer>
 <script>
-      var scroll = $('.toggle-span');
+      var scroll = $('#toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('.toggle-span2');
+      var collpas = $('#toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
-        maincontent.removeClass('inner').addClass('col-md-8');
-        
       })
 
       collpas.click(function(){

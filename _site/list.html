@@ -9,6 +9,7 @@
   <title>CatAmo凉生</title>
   <meta name="description" content="">
 
+  <script src="/TempBlogs/js/jquery.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
   <link rel="stylesheet" href="/TempBlogs/css/main.css">
@@ -18,7 +19,7 @@
 
   <link rel="stylesheet" href="/TempBlogs/css/font-awesome.min.css">
 
-  <script src="/TempBlogs/js/jquery.js"></script>
+  
   <link rel="canonical" href="http://catamo10.github.io/TempBlogs/TempBlogs/list">
   <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml">
 
@@ -53,6 +54,8 @@
         
           
           <a class="page-link" href="/TempBlogs/about/">关于</a>
+          
+        
           
         
           
@@ -129,6 +132,15 @@
                 
                         
                         
+                
+                        
+                        
+                
+                        
+                        
+                
+                        
+                        
                         
                     <li id="year-list" class="each-post-list">
                         <div class="each-post">
@@ -188,6 +200,30 @@
         </div>
         <div class="col-md-8">
                 <ul class="list-posts">
+                    
+                    
+                    <li class="each-post-list" year="2016">
+                        <div class="each-post">
+                                <a href="/TempBlogs/2016/02/02/%E6%B5%8B%E8%AF%953">测试1</a>
+                                <span class="post-meta">Feb 2, 2016</span>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="each-post-list" year="2016">
+                        <div class="each-post">
+                                <a href="/TempBlogs/2016/02/02/%E6%B5%8B%E8%AF%952">测试1</a>
+                                <span class="post-meta">Feb 2, 2016</span>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="each-post-list" year="2016">
+                        <div class="each-post">
+                                <a href="/TempBlogs/2016/02/02/%E6%B5%8B%E8%AF%951">测试1</a>
+                                <span class="post-meta">Feb 2, 2016</span>
+                        </div>
+                    </li>
                     
                     
                     <li class="each-post-list" year="2016">
@@ -398,21 +434,20 @@
 
 </footer>
 <script>
-      var scroll = $('.toggle-span');
+      var scroll = $('#toggle-span');
       var wrapper1 = $('#mainpage');
       var wrapper2 = $('.wrapper2');
       var maincontent = $('#main-content');
       var side = $('.col-md-4');
-      var collpas = $('.toggle-span2');
+      var collpas = $('#toggle-span2');
 
 
       scroll.click(function(){
         // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        maincontent.removeClass('inner').addClass('col-md-8');
         side.css('display','block');
         $(this).css('display','none');
         collpas.css('display','block');
-        maincontent.removeClass('inner').addClass('col-md-8');
-        
       })
 
       collpas.click(function(){

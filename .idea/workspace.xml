@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27f10afb-fef3-49b3-9069-29e3278902bf" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_plugins/ext.rb" afterPath="$PROJECT_DIR$/_plugins/ext.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/c语言/index.html" afterPath="$PROJECT_DIR$/_site/tag/c语言/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/express/index.html" afterPath="$PROJECT_DIR$/_site/tag/express/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/nodejs/index.html" afterPath="$PROJECT_DIR$/_site/tag/nodejs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/学习/index.html" afterPath="$PROJECT_DIR$/_site/tag/学习/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/总结/index.html" afterPath="$PROJECT_DIR$/_site/tag/总结/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/无聊/index.html" afterPath="$PROJECT_DIR$/_site/tag/无聊/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/物联网/index.html" afterPath="$PROJECT_DIR$/_site/tag/物联网/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/记事/index.html" afterPath="$PROJECT_DIR$/_site/tag/记事/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/面试/index.html" afterPath="$PROJECT_DIR$/_site/tag/面试/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="27f10afb-fef3-49b3-9069-29e3278902bf" name="Default" comment="" />
     <ignored path="TempBlogs.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

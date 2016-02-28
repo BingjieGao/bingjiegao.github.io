@@ -2,56 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f10afb-fef3-49b3-9069-29e3278902bf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/demo/waterfall.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/demo/css/waterfall.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/06/26/week4.html" afterPath="$PROJECT_DIR$/_site/2015/06/26/week4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/无聊/index.html" afterPath="$PROJECT_DIR$/_site/tag/无聊/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/06/程序员面试金典Chapter3.html" afterPath="$PROJECT_DIR$/_site/2016/02/06/程序员面试金典Chapter3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/07/13/WEEK8.html" afterPath="$PROJECT_DIR$/_site/2015/07/13/WEEK8.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/page6/index.html" afterPath="$PROJECT_DIR$/_site/blog/page6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/3c158eca323f1359ec8cf507acc26d9e7ed19e41/_layout.scssc" afterPath="$PROJECT_DIR$/.sass-cache/3c158eca323f1359ec8cf507acc26d9e7ed19e41/_layout.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/page5/index.html" afterPath="$PROJECT_DIR$/_site/blog/page5/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/01/23/程序员面试金典-Chapter1-Arrays-and-Strings.html" afterPath="$PROJECT_DIR$/_site/2016/01/23/程序员面试金典-Chapter1-Arrays-and-Strings.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/page2/index.html" afterPath="$PROJECT_DIR$/_site/blog/page2/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/记事/index.html" afterPath="$PROJECT_DIR$/_site/tag/记事/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/06/19/week3.html" afterPath="$PROJECT_DIR$/_site/2015/06/19/week3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_layout.scss" afterPath="$PROJECT_DIR$/_sass/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_base.scss" afterPath="$PROJECT_DIR$/_sass/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="$PROJECT_DIR$/_site/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/01/02/深夜惊醒程序员.html" afterPath="$PROJECT_DIR$/_site/2016/01/02/深夜惊醒程序员.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/list.html" afterPath="$PROJECT_DIR$/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/page4/index.html" afterPath="$PROJECT_DIR$/_site/blog/page4/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/02/07/与家书-初一上班.html" afterPath="$PROJECT_DIR$/_site/2016/02/07/与家书-初一上班.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/c语言/index.html" afterPath="$PROJECT_DIR$/_site/tag/c语言/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sass-cache/3c158eca323f1359ec8cf507acc26d9e7ed19e41/_base.scssc" afterPath="$PROJECT_DIR$/.sass-cache/3c158eca323f1359ec8cf507acc26d9e7ed19e41/_base.scssc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/11/11/Express开发陷入异步圈和回调坑.html" afterPath="$PROJECT_DIR$/_site/2015/11/11/Express开发陷入异步圈和回调坑.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/物联网/index.html" afterPath="$PROJECT_DIR$/_site/tag/物联网/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2014/11/05/2014测试.html" afterPath="$PROJECT_DIR$/_site/2014/11/05/2014测试.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/学习/index.html" afterPath="$PROJECT_DIR$/_site/tag/学习/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/11/08/我和生活失了次恋.html" afterPath="$PROJECT_DIR$/_site/2015/11/08/我和生活失了次恋.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2013/11/05/2013测试.html" afterPath="$PROJECT_DIR$/_site/2013/11/05/2013测试.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/06/05/day-1-2.html" afterPath="$PROJECT_DIR$/_site/2015/06/05/day-1-2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2016/01/24/程序员面试金典Chapter2.html" afterPath="$PROJECT_DIR$/_site/2016/01/24/程序员面试金典Chapter2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/category-list.html" afterPath="$PROJECT_DIR$/_site/category-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/express/index.html" afterPath="$PROJECT_DIR$/_site/tag/express/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/categories.html" afterPath="$PROJECT_DIR$/_site/categories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/总结/index.html" afterPath="$PROJECT_DIR$/_site/tag/总结/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/07/03/WEEK5.html" afterPath="$PROJECT_DIR$/_site/2015/07/03/WEEK5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/11/08/若是我送你走-会怎样.html" afterPath="$PROJECT_DIR$/_site/2015/11/08/若是我送你走-会怎样.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/list.html" afterPath="$PROJECT_DIR$/_site/list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/11/06/jekyll-1.html" afterPath="$PROJECT_DIR$/_site/2015/11/06/jekyll-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/面试/index.html" afterPath="$PROJECT_DIR$/_site/tag/面试/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/2015/07/13/WEEK6.html" afterPath="$PROJECT_DIR$/_site/2015/07/13/WEEK6.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/page3/index.html" afterPath="$PROJECT_DIR$/_site/blog/page3/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/pages/demo/css/clock.less" afterPath="$PROJECT_DIR$/_site/pages/demo/css/clock.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/demo/css/clock.less" afterPath="$PROJECT_DIR$/pages/demo/css/clock.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/demo/css-clock.html" afterPath="$PROJECT_DIR$/_site/demo/css-clock.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/demo/css-clock.html" afterPath="$PROJECT_DIR$/pages/demo/css-clock.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/demo.css" afterPath="$PROJECT_DIR$/_site/css/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/demo.css" afterPath="$PROJECT_DIR$/css/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/tag/nodejs/index.html" afterPath="$PROJECT_DIR$/_site/tag/nodejs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/head.html" afterPath="$PROJECT_DIR$/_includes/head.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TempBlogs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +34,28 @@
       <file leaf-file-name="clock.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/demo/css/clock.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="-10.24">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/demo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.230769">
+              <caret line="217" column="14" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44198895">
+              <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -95,18 +74,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/demo/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="css-clock.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="css-clock.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/demo/css-clock.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.88">
+              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -116,6 +95,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/css/demo.css" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -132,7 +114,6 @@
         <option value="$PROJECT_DIR$/pages/demo/css/responsive-table.css" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_pages/demo/index.html" />
-        <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/list.html" />
         <option value="$PROJECT_DIR$/_sass/_layout.scss" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
@@ -140,7 +121,6 @@
         <option value="$PROJECT_DIR$/pages/demo/waterfall.html" />
         <option value="$PROJECT_DIR$/pages/demo/css/color.less" />
         <option value="$PROJECT_DIR$/pages/demo/css/demo.less" />
-        <option value="$PROJECT_DIR$/pages/demo/css/clock.less" />
         <option value="$PROJECT_DIR$/pages/demo/index.html" />
         <option value="$PROJECT_DIR$/pages/demo/css/waterfall.less" />
         <option value="$PROJECT_DIR$/_sass/_base.scss" />
@@ -148,9 +128,11 @@
         <option value="$PROJECT_DIR$/pages/demo/css-responsive-table.html" />
         <option value="$PROJECT_DIR$/pages/demo/css/responsive-table.less" />
         <option value="$PROJECT_DIR$/pages/demo/css/demo.css" />
-        <option value="$PROJECT_DIR$/css/demo.css" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/pages/demo/css-clock.html" />
+        <option value="$PROJECT_DIR$/pages/demo/css/clock.less" />
+        <option value="$PROJECT_DIR$/css/demo.css" />
+        <option value="$PROJECT_DIR$/_includes/head.html" />
       </list>
     </option>
   </component>
@@ -209,6 +191,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -325,8 +309,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,11 +395,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="23" width="1218" height="710" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2312187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -428,7 +411,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -497,6 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -504,6 +487,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -546,6 +530,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -561,6 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -610,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29679596">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -631,13 +618,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33268481">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="6" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3943662">
-          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -687,13 +668,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08450704">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/demo/waterfall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.96">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -701,6 +676,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -708,6 +684,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4647887">
           <caret line="52" column="9" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -715,6 +692,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30985916">
           <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -729,28 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028169014">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/demo/css/clock.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/demo/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.460371">
-          <caret line="194" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9435626">
-          <caret line="270" column="0" selection-start-line="270" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -769,17 +725,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/demo/css-responsive-table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1971831">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/demo/css/responsive-table.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26519337">
           <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -794,6 +744,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74647886">
           <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/demo/css-responsive-table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1971831">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/demo/waterfall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53521127">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -805,10 +772,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/demo/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27150086">
+          <caret line="187" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="270" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/demo/css-clock.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.88">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/demo/css/clock.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.24">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/demo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.230769">
+          <caret line="217" column="14" selection-start-line="217" selection-start-column="14" selection-end-line="217" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44198895">
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding />
         </state>
       </provider>

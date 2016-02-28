@@ -5,9 +5,27 @@
     <description></description>
     <link>http://catamo10.github.io/TempBlogs/TempBlogs/</link>
     <atom:link href="http://catamo10.github.io/TempBlogs/TempBlogs/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Feb 2016 21:29:56 +0000</pubDate>
-    <lastBuildDate>Tue, 09 Feb 2016 21:29:56 +0000</lastBuildDate>
+    <pubDate>Sun, 28 Feb 2016 01:27:10 +0000</pubDate>
+    <lastBuildDate>Sun, 28 Feb 2016 01:27:10 +0000</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>我一点都不想去怀念英国</title>
+        <description>&lt;p&gt;从前几天考试流行的，我要去各个城市体，到这两天陡然在朋友圈里横行霸道的”我要去英国”，突然觉得此时此刻的感受就叫作：说了矫情、不说憋屈。我回顾我的大学生涯，我把幼稚却又坚定的步伐留在那个英国北部的城市里，又带着还未消解的毕业惆怅直线来到这个英格兰南部的城镇，短短十个月，我从一名英国留学生正式升级成为了滞留在这片土地上朝九晚五的一员，对此，我只能说，我后悔过。我不想也不愿意在未来的某一天想起此时的自己，往往回忆英国的或许大都会怀念英国的那为数不多的大城市，伦敦，曼城，甚至是北方那个不大的利物浦也值得我的时不时想起。然而，正襟危坐的这个城市，这片土地，我打起12分精神也爱不起来，更谈不上将来会怀念。&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 25 Feb 2016 15:10:18 +0000</pubDate>
+        <link>http://catamo10.github.io/TempBlogs/TempBlogs/2016/02/25/%E6%88%91%E4%B8%80%E7%82%B9%E9%83%BD%E4%B8%8D%E6%83%B3%E5%8E%BB%E6%80%80%E5%BF%B5%E8%8B%B1%E5%9B%BD</link>
+        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs/TempBlogs/2016/02/25/%E6%88%91%E4%B8%80%E7%82%B9%E9%83%BD%E4%B8%8D%E6%83%B3%E5%8E%BB%E6%80%80%E5%BF%B5%E8%8B%B1%E5%9B%BD</guid>
+        
+        <category>-记事</category>
+        
+        <category>-无聊</category>
+        
+        
+        <category>生活笔记</category>
+        
+      </item>
     
       <item>
         <title>与家书-初一上班</title>
@@ -1249,49 +1267,6 @@ paginate_path: “/blog/page:num/”&lt;/p&gt;
         
         
         <category>学习</category>
-        
-      </item>
-    
-      <item>
-        <title>Summary on WEEK8</title>
-        <description>&lt;h1 id=&quot;summary-for-week8&quot;&gt;Summary for WEEK8&lt;/h1&gt;
-
-&lt;h2 id=&quot;hardware-side&quot;&gt;Hardware Side&lt;/h2&gt;
-&lt;p&gt;The improvements are required for a more flexible and secure purposes of the sensor node. Previously, the cheap solution was to use the Atmel mega 328p as the centre MCU with just 32K programming memary and 2k SRAM. For the crypto engine, the quarz frequency should be raised to a certain amount which now is 32MHz and with 384kB programming memory Atmel chip XMEGA384C3. The 64-pin TQFP package was again used for this MCU chip as the design size scale.
-The basic design in draft is presented below:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.17.31.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The new schematic of PCB is complated according to the reference design from offical Atmel Xmega C series manual. There are few things different which only fit into the modular application solution Nquiringminds demands.&lt;/p&gt;
-
-&lt;h5 id=&quot;the-printing-3d-box&quot;&gt;The printing 3D box&lt;/h5&gt;
-&lt;p&gt;There are many changes to previous design, basically the cube design is now transfer to the all stackable design instead. The issue is quite complicated with the cube design as there is a risk putting all the modules together along with the power module as well as RF module. The spacing could be the sensitive issue in terms of the attenna and the battery which should go beneath the main MCU module.
-The design thinking of this modular sensor node had been changed a lot in terms of the usability and different senarios. The image below shows the brief magenetic connection between each identical sensor boxes which could stack together.&lt;/p&gt;
-
-&lt;h2 id=&quot;software-side&quot;&gt;Software Side&lt;/h2&gt;
-&lt;p&gt;The simple HTTP RESTful server is about to be finished but a lot more are to be modified. There is a failure to add the user athorization on top of the visualization sensor data. It is believed that the issue is happened because of users holding the mongodb collection. Currently, the data sent from each sensor node through the hub stations are storeed in the mongodb using embedded documents with arrays:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 15.32.57.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The things are to be working on following weeks:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The dissertation writting&lt;/li&gt;
-  &lt;li&gt;The further development of software side for the HTTP RESTful server&lt;/li&gt;
-  &lt;li&gt;The hardware design is finished for complating the MSc project&lt;/li&gt;
-  &lt;li&gt;For the company, the hardware design needs to be continued with more researches on voltage regulators and finish the PCB routing.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Mon, 13 Jul 2015 11:07:34 +0100</pubDate>
-        <link>http://catamo10.github.io/TempBlogs/TempBlogs/2015/07/13/WEEK8</link>
-        <guid isPermaLink="true">http://catamo10.github.io/TempBlogs/TempBlogs/2015/07/13/WEEK8</guid>
-        
-        <category>-物联网</category>
-        
-        <category>-总结</category>
-        
-        
-        <category>毕设Archive</category>
         
       </item>
     

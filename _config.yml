@@ -32,6 +32,7 @@ jianshu_png: /TempBlogs/_includes/skeleton.png
 gems: [jekyll-paginate]
 paginate: 3
 paginate_path: "blog/page:num"
+include: ['pages']
 # Build settings
 # markdown: kramdown 
 # kramdown: 

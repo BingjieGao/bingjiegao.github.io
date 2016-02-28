@@ -11,6 +11,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",serif;
   font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #6c6c6c;
   background-color: #fdfdfd;
@@ -112,6 +113,7 @@ pre {
 .wrapper {
   max-width: -webkit-calc((800px) * 1.2);
   max-width: calc((800px) * 1.2);
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 0 auto; }
@@ -139,7 +141,7 @@ pre {
 /**
  * Clearfix
  */
-.wrapper:after, .wrapper2:after, .header-main:after, .inner:after, .footer-col-wrapper:after {
+.wrapper:after, .wrapper2:after, .header-main:after, .row:after, .inner:after, .footer-col-wrapper:after {
   content: "";
   display: table;
   clear: both; }
@@ -287,7 +289,7 @@ pre {
     transition: padding 0.5s ease-out;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
-    transform: translate3d(20px, 20px, 0px); } }
+    transform: translate3d(0px, 0px, 0px); } }
 
 @-webkit-keyframes fadeIn {
   0% {
@@ -439,8 +441,7 @@ pre {
 
 .inner {
   width: 100%;
-  min-width: 550px;
-  position: relative; }
+  min-width: 550px; }
 
 .each-post-list {
   list-style-type: none; }

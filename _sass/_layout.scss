@@ -107,10 +107,13 @@
         }
     }
 }
+.row{
+    @extend %clearfix;
+}
 .inner{
     width:100%;
     min-width: 550px;
-    position:relative;
+    //position:relative;
     @extend %clearfix;
 }
 

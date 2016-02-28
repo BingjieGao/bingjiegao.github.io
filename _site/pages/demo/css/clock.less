@@ -1,0 +1,104 @@
+.clock-center{
+  width:15px;
+  height:15px;
+  border-radius: 50%;
+  position:absolute;
+  background-color: #1b1b1b;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.css-clock {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  border: 9px solid #1b1b1b;
+  margin: 0px auto;
+  padding: 0px;
+}
+.hour{
+  width:7px;
+  height:60px;
+  border-radius: 4px;
+  position:absolute;
+  background-color: @POMEGANATE;
+  top:90px;
+  left:49.7%;
+  transform: translate(-50%,-50%);
+  transform-origin: 50% 98%;
+
+  animation: rotates 216000s infinite steps(60);
+}
+.css-clock:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 80px;
+  background-color: #1b1b1b;
+  top:75px;
+  left:49.7%;
+  transform-origin: 50% 96%;
+  transform: translate(-50%,-50%);
+  border-radius: 3px;
+  /*animation*/
+  -webkit-animation-name: rotates;
+  -moz-animation-name: rotates;
+  -o-animation-name: rotates;
+  animation-name: rotates;
+
+
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3600s;
+
+  /*animation: rotates 60s infinite steps(60);*/
+
+
+}
+.css-clock:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 130px;
+  background-color: #1b1b1b;
+  top:24px;
+  left:50%;
+  transform-origin: 50% 97%;
+  transform: translate(-50%,-50%);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+  /*animation*/
+  /*-webkit-animation-name: rotates;*/
+  /*-moz-animation-name: rotates;*/
+  /*-o-animation-name: rotates;*/
+  /*animation-name: rotates;*/
+
+
+  /*animation-iteration-count: infinite;*/
+  /*animation-timing-function: linear;*/
+  /*animation-duration: 10s;*/
+
+  animation: rotates 60s infinite steps(60);
+}
+
+
+/*keyframe animation*/
+@keyframes rotates {
+  0%{
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

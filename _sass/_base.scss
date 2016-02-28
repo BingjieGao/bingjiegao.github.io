@@ -14,7 +14,9 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
+  font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3",serif;
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+
     color: #6c6c6c;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -166,6 +168,7 @@ pre {
 .wrapper {
     max-width: -webkit-calc((#{$content-width}) * 1.2);
     max-width:         calc((#{$content-width}) * 1.2);
+    width:100%;
     margin-right: auto;
     margin-left: auto;
     padding: 0 auto;
@@ -195,6 +198,8 @@ pre {
         padding-left: $spacing-unit / 2;
     }
 }
+
+
 
 
 
@@ -381,7 +386,7 @@ pre {
 
     -webkit-transform: translateZ(0);
     transform:translateZ(0);
-    transform: translate3d(20px, 20px, 0px)
+    transform: translate3d(0px, 0px, 0px)
     }
 }
 //animation fadein

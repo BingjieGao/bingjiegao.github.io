@@ -1,0 +1,92 @@
+
+table {
+    font: 14px/1.5 "Microsoft YaHei", "微软雅黑", "Lantinghei SC", Helvetica, Tahoma, Arial, sans-serif, SimSun, "Hiragino Sans GB", "Hiragino Sans GB";
+    width: 90%;
+    height: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    margin:0 auto;
+}
+tr{
+    /*margin: 1.5em;*/
+    /*display:table;*/
+}
+tr:nth-child(odd){
+    background-color: #eeeeee;
+}
+td,th{
+    margin:0 auto;
+    padding:0.8em;
+}
+@media only screen
+and (max-width: 900px){
+    td,th{
+        padding:0.5em;
+        font-size:15px;
+        min-font-size: 14px;
+    }
+}
+@media only screen
+and (max-width: 730px) {
+    table thead{
+        display:none;
+    }
+    table tr{
+        display:block;
+    }
+    tr:before{
+        display:block;
+    }
+    table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    table td {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        clear: left;
+        width: 100%;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+    td:before {
+        content:attr(table-title);
+        float: left;
+        display:block;
+    }
+}
+@media only screen
+and (min-width: 320px)
+and (max-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    tr{
+        display:block;
+    }
+    tr:before{
+        display:block;
+    }
+    table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    table td {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        clear: left;
+        width: 100%;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+    td:before {
+        content:attr(table-title);
+        float: left;
+        display:block;
+    }
+}

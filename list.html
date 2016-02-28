@@ -3,23 +3,22 @@ layout: otherpages
 ---
 
 
-    <div class="list-content">
-            <div class="col-md-4" id="archive-year">
-            <!-- <div class="side-bar"> -->
-                {% assign static-year = 0 %}
-                {% for post in site.posts  %}
-                        {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
-                        {% if static-year != year %}
-                        {% assign static-year = year %}
-                    <li id="year-list" class="each-post-list">
-                        <div class="each-post">
-                            <a href=javascript:; class="archive-year" year="{{static-year}}" style="nactive">{{ static-year }}</a>
-                        </div>
-                     </li>   
-                        {% endif %}
-                {% endfor %}
-            </div>      
+        <div class="col-md-4" id="archive-year">
+        <!-- <div class="side-bar"> -->
+            {% assign static-year = 0 %}
+            {% for post in site.posts  %}
+                    {% capture year %}{{post.date | date: "%Y"}}{% endcapture %}
+                    {% if static-year != year %}
+                    {% assign static-year = year %}
+                <li id="year-list" class="each-post-list">
+                    <div class="each-post">
+                        <a href=javascript:; class="archive-year" year="{{static-year}}" style="nactive">{{ static-year }}</a>
+                    </div>
+                 </li>
+                    {% endif %}
+            {% endfor %}
         </div>
+
         <div class="col-md-8">
                 <ul class="list-posts">
                     {% for post in site.posts  %}

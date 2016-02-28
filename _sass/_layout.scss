@@ -111,8 +111,9 @@
     @extend %clearfix;
 }
 .inner{
-    width:100%;
-    min-width: 550px;
+    width:80%;
+    min-width: 400px;
+    margin: 0 auto;
     //position:relative;
     @extend %clearfix;
 }

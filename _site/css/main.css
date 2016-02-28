@@ -111,8 +111,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc((800px) * 1.2);
-  max-width: calc((800px) * 1.2);
+  max-width: -webkit-calc((800px) * 1.5);
+  max-width: calc((800px) * 1.5);
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -440,8 +440,9 @@ pre {
           margin-right: 5px; } }
 
 .inner {
-  width: 100%;
-  min-width: 550px; }
+  width: 80%;
+  min-width: 400px;
+  margin: 0 auto; }
 
 .each-post-list {
   list-style-type: none; }

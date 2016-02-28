@@ -1,6 +1,6 @@
 table {
     font: 14px/1.5 "Microsoft YaHei", "微软雅黑", "Lantinghei SC", Helvetica, Tahoma, Arial, sans-serif, SimSun, "Hiragino Sans GB", "Hiragino Sans GB";
-    width: 90%;
+    width: 97%;
     height: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -92,27 +92,31 @@ th {
     padding: 0px;
     /*for least small or mobile*/
     -webkit-column-count: 1;
-    -webkit-column-gap: 20px;
     -moz-column-count: 1;
-    -moz-column-gap: 20px;
     column-count: 1;
-    column-gap: 20px;
 }
-@media (min-width: 580px) {
+@media (min-width: 550px) and (max-width: 740px) {
+    .waterfall {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media (min-width: 800px) and (max-width: 970px) {
     .waterfall {
         -webkit-column-count: 3;
         -moz-column-count: 3;
         column-count: 3;
     }
 }
-@media (min-width: 870px) {
+@media (min-width: 1000px) {
     .waterfall {
         -webkit-column-count: 4;
         -moz-column-count: 4;
         column-count: 4;
     }
 }
-@media (min-width: 1160px) {
+@media (min-width: 1200px) {
     .waterfall {
         -webkit-column-count: 5;
         -moz-column-count: 5;
@@ -122,14 +126,47 @@ th {
 .waterfall:hover {
     cursor: pointer;
 }
+.waterfall-square-demo {
+    width: 250px;
+    height: 180px;
+    max-width: 100%;
+    display: inline-block;
+    background-color: #dfdfdf;
+    margin-bottom: 20px;
+    text-align: center;
+}
 .waterfall-square {
     width: 250px;
     height: 180px;
     max-width: 100%;
     display: inline-block;
     background-color: #dfdfdf;
-    margin: 20px;
+    margin-bottom: 20px;
     text-align: center;
+}
+.waterfall-square h4 {
+    margin-top: 85px;
+    color: #77BA9B;
+}
+.waterfall-square:hover {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    animation: show-shadow 0.5s forwards ease-out;
+}
+.waterfall-square:hover h4 {
+    color: #95a5a6;
+}
+@keyframes show-shadow {
+    0% {
+        box-shadow: 0px 0px 0px 0px #77BA9B inset;
+    }
+    50% {
+        box-shadow: 0px 0px 0px 3px #77BA9B inset;
+    }
+    100% {
+        box-shadow: 0px 0px 0px 8px #77BA9B inset;
+    }
 }
 .turquoise {
     background-color: #1abc9c;
@@ -176,97 +213,76 @@ th {
 .asbestos {
     background-color: #7f8c8d;
 }
-.clock-center {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    background-color: #1b1b1b;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+.clocks {
+    display: inline-block;
+    margin-right: 5%;
 }
-.css-clock {
+.clock-container {
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    border: 9px solid #1b1b1b;
-    /*margin: 0px auto;*/
-    /*padding: 0px;*/
-    float:left;
-
+    border: 8px solid #1b1b1b;
+    position: relative;
+    display: inline-block;
 }
-.hour {
-    width: 7px;
-    height: 60px;
-    border-radius: 4px;
+.center-point {
     position: absolute;
-    background-color: #c0392b;
-    top: 90px;
-    left: 49.7%;
-    transform: translate(-50%, -50%);
-    transform-origin: 50% 98%;
-    animation: rotates 216000s infinite steps(60);
-}
-.css-clock:before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 80px;
-    background-color: #1b1b1b;
-    top: 75px;
-    left: 49.7%;
-    transform-origin: 50% 96%;
-    transform: translate(-50%, -50%);
-    border-radius: 3px;
-    /*animation*/
-    -webkit-animation-name: rotates;
-    -moz-animation-name: rotates;
-    -o-animation-name: rotates;
-    animation-name: rotates;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 3600s;
-    /*animation: rotates 60s infinite steps(60);*/
-}
-.css-clock:after {
-    content: "";
-    position: absolute;
-    width: 2px;
-    height: 130px;
-    background-color: #1b1b1b;
-    top: 24px;
+    top: 50%;
     left: 50%;
-    transform-origin: 50% 97%;
     transform: translate(-50%, -50%);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    /*animation*/
-    /*-webkit-animation-name: rotates;*/
-    /*-moz-animation-name: rotates;*/
-    /*-o-animation-name: rotates;*/
-    /*animation-name: rotates;*/
-    /*animation-iteration-count: infinite;*/
-    /*animation-timing-function: linear;*/
-    /*animation-duration: 10s;*/
-    animation: rotates 60s infinite steps(60);
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #1b1b1b;
+    z-index: 2;
+}
+.hours {
+    background: #000;
+    height: 60px;
+    left: 49.2%;
+    position: absolute;
+    top: 81.5px;
+    transform-origin: 50% 100%;
+    background-color: #c0392b;
+    width: 6px;
+    transform: translate(-50%, -50%);
+    animation: rotates 43200s infinite linear;
+}
+.seconds {
+    background: #000;
+    height: 130px;
+    left: 49.58%;
+    position: absolute;
+    top: 38px;
+    transform-origin: 50% 80%;
+    width: 2px;
+    transform: translate(-50%, -50%);
+    animation: rotates 60s infinite linear;
+}
+.minutes {
+    background: #000;
+    height: 80px;
+    left: 49.4%;
+    position: absolute;
+    top: 63px;
+    transform-origin: 50% 99%;
+    width: 3px;
+    transform: translate(-50%, -50%);
+    animation: rotates 3600s infinite linear;
 }
 /*keyframe animation*/
 @keyframes rotates {
-    0% {
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
     100% {
         -webkit-transform: rotateZ(360deg);
-        -moz-transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        transform: rotate(360deg);
+        -moz-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+        -o-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
     }
+}
+.demo-container {
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 95%;
 }

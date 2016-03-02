@@ -34,10 +34,25 @@ var skillJson = [
 ]
 
 var width = document.getElementById('skillchart').offsetWidth;
+var dragable = d3.behavior.drag()
+    .on("drag", function() {
+        var x = d3.event.x;
+
+        d3.select(this).attr("x",x);
+    });
+var dragwidth = d3.behavior.drag()
+    .on("drag", function() {
+        var x = d3.event.x;
+        d3.select(this).attr("width",function(d,i){
+           return  x+0.25*width;
+        })
+
+    });
+
 console.log(width);
 var x = d3.scale.linear()
     .domain([0, 10])
-    .range([0, width * 0.55]);
+    .range([0, width * 0.4]);
 var barHeight = 30;
 var barchart = d3.select(".skill-chart")
     .append('svg')
@@ -49,31 +64,56 @@ var g = barchart.selectAll('g')
     .append('g')
 
 
-
-var bars = barchart.selectAll('rect')
+var bars = barchart.selectAll('.bar')
     .data(skillJson)
     .enter()
     .append("rect")
-    .style("fill", "#77BA9B")
+    .attr('class','bar')
+
+bars.style("fill", "#77BA9B")
     .style("height", 25 + "px")
-    .attr("class", "bar")
     .attr("transform", function (d, i) {
         return "translate(0," + i * barHeight + ")";
     })
     .attr('x', '25%')
-
-bars.attr("width", '0px')
+    .call(dragwidth)
+    .attr("width", '0px')
     .style('opacity', 0)
-        .transition()
-        .delay(function(d, i) { return i * 200 })
-        .duration(1000)
-        .attr("width", function (d) {
+    .transition()
+    .delay(function (d, i) {
+        return i * 200
+    })
+    .duration(1000)
+    .attr("width", function (d) {
         return x(d.profency) + 'px';
-            })
-        .style('opacity', 1)
+    })
+    .style('opacity', 1)
+
+
+var drag = barchart.selectAll('.drag')
+    .data(skillJson)
+    .enter()
+    .append("rect")
+    .attr('class','drag')
+    .style("width", function (d) {
+        return 10 + 'px';
+    })
+    .attr("transform", function (d, i) {
+        return "translate(0," + i * barHeight + ")";
+    })
+    .style("height", 30 + "px")
+    .attr('x', function(d){
+        return x(d.profency)+0.25*width-10+'px';
+    })
+    .attr('y', function(d){
+        return -2.5+'px';
+    })
+    .style("fill", "red")
+    .call(dragable)
+
 var greybars = g.append("rect")
     .style("width", function (d) {
-        return width * 0.55 + 'px';
+        return width * 0.4 + 'px';
     })
     .attr("transform", function (d, i) {
         return "translate(0," + i * barHeight + ")";

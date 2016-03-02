@@ -141,7 +141,7 @@ pre {
 /**
  * Clearfix
  */
-.wrapper:after, .wrapper2:after, .header-main:after, .row:after, .inner:after, .footer-col-wrapper:after {
+.wrapper:after, .wrapper2:after, .resume-block:after, .resume-subblock:after, .header-main:after, .row:after, .inner:after, .footer-col-wrapper:after {
   content: "";
   display: table;
   clear: both; }
@@ -364,6 +364,115 @@ pre {
     transform: scale(1);
     -ms-filter: none;
     filter: none; } }
+/*    resume      */
+.resume-header {
+  background-color: #efefef;
+  margin-bottom: 5px;
+  padding: 20px 0px; }
+
+.circle-border {
+  margin: 0px auto;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  padding: 20px;
+  border: 4px solid #77BA9B; }
+
+.col-md-9 {
+  padding: 15px 15px 15px 0px; }
+  @media screen and (max-width: 990px) {
+    .col-md-9 {
+      padding: 15px 0px 15px 0px; } }
+
+.col-md-3 {
+  padding: 15px 0px 15px 0px; }
+
+.resume-block {
+  background-color: #efefef;
+  padding: 10px; }
+
+.resume-subtitle {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 1.2em; }
+
+.resume-nav {
+  text-align: center;
+  background-color: #efefef;
+  padding: 20px; }
+
+.nav-line {
+  border-left: 2.5px solid #dfdfdf;
+  padding: 15px; }
+  .nav-line:hover {
+    border-left: 2.5px solid #77BA9B; }
+
+.nav-title {
+  font-size: 1.1em;
+  color: #6c6c6c; }
+  .nav-title:hover {
+    color: #77BA9B;
+    cursor: pointer; }
+
+.resume-subblock {
+  margin: 0 auto;
+  top: -10px;
+  width: 85%;
+  padding: 15px 0px 0px 0px; }
+  .resume-subblock:first-child {
+    border-top: 2px solid #77BA9B; }
+
+.resume-subblock:nth-child(even) {
+  border-top: 2px solid #77BA9B; }
+
+.icon-content {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: bottom;
+  font-size: 1em; }
+  .icon-content h4 {
+    font-size: 1.2em; }
+  .icon-content p {
+    margin-bottom: 0px; }
+
+.content-title {
+  display: block;
+  padding: 0px; }
+
+.subblock-content {
+  padding: 0px; }
+  .subblock-content p {
+    display: block;
+    font-size: 0.9em; }
+
+/*uni and company imgs*/
+.icons {
+  display: inline-block;
+  vertical-align: top;
+  width: 90px; }
+
+#nqminds-img {
+  width: 50px;
+  border: 2px solid #cecece;
+  border-radius: 50%;
+  background-color: #ffffff; }
+
+#sou-img {
+  background-color: rgba(12, 73, 100, 0.92);
+  width: 89px; }
+
+#liv-img {
+  width: 90px; }
+
+/*skill-chart*/
+.skill-text {
+  margin-top: 13px;
+  float: left;
+  width: 25%; }
+
+.bars {
+  fill: #77BA9B; }
+
 /**
  * Site header
  */

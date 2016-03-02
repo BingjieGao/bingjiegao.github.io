@@ -46,9 +46,21 @@
   margin-bottom: 20px;
   text-align: center;
 }
-.waterfall-square {
+.waterfall-square{
   width: 250px;
   height: 180px;
+  & h4{
+    margin-top:85px;
+  }
+}
+.waterfall-square-sm{
+  width:150px;
+  height:150px;
+  & h4{
+    margin-top:70px;
+  }
+}
+.waterfall-square,.waterfall-square-sm {
   max-width: 100%;
   display: inline-block;
   background-color: #dfdfdf;
@@ -56,7 +68,6 @@
   text-align: center;
 
   & h4{
-    margin-top:85px;
     color: #77BA9B;
   }
   &:hover{

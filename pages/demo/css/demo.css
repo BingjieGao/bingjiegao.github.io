@@ -138,23 +138,38 @@ th {
 .waterfall-square {
   width: 250px;
   height: 180px;
+}
+.waterfall-square h4 {
+  margin-top: 85px;
+}
+.waterfall-square-sm {
+  width: 150px;
+  height: 150px;
+}
+.waterfall-square-sm h4 {
+  margin-top: 70px;
+}
+.waterfall-square,
+.waterfall-square-sm {
   max-width: 100%;
   display: inline-block;
   background-color: #dfdfdf;
   margin-bottom: 20px;
   text-align: center;
 }
-.waterfall-square h4 {
-  margin-top: 85px;
+.waterfall-square h4,
+.waterfall-square-sm h4 {
   color: #77BA9B;
 }
-.waterfall-square:hover {
+.waterfall-square:hover,
+.waterfall-square-sm:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   animation: show-shadow 0.5s forwards ease-out;
 }
-.waterfall-square:hover h4 {
+.waterfall-square:hover h4,
+.waterfall-square-sm:hover h4 {
   color: #95a5a6;
 }
 @keyframes show-shadow {

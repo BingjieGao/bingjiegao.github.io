@@ -12,6 +12,7 @@
       <div class="trigger">
         <a class="page-link" id="categories" href="{{ site.baseurl }}/categories.html">文章类别</a>
         <a class="page-link" id="list" href="{{ site.baseurl }}/list.html">文章列表</a>
+        <a class="page-link" id="list" href="{{ site.baseurl }}/resume">简历</a>
         {% for my_page in site.pages %}
           {% if my_page.title %}
           <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">关于</a>

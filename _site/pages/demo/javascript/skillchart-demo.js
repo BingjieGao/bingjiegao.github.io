@@ -5,48 +5,83 @@
 var skillJson = [
     {
         "skill": "PHP",
+        "name":"PHP",
         "profency": 3
     },
     {
         "skill": "Embedded C",
-        "profency": 6
+        "name": "Embedded-C",
+        "profency": 3
     },
     {
         "skill": "Nodejs",
-        "profency": 4
+        "name": "Nodejs",
+        "profency": 3
     },
     {
         "skill": "Expressjs",
-        "profency": 4
+        "name": "Expressjs",
+        "profency": 3
     },
     {
         "skill": "MongoDB",
-        "profency": 4
+        "name": "MongoDB",
+        "profency": 5
     },
     {
         "skill": "HTML",
-        "profency": 7
+        "name": "HTML",
+        "profency": 6
     },
     {
         "skill": "CSS3",
-        "profency": 7
-    },
-    {
-        "skill": "JQuery",
-        "profency": 4
-    },
-    {
-        "skill": "Circuit Design& PCB",
-        "profency": 8
+        "name": "CSS3",
+        "profency": 10
     }
 ]
-
+var text_value='';
+var this_bar;
+var this_value;
+var num;
 var width = document.getElementById('skillchart').offsetWidth;
+
 console.log(width);
-var x = d3.scale.linear()
+var xscale = d3.scale.linear()
     .domain([0, 10])
     .range([0, width * 0.55]);
 var barHeight = 30;
+
+var dragable = d3.behavior.drag()
+    .on('dragstart',function(d){
+        console.log(text_value);
+        text_value = d.name;
+        this_bar = d3.select('rect[name='+text_value+']');
+        this_value = d3.select('.value-text[value='+text_value+']');
+        console.log(this_bar);
+    })
+    .on('drag', function(d) {
+        var x = d3.event.x;
+        num = (x-0.25*width)/(width*0.055);
+        num = Math.round(num);
+        d3.select(this).attr("x",num * width*0.055+0.25*width);
+        this_value.text(function(d){
+            return num+'/10';
+        })
+        this_bar.attr('width',function(){
+            if(x<width*0.26)
+            return 0;
+            else if(x>width*0.80)
+            return width*0.55;
+            else{
+                return num * width*0.055;
+            }
+        })
+    })
+    .on('dragend',function(d,i){
+        skillJson[i].profency = num;
+        console.log(skillJson[i]);
+    })
+
 var barchart = d3.select(".skill-chart")
     .append('svg')
     .attr("width", '100%')
@@ -56,11 +91,15 @@ var g = barchart.selectAll('g')
     .enter()
     .append('g')
 
+
 var bars = barchart.selectAll('.bar')
     .data(skillJson)
     .enter()
     .append("rect")
     .attr('class','bar')
+    .attr('name',function(d){
+        return d.name;
+    })
 
 bars.style("fill", "#77BA9B")
     .style("height", 25 + "px")
@@ -76,9 +115,31 @@ bars.style("fill", "#77BA9B")
     })
     .duration(1000)
     .attr("width", function (d) {
-        return x(d.profency) + 'px';
+        return xscale(d.profency) + 'px';
     })
     .style('opacity', 1)
+
+
+var drag = barchart.selectAll('.drag')
+    .data(skillJson)
+    .enter()
+    .append("rect")
+    .attr('class','drag')
+    .style("width", function (d) {
+        return 10 + 'px';
+    })
+    .attr("transform", function (d, i) {
+        return "translate(0," + i * barHeight + ")";
+    })
+    .attr('x', function(d){
+        return xscale(d.profency)+0.25*width-10+'px';
+    })
+    .style("height", 25 + "px")
+    .style('rx','5')
+    .style('ry','5')
+    .style("fill", "#6c6c6c")
+    .call(dragable)
+
 var greybars = g.append("rect")
     .style("width", function (d) {
         return width * 0.55 + 'px';
@@ -105,22 +166,27 @@ var value = g.append('text')
     .text(function (d) {
         return d.profency + '/10';
     })
+    .attr('value',function(d){
+        return d.name;
+    })
+    .attr('class','value-text')
     .attr('y', barHeight / 1.5)
-    .attr('x', '89%')
+    .attr('x', '87%')
     .attr("transform", function (d, i) {
         return "translate(0," + i * barHeight + ")";
     })
     .style('font-size','1em')
     .style('fill','#6c6c6c')
 
+//
 d3.select(window)
     .on('resize', function () {
-        var width = document.getElementById('skillchart').offsetWidth;
-        var x = d3.scale.linear()
+         width = document.getElementById('skillchart').offsetWidth;
+         xscale = d3.scale.linear()
             .domain([0, 10])
             .range([0, width * 0.55]);
         bars.style("width", function (d) {
-            return x(d.profency) + 'px';
+            return xscale(d.profency) + 'px';
         })
         greybars.style("width", function (d) {
             return width*0.55 + 'px';

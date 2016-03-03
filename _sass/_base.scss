@@ -487,6 +487,9 @@ pre {
   }
 }
 /*    resume      */
+.resume-en{
+  display:none;
+}
 .resume-header{
   background-color: #efefef;
   margin-bottom:5px;
@@ -552,7 +555,7 @@ pre {
     border-top:2px solid #77BA9B;
   }
 }
-.resume-subblock:nth-child(even){
+.resume-subblock:nth-child(2){
   border-top:2px solid #77BA9B;
 }
 .icon-content{

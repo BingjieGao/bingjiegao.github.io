@@ -407,6 +407,9 @@ pre {
   position: absolute;
   top: 15px;
   width: 100%; }
+  @media screen and (max-width: 900px) {
+    .resume-nav {
+      display: none; } }
 
 .nav-line {
   border-left: 2.5px solid #dfdfdf;

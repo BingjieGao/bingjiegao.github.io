@@ -132,7 +132,7 @@ d3.select(window)
 
 var sidebar = $('.resume-nav');
 var sections = $('.resume-block');
-var current_section;
+var contentTop = [];
 $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
@@ -145,19 +145,20 @@ $('a[href*="#"]:not([href="#"])').click(function() {
         }
     }
 });
-
+$('.resume-nav').find('a').each(function(){
+    contentTop.push( $( $(this).attr('href') ).offset().top );
+})
+console.log(contentTop);
 $(window).scroll(function(){
-    sidebar.css('top',Math.min((Math.max(15,($(this).scrollTop()-320))),1150));
-    sections.each(function(){
-        var current_position = $(this).scrollTop();
-        var position = $(this).offset().top;
-        console.log(position+"....."+$(this).attr('id'));
-
-        if(position-current_position<=5){
-            current_section = $(this);
-            var anchor_id = $(this).attr('id');
-            $('.nav-line').removeClass('nav-active');
-            $("[href=#"+anchor_id+"]").parent().addClass('nav-active');
+    sidebar.css('top',Math.min((Math.max(15,($(this).scrollTop()-320))),1094));
+    var current_position = $(this).scrollTop();
+    $.each(contentTop,function(index,loc){
+        console.log(current_position+'......'+loc);
+        if ( loc < (current_position+200)){
+            console.log('loc');
+            $('.nav-line')
+                .removeClass('nav-active')
+                .eq(index).addClass('nav-active');
         }
     })
 })

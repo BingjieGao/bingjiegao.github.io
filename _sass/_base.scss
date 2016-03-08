@@ -602,6 +602,9 @@ pre {
   display:inline-block;
   vertical-align: top;
   width:90px;
+  @media screen and (max-width: 470px){
+    display:none;
+  }
 }
 #nqminds-img{
 

@@ -382,12 +382,9 @@
     var ch = $('.resume-ch');
     var en = $('.resume-en');
     navtitle.click(function () {
-        navtitle.css('color', '#6c6c6c');
-        $(this).css('color', '#77BA9B');
-    })
-    navline.click(function () {
-        navline.css('border-color', '#dfdfdf');
-        $(this).css('border-color', '#77BA9B');
+        navline.removeClass('nav-active');
+        $(this).parent().addClass('nav-active');
+        console.log('click');
     })
 </script>
                       </div>

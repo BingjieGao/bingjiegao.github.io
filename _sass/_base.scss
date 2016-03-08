@@ -511,6 +511,7 @@ pre {
 }
 .col-md-3{
   padding:15px 0px 15px 0px;
+  position:relative;
 }
 #resume-content{
 
@@ -525,10 +526,13 @@ pre {
   margin:10px auto;
   font-size:1.2em;
 }
-.resume-nav{
+.resume-nav {
   text-align: center;
   background-color: #efefef;
-  padding:20px;
+  padding: 20px;
+  position: absolute;
+  top:15px;
+  width:100%;
 }
 .nav-line{
   border-left:2.5px solid #dfdfdf;
@@ -545,6 +549,14 @@ pre {
     cursor: pointer;
   }
 }
+.nav-active{
+  border-left:2.5px solid #77BA9B;
+  > .nav-title{
+      color:#77BA9B;
+  }
+}
+
+
 .resume-subblock {
   @extend %clearfix;
   margin:0 auto;

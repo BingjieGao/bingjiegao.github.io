@@ -205,7 +205,8 @@ d3.select(window)
         })
     })
 
-
+/*Utility Functions*/
+/*Add function*/
 add.click(function(){
     var newskill = $('input').val();
     console.log(newskill);
@@ -218,3 +219,4 @@ add.click(function(){
     skillJson.push(item);
     draw();
 })
+/*************************************************************/

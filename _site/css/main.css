@@ -388,7 +388,8 @@ pre > code {
         padding: 15px 0px 15px 0px; } }
 
 .col-md-3 {
-    padding: 15px 0px 15px 0px; }
+    padding: 15px 0px 15px 0px;
+    position: relative; }
 
 .resume-block {
     background-color: #efefef;
@@ -402,7 +403,10 @@ pre > code {
 .resume-nav {
     text-align: center;
     background-color: #efefef;
-    padding: 20px; }
+    padding: 20px;
+    position: absolute;
+    top: 15px;
+    width: 100%; }
 
 .nav-line {
     border-left: 2.5px solid #dfdfdf;
@@ -416,6 +420,11 @@ pre > code {
 .nav-title:hover {
     color: #77BA9B;
     cursor: pointer; }
+
+.nav-active {
+    border-left: 2.5px solid #77BA9B; }
+.nav-active > .nav-title {
+    color: #77BA9B; }
 
 .resume-subblock {
     margin: 0 auto;

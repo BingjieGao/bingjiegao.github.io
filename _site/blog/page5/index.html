@@ -99,8 +99,6 @@
         
           
         
-          
-        
       </div>
     </nav>
   </div>
@@ -117,27 +115,6 @@
                             <div class="home">
 
   <ul class="post-list" post-cate="All">
-    
-      <li>
-        <span class="post-meta">Jul 13, 2015</span>
-        <div class="post-link">
-        <h1>
-          <a href="/blogs/2015/07/13/WEEK6">Summary on WEEK6</a>
-        </h1>
-          <h1 id="summary-for-week6">Summary for WEEK6</h1>
-
-<h2 id="software-side">Software Side</h2>
-<p>Because of waiting the manufacture delivering the PCB, there is no design actually related to hardware expect for the discussions on the final products. In order to build a flexible solution for most of the cases the company is going to work on, the main MCU board keeps simple but complicated with different tiny components. For example, the voltage regulator or the battery charger just in case the application solution needs different output voltage for the sensors. The “LEGO” design is believed to be like a extendable pcb board with four sides or maybe to form as a cube with 6 faces.
-The software side didn’t go well because of not succeeding on streaming the data like a “server awareness” system. The solution was to simply put a AJAX funciton which does the refresh automatically for every 5 second.
-The difficulty was mainly the data model, the design is basically as shown below:</p>
-
-<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-07-23 at 16.29.16.png" alt="image" /></p>
-
-<p>Feed data is generally the data for each different sensor station while the node data is for each different sensors. The idea is that data is stored in nested documents and arrays as JSON format. The users’ authetication information would be added on top of this.</p>
-
-
-        </div>
-      </li>
     
       <li>
         <span class="post-meta">Jul 3, 2015</span>
@@ -224,6 +201,42 @@ The difficulty was mainly the data model, the design is basically as shown below
         </div>
       </li>
     
+      <li>
+        <span class="post-meta">Jun 19, 2015</span>
+        <div class="post-link">
+        <h1>
+          <a href="/blogs/2015/06/19/week3">Summary on WEEK3</a>
+        </h1>
+          <h1 id="week-3">Week 3</h1>
+<p>After researching on the MCU and the HOPErf modules, the initial PCB was produced in 4 days. The MCU selected was the ATmel 328P which is the most popular one on diffrerent Arduino alternative boards. The schematic circuit was pretty much the same as Moteino has, the only difference so far is the RF module which in my design the rfm69hw was basically used while in moteino the rf module was deployed from rf12b.</p>
+
+<p>It has been a long time being familair with the software Eagle which is to be used for following PCB design as well. The next step would be adding the secure device ATmel produced called ATSHA204A that can be compatible with ATmel mega 328P using now. The original PCB design still need a lot of improvements in order to be price and size optimized for building the sensor nodes. The bootloader for the ATmel mega 328P MCU should also be researched and re-implemented for intergated with intialization of ATSHA204A module.</p>
+
+<h3 id="what-have-been-done-on-pcb-initial-design">What have been done on PCB initial design:</h3>
+
+<h5 id="the-schematic-circuit">The schematic circuit</h5>
+
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-06-18 at 23.28.09.png" alt="image" /></p>
+
+<h5 id="the-board">The board:</h5>
+
+<p><img src="/TempBlogs/img/pictures/Screen Shot 2015-06-21 at 12.13.59.png" alt="image" /></p>
+
+<p>In the next two weeks, the following things are to be done hopefully:</p>
+
+<ul>
+  <li>Continue working on the “perfect” PCB design in order to fit the flexibility as well as relative price optimization purpose</li>
+  <li>Research on the secure chip may be used on the PCB ATSHA204A module</li>
+  <li>Research on the bootloader ATmel 328P requires and find out it the bootloader could work with the secure module</li>
+  <li>Further research on the ATmel chip which has larger flash memory, and try to find if it is necessary to have external flash momery on PCB design or not
+*</li>
+  <li>Continue working on some nodejs development, transfer the simple blog building to a simple CMS</li>
+</ul>
+
+
+        </div>
+      </li>
+    
 
   </ul>
 
@@ -293,7 +306,7 @@ The difficulty was mainly the data model, the design is basically as shown below
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/无聊/index.html"
-                                      style="font-size: 100%"> 无聊</a>
+                                      style="font-size: 96%"> 无聊</a>
                                 </div>
                                 
                                 <div class="site-tag">
@@ -303,7 +316,7 @@ The difficulty was mainly the data model, the design is basically as shown below
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/记事/index.html"
-                                      style="font-size: 100%"> 记事</a>
+                                      style="font-size: 96%"> 记事</a>
                                 </div>
                                 
                                 <div class="site-tag">

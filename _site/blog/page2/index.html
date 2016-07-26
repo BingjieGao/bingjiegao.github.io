@@ -99,8 +99,6 @@
         
           
         
-          
-        
       </div>
     </nav>
   </div>
@@ -117,279 +115,6 @@
                             <div class="home">
 
   <ul class="post-list" post-cate="All">
-    
-      <li>
-        <span class="post-meta">Feb 6, 2016</span>
-        <div class="post-link">
-        <h1>
-          <a href="/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">程序员面试金典 chapter3 Stacks and Queues</a>
-        </h1>
-          <h4 id="section">数据结构 栈的实现</h4>
-<p>根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:
-*  push()
-*  pop()
-*  peek()
-*  isFull()
-*  isEmpty()
-顾名思义，isFull和isEmpty就是判断栈满栈空的的function，主要说下两个主要的函数，pop和push。以链表的形式定义一个struct来代表这个stack</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">elt</span> <span class="p">{</span>
-  <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="k">typedef</span> <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">Stack</span><span class="p">;</span></code></pre></figure>
-
-<p>对于push来说主要做两件事情，第一先把此时stack指针指向的value赋值，第二部就是将指针指向next，具体代码如下：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">stackPush</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
-
-<span class="p">{</span>
-    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">e</span><span class="p">;</span>
-    <span class="n">e</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">elt</span><span class="p">));</span>
-    <span class="n">assert</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-     <span class="n">e</span><span class="o">-&gt;</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
-     <span class="n">e</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="n">e</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<p>那木pop呢，也很简单，就是将此时top的value取出来，再将next指向top的位置，而此时的next指向origin next的下一个，具体代码实现如下：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="n">stackPop</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">s</span><span class="p">){</span>
-    <span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
-    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">e</span><span class="p">;</span>
-    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">stackEmpty</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
-    <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">value</span><span class="p">;</span>
-    <span class="n">e</span> <span class="o">=</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="n">e</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
-    <span class="n">free</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<h4 id="section-1">第一题 集合栈</h4>
-<p>题目描述，实现将每个大小为给定size的栈填满，并且当当前栈填满时新建一个栈。
-题目所给出的标准class 函数定义为:</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">SetOfStacks</span> <span class="p">{</span>
-<span class="n">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setOfStacks</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here
-</span><span class="p">}</span></code></pre></figure>
-
-<p>所以这题应该就是基本的入栈出栈，而所谓的“集合栈”就是另一层的入栈和出栈，最后的时候返回这个默认的”集合栈”。具体代码实现如下:</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">SetOfStacks</span> <span class="p">{</span>
-<span class="n">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setOfStacks</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here
-</span>        <span class="kt">int</span> <span class="n">ope_size</span><span class="p">;</span>
-        <span class="n">ope_size</span> <span class="o">=</span> <span class="n">ope</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-        
-        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setofstacks</span><span class="p">;</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stacks</span><span class="p">;</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">ope_size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">stacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">size</span> <span class="p">){</span>
-                    <span class="n">setofstacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">stacks</span><span class="p">);</span>
-                    <span class="n">stacks</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
-                    <span class="n">stacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
-                <span class="p">}</span>
-                <span class="k">else</span>
-                    <span class="n">stacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
-            <span class="p">}</span>
-            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">stacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="n">stacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                    <span class="p">}</span>
-                <span class="k">else</span><span class="p">{</span>
-                    <span class="n">stacks</span> <span class="o">=</span> <span class="n">setofstacks</span><span class="p">[</span><span class="n">setofstacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
-                    <span class="n">stacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                    <span class="n">setofstacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">stacks</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-            <span class="n">setofstacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">stacks</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">setofstacks</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span></code></pre></figure>
-
-<h5 id="section-2">第二题 用两个栈实现队列</h5>
-<p>题目描述为用两个栈完成队列基本的pop和push
-我没学过数据结构，所以还是先来看一下队列在数据结构的定义。
-队列不一样的是先进先出(FIFO)，并且有指向head和tail的指针，下面为简单队列实现的struct定义：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">elt</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
-    <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
-<span class="p">};</span>
-<span class="k">struct</span> <span class="n">queue</span> <span class="p">{</span>
-    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
-    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">tail</span><span class="p">;</span>
-<span class="p">};</span>
-  <span class="k">typedef</span> <span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="n">q</span><span class="p">;</span></code></pre></figure>
-
-<p>那么这道题目就变成了，怎样用两个实现先进后出stack来实现先进先出的队列形式，我认为很自然的就会想到，将其中一个队列用来将原本的数据倒序，以作为原本数据的先进先出，而倒序了的数据自然符合先进后出的原则。一下为实现代码：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span>
-<span class="p">{</span>
-<span class="n">public</span><span class="o">:</span>
-    <span class="kt">void</span> <span class="n">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">stack1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="kt">int</span> <span class="n">pop</span><span class="p">()</span> <span class="p">{</span>
-     <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
-        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">stack2</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="c1">//判断是否为空，不为空那么说明已经压入了栈，倒序了stack1，直接pop就可以了
-</span>         <span class="p">{</span>
-            <span class="n">result</span><span class="o">=</span><span class="n">stack2</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
-            <span class="n">stack2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-         <span class="p">}</span>
-        <span class="k">else</span>
-        <span class="p">{</span>  <span class="c1">//不为空的话就需要重新压栈
-</span>            <span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="n">stack1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">num</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="kt">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">stack1</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
-                <span class="n">stack1</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                <span class="n">stack2</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
-            <span class="p">}</span>                     
-            <span class="n">result</span><span class="o">=</span><span class="n">stack2</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
-            <span class="n">stack2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
-        <span class="p">}</span>   
-    <span class="p">}</span>
-
-<span class="n">private</span><span class="o">:</span>
-    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack1</span><span class="p">;</span>
-    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack2</span><span class="p">;</span>
-<span class="p">};</span></code></pre></figure>
-
-<h4 id="section-3">第三题 双栈排序</h4>
-<p>题目描述为将一个乱序排放的数据栈重新排序，最大的元素在栈的顶端。
-既然有两个栈，那么实现方式应该和上一题大同小异，两个栈中的最顶元素进行比较和压栈出栈。首先，原始的数据链先pop_back()出最顶元素到新定义的栈中，当新定义的临时栈不为空时，每次循环比较最顶元素的大小，我天真的认为这个和数组中的冒泡法理想一样，通过多次的循环比较以达到排序。第一步新定义一个栈，并且pop_back()出原数据栈中的最顶元素:</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">forSort</span><span class="p">;</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">numbers</span><span class="p">;</span>
-        <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
-        <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span></code></pre></figure>
-
-<p>第二步，建立第一层循环，while loop直到比较到最先压入原数据栈的元素</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">while</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
-                <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                <span class="kt">int</span> <span class="n">popNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  
-            <span class="p">}</span></code></pre></figure>
-
-<p>每一次首先拿出原数据栈中的最顶元素，以一个integer作为存储以便之后的比较，将此时最顶元素pop_back()。将取出来的原数据栈的顶层元素与届时的sort stack的顶层元素作比较，将更大的元素压入sort stack，而将较小的元素重新压回原数据栈，这样在最后把循环比较之后剩余在原数据栈中的所有元素按顺序一一压入sort stack数据栈中，这样最大的元素就最后压入最终返回的stack。示例代码如下：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">forSort</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">forSort</span><span class="p">.</span><span class="n">back</span><span class="p">()){</span>
-                    <span class="n">numbers</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">forSort</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
-                    <span class="n">forSort</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                    <span class="n">popNum</span><span class="o">++</span><span class="p">;</span>
-                <span class="p">}</span>
-                <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
-                <span class="k">while</span><span class="p">(</span><span class="n">popNum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
-                    <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
-                    <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
-                    <span class="n">popNum</span><span class="o">--</span><span class="p">;</span>
-                <span class="p">}</span></code></pre></figure>
-
-<h4 id="section-4">第四题 猫狗收容所</h4>
-<p>题目描述，有两种收养方式，一个是收养所有最早进入收容所的动物，另一个是选择性的收养最早进入收容所的猫或者狗。
-首先，最早意味着先进先出，所以应该选择队列的数据结构来做。
-因为有猫狗两种动物，都有先进先出，所以第一步先将两个队列分别对应猫和狗定义。</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cat</span><span class="p">;</span>
-<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dog</span><span class="p">;</span>
-<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span></code></pre></figure>
-
-<p>首先在循环内判断是入收养所还是被收养，也就是入还是出的问题:</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="c1">//入收养所
-</span>            <span class="p">}</span>
- <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-<span class="p">{</span>
-      <span class="c1">//出收养所
-</span><span class="p">}</span></code></pre></figure>
-
-<p>情况很简单了，那么入收养所的时候只需要一个判断，是狗还是猫，出收养所的时候麻烦一些，第一步判断是哪种收养方式，若是第二种就只需要进一步看猫狗的选择直接在cat和dog两个定义的队列中pop最先进入的元素即可。若是第一种那么就需要比较了，在两个定义的队列中选取更早进入的一个。所以这就需要在每一次push到两个猫狗队列的同时，增加一个计数的index，完整的代码示例如下：</p>
-
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">CatDogAsylum</span> <span class="p">{</span>
-<span class="n">public</span><span class="o">:</span>
-    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">asylum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// write code here
-</span>        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cat</span><span class="p">;</span>
-        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dog</span><span class="p">;</span>
-        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span>
-        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">size1</span><span class="o">=</span><span class="n">ope</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
-        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">kind</span><span class="o">=</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">kind</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">dog</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">index</span><span class="o">++</span><span class="p">);</span>
-                    <span class="n">dog</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
-                <span class="p">}</span>
-                <span class="k">else</span>
-                <span class="p">{</span>
-                    <span class="n">cat</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">index</span><span class="o">++</span><span class="p">);</span>
-                    <span class="n">cat</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-            <span class="k">else</span>
-            <span class="p">{</span>
-                <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="kt">int</span> <span class="n">min</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-                        <span class="n">min</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-                        <span class="n">min</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
-                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-                        <span class="n">min</span><span class="o">=</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">&gt;</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">?-</span><span class="mi">1</span><span class="o">:</span><span class="mi">1</span><span class="p">;</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">==-</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="p">{</span>
-                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
-                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                    <span class="p">}</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
-                    <span class="p">{</span>
-                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
-                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
-                <span class="k">else</span>
-                <span class="p">{</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-                    <span class="p">{</span>
-                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
-                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                    <span class="p">}</span>
-                    <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==-</span><span class="mi">1</span><span class="o">&amp;&amp;!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
-                    <span class="p">{</span>
-                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
-                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-                    <span class="p">}</span>
-                <span class="p">}</span>
- 
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">vec</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">};</span></code></pre></figure>
-
-        </div>
-      </li>
     
       <li>
         <span class="post-meta">Jan 24, 2016</span>
@@ -979,6 +704,27 @@ struct ListNode {
         </div>
       </li>
     
+      <li>
+        <span class="post-meta">Jan 2, 2016</span>
+        <div class="post-link">
+        <h1>
+          <a href="/blogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">深夜惊醒程序员</a>
+        </h1>
+          <p>多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。</p>
+
+<p>再说这位朋友 985工程下的名校自动化专业在读生，说着我都心里犯尴尬的专业 如今这个社会也可以越来越不关心所谓 专科出身 这样的帽子了。且说所谓计算机专业，那些成为网民手下的码农、程序员的人 相当一部分出自自动化 通信 电子 机械，甚至数学 物理这些兄弟姐妹类似的旁系。这些统称为工科的专业大都殊途同归变成了不同的码农 操纵着不同的编程语言、这是我上大学的时候一位出身通信的学长告诉我的 现在看来的确是不可争的事实。彼时我还在读 余果的 全栈工程师自我修养，想来现在的社会分工于二、三十年前相比精致许多，所谓软件工程师 嵌入式工程师 web工程师 硬件工程师 前端工程师 后端工程师，呵、当然还有全栈工程师。看看那一个个的头衔 哪一个不是人们嘴里、文字里的码农，眼里穿着冲锋衣牛仔裤的程序员。同样是理论物理出身的我的父亲，在三十年前大学毕业的时候手里只有一本翻译的FORTRAN教材，三十年后的今天，几乎你想学的语言，你想学习的方向，都只需要简单的通过键盘敲在搜索框里，丰富的资源都在回车之后一览无遗。我想所谓码农的分工之细正好对上了开头我的一时语塞，现在说想学编程，不能不说这是一个极其复杂而艰难的问题，我根本无从说起。作为一个半路出家了一年的应届毕业生来说，我接触的编码实在少之又少，每天醒来都觉得世界又变了，有太多新的语言，新的框架和许许多多我叫不上来的技术正在世界每个角落萌发生长。往往清晨起床，在V2EX上浪一浪，就满眼飘着的都是诸如Vue.js，ES6，PHP7这些跟我的生活无关却又息息相关的技术名词，坐在高脚凳上，两腿就开始发虚了，一声长叹，这个世界啊，这个社会啊，我是否会在一波又一波的浪潮中死无葬身之地。在这个无论是工资还是智商都追不上的社会里如何避免食不果腹、衣冠不整、开始成为每天头顶着的无形压力，谁说不恐惧呢，我打包票，城市里，那些夜晚亮着灯的办公室中，每个所谓的程序员或多或少都有这样的技术栈恐惧感。
+&gt;所谓30的程序员、一语成谶。</p>
+
+<p>我们这些初入社会的捣乱分子，还能年轻多久，还能趁着这股激情疯狂多久。在那些程序员的世界里，有一个长着章鱼脚的猫看管的圣地，时不时那里的风景会带来些许兴奋，些许失落，兴奋是别人的院子永远绿满格，而失落则是不管发了几回毒誓，自己的院子还是空空荡荡，甚至当开始寻摸下一份工作的时候都怕拿不出像样的项目。其实从哪里开始的都不重要，长久的坚持才能时不时的消除那份莫名的恐慌吧。
+&gt;在这个不大不小的尴尬年龄，从前过往，不知曾经爱过的人如今在哪里，愿在漫长的未来里，除了爱情，彼时，我们还能拥有此时的激情。</p>
+
+<p><img src="/TempBlogs/img/pictures/20160102.jpeg" alt="这些都是你给我的爱" /></p>
+
+<p>我不想成为一名人们说的程序员、工程师，在我慢慢走近编程的这条路上，有过太多的的骄傲自满也有过数不清的煎熬和自卑。对于朋友，我只想说，找一个感兴趣的方向不难，甚至在未来的几年里成为一个性感又受众的所谓大数据工程师也并不难，我给不了太多的建议，那么、说说你编程想做什么吧</p>
+
+        </div>
+      </li>
+    
 
   </ul>
 
@@ -1048,7 +794,7 @@ struct ListNode {
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/无聊/index.html"
-                                      style="font-size: 100%"> 无聊</a>
+                                      style="font-size: 96%"> 无聊</a>
                                 </div>
                                 
                                 <div class="site-tag">
@@ -1058,7 +804,7 @@ struct ListNode {
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/记事/index.html"
-                                      style="font-size: 100%"> 记事</a>
+                                      style="font-size: 96%"> 记事</a>
                                 </div>
                                 
                                 <div class="site-tag">

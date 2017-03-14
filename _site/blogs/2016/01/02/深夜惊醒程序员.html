@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>深夜惊醒程序员</title>
+  <meta name="description" content="多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+
+  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="/">CatAmo凉生</a>
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page-link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page-link" id="list" href="/list.html">文章列表</a>
+        <a class="page-link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page-link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page-content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container-fluid">
+                    <div class="row">
+                      <div class="inner" id="main-content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">深夜惊醒程序员</h1>
+    <p class="post-meta"><time datetime="2016-01-02T00:00:00+00:00" itemprop="datePublished">Jan 2, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。</p>
+
+<p>再说这位朋友 985工程下的名校自动化专业在读生，说着我都心里犯尴尬的专业 如今这个社会也可以越来越不关心所谓 专科出身 这样的帽子了。且说所谓计算机专业，那些成为网民手下的码农、程序员的人 相当一部分出自自动化 通信 电子 机械，甚至数学 物理这些兄弟姐妹类似的旁系。这些统称为工科的专业大都殊途同归变成了不同的码农 操纵着不同的编程语言、这是我上大学的时候一位出身通信的学长告诉我的 现在看来的确是不可争的事实。彼时我还在读 余果的 全栈工程师自我修养，想来现在的社会分工于二、三十年前相比精致许多，所谓软件工程师 嵌入式工程师 web工程师 硬件工程师 前端工程师 后端工程师，呵、当然还有全栈工程师。看看那一个个的头衔 哪一个不是人们嘴里、文字里的码农，眼里穿着冲锋衣牛仔裤的程序员。同样是理论物理出身的我的父亲，在三十年前大学毕业的时候手里只有一本翻译的FORTRAN教材，三十年后的今天，几乎你想学的语言，你想学习的方向，都只需要简单的通过键盘敲在搜索框里，丰富的资源都在回车之后一览无遗。我想所谓码农的分工之细正好对上了开头我的一时语塞，现在说想学编程，不能不说这是一个极其复杂而艰难的问题，我根本无从说起。作为一个半路出家了一年的应届毕业生来说，我接触的编码实在少之又少，每天醒来都觉得世界又变了，有太多新的语言，新的框架和许许多多我叫不上来的技术正在世界每个角落萌发生长。往往清晨起床，在V2EX上浪一浪，就满眼飘着的都是诸如Vue.js，ES6，PHP7这些跟我的生活无关却又息息相关的技术名词，坐在高脚凳上，两腿就开始发虚了，一声长叹，这个世界啊，这个社会啊，我是否会在一波又一波的浪潮中死无葬身之地。在这个无论是工资还是智商都追不上的社会里如何避免食不果腹、衣冠不整、开始成为每天头顶着的无形压力，谁说不恐惧呢，我打包票，城市里，那些夜晚亮着灯的办公室中，每个所谓的程序员或多或少都有这样的技术栈恐惧感。
+&gt;所谓30的程序员、一语成谶。</p>
+
+<p>我们这些初入社会的捣乱分子，还能年轻多久，还能趁着这股激情疯狂多久。在那些程序员的世界里，有一个长着章鱼脚的猫看管的圣地，时不时那里的风景会带来些许兴奋，些许失落，兴奋是别人的院子永远绿满格，而失落则是不管发了几回毒誓，自己的院子还是空空荡荡，甚至当开始寻摸下一份工作的时候都怕拿不出像样的项目。其实从哪里开始的都不重要，长久的坚持才能时不时的消除那份莫名的恐慌吧。
+&gt;在这个不大不小的尴尬年龄，从前过往，不知曾经爱过的人如今在哪里，愿在漫长的未来里，除了爱情，彼时，我们还能拥有此时的激情。</p>
+
+<p><img src="/TempBlogs/img/pictures/20160102.jpeg" alt="这些都是你给我的爱" /></p>
+
+<p>我不想成为一名人们说的程序员、工程师，在我慢慢走近编程的这条路上，有过太多的的骄傲自满也有过数不清的煎熬和自卑。对于朋友，我只想说，找一个感兴趣的方向不难，甚至在未来的几年里成为一个性感又受众的所谓大数据工程师也并不难，我给不了太多的建议，那么、说说你编程想做什么吧</p>
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle-span">
+                          <i class="fa fa-chevron-circle-left fa-2x"></i>
+                      </div>
+
+                      <div class="col-md-4" id="side-page">
+                          <div class="side-content">
+                              <div id="side-img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side-content">    
+                              <div class="side-content-title">Tag Cloud</div>
+                                
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/c语言/index.html"
+                                      style="font-size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/express/index.html"
+                                      style="font-size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/nodejs/index.html"
+                                      style="font-size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/学习/index.html"
+                                      style="font-size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/总结/index.html"
+                                      style="font-size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/无聊/index.html"
+                                      style="font-size: 96%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/物联网/index.html"
+                                      style="font-size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/记事/index.html"
+                                      style="font-size: 96%"> 记事</a>
+                                </div>
+                                
+                                <div class="site-tag">
+                                  <a class="tag-name" href="/tag/面试/index.html"
+                                      style="font-size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle-span2">
+                            <i class="fa fa-chevron-circle-right fa-2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">CatAmo凉生</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle-span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main-content');
+      var side = $('.col-md-4');
+      var collpas = $('.toggle-span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col-md-8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col-md-8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150-$(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>

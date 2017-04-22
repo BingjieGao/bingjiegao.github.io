@@ -1,0 +1,31 @@
+#gallery {
+  position: absolute; top: 50%; left: 50%;
+  margin: -50px 0 0 -108px;
+  width: 200px;
+  height: 200px;
+
+  .photo {
+    position: absolute;
+    top: 0; left: 0;
+    height: 200px; width: 200px;
+    padding: 10px;
+    background: linear-gradient(to bottom, #FFFFFF, #CFCFCF, #FFFFFF);
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.6);
+
+    &:last-child {
+      cursor: pointer;
+    }
+
+    .img {
+      height: 200px;
+      border: 1px solid rgba(0,0,0,.5);
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

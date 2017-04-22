@@ -4,24 +4,40 @@
 
 var skillJson = [
     {
-        "skill": "PHP",
-        "profency": 3
-    },
-    {
-        "skill": "Embedded C",
+        "skill": "Nodejs",
         "profency": 6
     },
     {
-        "skill": "Nodejs",
-        "profency": 4
+        "skill": "Scrum Master",
+        "profency": 5
+    },
+    {
+        "skill": "ReactJs",
+        "profency": 5
+    },
+    {
+        "skill": "Meteor",
+        "profency": 5
     },
     {
         "skill": "Expressjs",
         "profency": 4
     },
     {
+        "skill": "Product Management",
+        "profency":"4"
+    },
+    {
         "skill": "MongoDB",
         "profency": 4
+    },
+    {
+        "skill": "PHP",
+        "profency": 3
+    },
+    {
+        "skill": "Embedded C",
+        "profency": 6
     },
     {
         "skill": "HTML",

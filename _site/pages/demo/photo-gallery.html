@@ -1,0 +1,114 @@
+
+
+
+<link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
+<h1>Gallery <span>(click on the first image)</span></h1>
+<div id="gallery">
+    <div class="photo">
+        <div class="img">
+            <img src="{{site.baseurl}}/img/birthdayPics1.jpg" alt="img"/>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var photos = [
+            "{{site.baseurl}}/img/birthdayPics1.jpg",
+            "{{site.baseurl}}/img/birthdayPics2.jpg",
+            "{{site.baseurl}}/img/birthdayPics3.jpg",
+            "{{site.baseurl}}/img/birthdayPics4.jpg",
+            "{{site.baseurl}}/img/birthdayPics5.jpg",
+        ];
+
+        var nbPhotos = photos.length;
+        var animation = false;
+        var direction = "+";
+
+        function init() {
+            var titre = $("#gallery h1");
+            titre.detach();
+            $("#gallery").empty();
+            titre.prependTo($("#gallery"));
+            for(var i = nbPhotos-1; i>=0; i--) {
+                var color = (255-i*10);
+                var background = "rgba("+color+","+color+","+color+", 1)";
+                var photo = $("<div>").addClass("photo").appendTo($("#gallery")).css({
+                    "top": i * -6 + "px",
+                    "left": (i * 4.5) + "px",
+                    "width": 100-i*5 + "%",
+                    "background": background
+                });
+                var divImg = $("<div>").addClass("img").appendTo(photo);
+                var img = $("<img>").attr("src", photos[i]).appendTo(divImg);
+            }
+
+            $(".photo").on("click", function() {
+                if ($(this).index() == $(".photo").length - 1 && animation == false)
+                    poussePhoto(this);
+            });
+        }
+
+        function poussePhoto(elem) {
+            animation = true;
+            var photo = $(elem);
+
+            var animationsDone = 0;
+            function animationDone() {
+                animationsDone++;
+                if (animationsDone >= nbPhotos) {
+                    $(".photo").attr("animating", false);
+                    animation = false;
+                }
+            }
+
+            // Animation photo sur la droite
+            photo.attr("animating", true);
+            photo.animate({
+                top: "+=" + 30,
+                left: direction+"=" + 250
+            }, 500, "easeInQuart", function() {
+                // Elle passe tout derrière dans le DOM
+                photo.detach();
+                photo.prependTo("#gallery");
+
+                var color = (255-4*10);
+                var background = "rgba("+color+","+color+","+color+", 1)";
+
+                // Animation photo derrière tas de photos
+                photo.animate({
+                    "top": (nbPhotos - 1) * -6 + "px",
+                    "left": ((nbPhotos - 1) * 4.5) + "px",
+                    "width": 100-(nbPhotos - 1)*5 + "%"
+                }, 900, "easeOutQuart", animationDone)
+                        .css("background", background)
+            });
+
+            // MAJ du sens de l'animation
+            if(direction=="+") direction = "-";
+            else direction = "+";
+
+            // Animation où chaque photo avance l'une après l'autre pour bien se placer
+            var j = 0;
+            for(var i = nbPhotos - 1; i>=0; i--) {
+                var color = (225+i*12);
+                var background = "rgba("+color+","+color+","+color+", 1)";
+                if ($(".photo:eq("+i+")").attr("animating") !== "true") {
+                    $(".photo:eq("+i+")")
+                            .delay((nbPhotos - i + 1) * 150)
+                            .animate({
+                                "top": j * -6 + "px",
+                                "left": (j * 4.5) + "px",
+                                "width": 100-j*5 + "%",
+                            }, 500, "easeOutBack", animationDone)
+                            .css("background", background);
+                    j++;
+                }
+            };
+        }
+
+        init();
+
+    });
+</script>

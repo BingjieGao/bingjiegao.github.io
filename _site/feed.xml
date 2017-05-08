@@ -5,9 +5,227 @@
     <description></description>
     <link>http://bingjiegao.github.io/</link>
     <atom:link href="http://bingjiegao.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 22 Apr 2017 15:18:52 +0100</pubDate>
-    <lastBuildDate>Sat, 22 Apr 2017 15:18:52 +0100</lastBuildDate>
+    <pubDate>Mon, 08 May 2017 16:01:48 +0100</pubDate>
+    <lastBuildDate>Mon, 08 May 2017 16:01:48 +0100</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>我为什么不待见程序员</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;“计算机编程中极少人是真正的艺术家，大多数人充其量不过是房屋粉刷匠而已。”———Tim Bryce&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;出自一篇老博客，一个管理顾问对于程序员的诟病。批评中不乏难以消化的字眼，诸如程序员狂妄自大，故弄玄虚，整日邋里邋遢，然而相比于同等教育程度的其他职业工作者来说，他们的智商水平要低，程序员都是故弄玄虚，妄自尊大的家伙，不仅如此，他们会还抱怨自己的收入与工作量不成正比。&lt;/p&gt;
+
+&lt;p&gt;对于这些有失偏颇的见解，我倒是并不反对，说的有一些道理。我很理解所谓的管理者们在充斥着他们眼中木讷，难以沟通的技术人员中度日的确是件不容易的事。&lt;/p&gt;
+
+&lt;p&gt;我不反对将自己的职业习惯带入生活中，身边有少数的从事文学、艺术的人，例如我母亲，文字艺术融于日常，毫无违和感，疲惫在电脑屏幕前的人们有异常的能力，能把曼妙的自然变得毫无美感。&lt;/p&gt;
+
+&lt;p&gt;不要以为程序员都像哈利波特的魔法一般，好比能把下图中右边的代码小手一挥就成了飞翔中的小鸟。
+&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-0f364673f5f9f480.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;程序员的魔力&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;编程难不难？&lt;/strong&gt;
+&amp;gt;世间事有难易乎，为之，则难者亦易矣，不为则易者亦难矣。&lt;/p&gt;
+
+&lt;p&gt;从某个角度来讲编程入门在现在互联网普及的大环境背景下是一件极其容易的事情，比如写一个简单的静态页面，一如在下厨房上照着菜谱烧一个诱人的家常菜，甚至不会出现饭菜不可口这种差强人意的结果。不过，若编程真的能像博文标题描述的那样，“七天学会nodejs”，这么轻松，那些花四年在学校里从编译原理到数据结构次次考试通宵，门门功课低分飘过的人一定是太笨了吧。&lt;/p&gt;
+
+&lt;p&gt;只能说，没有哪件事情做起来难，只有看上去难。事情做好到极致，就饭团上放个生鱼片，我也会，可我永远不是小野二郎。前几天，有人给我看了一个画家的抽象派作品，这个画家叫蒙德里安，先来欣赏一下画作大约是这样的：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-50f77bb840ed2374.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Victory Boogie-Woogie&quot; /&gt;
+很没有诚意，哇，很像小时候礼拜二电视台不放节目的菱形吧，方格子而已我也会画啊，看上去并没有什么难度嘛。好吧，反正我没有这个能力欣赏这样的画作，同样的，不在编程的这个行业里凭什么去体会这项工作难易与否，如何能评价一个程序员的能力高低。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;编程赚不赚钱？&lt;/strong&gt;
+&amp;gt;这个事情….真的就很难讲了&lt;/p&gt;
+
+&lt;p&gt;生活里，很难不将眼神落在那些靠编程发家致富的人身上，撇开国外Linus之类天赋异禀的人才，他的两项大成就Linux和Git都离普通消费者有点距离。说些耳熟能详的，每日睡前必刷的张小龙的微信，百度搜索，百度网盘，百度地图，Google缺失的年代怎么少的了李彦宏，前段时间刷屏的刘强东自学编程一个字母一个字母勤勤恳恳敲出来了京东老后台。看上去程序员很能赚钱，刘强东上大学靠编程一晚上能挣五万呢，别说是90年代，就放现在一晚上四位数的收入也很可观了。&lt;/p&gt;
+
+&lt;p&gt;凤毛麟角才能这么杰出，芸芸众生有谁能跟这些大佬比，在上海高消费的城市环境下，月收入只有4、5K的毕业生程序员铺天盖地，都不用玩断舍离衣服裤子也没几件。&lt;/p&gt;
+
+&lt;p&gt;管中窥豹，看一下上海各种程序员平均薪水：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-9bbb60e0b3224123.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;上海程序员平均薪资&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;正好契合了Bryce说的，极少数才是真正的艺术家，那些码农们自嘲慰藉时说：
+&amp;gt; 我是码农搬运工&lt;/p&gt;
+
+&lt;p&gt;回过头来再来看刘强东写京东后台这件事情，当我以一名开发者的角度仔细琢磨，就冥冥之中感到恐惧与无奈。刘强东明明是公共管理毕业的非科班出身人员，在纯粹的代码世界中他也耍的风生水起。俨然处在很严峻的时代，不光面对着日新月异的技术更迭，不断地学习与积累，相同比例的付出永远比不上传统工程行业要求的经验至上的熟练工，甚至，花了大量时间训练的这门手艺，其实是门槛相对低的一项技术，那一纸文凭显得并没有太紧要。&lt;/p&gt;
+
+&lt;p&gt;试着从一个旁观者的角度来想，也没有什么理由编程是一个门槛很高的技术，在搜索框里打下&lt;strong&gt;自学&lt;/strong&gt;…，编程是跟其他语言类学习并列的。
+&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-5fde0115f074e8aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;搜索框，关键字：自学&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这下就有点理解了为什么Bryce会嫌弃程序员们的自大了，编程一如所有其他的工作一样，只是在为这个世界添砖加瓦而已，傲慢的不可一世，又频频委屈的怀才不遇，就显得过于矫情。退回二十年前，简历上一行&lt;strong&gt;熟练使用Microsoft Office&lt;/strong&gt;可能就点突出了，就好比当下码代码想象上去是个厉害角色一般。进入全民编程的年代，编程这项技能也许就跟英语一样，成为一门基础学科。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-3c1ff594a37790ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;Coding for Kids&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;极端一点，若编程入门真的很繁复，拥有了编程就拥有了全世界，成为下一个扎克伯格，又哪里来的全民编程倡导，你见过倡导全民学习土建工程的吗？&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;鼓励全民编程会对IT业造成哪些影响？人人都成为程序员？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我不知道是谁提了个这样的问题，但是我想说，即便是全民都会说英语了也没见人人都去当外交官，我还会炖肉、炒面，炝白菜呢，我抢厨师工作了吗？&lt;/p&gt;
+
+&lt;p&gt;从某方面来说，编程基础就跟小时候的数学物理之类的学科一样，如果不是非要从事相关的行业，那些日常生活中用不到的知识就被遗忘了。我相信你一定已经很难再轻松的解出一到椭圆相关的数学题了，也不一定能背诵出英语课本单词表中所有的单词了，关于切割磁感线还有多少了解。编程带入生活的作用，我猜想就是改变未来思考的习惯，给那些在学海无涯里迷茫的孩子另一条职业的选择。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;毕竟，编程是一项有趣的事务&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;我不待见程序员们，他们将编程描绘成了晦涩难懂的科目，还带着一副不可一世的态度，穿得也不讲究。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;给那些断章取义，没有看完文章，看完还不理解的人们：
+1. 不幸，我也是一名程序员
+所以可能要小心这种 &lt;strong&gt;如果你不是程序员，千万别说这种话，因为这是一种智商极低的表现&lt;/strong&gt;评论，&lt;strong&gt;程序员的世界你不懂&lt;/strong&gt; 类似的言论
+2. 上文内容提到 &lt;strong&gt;同样的，不在编程的这个行业里凭什么去体会这项工作难易与否，如何能评价一个程序员的能力高低。&lt;/strong&gt;
+所以关于 &lt;strong&gt;you can you up&lt;/strong&gt;，我真的不想多解释什么，难道我告诫其他行业不要妄自评判编程难易不够明显？
+3. 穿衣不讲究，狂妄自大，不是我说的，开篇就写道是是一个管理顾问对于程序员的诟病，好了&lt;a href=&quot;http://blog.jobbole.com/1446/&quot;&gt;这里&lt;/a&gt;是原文链接。
+很简单的讽刺了一下一些人们心中程序员的固有印象而已，抓着&lt;strong&gt;不修边幅&lt;/strong&gt;，&lt;strong&gt;自大&lt;/strong&gt;这些字眼的，可能需要考虑一下，为什么有人能看出这只是&lt;strong&gt;无奈的自嘲&lt;/strong&gt;，而不是贬低你们，浮躁吗？
+关于&lt;strong&gt;编程晦涩难懂&lt;/strong&gt;，我谈得是，什么东西&lt;strong&gt;做到极致&lt;/strong&gt;都&lt;strong&gt;不容易&lt;/strong&gt;，&lt;strong&gt;并不因为这件事情是编程而发生变化&lt;/strong&gt;。我希望能让编程融入基础教育，让更多的人了解这个行业，了解程序员这个职业。
+关于&lt;strong&gt;随意抨击一个行业的工作人员，到底谁才是狂妄自大的人&lt;/strong&gt;，或者&lt;strong&gt;你以为你是谁？你不待见？地球围着你转&lt;/strong&gt;，我觉得正好反映了为什么有些产品和管理人员会对技术工作者有意见。产品、管理，技术，缺一不可，合作更重要，而不是抓着一个点还没从别人的角度考虑问题就立刻想要反驳。
+4. 为什么强调程序员
+因为，&lt;strong&gt;我也是其中之一&lt;/strong&gt;，自然希望人们想起这个职业不要有一些负面的印象，&lt;strong&gt;那么有则改之，无则加勉&lt;/strong&gt;，当将技术带入生活的时候，能不能&lt;strong&gt;将之描绘成一个5岁孩子都能听懂，都能感兴趣的东西&lt;/strong&gt;，而不是艰深的理论。全民编程是一个美好的愿景，一定不会所有人都成为程序员，但是一定会推动这个行业更好更快的发展&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Fri, 28 Apr 2017 16:10:18 +0100</pubDate>
+        <link>http://bingjiegao.github.io/blogs/2017/04/28/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BE%85%E8%A7%81%E7%A8%8B%E5%BA%8F%E5%91%98</link>
+        <guid isPermaLink="true">http://bingjiegao.github.io/blogs/2017/04/28/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E5%BE%85%E8%A7%81%E7%A8%8B%E5%BA%8F%E5%91%98</guid>
+        
+        <category>-记事</category>
+        
+        <category>-无聊</category>
+        
+        <category>-微信公众号</category>
+        
+        
+        <category>生活笔记</category>
+        
+      </item>
+    
+      <item>
+        <title>听Nick谈社会阶层固化</title>
+        <description>&lt;p&gt;最近这段时间，日照愈发充足，有些人的激情迸发防不胜防。Nick是我顶头上司，公司创始人兼CEO，每逢午休都要发表演说，有如滚滚长江滔滔不绝。连着几天都在以一个中产阶级的姿态谈论着英国社会地位流动稳定，阶层固化，我不了解社会学，经济学，所以容许我提个问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;允许我提个问题，社会地位由什么决定？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;好像不是金钱，一定有人作着一夜暴富的梦，也一定有人说暴发户才不是就代表从社会底层流动到上层了，那么什么决定了钱的重要性，什么才能成为社会地位的决定因素呢？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-e1816b7c4dacab5b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;社会地位金字塔&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在社会上生存，人一定是会被分成三六九等的，所谓的建立人人生而平等，没有压迫剥削的环境在今天这张午餐桌上是被否认的，即便是我们强调多次的法律面前一律平等的概念，也不能被苟同。总归是法治社会，会有一条条的社会规则需要去遵循，但是说到底法律还是人制定的，还是由人来执行的，偏激的理解难道不又是人治社会吗？&lt;/p&gt;
+
+&lt;p&gt;具象化的回答这个问题太难，不能说是金钱也不能完全说是出身，仿佛很多东西都可以决定或者改变一个人的社会地位，在人人不平等的天平上添加不同的砝码。&lt;/p&gt;
+
+&lt;p&gt;两种不同的方式来体现个体的社会地位是如何被决定的，
+&amp;gt; One can earn their social status by their own achievements, which is known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Achieved_status&quot;&gt;achieved status&lt;/a&gt;. Alternatively, one can be placed in the stratification system by their inherited position, which is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Ascribed_status&quot;&gt;ascribed status&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;自致地位&lt;/strong&gt;就是所谓通过努力换取来的社会地位结果，当然，这不代表努力就一定能够使一个个体从底层攀爬到更高的一个社会阶层。另一种获取社会地位的方式是&lt;strong&gt;先赋地位&lt;/strong&gt;，粗鄙一点地说就是“龙生龙凤生凤…”，放到现如今的生活背景下，更好的出身往往意味着更高质量，多元化的教育机会，相对的在步入成年生活后这些获取的知识就成为了厚积薄发的工具。事实又不仅只是如此，父辈积攒的不光是金钱还有与其地位相匹配的人脉，社会资源，也都会成为下一代继续积累财富的资本。&lt;/p&gt;
+
+&lt;p&gt;在&lt;strong&gt;Paul Fussell&lt;/strong&gt;的&lt;strong&gt;「格调」&lt;/strong&gt;中说，个体的社会地位体现在品味，修养和格调，这就好比是看&lt;strong&gt;「树大招风」&lt;/strong&gt;要调侃一番叶国欢从手持AK47的大佬到点头哈腰的走私商人，无论在哪一个位置上都会想在饭馆点上一份梅菜扣肉。这么看来，能决定个体所获得的资源，出身，以及成长环境的&lt;strong&gt;「先赋地位」&lt;/strong&gt;即便不是决定了这个人的人生，也很大程度上影响了个体的整个人生。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;那么，到底是否&lt;/strong&gt;「先赋地位」&lt;strong&gt;真的决定了一切呢&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;呐、幸亏不是在君主制的大环境下来阐述这种问题，不然这样的论调真的是很愚蠢。饭已经吃到一半了，吃瓜群众认为，教育是反败为胜最好的机会，学业上的成就自然弥补了先天条件的不足，怎么说考试也是公平竞争，实在是能力有限就去参军嘛总有可以实现自我超越的地方。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-5c583fee05912e94.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;好好学习，天天逆袭&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;(￣︶￣)&amp;gt; 、我就喜欢你这么天真无邪：
+&amp;gt; well, you only think in this way because you were educated to.&lt;/p&gt;
+
+&lt;p&gt;或许有时看不到别人在底层的挣扎，因为呆在上面太久了，久到已经忘了家庭对个体的潜移默化，忽视了那些&lt;strong&gt;「先赋地位」&lt;/strong&gt;给予的先天优势，好像一切都真的是白手起家，自己奋斗而来的。还是那句话&lt;strong&gt;仓廪实则知礼节，衣食足则知荣辱&lt;/strong&gt;，极端一点，若还有没有脱离赤贫的人，于他们，哪来的所谓什么精神追求呢。&lt;/p&gt;
+
+&lt;p&gt;拥有良好的&lt;strong&gt;「先赋地位」&lt;/strong&gt;，意味着在起跑线上就拥有社会资源，那我们是不是看不到什么寒门子弟逆袭成功，不存在&lt;strong&gt;“朝为田舍郎，暮登天子堂”&lt;/strong&gt;。那些精英的子女们不仅是在享受更好的教育资源，他们的生活也富有多项选择，再学业有成你也只知道&lt;strong&gt;高考&lt;/strong&gt;这一种可能出人头地的机会，没有财力出国留学更别说这个叔叔那个伯伯投一笔钱资助创业，无论成功与否都是在丰富人生的经历。人生不公平吗？怎么不怕苦不怕累，拼搏了一辈子到头来连一点机会都没看见。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Social Mobility 社会流动性&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;社会流动性差就表现为社会阶层固化，有一种出身决定一切的感觉，人生来就不公平啊，对于一部分人来说唾手可得的财富与地位，不是靠个体的努力就能获得的。
+&amp;gt; 唉，可惜房子千千万万套，没有一间是我屋&lt;/p&gt;
+
+&lt;p&gt;怎么办呢，旱的旱死，涝的涝死，富者愈富，所谓&lt;strong&gt;人道则不然，损不足，奉有余&lt;/strong&gt;。&lt;strong&gt;人治&lt;/strong&gt;的社会，当存在这些社会精英的同时，他们必然会设置相应的壁垒阻止更多的人成为自己的同类，因为上层的人永远是少数。这和小学生在班级里竞争是一个道理，第一名永远都只有一个，可以轮流当而不可能同时当，都教小朋友们&lt;strong&gt;人人争当第一名&lt;/strong&gt;，关键在于一个&lt;strong&gt;「争」&lt;/strong&gt;字，从小就是竞争上岗咯。不保护自己的既得利益，而得以传承至自己的后辈，那岂不是就叫别人给挤下去了，人之常情。一个相对稳定的现实社会中，&lt;strong&gt;马太效应&lt;/strong&gt;就是规则，一部分财富及权力持有者建立的规则。&lt;/p&gt;
+
+&lt;p&gt;仿佛看到一片独裁者的景象，想到George Orwell在&lt;strong&gt;「Animal Farm」&lt;/strong&gt;中说到的&lt;strong&gt;所有动物一例平等，但有些动物比其他动物更加平等&lt;/strong&gt;.
+&amp;gt; ALL ANIMALS ARE EQUAL, BUT SOME ANIMALS ARE MORE EQUAL THAN OTHERS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-0f2a6339561f6019.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;动物农场&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;好比是历经血的革命推翻了封建统治，极权主义，迎来了民主的春风，却依然受到命运的不公，很多人生来就已经输了。漫长的塑胶跑道上，每个人的起跑线都不尽相同，人生还未来得及想起发令枪，似乎就已经被决定了命运。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-f186ee21c79a5035.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;大都会&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如同将近一个世纪以前电影&lt;strong&gt;「大都会」&lt;/strong&gt;里描述的一般，两个不同阶层的人生活在截然不同的环境中，上层人群在富丽堂皇的高楼大厦里，贫穷的劳苦人民只能被困在幽暗的地下城市。
+我第一次真正的接触到这种类似的&lt;strong&gt;言论&lt;/strong&gt;是在上大学的时候，同寝的舍友说：&lt;strong&gt;像我们这样能来上这个大学的人，将来出去要比别人少奋斗五到十年&lt;/strong&gt;。有种&lt;strong&gt;宿命论&lt;/strong&gt;的感觉，而彼时我跟饭桌上那位吃瓜群众持相似观点，并没有吧，我也就是普通的工薪家庭而已，大概我也会像父母一样白手起家要去奋斗吧。其实，此时的我并没有改变太多，自始至终有一个理念我是&lt;strong&gt;坚持&lt;/strong&gt;的：
+&amp;gt;只有比别人付出更多的努力才会有可能获得跟他人同等的竞争机会&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;所以人生就是生来不公平咯&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;公平就是今天余额宝的万份收益是1.0元，我余额宝里的一万元明天就多了一块钱，他的10万元明天会多10块钱。而不是睡了一觉起来，诶呀，大家都多了10块钱。只是因为上一辈的积累而忽视了个体的努力这似乎也不公平吧，吃利息的时候也要讲究本金，像滚雪球一样，出身也是祖辈们&lt;strong&gt;compound interest&lt;/strong&gt;的结果。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-bffee20caa4ee1c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;厉害了word爹&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;「先赋地位」&lt;/strong&gt;能给予个体的是一个本金，或者说是一个人人生轨迹的下限，一个是低洼处耸立的白杨，一个是高山上一株无名的小草，怎么比，草再不济也站的高。话又说回来，现实社会中，倘若个体不努力地站在父辈肩膀上继续向上层流动，就好比巨款存在银行只靠那一点利息，&lt;strong&gt;肉食者鄙，未能远谋&lt;/strong&gt;，目光短浅的还要坐吃山空，那么随着时间的推移，祖辈们积累下来的这个优越的&lt;strong&gt;「先赋地位」&lt;/strong&gt;可能就慢慢一文不值了。&lt;/p&gt;
+
+&lt;p&gt;回到我坚持的那个观点，不是代表不相信宿命论，而是人生在世能够做的就只有&lt;strong&gt;尽人事，听天命&lt;/strong&gt;。根据统计，社会正在撕裂，两极分化严重，正在经历阶层固化，不论是什么样的结果，统计学描述的是群体而不是个体。对于个体来说，尽力而为，不被那些自己不能控制的事实禁锢住，所谓&lt;strong&gt;尽人事&lt;/strong&gt;，至于说最终奋斗换来的是什么这就只能&lt;strong&gt;听天命&lt;/strong&gt;了。社会的一味不公平，阶层固化可能是其发展的必经之路，作为个体在这个时间段看到的未必是事实，就好比是太阳东升西落是表象，实质是地球在围绕太阳不停转动。相对于整个社会长期的发展，个人存在的时间太短，现在看到的大量财富分配不均，没有&lt;strong&gt;先富带动后富&lt;/strong&gt;，不代表从整个历史上去看几代人甚至几十代人的发展结果不是所谓&lt;strong&gt;共同富裕&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-68c6261ac7988b5e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;好像你说得有道理&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;阶层固化的焦虑&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;太多人在拿阶层固化讨论出身决定一切，宿命论推崇，这些不能通过努力来改变自身现实的焦虑感从何而来？
+&amp;gt; 上帝的奥妙并不在《圣经》里面，而在神父的身上&lt;/p&gt;
+
+&lt;p&gt;大众的焦虑感来自现实生活的打击，和流窜在生活中的言论。这就好比是洗脑一样，统治阶级所要表达的他们的价值观，形成的社会规则，由金字塔中间的传播者带给底层的洗脑受众人群。”努力学习，屌丝逆袭”，”逃离北上广”，”社会阶层固化，通往上层的门正在关闭”。哪一批人在宣扬&lt;strong&gt;美国梦&lt;/strong&gt;一般的逆袭，又是哪一批人在声讨阶层天花板，抱怨人生无奈，谁是&lt;strong&gt;真正的在焦虑&lt;/strong&gt;，一边争先恐后向上爬，一边又似乎无能为力咒骂人生不公。也许最底层的人民还挣扎在贫困线，所谓&lt;strong&gt;失无所失&lt;/strong&gt;，即便有一夜暴富的梦不至于为此殚精竭虑。焦虑是在社会大多数人群中蔓延的，&lt;strong&gt;中产阶级的焦虑&lt;/strong&gt;，仿佛拼一拼，跳一跳又能够到顶层的天花板，面对不断攀升的房价，税收，医疗，教育，以及社会整体对于更加弱势群体的公益性帮助，中产阶级是否会沦为新穷人？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-ede5c3e4b118ef38.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;拯救中产阶级&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;迈向顶层社会的唯一阶梯 - 教育，好像在一夜间变了味，上个世纪考上大学是鲤鱼跃龙门，从农村去往城市的美好向往。而对于今日的中产阶级家庭来说，教育已然不是改变命运的手段，而是维持生活的基本必需品。横空出世的”富二代”和”官二代”，促进了愚蠢的”读书无用论”，日益增加的就业压力，不成比例的教育投资回报比，对待高等教育的态度也两极化，一些人更愿意相信”读个大学有什么用，不如我有几套拆迁房”，极端的中产阶级们却对&lt;strong&gt;孩子不能输在起跑线上&lt;/strong&gt;有着过多信仰。&lt;/p&gt;
+
+&lt;p&gt;作为中产阶级的子女，学业压力也许是相对更大的，吃瓜群众的我是其中之一。我觉得与其说是压力大不如说是继承了父辈们的焦虑感，我那年高考数学卷出乎意料的难，出了考场感觉这辈子就完了，极度的不安。然而，现在回头看，当时像是关乎生死存亡，一着不慎便满盘皆输，其实高考失利对我的影响几乎是微乎其微的。
+&amp;gt;不怕贼偷，就怕贼惦记着&lt;/p&gt;
+
+&lt;p&gt;夹在上层阶级和底层人民之间的生活，像是在走平衡木，一根独木桥，稍有不慎可能就会滑向贫困的一端，这种实实在在的焦灼不安仿佛是会伴随终生的。为什么？&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-61f126dc41d337c1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;穷怕了&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;当然，所谓夹层人民，中产阶级，一定不是真正的&lt;strong&gt;穷怕了&lt;/strong&gt;，但是无一例外多少有着类似的基因，代代相传。&lt;/p&gt;
+
+&lt;p&gt;比如说我的焦虑，在远离父母的国度挣一份刚够维持生计的薪水，每个月底都害怕钱袋见底，总要有些存款才觉得，嗯，心安理得，不然就一副没有安全感的样子。我正试图改掉这个习惯。&lt;/p&gt;
+
+&lt;p&gt;眼见着父辈步入中老年了，讨好周围的朋友圈以外还要乖巧的迎合上一辈的交际圈子，恨不能一天24小时可以不用疲惫。既要在酒过三巡能谈天说地，又要摆出一副健康生活的姿态，不敢指望朋友帮忙省得影响兄弟感情，不能奢望父辈指点江山怕是总有人在后面戳脊梁骨：你看你看，都是啃老族。好像一副&lt;strong&gt;雄心壮志&lt;/strong&gt;要弄出点什么动静，&lt;strong&gt;出人头地&lt;/strong&gt;的样子，&lt;strong&gt;上马退敌下马治国&lt;/strong&gt;，回家一脸我是好孩子，可是，皇上，&lt;strong&gt;臣妾做不到啊&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-45ab29dbb6520bd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;臣妾做不到啊&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;于个体来讲，与人比，自然是毫无意义可言，大多数人生活还不都是挣扎而已，诚然，这挣扎是否无谓，就得&lt;strong&gt;听天命&lt;/strong&gt;了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-6650a6531440bae0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;我能怎么办&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;毕竟，活着，就已经竭尽全力了&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;关注原文微信号: 也是少游&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/1160742-e1ae219a2f9b5d48.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;也是少游&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Apr 2016 16:10:18 +0100</pubDate>
+        <link>http://bingjiegao.github.io/blogs/2016/04/03/%E5%90%ACNick%E8%B0%88%E7%A4%BE%E4%BC%9A%E9%98%B6%E5%B1%82%E5%9B%BA%E5%8C%96</link>
+        <guid isPermaLink="true">http://bingjiegao.github.io/blogs/2016/04/03/%E5%90%ACNick%E8%B0%88%E7%A4%BE%E4%BC%9A%E9%98%B6%E5%B1%82%E5%9B%BA%E5%8C%96</guid>
+        
+        <category>-记事</category>
+        
+        <category>-无聊</category>
+        
+        <category>-微信公众号</category>
+        
+        
+        <category>生活笔记</category>
+        
+      </item>
     
       <item>
         <title>浮萍-利物浦杂记</title>
@@ -1075,218 +1293,6 @@ else{
         
         
         <category>生活笔记</category>
-        
-      </item>
-    
-      <item>
-        <title>我跟生活失了次恋</title>
-        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;“希望困得时候 有 大段的时间可以睡觉		寂寞的时候 知道你在爱我”&lt;/h3&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;我开始想了想其实这并不算一个很最近的发生的事情 有一天 我遇见了一个诉衷肠的孩子 哭哭啼啼 我们一起在路边坐下 就是那种背后能感到杂草丛生扎在背上的马路墩上 那时候是春天 太阳已经晒得我睁不开眼睛 我背上的汗正如他眼里的泪一样 大滴大滴流下来 “一个人太孤零零的了”他说 太软弱了 我起身拍拍灰 一点也不想掺和儿女情长 这不是高冷的我应该干的事情&lt;/p&gt;
-
-&lt;p&gt;他执着的跟着我 汗淋湿我的衬衫 湿哒哒的粘在身上 他也是 伴随着一刻不停的念念叨叨 竟然有一刻我突然喜欢上了这种纯粹而又真实的表达方式 比平时打电话听微信的语音都来得更加带劲&lt;/p&gt;
-
-&lt;p&gt;“我好想回到最开始”哭泣停滞 
-一下子很烦躁 听惯了别人嘴里的你还年轻 其实 早已到了有过去的年纪&lt;/p&gt;
-
-&lt;p&gt;懵懵懂懂的年纪 我也有我的困惑 就好比我拼了命的想要脱离一切去独立 却感觉落得孤家寡人 就好比很多过往的陋习一定要坚定不移的保持下去 常常我会觉得生活很无奈 读那所大学很无奈 尽管四年不乏精彩 读研究生很无奈 放弃所有博士的机会很无奈 现在、开始工作也感到是无奈之举 至今我还记得俞敏洪曾经到高中母校演讲 就记得要做到一句话：现在做应该做的事、以后才能做想做的事 现在回想起来 如今的那么多不得不、或许因为我曾经不是一个用功的学生、又不是一个聪明的人 没能把该做的完成了 以至于很多时候 我似乎并没有什么选择权&lt;/p&gt;
-
-&lt;p&gt;感情 这个东西对我来说好像比课业比工作都来得更加复杂 负担也更重 相比于小时候的字条传信 现在方便很多 已经很久没有因为这个月包的短信数不够而担心话费了 责任不可避免越来越重&lt;/p&gt;
-
-&lt;p&gt;前两年 我经常走着走着 在Liverpool One的街上 看着乌泱泱的人群 世界一直都这么熙熙攘攘 幸会那些美好 在总是下雨的天气里面 我和那些有爱的同学们一起见证了人生第一次的双彩虹 一边下雨一边出太阳 我们跟着彩虹一路跑 一起去唱K 喝酒 游戏人生 每晚走过那个大坡到家 总能听到牌桌上的热闹 这样的一个人的无奈经常被这些回忆的幸福感冲淡&lt;/p&gt;
-
-&lt;p&gt;很久以前 在那个炎炎夏日 我看了一部电影 听说看见双彩虹会有好运&lt;/p&gt;
-
-&lt;p&gt;那个夏天 我实在看了很多电影 那个夏天 还有厦门和猪肉脯&lt;/p&gt;
-
-&lt;p&gt;昨天晚上固执的从学校走了一路到寝室 也很奇怪 我从来都叫寝室为家 806是家 94号也是 50号也是 93号也是 如今我都叫寝室
-路过7bones 突然想起我们一起喝了两瓶Cider晕晕乎乎回去写报告的那个湿漉漉的雨天 没有彩虹&lt;/p&gt;
-
-&lt;p&gt;我迷惑 如果未来会很美好 为什么我常常要去纠结过去&lt;/p&gt;
-
-&lt;p&gt;一个人太孤零零了 我也会 即使拉赫玛尼诺夫永不凋谢&lt;/p&gt;
-
-&lt;p&gt;没有什么最开始可以让我们回去 过去打下的是烙印 现在的脚步永远追随着将来的希望和美好&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“A chance of sunshine 这样的注定相遇 的确是美丽的”&lt;/p&gt;
-&lt;/blockquote&gt;
-
-</description>
-        <pubDate>Sun, 08 Nov 2015 19:18:18 +0000</pubDate>
-        <link>http://bingjiegao.github.io/blogs/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B</link>
-        <guid isPermaLink="true">http://bingjiegao.github.io/blogs/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B</guid>
-        
-        
-        <category>生活笔记</category>
-        
-      </item>
-    
-      <item>
-        <title>怎样很麻烦的开始做一个个人博客~jekyll</title>
-        <description>&lt;p&gt;有一种强烈的预感 如果真的是想做一个个人博客的人是不会来翻这篇文章的 当然…不想做的更不来浪费时间 我只是单纯的想…以后的我不要忘了这个漫长的流程&lt;/p&gt;
-
-&lt;p&gt;首先 你要有一个充足的时间 比如…一个空闲的下午茶时间
-其次 你需要有一个Github账号或者、你有一个已购买的注册域名 一个主机服务器等等…&lt;/p&gt;
-
-&lt;p&gt;你应该是不会有那些的&lt;/p&gt;
-
-&lt;p&gt;这篇文章很有限的介绍怎样基于Mac环境下在Github上部署一个免费的jeklly博客 
-Jekyll是什么我也不知道 具体请去&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;官网&lt;/a&gt;详查&lt;/p&gt;
-
-&lt;p&gt;按照官网的安装教程 你可以将jekyll先下载到本地
-你需要打开一个黑色背景的小窗口 它叫‘Terminal’ 也许在你的电脑上它已经改名叫‘iTerm’了&lt;/p&gt;
-
-&lt;p&gt;第一步 安装jekyll&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;必要时候请 ‘sudo’&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
- sudo gem install jekyll
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;第二步 新建一个jekyll博客&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-jekyll new my-new-blog
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;第三步…&lt;/p&gt;
-
-&lt;p&gt;请到你的新建博客下&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-cd ~/PATH/my-new-blog/
-&lt;/code&gt;
-第四步 开启jekyll server&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;
-jekyll server --watch
-&lt;/code&gt;
-不要打小鼓默默碎碎念为什么要加watch 我也不知道…&lt;/p&gt;
-
-&lt;p&gt;不加watch在编辑中会有莫名的假bug让你误以为自己总是写错 其实可能只是你需要重新 ‘ctrl+c’ 再 ‘jekyll server’重新开启一下&lt;/p&gt;
-
-&lt;p&gt;接着你就能在浏览器中的’localhost:4000’看到你的页面了 应该跟下面一样&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/1.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后嘛…我们要来先看一下刚刚我们 ‘new’ 的这个jeyll文件夹里面有什么 
-下面这个就是你的文件夹&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;├── _config.yml
-├── _includes
-|   ├── footer.html
-|   └── header.html
-|   └── head.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-|   └── page.html
-├── _posts
-|   ├── 20015-10-29-welcome-to-jekyll.markdown
-├── _data
-|   └── members.yml
-├── _sass
-|   ├── base.scss
-|   └── layout.scss
-|   └── syntax-hoghlight.scss
-├── _css
-|   ├── main.scss
-├── _site
-├── feed.xml
-└── index.html&lt;/p&gt;
-
-&lt;p&gt;```
-好，我们先来看一下最基本的‘.yml’配置文件 在这个configuration文件中包含了网页的基本信息 诸如你的网页名称之类的 其中 ‘baseurl’这一项需要特别注意 最后我们上传到Github page上面需要特别注意这一项的设置 在本地时我们不要做修改 将 ‘baseurl’这一项保持&lt;/p&gt;
-
-&lt;p&gt;```
-baseurl=””&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;jekyll默认的用liquid template来定义网页界面
-我们来看第二和第三个子文件夹  ‘ _includes’ 和 ’ _layout‘ 在’_includes‘中的三个’html‘文件被分别引用安排在页面的不同位置 ‘_layout’中的’html’文件就是用来定义这些界面安排的&lt;/p&gt;
-
-&lt;p&gt;接下来你所看到的这个文件夹’ _posts’就是存放所有博客的地方 jekyll用markdown文件来让你专注于写作这件事情 所有在’ _posts’文件夹中的文件都以markdown文件形式存在 而对于你来说 写博客只需要将文字简单的输入完成思想到文字形式的转换就可以了 推荐一个Mac上我比较常用的markdown文本编辑器 &lt;a href=&quot;http://25.io/mou/&quot;&gt;‘Mou’&lt;/a&gt; 当然markdown编辑器还有很多 或许你平时已经习惯于用文本编辑器来写代码 sublime vim也可以作为写博客的好手 只要你去认真搜索一下相关的插件&lt;/p&gt;
-
-&lt;p&gt;最后对于这个本地正常运行的静态文件博客 你需要做的也就是添添补补把显示页面变成你喜欢的样子 这些你将以修改’ _sass‘和 ‘_includes’文件夹中的文件来完成 如果你暂时还没有什么做网页的经验那么CSS也就无关紧要了 五搜索一下你想要的页面Template吧 &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;这里&lt;/a&gt;有很多别人做好的主题可供下载直接使用&lt;/p&gt;
-
-&lt;p&gt;当然 除了很多ruby的插件可以让你的博客完成更多的事情以外 原生的jekyll也提供了一些基本的功能 诸如页面分页pagetination&lt;/p&gt;
-
-&lt;p&gt;pagetination的具体官方文档可以在&lt;a href=&quot;http://jekyllrb.com/docs/pagination/&quot;&gt;这里&lt;/a&gt;
-用法相当简单 这是一个可以让你的’index‘主页分页显示你的博客 这时我们需要打开configuration文件也就是开头所讲的 ‘ _config.yml’文件 在该文件后面加上：&lt;/p&gt;
-
-&lt;p&gt;```
-gems: [jekyll-paginate]
-paginate: 5
-paginate_path: “/blog/page:num/”&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;这里面 ‘paginate: 5’代表了每页显示5个博客 接下来paginate会自行generate出第二页第三页…直到你’ _posts ‘ 文件中的最后一个博客 而所设定的路径也就是 ‘ paginate_path ‘就是生成的第二页第三页的URL地址&lt;/p&gt;
-
-&lt;p&gt;接下来你会需要这些代码放在你的’index.html’文件中以便看到paginate的效果&lt;/p&gt;
-
-&lt;p&gt;```html&lt;/p&gt;
-
-&lt;p&gt;{% if paginator.total_pages &amp;gt; 1 %}&lt;/p&gt;
-&lt;div class=&quot;pagination&quot;&gt;
-  {% if paginator.previous_page %}
-    &lt;a href=&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;&amp;laquo; Prev&lt;/a&gt;
-  {% else %}
-    &lt;span&gt;&amp;laquo; Prev&lt;/span&gt;
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      &lt;em&gt;{{ page }}&lt;/em&gt;
-    {% elsif page == 1 %}
-      &lt;a href=&quot;{{ paginator.previous_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;{{ page }}&lt;/a&gt;
-    {% else %}
-      &lt;a href=&quot;{{ site.paginate_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; | replace: &#39;:num&#39;, page }}&quot;&gt;{{ page }}&lt;/a&gt;
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    &lt;a href=&quot;{{ paginator.next_page_path | prepend: site.baseurl | replace: &#39;//&#39;, &#39;/&#39; }}&quot;&gt;Next &amp;raquo;&lt;/a&gt;
-  {% else %}
-    &lt;span&gt;Next &amp;raquo;&lt;/span&gt;
-  {% endif %}
-&lt;/div&gt;
-&lt;p&gt;{% endif %}&lt;/p&gt;
-
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;p&gt;以上这些都能在上面的官方文档链接中找到 虽然默认的可能不符合你的审美 但是基本实现了翻页的功能&lt;/p&gt;
-
-&lt;p&gt;接下来就可以开始上传到你的Github page上 当然你确实需要一个Github账号 新建一个repository 创建一个新的Github page&lt;/p&gt;
-
-&lt;p&gt;重新打开你的’ _config.yml’ 文件将原来空的baseurl换成 ‘ /新建的Github repository地址名字/ ‘ 比如你的Github page的URL为 ‘YOUR_NAMW.github.io/PAGE_NAME/’ 那么你的baseurl在这里就应该是 ’ /PAGE_NAME/‘&lt;/p&gt;
-
-&lt;p&gt;将本地的文件上传到你的Github上之后 一切似乎就差不多准备就绪了&lt;/p&gt;
-
-&lt;p&gt;最后你就可以开始专注于你的博客了….&lt;/p&gt;
-
-&lt;p&gt;好吧、我承认这样实在是太麻烦了 但是…万一你也很感兴趣想做一个可以去看一下 反正也花不了太长的时间&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 06 Nov 2015 20:39:18 +0000</pubDate>
-        <link>http://bingjiegao.github.io/blogs/2015/11/06/jekyll-1</link>
-        <guid isPermaLink="true">http://bingjiegao.github.io/blogs/2015/11/06/jekyll-1</guid>
-        
-        
-        <category>学习</category>
         
       </item>
     

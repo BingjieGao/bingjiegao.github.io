@@ -101,6 +101,10 @@
         
           
         
+          
+        
+          
+        
       </div>
     </nav>
   </div>
@@ -117,6 +121,327 @@
                             <div class="home">
 
   <ul class="post-list" post-cate="All">
+    
+      <li>
+        <span class="post-meta">Jan 23, 2016</span>
+        <div class="post-link">
+        <h1>
+          <a href="/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">程序员面试金典 chapter1 arrays and strings</a>
+        </h1>
+          <h3 id="section">第一题  翻转字符串</h3>
+<p>把一个给定的字符串反转
+笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n-1-i]个元素对调，下面为代码示例：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Reverse</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">reverseString</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+         <span class="n">c</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">[</span><span class="n">len</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+            <span class="n">iniString</span><span class="p">[</span><span class="n">len</span> <span class="o">-</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">iniString</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="section-1">第二题  判定字符串中字符是否相同或不同</h3>
+<p>…
+不细说、代码示例在下面：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Different</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkDifferent</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="section-2">第三题  确定两串乱序同构</h3>
+
+<p>(我觉得和第八题是一样的，这里是第八题的描述：
+请将这个算法编写成一个函数，给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成。唯一不一样的地方可能就是第八题要求用并且只用一次issubstring这个函数吧。这里省略第八题。
+)</p>
+
+<p>给出的代码结构为:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span><span class="p">};</span></code></pre></figure>
+
+<p>我的第一个想法很简单，遍历整个stringA和stringB，当在B中能找到该元素就在B数组中删除这个元素，直到最后判断B是否为空。但是….总之我这么想着写有误，会漏判应该返回 “false”的情况，下面为错误的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+               <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                   <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+               <span class="p">}</span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+        <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span>  <span class="c1">//delete the last element in the string
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringB</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>既然漏判了一个原本应该为”false”的情况那么我就加判一个，同样遍历A，当不能在B中找到A的该元素时我就立即返回”false”.一下为通过的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+               <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                   <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+                   <span class="k">break</span><span class="p">;</span>
+               <span class="p">}</span>
+               <span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+                   <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+        <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">stringB</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>在看别人的讨论中看到大神们是这么想的，还是一样先从最简单的长度开始比较，然后定义一个存放了256个”0”的新数组，当在遍历的时候将A中的元素和B中的元素逐一进行记录，遇到A中的第n个元素该新定义的的数组的第[A[n]]个”0”自增1，而同样，遇到B的元素时自减1.也就是说若A和B是完全相同的组合数组那么意味着这个新定义的数组始终应该保持“0”的平衡。下面是该方法的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="kt">char</span> <span class="n">count</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+          
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">stringA</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">count</span><span class="p">[</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">count</span><span class="p">[</span><span class="n">stringB</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">256</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>我自己的本方法虽然最后运行结果正确但是运行时间相当长，我的正确代码运行时间为70ms而大神的代码只需要1ms。</p>
+
+<h3 id="section-3">第四题 将字符串中的空格全部替换为”%20”</h3>
+<p>给出的代码格式为:</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Replacement</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">replaceSpace</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>简单的想，首要任务应该就是找找这个字符串里面哪里有空格,哪里有空格就在哪里添加那个”%20”呗。简单的代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Replacement</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">replaceSpace</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">string</span> <span class="n">str</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">' '</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">str</span><span class="o">+=</span><span class="s">"%20"</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="section-4">第五题 压缩字符串</h3>
+<p>利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。</p>
+
+<p>好吧，一开始没怎么明白看了好几遍输出才知道卧槽根本不存在压缩后面不带数字的情况啊。。。。思路很简单总之就是j的循环在i里面，期间犯了个很大错误导致最后一个元素会打印不出来，原因在于内循环的j也设了不能到字符串最后的条件，来看一下这个判断：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+                    <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span></code></pre></figure>
+
+<p>我估计之所以不能get到最后的元素可能是因为这样写的后果。。。j到不了字符串最后的’\0’，以至于最后比较的时候没办法”j++”。所以最终通过代码为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Zipper</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">zipString</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">string</span> <span class="n">str</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;;){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+                    <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="n">iniString</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="section-5">第六题 像素翻转</h3>
+<p>需要返回一个旋转后的NxN矩阵
+函数样例给出如下：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Transform</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">transformImage</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>既然不能定义一个新的temp数组可能从替换的角度来思考这个问题更简便一些，首先从矩阵最外围的一圈来看：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+ <span class="c1">//... ...
+</span><span class="p">}</span></code></pre></figure>
+
+<p>假如说该原始矩阵有单数层那么理应只需要进行(n-1)/2次分层就可以了，比如三层，去掉最外围就只剩下中间的一个元素，应该不动。若是偶数层正好除尽，进行n/2次的处理。那么对于每一层来说有四条边，就在每一层中间做需要做四次的操作：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>第一次处理第一行的元素，变换后的矩阵第一行由第一列来取代，将内循环的j看作是列的话，那么挨个的元素替换就相当于是将该列最后一个元素[n-0-1][0]替换到了[0][0]的位置，而后以此类推。
+第二次处理应该处理刚刚替换的位置的元素也就是第一列的元素，第一列的元素是被最后一行的元素锁替代，那么代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span></code></pre></figure>
+
+<p>也就是说第一列最后一个元素[n-0-1][0]被替换成了[n-0-1][n-0-1]也就是最后一行的最后一个元素了，以此类推。
+继续第三次是把刚刚替换了第一列的元素，也就是原矩阵最后一行的元素进行处理，换成原矩阵的最后一列元素。最后将原矩阵第一行的元素放入原矩阵最后一列的元素，第一层就替换完毕了。
+最后完整代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Transform</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">transformImage</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// write code here
+</span>    <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+          <span class="n">temp</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+    <span class="k">return</span> <span class="n">mat</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="section-6">第七题  清除矩阵中整行整列</h3>
+<p>还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Clearer</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">clearZero</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="c1">//vector&lt;int&gt; row(n,1),column(n,1);
+</span>        <span class="kt">int</span> <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">column</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="n">column</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="n">column</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="o">||</span> <span class="n">column</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+                    <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">mat</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+        </div>
+      </li>
+    
+      <li>
+        <span class="post-meta">Jan 2, 2016</span>
+        <div class="post-link">
+        <h1>
+          <a href="/blogs/2016/01/02/%E6%B7%B1%E5%A4%9C%E6%83%8A%E9%86%92%E7%A8%8B%E5%BA%8F%E5%91%98">深夜惊醒程序员</a>
+        </h1>
+          <p>多年未曾联系的发小突然致电询问学习编程、从哪开始，我也有些迷茫 一时间不知道如何措辞 话又说回来 我也不是一个正经能称得上程序员的毕业生，我离那个程序员的称呼差得可不是一星半点啊。</p>
+
+<p>再说这位朋友 985工程下的名校自动化专业在读生，说着我都心里犯尴尬的专业 如今这个社会也可以越来越不关心所谓 专科出身 这样的帽子了。且说所谓计算机专业，那些成为网民手下的码农、程序员的人 相当一部分出自自动化 通信 电子 机械，甚至数学 物理这些兄弟姐妹类似的旁系。这些统称为工科的专业大都殊途同归变成了不同的码农 操纵着不同的编程语言、这是我上大学的时候一位出身通信的学长告诉我的 现在看来的确是不可争的事实。彼时我还在读 余果的 全栈工程师自我修养，想来现在的社会分工于二、三十年前相比精致许多，所谓软件工程师 嵌入式工程师 web工程师 硬件工程师 前端工程师 后端工程师，呵、当然还有全栈工程师。看看那一个个的头衔 哪一个不是人们嘴里、文字里的码农，眼里穿着冲锋衣牛仔裤的程序员。同样是理论物理出身的我的父亲，在三十年前大学毕业的时候手里只有一本翻译的FORTRAN教材，三十年后的今天，几乎你想学的语言，你想学习的方向，都只需要简单的通过键盘敲在搜索框里，丰富的资源都在回车之后一览无遗。我想所谓码农的分工之细正好对上了开头我的一时语塞，现在说想学编程，不能不说这是一个极其复杂而艰难的问题，我根本无从说起。作为一个半路出家了一年的应届毕业生来说，我接触的编码实在少之又少，每天醒来都觉得世界又变了，有太多新的语言，新的框架和许许多多我叫不上来的技术正在世界每个角落萌发生长。往往清晨起床，在V2EX上浪一浪，就满眼飘着的都是诸如Vue.js，ES6，PHP7这些跟我的生活无关却又息息相关的技术名词，坐在高脚凳上，两腿就开始发虚了，一声长叹，这个世界啊，这个社会啊，我是否会在一波又一波的浪潮中死无葬身之地。在这个无论是工资还是智商都追不上的社会里如何避免食不果腹、衣冠不整、开始成为每天头顶着的无形压力，谁说不恐惧呢，我打包票，城市里，那些夜晚亮着灯的办公室中，每个所谓的程序员或多或少都有这样的技术栈恐惧感。
+&gt;所谓30的程序员、一语成谶。</p>
+
+<p>我们这些初入社会的捣乱分子，还能年轻多久，还能趁着这股激情疯狂多久。在那些程序员的世界里，有一个长着章鱼脚的猫看管的圣地，时不时那里的风景会带来些许兴奋，些许失落，兴奋是别人的院子永远绿满格，而失落则是不管发了几回毒誓，自己的院子还是空空荡荡，甚至当开始寻摸下一份工作的时候都怕拿不出像样的项目。其实从哪里开始的都不重要，长久的坚持才能时不时的消除那份莫名的恐慌吧。
+&gt;在这个不大不小的尴尬年龄，从前过往，不知曾经爱过的人如今在哪里，愿在漫长的未来里，除了爱情，彼时，我们还能拥有此时的激情。</p>
+
+<p><img src="/TempBlogs/img/pictures/20160102.jpeg" alt="这些都是你给我的爱" /></p>
+
+<p>我不想成为一名人们说的程序员、工程师，在我慢慢走近编程的这条路上，有过太多的的骄傲自满也有过数不清的煎熬和自卑。对于朋友，我只想说，找一个感兴趣的方向不难，甚至在未来的几年里成为一个性感又受众的所谓大数据工程师也并不难，我给不了太多的建议，那么、说说你编程想做什么吧</p>
+
+        </div>
+      </li>
     
       <li>
         <span class="post-meta">Nov 11, 2015</span>
@@ -170,71 +495,6 @@ else{
 </div>
 
 <p>```</p>
-
-
-        </div>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 8, 2015</span>
-        <div class="post-link">
-        <h1>
-          <a href="/blogs/2015/11/08/%E8%8B%A5%E6%98%AF%E6%88%91%E9%80%81%E4%BD%A0%E8%B5%B0-%E4%BC%9A%E6%80%8E%E6%A0%B7">若是我送你走、会怎样</a>
-        </h1>
-          <p>或许这是一种想念式的道歉：这辈子不会有人叫我”媳妇”了</p>
-
-<p>如果等到送你走的那天 我希望给你写这么一句话</p>
-
-<h4 id="section">“最怀念的爱的方式 无非是将我现在的生活过成曾经的你一般</h4>
-
-<h4 id="section-1">最怀念你的方式 无非是将现在的她宠得一如当初的你爱我一般”</h4>
-
-<p>明信片我还留着 你没能去的地方 我想有时间替你去看看</p>
-
-        </div>
-      </li>
-    
-      <li>
-        <span class="post-meta">Nov 8, 2015</span>
-        <div class="post-link">
-        <h1>
-          <a href="/blogs/2015/11/08/%E6%88%91%E5%92%8C%E7%94%9F%E6%B4%BB%E5%A4%B1%E4%BA%86%E6%AC%A1%E6%81%8B">我跟生活失了次恋</a>
-        </h1>
-          <p><br /></p>
-
-<h3 id="section">“希望困得时候 有 大段的时间可以睡觉		寂寞的时候 知道你在爱我”</h3>
-
-<p><br /></p>
-
-<p>我开始想了想其实这并不算一个很最近的发生的事情 有一天 我遇见了一个诉衷肠的孩子 哭哭啼啼 我们一起在路边坐下 就是那种背后能感到杂草丛生扎在背上的马路墩上 那时候是春天 太阳已经晒得我睁不开眼睛 我背上的汗正如他眼里的泪一样 大滴大滴流下来 “一个人太孤零零的了”他说 太软弱了 我起身拍拍灰 一点也不想掺和儿女情长 这不是高冷的我应该干的事情</p>
-
-<p>他执着的跟着我 汗淋湿我的衬衫 湿哒哒的粘在身上 他也是 伴随着一刻不停的念念叨叨 竟然有一刻我突然喜欢上了这种纯粹而又真实的表达方式 比平时打电话听微信的语音都来得更加带劲</p>
-
-<p>“我好想回到最开始”哭泣停滞 
-一下子很烦躁 听惯了别人嘴里的你还年轻 其实 早已到了有过去的年纪</p>
-
-<p>懵懵懂懂的年纪 我也有我的困惑 就好比我拼了命的想要脱离一切去独立 却感觉落得孤家寡人 就好比很多过往的陋习一定要坚定不移的保持下去 常常我会觉得生活很无奈 读那所大学很无奈 尽管四年不乏精彩 读研究生很无奈 放弃所有博士的机会很无奈 现在、开始工作也感到是无奈之举 至今我还记得俞敏洪曾经到高中母校演讲 就记得要做到一句话：现在做应该做的事、以后才能做想做的事 现在回想起来 如今的那么多不得不、或许因为我曾经不是一个用功的学生、又不是一个聪明的人 没能把该做的完成了 以至于很多时候 我似乎并没有什么选择权</p>
-
-<p>感情 这个东西对我来说好像比课业比工作都来得更加复杂 负担也更重 相比于小时候的字条传信 现在方便很多 已经很久没有因为这个月包的短信数不够而担心话费了 责任不可避免越来越重</p>
-
-<p>前两年 我经常走着走着 在Liverpool One的街上 看着乌泱泱的人群 世界一直都这么熙熙攘攘 幸会那些美好 在总是下雨的天气里面 我和那些有爱的同学们一起见证了人生第一次的双彩虹 一边下雨一边出太阳 我们跟着彩虹一路跑 一起去唱K 喝酒 游戏人生 每晚走过那个大坡到家 总能听到牌桌上的热闹 这样的一个人的无奈经常被这些回忆的幸福感冲淡</p>
-
-<p>很久以前 在那个炎炎夏日 我看了一部电影 听说看见双彩虹会有好运</p>
-
-<p>那个夏天 我实在看了很多电影 那个夏天 还有厦门和猪肉脯</p>
-
-<p>昨天晚上固执的从学校走了一路到寝室 也很奇怪 我从来都叫寝室为家 806是家 94号也是 50号也是 93号也是 如今我都叫寝室
-路过7bones 突然想起我们一起喝了两瓶Cider晕晕乎乎回去写报告的那个湿漉漉的雨天 没有彩虹</p>
-
-<p>我迷惑 如果未来会很美好 为什么我常常要去纠结过去</p>
-
-<p>一个人太孤零零了 我也会 即使拉赫玛尼诺夫永不凋谢</p>
-
-<p>没有什么最开始可以让我们回去 过去打下的是烙印 现在的脚步永远追随着将来的希望和美好</p>
-
-<blockquote>
-  <p>“A chance of sunshine 这样的注定相遇 的确是美丽的”</p>
-</blockquote>
 
 
         </div>
@@ -303,13 +563,18 @@ else{
                                 </div>
                                 
                                 <div class="site-tag">
+                                  <a class="tag-name" href="/tag/微信公众号/index.html"
+                                      style="font-size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site-tag">
                                   <a class="tag-name" href="/tag/总结/index.html"
                                       style="font-size: 96%"> 总结</a>
                                 </div>
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/无聊/index.html"
-                                      style="font-size: 96%"> 无聊</a>
+                                      style="font-size: 104%"> 无聊</a>
                                 </div>
                                 
                                 <div class="site-tag">
@@ -319,7 +584,7 @@ else{
                                 
                                 <div class="site-tag">
                                   <a class="tag-name" href="/tag/记事/index.html"
-                                      style="font-size: 96%"> 记事</a>
+                                      style="font-size: 104%"> 记事</a>
                                 </div>
                                 
                                 <div class="site-tag">

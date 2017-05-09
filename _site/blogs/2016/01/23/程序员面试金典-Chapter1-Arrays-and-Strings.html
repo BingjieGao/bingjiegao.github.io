@@ -18,11 +18,11 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href=/css/demo.css>
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
 </head>
 
@@ -126,7 +126,7 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="section">第一题  翻转字符串</h3>
+    <h3 id="第一题--翻转字符串">第一题  翻转字符串</h3>
 <p>把一个给定的字符串反转
 笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n-1-i]个元素对调，下面为代码示例：</p>
 
@@ -146,7 +146,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3 id="section-1">第二题  判定字符串中字符是否相同或不同</h3>
+<h3 id="第二题--判定字符串中字符是否相同或不同">第二题  判定字符串中字符是否相同或不同</h3>
 <p>…
 不细说、代码示例在下面：</p>
 
@@ -165,7 +165,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3 id="section-2">第三题  确定两串乱序同构</h3>
+<h3 id="第三题--确定两串乱序同构">第三题  确定两串乱序同构</h3>
 
 <p>(我觉得和第八题是一样的，这里是第八题的描述：
 请将这个算法编写成一个函数，给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成。唯一不一样的地方可能就是第八题要求用并且只用一次issubstring这个函数吧。这里省略第八题。
@@ -249,7 +249,7 @@
 
 <p>我自己的本方法虽然最后运行结果正确但是运行时间相当长，我的正确代码运行时间为70ms而大神的代码只需要1ms。</p>
 
-<h3 id="section-3">第四题 将字符串中的空格全部替换为”%20”</h3>
+<h3 id="第四题-将字符串中的空格全部替换为20">第四题 将字符串中的空格全部替换为”%20”</h3>
 <p>给出的代码格式为:</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Replacement</span> <span class="p">{</span>
@@ -281,7 +281,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3 id="section-4">第五题 压缩字符串</h3>
+<h3 id="第五题-压缩字符串">第五题 压缩字符串</h3>
 <p>利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。</p>
 
 <p>好吧，一开始没怎么明白看了好几遍输出才知道卧槽根本不存在压缩后面不带数字的情况啊。。。。思路很简单总之就是j的循环在i里面，期间犯了个很大错误导致最后一个元素会打印不出来，原因在于内循环的j也设了不能到字符串最后的条件，来看一下这个判断：</p>
@@ -333,7 +333,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3 id="section-5">第六题 像素翻转</h3>
+<h3 id="第六题-像素翻转">第六题 像素翻转</h3>
 <p>需要返回一个旋转后的NxN矩阵
 函数样例给出如下：</p>
 
@@ -385,7 +385,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h3 id="section-6">第七题  清除矩阵中整行整列</h3>
+<h3 id="第七题--清除矩阵中整行整列">第七题  清除矩阵中整行整列</h3>
 <p>还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Clearer</span> <span class="p">{</span>

@@ -36,7 +36,12 @@ ul, ol, dl, figure,
  */
 img {
     max-width: 100%;
-    vertical-align: middle; }
+    vertical-align: middle; 
+    }
+img.center-img {
+    margin: 0 auto;
+  display: block;
+}
 
 /**
  * Figures

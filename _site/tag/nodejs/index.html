@@ -18,11 +18,11 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href=/css/demo.css>
-  <link rel="canonical" href="http://bingjiegao.github.io/tag/nodejs/">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/tag/nodejs/">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
-  <link rel="canonical" href="http://bingjiegao.github.io/tag/nodejs/">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/tag/nodejs/">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
 </head>
 
@@ -121,12 +121,356 @@
                             <h2>Nodejs</h2>
 <ul>
 
-  <li><a href="/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a> (11 Nov 2015  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/nodejs/" rel="tag"> Nodejs</a>, <a href="/tag/express/" rel="tag"> Express</a>)</li>
+  <li><a href="/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a> (11 Nov 2015  <!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
+
+  <title>Express开发陷入异步圈和回调坑</title>
+  <meta name="description" content="接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose C...">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">Express开发陷入异步圈和回调坑</h1>
+    <p class="post meta"><time datetime="2015 11 11T16:14:18+00:00" itemprop="datePublished">Nov 11, 2015</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <p>接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose CRUD之外 为了完成基本功能的express也写过了 想要真正的静下心来看Doc反而越看越慌 今天一天就深深的陷入了回调函数的坑里</p>
+
+<p>不讨论回调和异步、同步的关系和不同了 请自行google … … 因为我也没整明白 简单讲一下我试了一天对这几个的理解</p>
+
+<p>先说同步 我理解的同步就是逻辑自上而下 默默突然回想起做VerilogHDL的时候学过这么两个词blocking和non blocking 那么这个阻塞和非阻塞又和同步异步有什么关系和区别呢</p>
+
+<p>其实按照理论是没有什么关系的 同步嘛相当于调用者主动 一旦该调用返回了有值了 异步就反一反 相当于被调用者的状态反馈给调用者</p>
+
+<p>这个打个比方 我们国内很多客服态度可能时好时坏 但是这个服务速度是有的 你好比打个电话问问客服我有个什么问题不能解决 这个客服呢就在电话那头给你解决 在问题解决之前或者说在这个事情有结果之前你一直都是在跟客服进行沟通的</p>
+
+<p>那么英国这里呢 实在等不起 你打个电话 他说”Alright mate, but I can do nothing to help you right now I’ll give you a call back later, OK?” 这就是异步了 他解不解决问题在他 在你等他给你打回来通知结果之前 你是正常过日子的 没有24小时一直在通电话</p>
+
+<p>所以说呢同步还是异步只是说明了消息机制 communication嘛 对伐 而阻塞非阻塞可能就是描述了当在等待的状态 就是说非阻塞是会正常过日子的等结果的 中间呢因为这个英国服务太糟糕了 只能是不是check一下状态如何了 这个阻塞啊就意味着问题太大了 没法正常过日子等着客服解决了 不管什么时候返回结果 这期间都只能“挂起” 就好比只能呆滞的躺在床上等一场我想我要挂了的考试最终成绩一样</p>
+
+<p>再说这个回调，这个吧我就记住这么两条，一般情况下同步回调 这个回调函数最后执行 如果是异步回调 那人家不一定就最后执行 如果要等该函数执行完以后在执行另一条 那么这个执行语句必须放在回调函数内</p>
+
+<p>想想真的是慌得呀 一本正经好像说的跟真的一样 我就先给自己备忘一下 简单的注册功能 本来想把MVC弄得好看一些 不要把所有函数啊判断啊都放在一起混了 结果就被异步啊回调啊尴尬了</p>
+
+<div class="language javascript highlighter rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">IsExisted</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">callback</span><span class="p">){</span>
+  <span class="nx">userdb</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="s1">'useremail'</span><span class="p">:</span><span class="nx">data</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">doc</span><span class="p">){</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+      <span class="c1">//console.log(doc);</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new user'</span><span class="p">);</span>
+        <span class="c1">//console.log(doc);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'user existed'</span><span class="p">);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="o"> </span><span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
 
 </ul>
 
 <!-- <div id="tag-cloud">
-  <a href="/tag/c语言/" class="set4">-C语言</a> <a href="/tag/express/" class="set1">-Express</a> <a href="/tag/nodejs/" class="set1">-Nodejs</a> <a href="/tag/学习/" class="set5">-学习</a> <a href="/tag/微信公众号/" class="set2">-微信公众号</a> <a href="/tag/总结/" class="set4">-总结</a> <a href="/tag/无聊/" class="set5">-无聊</a> <a href="/tag/物联网/" class="set4">-物联网</a> <a href="/tag/记事/" class="set5">-记事</a> <a href="/tag/面试/" class="set4">-面试</a>
+  Jekyll::Drops::SiteDrop
 </div> -->
                       </div>
                     </div>

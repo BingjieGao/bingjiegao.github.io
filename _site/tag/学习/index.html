@@ -18,11 +18,11 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href=/css/demo.css>
-  <link rel="canonical" href="http://bingjiegao.github.io/tag/%E5%AD%A6%E4%B9%A0/">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/tag/%E5%AD%A6%E4%B9%A0/">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
-  <link rel="canonical" href="http://bingjiegao.github.io/tag/%E5%AD%A6%E4%B9%A0/">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/tag/%E5%AD%A6%E4%B9%A0/">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
 </head>
 
@@ -121,20 +121,2390 @@
                             <h2>学习</h2>
 <ul>
 
-  <li><a href="/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">程序员面试金典 chapter3 Stacks and Queues</a> (06 Feb 2016  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/面试/" rel="tag"> 面试</a>, <a href="/tag/c语言/" rel="tag"> C语言</a>)</li>
+  <li><a href="/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">程序员面试金典 chapter3 Stacks and Queues</a> (06 Feb 2016  <!DOCTYPE html>
+<html>
 
-  <li><a href="/blogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">程序员面试金典Chapter2</a> (24 Jan 2016  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/面试/" rel="tag"> 面试</a>, <a href="/tag/c语言/" rel="tag"> C语言</a>)</li>
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
 
-  <li><a href="/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">程序员面试金典 chapter1 arrays and strings</a> (23 Jan 2016  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/面试/" rel="tag"> 面试</a>, <a href="/tag/c语言/" rel="tag"> C语言</a>)</li>
+  <title>程序员面试金典 chapter3 Stacks and Queues</title>
+  <meta name="description" content="数据结构 栈的实现根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:  push()  pop()  peek()  isFull()  isEmpty()顾名思义，isFull和...">
 
-  <li><a href="/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a> (11 Nov 2015  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/nodejs/" rel="tag"> Nodejs</a>, <a href="/tag/express/" rel="tag"> Express</a>)</li>
 
-  <li><a href="/blogs/2013/11/05/2013%E6%B5%8B%E8%AF%95">2013年测试</a> (05 Nov 2013  <a href="/tag/学习/" rel="tag"> 学习</a>, <a href="/tag/面试/" rel="tag"> 面试</a>, <a href="/tag/c语言/" rel="tag"> C语言</a>)</li>
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">程序员面试金典 chapter3 Stacks and Queues</h1>
+    <p class="post meta"><time datetime="2016 02 06T00:00:00+00:00" itemprop="datePublished">Feb 6, 2016</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <h4 id="数据结构 栈的实现">数据结构 栈的实现</h4>
+<p>根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:</p>
+<ul>
+  <li>push()</li>
+  <li>pop()</li>
+  <li>peek()</li>
+  <li>isFull()</li>
+  <li>isEmpty()
+顾名思义，isFull和isEmpty就是判断栈满栈空的的function，主要说下两个主要的函数，pop和push。以链表的形式定义一个struct来代表这个stack</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">struct</span> <span class="n">elt</span> <span class="p">{</span>
+  <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">Stack</span><span class="p">;</span></code></pre></figure>
+
+<p>对于push来说主要做两件事情，第一先把此时stack指针指向的value赋值，第二部就是将指针指向next，具体代码如下：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="kt">void</span> <span class="nf">stackPush</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="kt">int</span> <span class="n">value</span><span class="p">)</span>
+
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span> <span class="n">elt</span><span class="p">));</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+     <span class="n">e</span><span class="o"> &gt;</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
+     <span class="n">e</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="n">e</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>那木pop呢，也很简单，就是将此时top的value取出来，再将next指向top的位置，而此时的next指向origin next的下一个，具体代码实现如下：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="kt">int</span> <span class="n">stackPop</span><span class="p">(</span><span class="n">Stack</span> <span class="o">*</span><span class="n">s</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">ret</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">e</span><span class="p">;</span>
+    <span class="n">assert</span><span class="p">(</span><span class="o">!</span><span class="n">stackEmpty</span><span class="p">(</span><span class="n">s</span><span class="p">));</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="o"> &gt;</span><span class="n">value</span><span class="p">;</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="o">*</span><span class="n">s</span><span class="p">;</span> <span class="o">*</span><span class="n">s</span> <span class="o">=</span> <span class="n">e</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="n">free</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="第一题 集合栈">第一题 集合栈</h4>
+<p>题目描述，实现将每个大小为给定size的栈填满，并且当当前栈填满时新建一个栈。
+题目所给出的标准class 函数定义为:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">SetOfStacks</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setOfStacks</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span><span class="p">}</span></code></pre></figure>
+
+<p>所以这题应该就是基本的入栈出栈，而所谓的“集合栈”就是另一层的入栈和出栈，最后的时候返回这个默认的”集合栈”。具体代码实现如下:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">SetOfStacks</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setOfStacks</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">,</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="kt">int</span> <span class="n">ope_size</span><span class="p">;</span>
+        <span class="n">ope_size</span> <span class="o">=</span> <span class="n">ope</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        
+        <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">setofstacks</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stacks</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">ope_size</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">stacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="n">size</span> <span class="p">){</span>
+                    <span class="n">setofstacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">stacks</span><span class="p">);</span>
+                    <span class="n">stacks</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span>
+                    <span class="n">stacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                    <span class="n">stacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">){</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">stacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">stacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="n">stacks</span> <span class="o">=</span> <span class="n">setofstacks</span><span class="p">[</span><span class="n">setofstacks</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o"> </span><span class="mi">1</span><span class="p">];</span>
+                    <span class="n">stacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                    <span class="n">setofstacks</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">stacks</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="n">setofstacks</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">stacks</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">setofstacks</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h5 id="第二题 用两个栈实现队列">第二题 用两个栈实现队列</h5>
+<p>题目描述为用两个栈完成队列基本的pop和push
+我没学过数据结构，所以还是先来看一下队列在数据结构的定义。
+队列不一样的是先进先出(FIFO)，并且有指向head和tail的指针，下面为简单队列实现的struct定义：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">struct</span> <span class="n">elt</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
+<span class="p">};</span>
+<span class="k">struct</span> <span class="n">queue</span> <span class="p">{</span>
+    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">head</span><span class="p">;</span>
+    <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">tail</span><span class="p">;</span>
+<span class="p">};</span>
+  <span class="k">typedef</span> <span class="k">struct</span> <span class="n">queue</span> <span class="o">*</span><span class="n">q</span><span class="p">;</span></code></pre></figure>
+
+<p>那么这道题目就变成了，怎样用两个实现先进后出stack来实现先进先出的队列形式，我认为很自然的就会想到，将其中一个队列用来将原本的数据倒序，以作为原本数据的先进先出，而倒序了的数据自然符合先进后出的原则。一下为实现代码：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Solution</span>
+<span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="kt">void</span> <span class="n">push</span><span class="p">(</span><span class="kt">int</span> <span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">stack1</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">node</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">pop</span><span class="p">()</span> <span class="p">{</span>
+     <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">stack2</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="c1">//判断是否为空，不为空那么说明已经压入了栈，倒序了stack1，直接pop就可以了
+</span>         <span class="p">{</span>
+            <span class="n">result</span><span class="o">=</span><span class="n">stack2</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">stack2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+         <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>  <span class="c1">//不为空的话就需要重新压栈
+</span>            <span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="n">stack1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">num</span><span class="p">;</span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">temp</span><span class="o">=</span><span class="n">stack1</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+                <span class="n">stack1</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                <span class="n">stack2</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+            <span class="p">}</span>                     
+            <span class="n">result</span><span class="o">=</span><span class="n">stack2</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">stack2</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span>   
+    <span class="p">}</span>
+
+<span class="n">private</span><span class="o">:</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack1</span><span class="p">;</span>
+    <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack2</span><span class="p">;</span>
+<span class="p">};</span></code></pre></figure>
+
+<h4 id="第三题 双栈排序">第三题 双栈排序</h4>
+<p>题目描述为将一个乱序排放的数据栈重新排序，最大的元素在栈的顶端。
+既然有两个栈，那么实现方式应该和上一题大同小异，两个栈中的最顶元素进行比较和压栈出栈。首先，原始的数据链先pop_back()出最顶元素到新定义的栈中，当新定义的临时栈不为空时，每次循环比较最顶元素的大小，我天真的认为这个和数组中的冒泡法理想一样，通过多次的循环比较以达到排序。第一步新定义一个栈，并且pop_back()出原数据栈中的最顶元素:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">forSort</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="n">numbers</span><span class="p">;</span>
+        <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
+        <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span></code></pre></figure>
+
+<p>第二步，建立第一层循环，while loop直到比较到最先压入原数据栈的元素</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">while</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">();</span>
+                <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                <span class="kt">int</span> <span class="n">popNum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  
+            <span class="p">}</span></code></pre></figure>
+
+<p>每一次首先拿出原数据栈中的最顶元素，以一个integer作为存储以便之后的比较，将此时最顶元素pop_back()。将取出来的原数据栈的顶层元素与届时的sort stack的顶层元素作比较，将更大的元素压入sort stack，而将较小的元素重新压回原数据栈，这样在最后把循环比较之后剩余在原数据栈中的所有元素按顺序一一压入sort stack数据栈中，这样最大的元素就最后压入最终返回的stack。示例代码如下：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">forSort</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="n">forSort</span><span class="p">.</span><span class="n">back</span><span class="p">()){</span>
+                    <span class="n">numbers</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">forSort</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
+                    <span class="n">forSort</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                    <span class="n">popNum</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+                <span class="k">while</span><span class="p">(</span><span class="n">popNum</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">forSort</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">back</span><span class="p">());</span>
+                    <span class="n">numbers</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span>
+                    <span class="n">popNum</span><span class="o">  </span><span class="p">;</span>
+                <span class="p">}</span></code></pre></figure>
+
+<h4 id="第四题 猫狗收容所">第四题 猫狗收容所</h4>
+<p>题目描述，有两种收养方式，一个是收养所有最早进入收容所的动物，另一个是选择性的收养最早进入收容所的猫或者狗。
+首先，最早意味着先进先出，所以应该选择队列的数据结构来做。
+因为有猫狗两种动物，都有先进先出，所以第一步先将两个队列分别对应猫和狗定义。</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cat</span><span class="p">;</span>
+<span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dog</span><span class="p">;</span>
+<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span></code></pre></figure>
+
+<p>首先在循环内判断是入收养所还是被收养，也就是入还是出的问题:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="c1">//入收养所
+</span>            <span class="p">}</span>
+ <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+<span class="p">{</span>
+      <span class="c1">//出收养所
+</span><span class="p">}</span></code></pre></figure>
+
+<p>情况很简单了，那么入收养所的时候只需要一个判断，是狗还是猫，出收养所的时候麻烦一些，第一步判断是哪种收养方式，若是第二种就只需要进一步看猫狗的选择直接在cat和dog两个定义的队列中pop最先进入的元素即可。若是第一种那么就需要比较了，在两个定义的队列中选取更早进入的一个。所以这就需要在每一次push到两个猫狗队列的同时，增加一个计数的index，完整的代码示例如下：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">CatDogAsylum</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">asylum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">ope</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">cat</span><span class="p">;</span>
+        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dog</span><span class="p">;</span>
+        <span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">s</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">vec</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">size1</span><span class="o">=</span><span class="n">ope</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">size1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">kind</span><span class="o">=</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">kind</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">dog</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">index</span><span class="o">++</span><span class="p">);</span>
+                    <span class="n">dog</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="n">cat</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">index</span><span class="o">++</span><span class="p">);</span>
+                    <span class="n">cat</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">min</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                        <span class="n">min</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                        <span class="n">min</span><span class="o">= </span><span class="mi">1</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                        <span class="n">min</span><span class="o">=</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">&gt;</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="o">? </span><span class="mi">1</span><span class="o">:</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">== </span><span class="mi">1</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
+                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">min</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
+                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="o">&amp;&amp;!</span><span class="n">dog</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                    <span class="p">{</span>
+                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
+                        <span class="n">dog</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span><span class="p">(</span><span class="n">ope</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">== </span><span class="mi">1</span><span class="o">&amp;&amp;!</span><span class="n">cat</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+                    <span class="p">{</span>
+                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                        <span class="n">vec</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">cat</span><span class="p">.</span><span class="n">front</span><span class="p">());</span>
+                        <span class="n">cat</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+ 
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">vec</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
+
+  <li><a href="/blogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">程序员面试金典Chapter2</a> (24 Jan 2016  <!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
+
+  <title>程序员面试金典Chapter2</title>
+  <meta name="description" content="第一题 输出链表中的倒数第n个结点">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/24/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter2">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">程序员面试金典Chapter2</h1>
+    <p class="post meta"><time datetime="2016 01 24T00:00:00+00:00" itemprop="datePublished">Jan 24, 2016</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <h3 id="第一题 输出链表中的倒数第n个结点">第一题 输出链表中的倒数第n个结点</h3>
+
+<p>给出的结构体为：</p>
+
+<figure class="highlight"><pre><code class="language c  " data lang="c++"><span class="k">struct</span> <span class="n">ListNode</span> <span class="p">{</span>
+
+  <span class="kt">int</span> <span class="n">val</span><span class="p">;</span>
+
+  <span class="k">struct</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+
+  <span class="n">ListNode</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="o">:</span>
+
+  <span class="n">val</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">next</span><span class="p">(</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>我觉得首先应该要把整个链表的长度先求出来，然后在不判断不遍历整个链表的情况下只比对数字。下面是示例代码：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">FindKthToTail</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pListHead</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">pListHead</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">temp</span><span class="p">){</span>
+            <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">temp</span><span class="o">=</span><span class="n">temp</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">count</span><span class="p">;){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="n">count</span><span class="o"> </span><span class="n">k</span><span class="p">){</span>
+                <span class="k">return</span> <span class="n">pListHead</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">pListHead</span><span class="o">=</span><span class="n">pListHead</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第二题  删除单向链表中的一个节点">第二题  删除单向链表中的一个节点</h3>
+<p>我觉得删除节点分两步，一个是删除单向链表中上一个只想该节点的链接和该节点指向下一个节点的链接，而变成第n 1个节点 &gt;next指向原先的n+1个节点。第二步就是当删除了链接并不代表当前删除的节点不占用内存空间，所以就要free这个空间。下面是通过的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Remove</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">removeNode</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span><span class="o">=</span><span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">=</span><span class="n">temp</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">free</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第三题  分割链表">第三题  分割链表</h3>
+<p>题目描述的是要将小于给定x值的节点与大于x值的节点分割成两部分，而本身链表的顺序不能够改变。最后需要返回小于x值的链表+大于x值的链表的头节点。
+想法很单纯，既然要分割链表就自然需要定义两个新的链表，第一步遍历整个给定的链表将每个节点的值与给定的x值作对比，当小于x的时候就把新定义的p1链表的下一个节点指向此时的temp节点，而当大于x值得时候自然就将此时的temp节点赋给p2的下一个节点。
+在过程中需要保存两个新定义链表的表头，也就是要判断一下p1和p2的头结点以便最后返回头节点。下面为最终的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
+<span class="n">class</span> <span class="n">Partition</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">partition</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">,</span> <span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p1</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p2</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p1Head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">p2Head</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">pHead</span><span class="p">){</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">pHead</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pHead</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">&lt;</span><span class="n">x</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+                    <span class="n">p1</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                    <span class="n">p1Head</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                <span class="p">}</span>
+                   
+                <span class="k">else</span><span class="p">{</span>
+                  <span class="n">p1</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                  <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>  
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">p2</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+                   <span class="n">p2</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                    <span class="n">p2Head</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                <span class="p">}</span>
+                    
+                <span class="k">else</span><span class="p">{</span>
+                	<span class="n">p2</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">=</span><span class="n">pHead</span><span class="p">;</span>
+                	<span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span> 
+                <span class="p">}</span>   
+            <span class="p">}</span>
+            <span class="n">pHead</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+            <span class="n">p2</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">=</span><span class="nb">NULL</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">p1</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+            <span class="n">p1Head</span><span class="o">=</span><span class="n">p2Head</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="n">p1</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">=</span><span class="n">p2Head</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">p1Head</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第四题  链表ab">第四题  链表A+B</h3>
+<p>题目描述为相加两个给出的链表A与B，比如说：{1,2,3} + {3,2,1}需要返回一个结果链表为{4,4,4}。
+在中间的加法运算中主要分为两步，第一步计算每每两个数字相加的结果，第二部提取出相应结果的进位和需要保留的个位数结果。下面为这一部分实现的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+<span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="o">+</span><span class="n">carry</span><span class="p">;</span>
+<span class="n">carry</span> <span class="o">=</span> <span class="n">val</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span></code></pre></figure>
+
+<p>定义两个新的ListNode结构的新链表，一个用来做最后返回的链表头，一个作为链表的存储。因为不知道两个给定的链表长度，所以判断的时候两个链表都判断是否为NULL再进入循环来遍历两个链表。当遍历时判断一下最终返回链表的头节点，下面为完整的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
+<span class="n">class</span> <span class="n">Plus</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">plusAB</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">a</span><span class="p">,</span> <span class="n">ListNode</span><span class="o">*</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">pNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">b</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">a</span> <span class="o">||</span> <span class="n">b</span> <span class="o">||</span> <span class="n">carry</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">;</span>
+            <span class="n">val1</span> <span class="o">=</span> <span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+            <span class="n">val2</span> <span class="o">=</span> <span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">:</span><span class="mi">0</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="o">+</span><span class="n">carry</span><span class="p">;</span>
+            <span class="n">carry</span> <span class="o">=</span> <span class="n">val</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+            
+            <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">val</span><span class="o">%</span><span class="mi">10</span><span class="p">);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pNode</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">){</span>
+                <span class="n">pNode</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+                <span class="n">pHead</span> <span class="o">=</span> <span class="n">pNode</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span><span class="p">{</span>
+                <span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+                <span class="n">pNode</span><span class="o">=</span><span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="o">?</span><span class="n">a</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">:</span><span class="nb">NULL</span><span class="p">;</span>
+            <span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="o">?</span><span class="n">b</span><span class="o"> &gt;</span><span class="n">next</span><span class="o">:</span><span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">pNode</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">pHead</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第五题 回文链表">第五题 回文链表</h3>
+<p>题目描述是这样的，需要判断一个给定的链表是否为回文链表，若给定链表如{1,2,3,2,1}则返回true，反之返回false。想法应该说并不难，但是我在链表的地址和赋值之间来回徘徊了很久才大概明白代码测试一直不能通过是因为什么，下面先来看这个代码</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Palindrome</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here·
+</span>        <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverseNode</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">originalNode</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pHead</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">pHead</span><span class="p">){</span>
+            <span class="n">next</span> <span class="o">=</span> <span class="n">pHead</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">reverseNode</span><span class="p">;</span><span class="c1">//temp=current
+</span>            <span class="n">reverseNode</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span><span class="c1">//prev=current
+</span>            <span class="n">reverseNode</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span><span class="c1">//next=current
+</span>            <span class="n">pHead</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">originalNode</span> <span class="o">&amp;&amp;</span> <span class="n">reverseNode</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">originalNode</span><span class="o"> &gt;</span><span class="n">val</span> <span class="o">!=</span> <span class="n">reverseNode</span><span class="o"> &gt;</span><span class="n">val</span><span class="p">){</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">originalNode</span> <span class="o">=</span> <span class="n">originalNode</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">reverseNode</span> <span class="o">=</span> <span class="n">reverseNode</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>首先定义了两个链表节点分别指向第一个给定节点和NULL，然后遍历给定的链表将链表反转。在遍历的过程中，将reverse这个想象中是反转后的链表先传给一个temp以做保留，将reverse指向遍历当前的节点，而reverse &gt;next指向先前的地址也就是temp，然而此时我想也就破坏了给定链表指向next的这个节点链接了。
+先贴一个正常反转链表并返回反转之后链表表头的leetcode上通过的代码：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="cm">/**
+ * Definition for singly linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverseList</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span><span class="p">,</span><span class="o">*</span><span class="n">current</span><span class="p">,</span><span class="o">*</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverse</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+        <span class="c1">//prev = NULL;
+</span>        <span class="k">while</span><span class="p">(</span><span class="n">current</span><span class="p">){</span>
+            <span class="n">next</span> <span class="o">=</span> <span class="n">current</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">reverse</span><span class="p">;</span>
+            <span class="n">reverse</span> <span class="o">=</span> <span class="n">current</span><span class="p">;</span>
+            <span class="n">reverse</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">reverse</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>同样将这段代码整齐的贴进这道题再去遍历做比较，依然会不能通过测试，始终返回true，以我的专业出身和智商还没有真正深究出原因，不过我猜想是因为永远指向同一个地址那么比较的时候肯定会不如人意，当在反转时有必要将反转之后的链表reverse和在遍历当前给定链表的时候new一个新的ListNode而不是在同一条地址链上进行多次的重复操作以至于最后比对的original链表丢失。这也是为什么当只是单纯做反转链表的时候遍历第一步就要保存好当前节点next指向的地址。
+所以重新定义并new一个链表reverse为NULL，然后遍历整个给定的链表，将当前节点值给该次循环中的reverse节点，将该被改动的reverse节点的next指向上一循环中的reverse节点，以此类推，直到把NULL推到最后一个位置。这个方法我很熟悉，跟做硬件编译时传输10101010….类的数据相差不大，都是按照一定的顺序你推我我推你到穷尽。</p>
+
+<h4 id="这里很想插一句">这里很想插一句</h4>
+
+<blockquote>
+  <p>一直以来人们给所谓程序员配的图满是10101010…..，看黑客帝国就知道了，我想说没错，计算机是接受二进制，可是在我自学Nodejs开发和这些满满的上层软件面向对象碰到过10101010现象的机会远远不如我作为公司的一名新晋嵌入式开发来的平常。</p>
+</blockquote>
+
+<blockquote>
+  <p>程序员分很多种，我希望我哪种都不是，我不是一名程序员或者软件、硬件工程师，我只是一名普通人，懂得少学得慢。</p>
+</blockquote>
+
+<p>好吧，插了一句嘴，下面来贴上纠结了我一下午的最终通过代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="cm">/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/</span>
+<span class="n">class</span> <span class="n">Palindrome</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="n">ListNode</span><span class="o">*</span> <span class="n">pHead</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">temp</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">current</span> <span class="o">=</span> <span class="n">pHead</span><span class="p">;</span>
+        <span class="n">ListNode</span><span class="o">*</span> <span class="n">reverse</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="nb">NULL</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pHead</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">current</span><span class="p">){</span>
+            <span class="c1">//temp = reverse;
+</span>            <span class="c1">//reverse &gt;next = temp;
+</span>            <span class="c1">//reverse = current &gt;next;
+</span>            <span class="n">temp</span><span class="o">=</span><span class="n">reverse</span><span class="p">;</span>
+            <span class="n">ListNode</span><span class="o">*</span> <span class="n">nextnode</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">current</span><span class="o"> &gt;</span><span class="n">val</span><span class="p">);</span><span class="c1">//reverse = current &gt;next;
+</span>            <span class="n">reverse</span> <span class="o">=</span> <span class="n">nextnode</span><span class="p">;</span>
+            <span class="n">reverse</span><span class="o"> &gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+         
+        <span class="k">while</span><span class="p">(</span><span class="n">pHead</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pHead</span><span class="o"> &gt;</span><span class="n">val</span><span class="o">!=</span><span class="n">reverse</span><span class="o"> &gt;</span><span class="n">val</span><span class="p">)</span>
+                <span class="p">{</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+                
+            <span class="n">pHead</span><span class="o">=</span><span class="n">pHead</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+            <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="o"> &gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
+
+  <li><a href="/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8-Chapter1-Arrays-and-Strings">程序员面试金典 chapter1 arrays and strings</a> (23 Jan 2016  <!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
+
+  <title>程序员面试金典 chapter1 arrays and strings</title>
+  <meta name="description" content="第一题  翻转字符串把一个给定的字符串反转笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n 1 i]个元素对调，下面为代码示例：">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8 Chapter1 Arrays and Strings">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/01/23/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8 Chapter1 Arrays and Strings">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">程序员面试金典 chapter1 arrays and strings</h1>
+    <p class="post meta"><time datetime="2016 01 23T00:00:00+00:00" itemprop="datePublished">Jan 23, 2016</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <h3 id="第一题  翻转字符串">第一题  翻转字符串</h3>
+<p>把一个给定的字符串反转
+笨方法，遍历整个给定的string，将数组string[n]中的第i个元素与第[n 1 i]个元素对调，下面为代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Reverse</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">reverseString</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+         <span class="n">c</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">iniString</span><span class="p">[</span><span class="n">len</span> <span class="o"> </span> <span class="n">i</span> <span class="o"> </span> <span class="mi">1</span><span class="p">];</span>
+            <span class="n">iniString</span><span class="p">[</span><span class="n">len</span> <span class="o"> </span> <span class="n">i</span> <span class="o"> </span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">iniString</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第二题  判定字符串中字符是否相同或不同">第二题  判定字符串中字符是否相同或不同</h3>
+<p>…
+不细说、代码示例在下面：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Different</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkDifferent</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="p">{</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第三题  确定两串乱序同构">第三题  确定两串乱序同构</h3>
+
+<p>(我觉得和第八题是一样的，这里是第八题的描述：
+请将这个算法编写成一个函数，给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成。唯一不一样的地方可能就是第八题要求用并且只用一次issubstring这个函数吧。这里省略第八题。
+)</p>
+
+<p>给出的代码结构为:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span><span class="p">};</span></code></pre></figure>
+
+<p>我的第一个想法很简单，遍历整个stringA和stringB，当在B中能找到该元素就在B数组中删除这个元素，直到最后判断B是否为空。但是….总之我这么想着写有误，会漏判应该返回 “false”的情况，下面为错误的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+               <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                   <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+               <span class="p">}</span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+        <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span>  <span class="c1">//delete the last element in the string
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringB</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>既然漏判了一个原本应该为”false”的情况那么我就加判一个，同样遍历A，当不能在B中找到A的该元素时我就立即返回”false”.一下为通过的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+       <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+           <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="sc">'\0'</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+               <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                   <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+                   <span class="k">break</span><span class="p">;</span>
+               <span class="p">}</span>
+               <span class="k">else</span> <span class="k">if</span><span class="p">((</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">stringB</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">j</span> <span class="o">==</span> <span class="n">stringB</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o"> </span><span class="mi">1</span><span class="p">))</span>
+                   <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+        <span class="n">stringB</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="sc">'\0'</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">stringB</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span>
+            <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>在看别人的讨论中看到大神们是这么想的，还是一样先从最简单的长度开始比较，然后定义一个存放了256个”0”的新数组，当在遍历的时候将A中的元素和B中的元素逐一进行记录，遇到A中的第n个元素该新定义的的数组的第[A[n]]个”0”自增1，而同样，遇到B的元素时自减1.也就是说若A和B是完全相同的组合数组那么意味着这个新定义的数组始终应该保持“0”的平衡。下面是该方法的代码示例：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Same</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">bool</span> <span class="n">checkSam</span><span class="p">(</span><span class="n">string</span> <span class="n">stringA</span><span class="p">,</span> <span class="n">string</span> <span class="n">stringB</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="kt">char</span> <span class="n">count</span><span class="p">[</span><span class="mi">256</span><span class="p">]</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">stringA</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="o">!=</span><span class="n">stringB</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+          
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">stringA</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">count</span><span class="p">[</span><span class="n">stringA</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">count</span><span class="p">[</span><span class="n">stringB</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">  </span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">256</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+                <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>我自己的本方法虽然最后运行结果正确但是运行时间相当长，我的正确代码运行时间为70ms而大神的代码只需要1ms。</p>
+
+<h3 id="第四题 将字符串中的空格全部替换为20">第四题 将字符串中的空格全部替换为”%20”</h3>
+<p>给出的代码格式为:</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Replacement</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">replaceSpace</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>简单的想，首要任务应该就是找找这个字符串里面哪里有空格,哪里有空格就在哪里添加那个”%20”呗。简单的代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Replacement</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">replaceSpace</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">,</span> <span class="kt">int</span> <span class="n">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">string</span> <span class="n">str</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="sc">' '</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">str</span><span class="o">+=</span><span class="s">"%20"</span><span class="p">;</span>
+            <span class="p">}</span><span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第五题 压缩字符串">第五题 压缩字符串</h3>
+<p>利用字符重复出现的次数，编写一个方法，实现基本的字符串压缩功能。比如，字符串“aabcccccaaa”经压缩会变成“a2b1c5a3”。若压缩后的字符串没有变短，则返回原先的字符串。</p>
+
+<p>好吧，一开始没怎么明白看了好几遍输出才知道卧槽根本不存在压缩后面不带数字的情况啊。。。。思路很简单总之就是j的循环在i里面，期间犯了个很大错误导致最后一个元素会打印不出来，原因在于内循环的j也设了不能到字符串最后的条件，来看一下这个判断：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+                    <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span></code></pre></figure>
+
+<p>我估计之所以不能get到最后的元素可能是因为这样写的后果。。。j到不了字符串最后的’\0’，以至于最后比较的时候没办法”j++”。所以最终通过代码为：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Zipper</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">string</span> <span class="n">zipString</span><span class="p">(</span><span class="n">string</span> <span class="n">iniString</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="n">string</span> <span class="n">str</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">();){</span>
+            <span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;;){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">iniString</span><span class="p">[</span><span class="n">j</span><span class="p">]){</span>
+                    <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+                    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">iniString</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+                       <span class="n">str</span><span class="o">+=</span><span class="n">to_string</span><span class="p">(</span><span class="n">count</span><span class="p">);</span>
+                    <span class="n">count</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="n">i</span><span class="o">=</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">iniString</span><span class="p">.</span><span class="n">length</span><span class="p">())</span>
+            <span class="k">return</span> <span class="n">iniString</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">str</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第六题 像素翻转">第六题 像素翻转</h3>
+<p>需要返回一个旋转后的NxN矩阵
+函数样例给出如下：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Transform</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">transformImage</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<p>既然不能定义一个新的temp数组可能从替换的角度来思考这个问题更简便一些，首先从矩阵最外围的一圈来看：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+ <span class="c1">//... ...
+</span><span class="p">}</span></code></pre></figure>
+
+<p>假如说该原始矩阵有单数层那么理应只需要进行(n 1)/2次分层就可以了，比如三层，去掉最外围就只剩下中间的一个元素，应该不动。若是偶数层正好除尽，进行n/2次的处理。那么对于每一层来说有四条边，就在每一层中间做需要做四次的操作：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o"> </span><span class="mi">1</span><span class="o"> </span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>第一次处理第一行的元素，变换后的矩阵第一行由第一列来取代，将内循环的j看作是列的话，那么挨个的元素替换就相当于是将该列最后一个元素[n 0 1][0]替换到了[0][0]的位置，而后以此类推。
+第二次处理应该处理刚刚替换的位置的元素也就是第一列的元素，第一列的元素是被最后一行的元素锁替代，那么代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">i</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">];</span></code></pre></figure>
+
+<p>也就是说第一列最后一个元素[n 0 1][0]被替换成了[n 0 1][n 0 1]也就是最后一行的最后一个元素了，以此类推。
+继续第三次是把刚刚替换了第一列的元素，也就是原矩阵最后一行的元素进行处理，换成原矩阵的最后一列元素。最后将原矩阵第一行的元素放入原矩阵最后一列的元素，第一层就替换完毕了。
+最后完整代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Transform</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">transformImage</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// write code here
+</span>    <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="o"> </span><span class="mi">1</span><span class="o"> </span><span class="n">i</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+          <span class="n">temp</span> <span class="o">=</span> <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">i</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">n</span><span class="o"> </span><span class="n">i</span><span class="o"> </span><span class="mi">1</span><span class="p">][</span><span class="n">n</span><span class="o"> </span><span class="n">j</span><span class="o"> </span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span><span class="o"> </span><span class="n">i</span><span class="o"> </span><span class="mi">1</span><span class="p">];</span>
+          <span class="n">mat</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span><span class="o"> </span><span class="n">i</span><span class="o"> </span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">temp</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+    <span class="k">return</span> <span class="n">mat</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+<h3 id="第七题  清除矩阵中整行整列">第七题  清除矩阵中整行整列</h3>
+<p>还是遍历整个矩阵，也就是一个二维数组，找到0就返回flag该行该列都应该为0。那么返回的这个flag通过定义两个新的一维数组来实现简单的记录，通过代码示例为：</p>
+
+<figure class="highlight"><pre><code class="language c" data lang="c"><span class="n">class</span> <span class="n">Clearer</span> <span class="p">{</span>
+<span class="n">public</span><span class="o">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">clearZero</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">mat</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// write code here
+</span>        <span class="c1">//vector&lt;int&gt; row(n,1),column(n,1);
+</span>        <span class="kt">int</span> <span class="n">row</span><span class="p">[</span><span class="n">n</span><span class="p">],</span><span class="n">column</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+            <span class="n">column</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+                    <span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                    <span class="n">column</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span> <span class="o">||</span> <span class="n">column</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+                    <span class="n">mat</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">mat</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span></code></pre></figure>
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
+
+  <li><a href="/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">Express开发陷入异步圈和回调坑</a> (11 Nov 2015  <!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
+
+  <title>Express开发陷入异步圈和回调坑</title>
+  <meta name="description" content="接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose C...">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">Express开发陷入异步圈和回调坑</h1>
+    <p class="post meta"><time datetime="2015 11 11T16:14:18+00:00" itemprop="datePublished">Nov 11, 2015</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <p>接着上个礼拜的jekyll结束后这个星期公司依然地广人稀 我第一次开始认认真真的看express4.x这个框架 慌是肯定的 明明手里已经预订了好几个MEAN stack的博客准备去看 其实连最基本的jQuery和AJAX都不会用 如何能谈Angularjs呢 除了最简单的routing和基本的mongoose CRUD之外 为了完成基本功能的express也写过了 想要真正的静下心来看Doc反而越看越慌 今天一天就深深的陷入了回调函数的坑里</p>
+
+<p>不讨论回调和异步、同步的关系和不同了 请自行google … … 因为我也没整明白 简单讲一下我试了一天对这几个的理解</p>
+
+<p>先说同步 我理解的同步就是逻辑自上而下 默默突然回想起做VerilogHDL的时候学过这么两个词blocking和non blocking 那么这个阻塞和非阻塞又和同步异步有什么关系和区别呢</p>
+
+<p>其实按照理论是没有什么关系的 同步嘛相当于调用者主动 一旦该调用返回了有值了 异步就反一反 相当于被调用者的状态反馈给调用者</p>
+
+<p>这个打个比方 我们国内很多客服态度可能时好时坏 但是这个服务速度是有的 你好比打个电话问问客服我有个什么问题不能解决 这个客服呢就在电话那头给你解决 在问题解决之前或者说在这个事情有结果之前你一直都是在跟客服进行沟通的</p>
+
+<p>那么英国这里呢 实在等不起 你打个电话 他说”Alright mate, but I can do nothing to help you right now I’ll give you a call back later, OK?” 这就是异步了 他解不解决问题在他 在你等他给你打回来通知结果之前 你是正常过日子的 没有24小时一直在通电话</p>
+
+<p>所以说呢同步还是异步只是说明了消息机制 communication嘛 对伐 而阻塞非阻塞可能就是描述了当在等待的状态 就是说非阻塞是会正常过日子的等结果的 中间呢因为这个英国服务太糟糕了 只能是不是check一下状态如何了 这个阻塞啊就意味着问题太大了 没法正常过日子等着客服解决了 不管什么时候返回结果 这期间都只能“挂起” 就好比只能呆滞的躺在床上等一场我想我要挂了的考试最终成绩一样</p>
+
+<p>再说这个回调，这个吧我就记住这么两条，一般情况下同步回调 这个回调函数最后执行 如果是异步回调 那人家不一定就最后执行 如果要等该函数执行完以后在执行另一条 那么这个执行语句必须放在回调函数内</p>
+
+<p>想想真的是慌得呀 一本正经好像说的跟真的一样 我就先给自己备忘一下 简单的注册功能 本来想把MVC弄得好看一些 不要把所有函数啊判断啊都放在一起混了 结果就被异步啊回调啊尴尬了</p>
+
+<div class="language javascript highlighter rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">IsExisted</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">callback</span><span class="p">){</span>
+  <span class="nx">userdb</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="s1">'useremail'</span><span class="p">:</span><span class="nx">data</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">doc</span><span class="p">){</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+      <span class="c1">//console.log(doc);</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new user'</span><span class="p">);</span>
+        <span class="c1">//console.log(doc);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'user existed'</span><span class="p">);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="o"> </span><span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
+
+  <li><a href="/blogs/2013/11/05/2013%E6%B5%8B%E8%AF%95">2013年测试</a> (05 Nov 2013  <!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf 8">
+  <meta http equiv="X UA Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device width, initial scale=1">
+
+  <title>2013年测试</title>
+  <meta name="description" content="">
+
+
+  <script src="/js/jquery.js"></script>
+  <script src="//d3js.org/d3.v3.min.js" charset="utf 8"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384 1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font awesome/4.5.0/css/font awesome.min.css">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href=/css/demo.css>
+  <link rel="canonical" href="http://localhost:4000/blogs/2013/11/05/2013%E6%B5%8B%E8%AF%95">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+  <link rel="canonical" href="http://localhost:4000/blogs/2013/11/05/2013%E6%B5%8B%E8%AF%95">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
+
+</head>
+
+
+  <body>
+
+    <header class="site header">
+  <div class="wrapper">
+    <a class="site title" href="/">CatAmo凉生</a>
+    <nav class="site nav">
+      <a href="#" class="menu icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82 0.665,1.484 1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0 0.82,0.665 1.484,1.484 1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0 0.82,0.665 1.484,1.484 1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        <a class="page link" id="categories" href="/categories.html">文章类别</a>
+        <a class="page link" id="list" href="/list.html">文章列表</a>
+        <a class="page link" id="list" href="/resume">简历</a>
+        
+          
+          <a class="page link" href="/about/">关于</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+  </div>
+  </div>
+</header>
+
+
+    <div class="page content">
+      
+            <div class="wrapper" id="mainpage">
+              <div class="container fluid">
+                    <div class="row">
+                      <div class="inner" id="main content">
+                            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post header">
+    <h1 class="post title" itemprop="name headline">2013年测试</h1>
+    <p class="post meta"><time datetime="2013 11 05T16:59:18+00:00" itemprop="datePublished">Nov 5, 2013</time></p>
+  </header>
+
+  <div class="post content" itemprop="articleBody">
+    <p><br />
+<br /><br /><br /><br /><br /></p>
+
+<p>别看了、这只是个测试</p>
+
+
+  </div>
+
+</article>
+
+                      </div>
+
+                      <div class="toggle span">
+                          <i class="fa fa chevron circle left fa 2x"></i>
+                      </div>
+
+                      <div class="col md 4" id="side page">
+                          <div class="side content">
+                              <div id="side img">
+                                  <img  src="/img/minion.png"></img>
+                                  <p>CATAMO(Bingjie Gao)</p>
+                              </div>
+                          </div>
+                              
+                          <div class="side content">    
+                              <div class="side content title">Tag Cloud</div>
+                                
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/c语言/index.html"
+                                      style="font size: 96%"> C语言</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/express/index.html"
+                                      style="font size: 84%"> Express</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/nodejs/index.html"
+                                      style="font size: 84%"> Nodejs</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/学习/index.html"
+                                      style="font size: 100%"> 学习</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/微信公众号/index.html"
+                                      style="font size: 88%"> 微信公众号</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/总结/index.html"
+                                      style="font size: 96%"> 总结</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/无聊/index.html"
+                                      style="font size: 104%"> 无聊</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/物联网/index.html"
+                                      style="font size: 96%"> 物联网</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/记事/index.html"
+                                      style="font size: 104%"> 记事</a>
+                                </div>
+                                
+                                <div class="site tag">
+                                  <a class="tag name" href="/tag/面试/index.html"
+                                      style="font size: 96%"> 面试</a>
+                                </div>
+                                
+                          </div>
+                          <div class="toggle span2">
+                            <i class="fa fa chevron circle right fa 2x"></i>
+                          </div>
+                    </div>
+                    
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer heading">CatAmo凉生</h2>
+
+    <div class="footer col wrapper">
+      <div class="footer col footer col 1">
+        <ul class="contact list">
+          <li>CatAmo凉生</li>
+          <li><a href="mailto:bingjie.gao10@gmail.com">bingjie.gao10@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer col footer col 2">
+        <ul class="social media list">
+          
+          <li>
+            <a href="https://github.com/CatAmo10"><span class="icon icon  github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c 4.285,0 7.76,3.474 7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53 0.168,0.53 0.374c0 0.184 0.007 0.672 0.01 1.32 c 2.159,0.469 2.614 1.04 2.614 1.04c 0.353 0.896 0.862 1.135 0.862 1.135c 0.705 0.481,0.053 0.472,0.053 0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071 0.502,0.271 0.843,0.493 1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0 0.847,0.302 1.54,0.799 2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652 0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482 1.004,2.132 0.796,2.132 0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981 1.814,3.637 3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037 0.01,1.874 0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081 1.028,5.302 3.935,5.302 7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">CatAmo10</span></a>
+
+          </li>
+          
+
+
+          
+          <li>
+            <a href="https://www.jianshu.com/users/484f0e3efc60/latest_articles"><span class="username">CatAmo凉生_简书</span></a>
+
+            
+          
+        </ul>
+      </div>
+
+      <div class="footer col footer col 3">
+        <p></p>
+      </div>
+    </div>
+
+
+    <p class="rss subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+  </div>
+
+</footer>
+<script>
+      var scroll = $('.toggle span');
+      var wrapper1 = $('#mainpage');
+      var wrapper2 = $('.wrapper2');
+      var maincontent = $('#main content');
+      var side = $('.col md 4');
+      var collpas = $('.toggle span2');
+
+
+      scroll.click(function(){
+        // wrapper1.removeClass('wrapper').addClass('wrapper2');
+        side.css('display','block');
+        $(this).css('display','none');
+        collpas.css('display','block');
+        maincontent.removeClass('inner').addClass('col md 8');
+        
+      })
+
+      collpas.click(function(){
+         maincontent.removeClass('col md 8').addClass('inner');
+         side.css('display','none');
+         scroll.css('display','block');
+         $(this).css('display','none');
+      })
+
+      $(window).scroll(function(){
+        scroll.css('top',Math.max(60,150 $(this).scrollTop()));
+      })
+</script>
+
+
+  </div>
+
+</footer>
+
+
+
+  </body>
+
+</html>
+)</li>
 
 </ul>
 
 <!-- <div id="tag-cloud">
-  <a href="/tag/c语言/" class="set4">-C语言</a> <a href="/tag/express/" class="set1">-Express</a> <a href="/tag/nodejs/" class="set1">-Nodejs</a> <a href="/tag/学习/" class="set5">-学习</a> <a href="/tag/微信公众号/" class="set2">-微信公众号</a> <a href="/tag/总结/" class="set4">-总结</a> <a href="/tag/无聊/" class="set5">-无聊</a> <a href="/tag/物联网/" class="set4">-物联网</a> <a href="/tag/记事/" class="set5">-记事</a> <a href="/tag/面试/" class="set4">-面试</a>
+  Jekyll::Drops::SiteDrop
 </div> -->
                       </div>
                     </div>

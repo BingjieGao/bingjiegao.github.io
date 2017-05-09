@@ -18,11 +18,11 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href=/css/demo.css>
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2015/11/11/Express%E5%BC%80%E5%8F%91%E9%99%B7%E5%85%A5%E5%BC%82%E6%AD%A5%E5%9C%88%E5%92%8C%E5%9B%9E%E8%B0%83%E5%9D%91">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
 </head>
 
@@ -144,34 +144,34 @@
 
 <p>想想真的是慌得呀 一本正经好像说的跟真的一样 我就先给自己备忘一下 简单的注册功能 本来想把MVC弄得好看一些 不要把所有函数啊判断啊都放在一起混了 结果就被异步啊回调啊尴尬了</p>
 
-<p>```javascript
-var IsExisted = function(data,callback){
-  userdb.findOne({‘useremail’:data},function(err,doc){</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">IsExisted</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">callback</span><span class="p">){</span>
+  <span class="nx">userdb</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="s1">'useremail'</span><span class="p">:</span><span class="nx">data</span><span class="p">},</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span><span class="nx">doc</span><span class="p">){</span>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>console.log(data);
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
 
-if(!err){
-  //console.log(doc);
-  if(!doc){
-    console.log('new user');
-    //console.log(doc);
-    return_value = 1;
-    callback(return_value);
-  }
-  else
-  {
-    console.log('user existed');
-    return_value = -1;
-    callback(return_value);
-  }
-}
-else{
-  console.log(err);
-}   }); }
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">){</span>
+      <span class="c1">//console.log(doc);</span>
+      <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">doc</span><span class="p">){</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'new user'</span><span class="p">);</span>
+        <span class="c1">//console.log(doc);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">else</span>
+      <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'user existed'</span><span class="p">);</span>
+        <span class="nx">return_value</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="nx">callback</span><span class="p">(</span><span class="nx">return_value</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+
 </code></pre>
 </div>
-
-<p>```</p>
 
 
   </div>

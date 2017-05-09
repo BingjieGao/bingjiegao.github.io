@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>程序员面试金典 chapter3 Stacks and Queues</title>
-  <meta name="description" content="数据结构 栈的实现根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:*  push()*  pop()*  peek()*  isFull()*  isEmpty()顾名思义，is...">
+  <meta name="description" content="数据结构 栈的实现根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:  push()  pop()  peek()  isFull()  isEmpty()顾名思义，isFull和...">
 
 
   <script src="/js/jquery.js"></script>
@@ -18,11 +18,11 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href=/css/demo.css>
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
-  <link rel="canonical" href="http://bingjiegao.github.io/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
-  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://bingjiegao.github.io/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/blogs/2016/02/06/%E7%A8%8B%E5%BA%8F%E5%91%98%E9%9D%A2%E8%AF%95%E9%87%91%E5%85%B8Chapter3">
+  <link rel="alternate" type="application/rss+xml" title="CatAmo凉生" href="http://localhost:4000/feed.xml">
 
 </head>
 
@@ -126,14 +126,16 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h4 id="section">数据结构 栈的实现</h4>
-<p>根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:
-*  push()
-*  pop()
-*  peek()
-*  isFull()
-*  isEmpty()
-顾名思义，isFull和isEmpty就是判断栈满栈空的的function，主要说下两个主要的函数，pop和push。以链表的形式定义一个struct来代表这个stack</p>
+    <h4 id="数据结构-栈的实现">数据结构 栈的实现</h4>
+<p>根据某大学的教材，栈多用于递归(recursive)和多线程(multithread)，秉持先进后出(FILO)的原则，现在我要试着亲手实现一个基本的栈，基本的function应该有:</p>
+<ul>
+  <li>push()</li>
+  <li>pop()</li>
+  <li>peek()</li>
+  <li>isFull()</li>
+  <li>isEmpty()
+顾名思义，isFull和isEmpty就是判断栈满栈空的的function，主要说下两个主要的函数，pop和push。以链表的形式定义一个struct来代表这个stack</li>
+</ul>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">struct</span> <span class="n">elt</span> <span class="p">{</span>
   <span class="k">struct</span> <span class="n">elt</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span><span class="kt">int</span> <span class="n">value</span><span class="p">;</span>
@@ -164,7 +166,7 @@
     <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
 
-<h4 id="section-1">第一题 集合栈</h4>
+<h4 id="第一题-集合栈">第一题 集合栈</h4>
 <p>题目描述，实现将每个大小为给定size的栈填满，并且当当前栈填满时新建一个栈。
 题目所给出的标准class 函数定义为:</p>
 
@@ -212,7 +214,7 @@
     <span class="p">}</span>
 <span class="p">};</span></code></pre></figure>
 
-<h5 id="section-2">第二题 用两个栈实现队列</h5>
+<h5 id="第二题-用两个栈实现队列">第二题 用两个栈实现队列</h5>
 <p>题目描述为用两个栈完成队列基本的pop和push
 我没学过数据结构，所以还是先来看一下队列在数据结构的定义。
 队列不一样的是先进先出(FIFO)，并且有指向head和tail的指针，下面为简单队列实现的struct定义：</p>
@@ -264,7 +266,7 @@
     <span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">stack2</span><span class="p">;</span>
 <span class="p">};</span></code></pre></figure>
 
-<h4 id="section-3">第三题 双栈排序</h4>
+<h4 id="第三题-双栈排序">第三题 双栈排序</h4>
 <p>题目描述为将一个乱序排放的数据栈重新排序，最大的元素在栈的顶端。
 既然有两个栈，那么实现方式应该和上一题大同小异，两个栈中的最顶元素进行比较和压栈出栈。首先，原始的数据链先pop_back()出最顶元素到新定义的栈中，当新定义的临时栈不为空时，每次循环比较最顶元素的大小，我天真的认为这个和数组中的冒泡法理想一样，通过多次的循环比较以达到排序。第一步新定义一个栈，并且pop_back()出原数据栈中的最顶元素:</p>
 
@@ -296,7 +298,7 @@
                     <span class="n">popNum</span><span class="o">--</span><span class="p">;</span>
                 <span class="p">}</span></code></pre></figure>
 
-<h4 id="section-4">第四题 猫狗收容所</h4>
+<h4 id="第四题-猫狗收容所">第四题 猫狗收容所</h4>
 <p>题目描述，有两种收养方式，一个是收养所有最早进入收容所的动物，另一个是选择性的收养最早进入收容所的猫或者狗。
 首先，最早意味着先进先出，所以应该选择队列的数据结构来做。
 因为有猫狗两种动物，都有先进先出，所以第一步先将两个队列分别对应猫和狗定义。</p>
